@@ -4,7 +4,10 @@ const routes = [
   {
     path: "/error-404",
     name: "Error404",
-    component: Error404
+    component: Error404,
+    meta: {
+      layout: 'ErrorLayout'
+    }
   },
 ];
 export default routes;

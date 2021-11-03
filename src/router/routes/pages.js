@@ -8,27 +8,42 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    meta: {
+      layout: 'DefaultLayout'
+    }
   },
   {
     path: "/about",
     name: "About",
-    component: About
+    component: About,
+    meta: {
+      layout: 'DefaultLayout'
+    }
   },
   {
     path: "/privacy",
     name: "Privacy",
-    component: Privacy
+    component: Privacy,
+    meta: {
+      layout: 'DefaultLayout'
+    }
   },
   {
     path: "/faq",
     name: "Faq",
-    component: Faq
+    component: Faq,
+    meta: {
+      layout: 'DefaultLayout'
+    }
   },
   {
     path: "/terms",
     name: "Terms",
-    component: Terms
+    component: Terms,
+    meta: {
+      layout: 'DefaultLayout'
+    }
   },
 ];
 export default routes;

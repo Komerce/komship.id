@@ -1,18 +1,27 @@
 <template>
-  <v-app>
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+  <component :is="layout" />
 </template>
 
 <script>
+import DefaultLayout from "@/layouts/Default.vue";
+import ErrorLayout from "@/layouts/Error.vue";
 
 export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  }),
-}
+  components: {
+    DefaultLayout,
+    ErrorLayout,
+  },
+  data() {
+    return {
+      layout: null,
+    };
+  },
+  watch: {
+    $route(to) {
+      if (to.meta.layout !== undefined) {
+        this.layout = to.meta.layout
+      }
+    },
+  },
+};
 </script>
