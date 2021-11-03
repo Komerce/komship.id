@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import '@/assets/css/app.css'
 import DefaultLayout from "@/layouts/Default.vue";
 import ErrorLayout from "@/layouts/Error.vue";
 
