@@ -11,7 +11,7 @@
                 <h1 class="title-error">Whoops!</h1>
                 <p class="desc-error">Maaf, kami tidak bisa menemukan halaman yang kamu cari.</p>
                 <div class="backhome">
-                    <button class="btn-backhome">Kembali ke beranda</button>
+                    <router-link to="/"><button class="btn-backhome">Kembali ke beranda</button></router-link>
                 </div>
             </div>
         </section>
