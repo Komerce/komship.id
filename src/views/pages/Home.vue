@@ -6,11 +6,11 @@
                     <h1 class="title">
                     <!-- <img :src="require('@/assets/img/partials/bg-circle.png')" class="bg-circle" /> -->
                         Percayakan Pengelolaan Pengiriman Paket <span class="order">Orderanmu</span> 
-                        <p class="kepada">Kepada</p>
+                        <span class="kepada">Kepada</span>
                         <v-img :src="require('@/assets/img/partials/komship-title.png')" class="komship" />
                     </h1>
                     <p class="description">Dengan menggunakan Komship proses pengiriman paket orderan akan lebih mudah dan menguntungkan. Tidak hanya itu, kamu akan makin untung dengan adanya cashback biaya pengiriman barang COD dan kemudahan penarikan dana hasil dari transaksi COD kapanpun setelah barang diterima pembeli.</p>
-                    <button class="btn btn-register-now">Daftar sekarang juga</button>
+                    <button class="btn btn-primary btn-register-now">Daftar sekarang juga</button>
                 </div>
                 <div class="col-md-5 image"><v-img :src="require('@/assets/img/partials/home-model.png')" max-width="563px" /></div>
             </div>
@@ -18,15 +18,15 @@
         <section class="why">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-lg-5 col-md-6">
                         <h2 class="title">Kenapa Harus Komship?</h2>
                     </div>
-                    <div class="col-md-7 description">
+                    <div class="col-lg-7 col-md-6 description">
                         Dengan komship proses pengelolaan orderan tidak sebatas pada pengiriman barang saja. Namun banyak manfaat dari layanan Komship yang dibisa kamu dapatkan untuk peningkatan bisnismu.
                     </div>
                 </div>
                 <div class="row mt-5">
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card content">
                             <div class="card-body">
                                 <v-img :src="require('@/assets/img/icons/rts-icon.png')" class="icons" />
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card content">
                             <div class="card-body">
                                 <v-img :src="require('@/assets/img/icons/income-icon.png')" class="icons" />
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card content">
                             <div class="card-body">
                                 <v-img :src="require('@/assets/img/icons/analyst-icon.png')" class="icons" />
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card content">
                             <div class="card-body">
                                 <v-img :src="require('@/assets/img/icons/monitoring-cs-icon.png')" class="icons" />
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card content">
                             <div class="card-body">
                                 <v-img :src="require('@/assets/img/icons/cod-icon.png')" class="icons" />
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card content">
                             <div class="card-body">
                                 <v-img :src="require('@/assets/img/icons/cashback-icon.png')" class="icons" />
@@ -156,10 +156,10 @@
     position: relative;
     max-width: 203px;
     left: 11.5vw;
-    top: -86px;
+    top: -70px;
 }
 .register-now .description{
-    margin-top: -86px;
+    margin-top: -70px;
     width: 80%;
     color:#828282;
     font-size: 18px;
@@ -168,13 +168,10 @@
 }
 .register-now .btn-register-now{
     margin-top: 1.5vw;
-    background-color: #F95031;
-    color: #FFFFFF;
     font-weight: 800;
     font-size: 16px;
     width: 231px;
     height: 60px;
-    border-radius: 12px;
 }
 
 /* WHYYYY */
@@ -252,6 +249,9 @@
     text-align: center;
     font-size: 16px;
     line-height: 150%;
+}
+.conclusion .description-content{
+    color:#FFFFFF;
 }
 .conclusion .btn-register-conclusion{
     width: 208px;
