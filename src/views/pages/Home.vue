@@ -2,17 +2,17 @@
     <v-app style="background-color:#F6F6F9">
         <section class="register-now container">
             <div class="row">
+                <img :src="require('@/assets/img/partials/bg-circle.png')" class="bg-circle" />
+                <div class="col-md-5 image-mobile"><v-img :src="require('@/assets/img/partials/home-model.png')" max-width="563px" /></div>
                 <div class="col-md-7 content">
                     <h1 class="title">
-                    <!-- <img :src="require('@/assets/img/partials/bg-circle.png')" class="bg-circle" /> -->
-                        Percayakan Pengelolaan Pengiriman Paket <span class="order">Orderanmu</span> 
-                        <span class="kepada">Kepada</span>
-                        <v-img :src="require('@/assets/img/partials/komship-title.png')" class="komship" />
+                        Percayakan Pengelolaan Pengiriman Paket <span class="order">Orderanmu</span><br>Kepada Kompship
+                        
                     </h1>
                     <p class="description">Dengan menggunakan Komship proses pengiriman paket orderan akan lebih mudah dan menguntungkan. Tidak hanya itu, kamu akan makin untung dengan adanya cashback biaya pengiriman barang COD dan kemudahan penarikan dana hasil dari transaksi COD kapanpun setelah barang diterima pembeli.</p>
                     <button class="btn btn-primary btn-register-now">Daftar sekarang juga</button>
                 </div>
-                <div class="col-md-5 image"><v-img :src="require('@/assets/img/partials/home-model.png')" max-width="563px" /></div>
+                <div class="col-md-5 image-desktop"><v-img :src="require('@/assets/img/partials/home-model.png')" max-width="563px" /></div>
             </div>
         </section>
         <section class="service" id="service">
@@ -84,32 +84,48 @@
             </div>
         </section>
         <section class="feature" id="feature">
+            <img :src="require('@/assets/img/partials/bg-ellipse.png')" class="bg-ellipse" />
+                    <img :src="require('@/assets/img/partials/bg-dots-primary.png')" class="bg-dots" />
+            <img :src="require('@/assets/img/partials/bg-square.png')" class="bg-square" />
+            <img :src="require('@/assets/img/partials/bg-monster-primary.png')" class="bg-monster" />
             <div class="container">
                 <h2 class="title">Fitur</h2>
                 <div class="row">
+                    <div class="col-md-6 image-mobile">
+                        <v-img :src="require('@/assets/img/partials/dashboard-feature.png')" />
+                    </div>
                     <div class="col-md-6 content">
+                        <v-img :src="require('@/assets/img/icons/dashboard-feature-icon.png')" class="icons-content" />
                         <h2 class="title-content">Dashboard Komship</h2>
                         <p class="description-content">Dapatkan informasi terupdate dan insight tentang produk terlaris, customer loyal, top admin order, top customer service, hingga laporan penghasilan penjualan secara realtime hanya di satu dashboard.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 image-desktop">
                         <v-img :src="require('@/assets/img/partials/dashboard-feature.png')" />
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 image-mobile">
+                        <v-img :src="require('@/assets/img/partials/income-feature.png')" />
+                    </div>
+                    <div class="col-md-6 image-desktop">
                         <v-img :src="require('@/assets/img/partials/income-feature.png')" />
                     </div>
                     <div class="col-md-6 content">
+                        <v-img :src="require('@/assets/img/icons/income-feature-icon.png')" class="icons-content" />
                         <h2 class="title-content">Informasi Penghasilan</h2>
                         <p class="description-content">Pebisnis akan semakin mudah menganalisa data penghasilan baik dari  transaksi menggunakan metode COD ataupun transfer bank.</p>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-6 image-mobile">
+                        <v-img :src="require('@/assets/img/partials/maintenance-feature.png')" />
+                    </div>
                     <div class="col-md-6 content">
+                        <v-img :src="require('@/assets/img/icons/maintenance-feature-icon.png')" class="icons-content" />
                         <h2 class="title-content">Pengelolaan Produk</h2>
                         <p class="description-content">Penyesuaian daftar produk hingga update stok dapat diatur dengan mudah dalam satu sistem yang terintegrasi.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 image-desktop">
                         <v-img :src="require('@/assets/img/partials/maintenance-feature.png')" />
                     </div>
                 </div>
@@ -117,12 +133,12 @@
         </section>
         <section class="conclusion">
             <div class="row">
-                <img :src="require('@/assets/img/partials/bg-left-conclusion.png')" class="bg-left-conclusion" />
-                <div class="col-md-6 content">
+                <img :src="require('@/assets/img/partials/bg-dots.png')" class="bg-dots" />
+                <div class="col-lg-6 col-md-8 content">
                     <p class="description-content">Komship saat ini telah bekerjasama dengan JNE untuk menjadi mitra ekspedisi untuk pengiriman barang. Ketika UMKM menggunakan layanan Komship, maka UMKM akan mendapatkan cashback ongkir sebesar 25%.</p>
                     <button class="btn btn-register-conclusion btn-outline-light">Daftar sekarang</button>
                 </div>
-                <img :src="require('@/assets/img/partials/bg-right-conclusion.png')" class="bg-right-conclusion" />
+                <img :src="require('@/assets/img/partials/bg-monster.png')" class="bg-monster" />
             </div>
         </section>
     </v-app>
@@ -132,12 +148,16 @@
     display: flex;
     width: 100%;
     padding-bottom: 5vw;
-    background-color: #f6f6f9;
 }
-/* .register-now .bg-circle{
+.register-now .image-mobile{
+    display: none;
+}
+.register-now .bg-circle{
     position: absolute;
-    z-index: 0;
-} */
+    width: 124px;
+    margin-top: 4vw;
+    margin-left: -2vw;
+}
 .register-now .content{
     margin-top: 5vw;
 }
@@ -152,14 +172,8 @@
 .register-now .title .order{
     color: #FF6A3A;
 }
-.register-now .title .komship{
-    position: relative;
-    max-width: 203px;
-    left: 11.5vw;
-    top: -70px;
-}
 .register-now .description{
-    margin-top: -70px;
+    margin-top: 2vw;
     width: 80%;
     color:#828282;
     font-size: 18px;
@@ -167,7 +181,7 @@
     font-weight: 400;
 }
 .register-now .btn-register-now{
-    margin-top: 1.5vw;
+    margin-top: 1vw;
     font-weight: 800;
     font-size: 16px;
     width: 231px;
@@ -215,6 +229,10 @@
 .feature{
     background-color: #f8f9fa;
     padding-top: 5vw;
+    padding-bottom: 8vw;
+}
+.feature .row{
+    padding-bottom: 20vh;
 }
 .feature .title{
     display: flex;
@@ -226,7 +244,11 @@
 .feature .content{
     margin: auto;
 }
+.feature .icons-content{
+    width: 60px;
+}
 .feature .title-content{
+    margin-top: 1vw;
     font-size: 32px;
     font-weight: 700;
 }
@@ -236,6 +258,30 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+}
+.feature .bg-ellipse{
+    position: absolute;
+    margin-top: -7vw;
+    width: 150px;
+}
+.feature .bg-dots{
+    position: absolute;
+    height: 216.52px;
+    margin-top: 41vw;
+    left: 0;
+}
+.feature .bg-monster{
+    position: absolute;
+    width: 150px;
+    right: -0;
+    margin-top: 90vw;
+}
+.feature .bg-square{
+    position: absolute;
+    bottom: 13vw;
+}
+.feature .image-mobile{
+    display: none;
 }
 .conclusion{
     display: flex;
@@ -258,19 +304,99 @@
     height: 60px;
     border-radius: 12px;
 }
-.conclusion .bg-left-conclusion{
+.conclusion .bg-dots{
     position: absolute;
     left: -33px;
     margin-top: 45px;
     width: 117px;
     height: 216px;
 }
-.conclusion .bg-right-conclusion{
+.conclusion .bg-monster{
     position: absolute;
     display: block;
     margin-top: 15px;
     right: -40px;
     width: 200px;
     height: 286px;
+}
+@media only screen and (max-width: 991px)
+{
+    .register-now .bg-circle{
+        width: 80px;
+    }
+    .register-now .title{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .register-now .description{
+        font-size: 16px;
+    }
+    .register-now .image{
+        margin: auto 0;
+    }
+    .service .title{
+        font-weight: 700;
+        font-size: 24px;
+        margin-top: 4vh;
+    }
+    .feature .title-content{
+        font-size: 20px;
+    }
+    .feature .bg-ellipse{
+        display: none;
+    }
+    .feature .bg-dots{
+        display: none;
+    }
+    .feature .bg-square{
+        display: none;
+    }
+    .feature .bg-monster{
+        width: 110px;
+        margin-top: 90vh;
+    }
+}
+@media only screen and (max-width: 540px)
+{
+    .register-now .image-desktop{
+        display: none;
+    }
+    .register-now .image-mobile{
+        display: flex;
+    }
+    .service .content{
+        padding: 2vw 4vw;
+        margin-bottom: 5vw;
+    }
+    .feature .row{
+        padding-bottom: 5vh;
+    }
+    .feature .image-mobile{
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+    .feature .image-desktop{
+        display: none;
+    }
+    .feature .content{
+        margin-top: 8vw;
+    }
+    .feature .bg-monster{
+        display: none;
+    }
+    .conclusion .bg-dots{
+        display: none;
+    }
+    .conclusion .bg-monster{
+        display: none;
+    }
+    .conclusion .description-content{
+        width: 85%;
+        margin: auto;
+    }
+    .conclusion .btn-register-conclusion{
+        margin-top: 5vw;
+    }
 }
 </style>

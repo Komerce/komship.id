@@ -90,4 +90,10 @@
     display: none !important;
   }
 }
+@media only screen and (max-width: 540px)
+{
+  .navbar-brand img{
+    width: 135px;
+  }
+}
 </style>
