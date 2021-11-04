@@ -15,7 +15,7 @@
                 <div class="col-md-5 image"><v-img :src="require('@/assets/img/partials/home-model.png')" max-width="563px" /></div>
             </div>
         </section>
-        <section class="why">
+        <section class="service" id="service">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-md-6">
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </section>
-        <section class="feature">
+        <section class="feature" id="feature">
             <div class="container">
                 <h2 class="title">Fitur</h2>
                 <div class="row">
@@ -174,40 +174,40 @@
     height: 60px;
 }
 
-/* WHYYYY */
-.why{
+/* serviceYYY */
+.service{
     padding-top: 5vw;
     background-color: #f8f9fa;
 }
-.why .title{
+.service .title{
     font-weight: 700;
     font-size: 32px;
     display: flex;
     justify-content: center;
 }
-.why .description{
+.service .description{
     color:#828282;
     font-weight: 400;
     line-height: 24px;
 }
-.why .content{
+.service .content{
     border: none;
     border-radius: 10px;
     height: 230px;
     margin-bottom: 1.8vw;
 }
-.why .title-content{
+.service .title-content{
     margin-top: 1.5vw;
     font-size: 18px;
     font-weight: 600;
 }
-.why .description-content{
+.service .description-content{
     color: #828282;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
 }
-.why .icons{
+.service .icons{
     width: 80px;
 }
 
