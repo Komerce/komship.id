@@ -1,4 +1,4 @@
-import Error404 from '../../views/errors/Error-404.vue'
+import Error404 from "../../views/errors/Error-404.vue";
 
 const routes = [
   {
@@ -6,8 +6,8 @@ const routes = [
     name: "Error404",
     component: Error404,
     meta: {
-      layout: 'ErrorLayout'
-    }
+      layout: "ErrorLayout",
+    },
   },
 ];
 export default routes;

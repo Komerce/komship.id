@@ -59,6 +59,9 @@ a, a:hover, a:visited, a:active, a:link
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
+.router-link-exact-active{
+	color: #F95031!important;
+}
 p a:active
 {
 	position: relative;

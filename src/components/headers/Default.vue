@@ -2,20 +2,37 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img :src="require('@/assets/img/logo/komship-logo.png')" class="image-navbar" />
+        <img
+          :src="require('@/assets/img/logo/komship-logo.png')"
+          class="image-navbar"
+        />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <img :src="require('@/assets/img/icons/toggler-icon.png')" />
       </button>
-      <div class="collapse navbar-collapse nav-menu" id="navbarNav">
+      <div id="navbarNav" class="collapse navbar-collapse nav-menu">
         <div class="close-toggler">
-          <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Close">
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-label="Close"
+          >
             <img :src="require('@/assets/img/icons/close-icon.png')" />
           </button>
         </div>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link to="/" class="nav-link active">Beranda</router-link>
+            <router-link to="/" class="nav-link"> Beranda </router-link>
           </li>
           <li class="nav-item">
             <a href="#service" class="nav-link">Layanan</a>
@@ -30,42 +47,39 @@
   </nav>
 </template>
 <style>
-.navbar{
-  background-color: #F6F6F9;
+.navbar {
+  background-color: #f6f6f9;
 }
-.btn-sign-in{
+.btn-sign-in {
   width: 151px;
   height: 56px;
   margin: auto 5vw;
 }
-.nav-item{
+.nav-item {
   padding-left: 2.5vw;
 }
-.nav-item .active{
-  color: #F95031!important;
-}
-.nav-item .active:before {
-  content : "";
+.nav-item .router-link-exact-active:before {
+  content: "";
   position: absolute;
   bottom: 10px;
   width: 30px;
-  border-bottom: 2px solid #F95031;
+  border-bottom: 2px solid #f95031;
 }
-.navbar-toggler{
-  border-color: #F95031!important;
-  box-shadow: unset!important;
+.navbar-toggler {
+  border-color: #f95031 !important;
+  box-shadow: unset !important;
   margin-right: 2.5vw;
 }
-.close-toggler{
+.close-toggler {
   display: none;
 }
-@media only screen and (max-width: 991px){
-  .close-toggler{
+@media only screen and (max-width: 991px) {
+  .close-toggler {
     display: flex;
     float: right;
   }
-  .nav-menu{
-    background-color: #F95031;
+  .nav-menu {
+    background-color: #f95031;
     top: 0;
     left: 0;
     padding: 5vw;
@@ -74,25 +88,24 @@
     width: 100%;
     z-index: 9;
   }
-  .navbar-nav{
+  .navbar-nav {
     margin-top: 3vw;
   }
-  .nav-item a{
-    color: #FFFFFF!important;
-    font-weight: 600!important;
+  .nav-item a {
+    color: #ffffff !important;
+    font-weight: 600 !important;
     margin-bottom: 1vw;
   }
-  .nav-item .active{
-    color: #FFFFFF!important;
+  .nav-item .active {
+    color: #ffffff !important;
     font-weight: 700;
   }
-  .btn-sign-in{
+  .btn-sign-in {
     display: none !important;
   }
 }
-@media only screen and (max-width: 540px)
-{
-  .navbar-brand img{
+@media only screen and (max-width: 540px) {
+  .navbar-brand img {
     width: 135px;
   }
 }
