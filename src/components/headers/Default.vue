@@ -1,12 +1,12 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <router-link class="navbar-brand" to="/">
         <img
           :src="require('@/assets/img/logo/komship-logo.png')"
           class="image-navbar"
         />
-      </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"

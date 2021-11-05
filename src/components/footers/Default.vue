@@ -4,10 +4,12 @@
       <div class="col-md-12">
         <div class="row">
           <div class="col-lg-6 col-md-8 profile">
-            <v-img
-              :src="require('@/assets/img/logo/komship-logo.png')"
-              class="profile-image"
-            />
+            <router-link to="/">
+              <v-img
+                :src="require('@/assets/img/logo/komship-logo.png')"
+                class="profile-image"
+              />
+            </router-link>
             <div class="row">
               <div class="profile-icon">
                 <v-img
