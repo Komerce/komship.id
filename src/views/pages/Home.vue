@@ -45,7 +45,7 @@
           <div class="col-lg-7 col-md-6 description">
             Dengan komship proses pengelolaan orderan tidak sebatas pada
             pengiriman barang saja. Namun banyak manfaat dari layanan Komship
-            yang dibisa kamu dapatkan untuk peningkatan bisnismu.
+            yang bisa kamu dapatkan untuk peningkatan bisnismu.
           </div>
         </div>
         <div class="row mt-5">
@@ -56,7 +56,7 @@
                   :src="require('@/assets/img/icons/rts-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">RTS rendah</h5>
+                <h5 class="title-content">RTS Rendah</h5>
                 <p class="description-content">
                   Tingkat pengembalian barang rendah, pebisnis semakin untung.
                 </p>
@@ -70,10 +70,10 @@
                   :src="require('@/assets/img/icons/income-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Informasi penghasilan</h5>
+                <h5 class="title-content">Informasi Penghasilan</h5>
                 <p class="description-content">
                   Makin mudah pantau penghasilan terupdate kapanpun dan
-                  dimanapun
+                  dimanapun.
                 </p>
               </div>
             </div>
@@ -115,10 +115,10 @@
                   :src="require('@/assets/img/icons/cod-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Pencairan uang COD kapan saja</h5>
+                <h5 class="title-content">Pencairan Uang COD Kapan Saja</h5>
                 <p class="description-content">
                   Cashflow pantang terganggu, dengan kemudahan pencaiaran dana
-                  kapanpun
+                  kapanpun.
                 </p>
               </div>
             </div>
@@ -130,10 +130,10 @@
                   :src="require('@/assets/img/icons/cashback-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Cashback ongkos kirim</h5>
+                <h5 class="title-content">Cashback Ongkos Kirim</h5>
                 <p class="description-content">
                   Semakin rajin kirim barang, semakin untung! cashback ongkis
-                  kirim menantimu
+                  kirim menantimu.
                 </p>
               </div>
             </div>
