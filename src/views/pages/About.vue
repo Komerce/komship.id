@@ -70,6 +70,7 @@
 .about .description-desktop {
   margin-top: 2vw;
   width: 85%;
+  text-align: justify;
 }
 .about .image {
   margin: auto;
@@ -88,6 +89,7 @@
     width: 90%;
     margin: auto;
     padding-top: 5vw;
+    text-align: justify;
   }
 }
 </style>

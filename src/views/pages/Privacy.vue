@@ -59,6 +59,7 @@
   padding: 7vw 0;
   background-color: #f6f6f9;
   height: 100%;
+  text-align: justify;
 }
 .privacy .title {
   display: flex;

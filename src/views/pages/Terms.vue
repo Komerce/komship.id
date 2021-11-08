@@ -94,6 +94,7 @@
 .terms {
   padding: 7vw 0;
   background-color: #f6f6f9;
+  text-align: justify;
 }
 .terms .title {
   display: flex;

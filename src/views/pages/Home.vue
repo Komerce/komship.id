@@ -15,7 +15,7 @@
         <div class="col-lg-7 col-md-6 content">
           <h1 class="title">
             Percayakan Pengelolaan Pengiriman Paket
-            <span class="order">Orderanmu</span><br />Kepada Kompship
+            <span class="order">Orderanmu</span><br />Kepada Komship
           </h1>
           <p class="description">
             Dengan menggunakan Komship proses pengiriman paket orderan akan
@@ -289,6 +289,7 @@
   font-size: 18px;
   line-height: 28.8px;
   font-weight: 400;
+  text-align: justify;
 }
 .register-now .btn-register-now {
   margin-top: 1vw;
@@ -313,6 +314,7 @@
   color: #828282;
   font-weight: 400;
   line-height: 24px;
+  text-align: justify;
 }
 .service .content {
   border: none;
@@ -368,6 +370,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  text-align: justify;
 }
 .feature .bg-ellipse {
   position: absolute;
