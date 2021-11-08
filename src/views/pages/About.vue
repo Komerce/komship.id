@@ -11,7 +11,7 @@
               COD atau Non-COD tanpa batas minimum pengiriman. Kamu juga dapat
               mencairkan pendapatan COD kamu kapanpun itu tanpa harus menunggu,
               karena setiap paket kamu dibayar maka saat itu juga kamu bisa
-              mencairkan.Komship memberikan kemudahan untuk UMKM, Pebisnis
+              mencairkan. Komship memberikan kemudahan untuk UMKM, Pebisnis
               Online, atau seluruh warga Indonesia yang akan atau ingin mengirim
               paket kemanapun.
             </p>
