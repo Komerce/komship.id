@@ -58,6 +58,7 @@
 .privacy {
   padding: 7vw 0;
   background-color: #f6f6f9;
+  height: 100%;
 }
 .privacy .title {
   display: flex;

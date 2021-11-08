@@ -6,8 +6,9 @@
         <h5>Selamat datang di platform Komship</h5>
         <p>
           Syarat dan ketentuan di bawah ini mengatur penggunaan layanan jasa
-          yang ditawarkan oleh <span>PT. Kampung Marketerindo Berdaya (Komship)</span>
-          terkait penyedia platform pengelola transaksi order barang dari mulai
+          yang ditawarkan oleh
+          <span>PT. Kampung Marketerindo Berdaya (Komship)</span> terkait
+          penyedia platform pengelola transaksi order barang dari mulai
           penginputan data barang, sampai dengan proses pengiriman ke pembeli.
           Syarat dan ketentuan ini dapat mempengaruhi hak dan kewajiban pengguna
           jasa Komerce dan dibawah ketentuan hukum yang berlaku.<br />
@@ -90,25 +91,25 @@
   </v-app>
 </template>
 <style>
-.terms{
-    padding: 7vw 0;
-    background-color: #f6f6f9;
+.terms {
+  padding: 7vw 0;
+  background-color: #f6f6f9;
 }
-.terms .title{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5vw;
-    font-weight: 700;
+.terms .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vw;
+  font-weight: 700;
 }
-.terms h5{
-    font-weight: 700;
-    margin: 2vw 0;
+.terms h5 {
+  font-weight: 700;
+  margin: 2vw 0;
 }
 .terms p {
-    line-height: 150%;
+  line-height: 150%;
 }
 .terms p span {
-    font-weight: 700;
-    color: #222222;
+  font-weight: 700;
+  color: #222222;
 }
 </style>

@@ -55,6 +55,7 @@
 <style>
 .about {
   background-color: #f8f9fa;
+  height: 100%;
   padding: 8vh 0;
 }
 .about .content {

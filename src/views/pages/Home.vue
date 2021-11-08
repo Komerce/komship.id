@@ -515,6 +515,9 @@
   }
 }
 @media only screen and (max-width: 540px) {
+  .register-now .bg-circle {
+    display: none;
+  }
   .register-now .title {
     font-size: 30px;
   }
