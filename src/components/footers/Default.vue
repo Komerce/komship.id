@@ -75,16 +75,19 @@
               :src="require('@/assets/img/icons/whatsapp-icon.png')"
               class="ml-3"
               max-width="30px"
+              @click="openLink('https://wa.me/6281227931840')"
             />
             <v-img
               :src="require('@/assets/img/icons/instagram-icon.png')"
               class="ml-3"
               max-width="30px"
+              @click="openLink('https://instagram.com/komship')"
             />
             <v-img
               :src="require('@/assets/img/icons/facebook-icon.png')"
               class="ml-3"
               max-width="30px"
+              @click="openLink('https://www.facebook.com/komship')"
             />
           </div>
         </div>
@@ -95,6 +98,15 @@
     </div>
   </v-footer>
 </template>
+<script>
+export default {
+  methods: {
+    openLink(link) {
+      window.open(link);
+    },
+  },
+};
+</script>
 <style>
 .profile {
   color: #828282;
