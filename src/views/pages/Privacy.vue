@@ -23,8 +23,8 @@
           <li>Sumber informasi lainnya</li>
         </ul>
         <h5>PENGGUNAAN DATA</h5>
+        <p>Data-data yang telah diperloleh akan digunakan untuk:</p>
         <ul>
-          <li>Data-data yang telah diperloleh akan digunakan untuk:</li>
           <li>Melakukan komunikasi dalam rangka penawaran jasa Komship</li>
           <li>
             Melakukan komunikasi koordinasi antar pihak Komship dengan partner
