@@ -1,6 +1,6 @@
 <template>
   <v-app style="background-color: #f6f6f9">
-    <section class="register-now container">
+    <section id="home" class="register-now container">
       <div class="row">
         <img
           :src="require('@/assets/img/partials/bg-circle.png')"
@@ -253,11 +253,64 @@
     </section>
   </v-app>
 </template>
+<script>
+export default {
+  created() {
+    window.addEventListener("scroll", this.homeScroll);
+    window.addEventListener("scroll", this.serviceScroll);
+    window.addEventListener("scroll", this.featureScroll);
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.homeScroll);
+    window.removeEventListener("scroll", this.serviceScroll);
+    window.removeEventListener("scroll", this.featureScroll);
+  },
+  mounted() {
+    document.getElementById("menuHome").classList.add("active");
+  },
+  methods: {
+    homeScroll() {
+      const el = document.getElementById("home");
+      const elTop = document.body.getBoundingClientRect().top;
+      const elBottom = el.getBoundingClientRect().bottom;
+      if (elTop >= 0 || elBottom <= 0) {
+        document.getElementById("menuHome").classList.remove("active");
+      }
+      if (elTop <= 0 && elBottom >= 0) {
+        document.getElementById("menuHome").classList.add("active");
+      }
+    },
+    serviceScroll() {
+      const el = document.getElementById("service");
+      const elTop = el.getBoundingClientRect().top;
+      const elBottom = el.getBoundingClientRect().bottom;
+      if (elTop >= 0 || elBottom <= 0) {
+        document.getElementById("menuService").classList.remove("active");
+      }
+      if (elTop <= 0 && elBottom >= 0) {
+        document.getElementById("menuService").classList.add("active");
+      }
+    },
+    featureScroll() {
+      const el = document.getElementById("feature");
+      const elTop = el.getBoundingClientRect().top;
+      const elBottom = el.getBoundingClientRect().bottom;
+      if (elTop >= 0 || elBottom <= 0) {
+        document.getElementById("menuFeature").classList.remove("active");
+      }
+      if (elTop <= 0 && elBottom >= 0) {
+        document.getElementById("menuFeature").classList.add("active");
+      }
+    },
+  },
+};
+</script>
 <style>
 .register-now {
   display: flex;
   width: 100%;
   padding-bottom: 5vw;
+  scroll-margin-top: 70px;
 }
 .register-now .image-mobile {
   display: none;
@@ -303,6 +356,7 @@
 .service {
   padding-top: 5vw;
   background-color: #f8f9fa;
+  scroll-margin-top: 70px;
 }
 .service .title {
   font-weight: 700;
@@ -342,6 +396,7 @@
   background-color: #f8f9fa;
   padding-top: 5vw;
   padding-bottom: 8vw;
+  scroll-margin-top: 70px;
 }
 .feature .row {
   padding-bottom: 20vh;

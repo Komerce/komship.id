@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
         <img
@@ -32,13 +32,17 @@
         </div>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link to="/" class="nav-link"> Beranda </router-link>
+            <a id="menuHome" class="nav-link" @click="goto('home')">Beranda</a>
           </li>
           <li class="nav-item">
-            <a href="#service" class="nav-link">Layanan</a>
+            <a id="menuService" class="nav-link" @click="goto('service')"
+              >Layanan</a
+            >
           </li>
           <li class="nav-item">
-            <a href="#feature" class="nav-link">Fitur</a>
+            <a id="menuFeature" class="nav-link" @click="goto('feature')"
+              >Fitur</a
+            >
           </li>
         </ul>
         <button class="btn btn-outline-primary btn-sign-in">Masuk</button>
@@ -46,9 +50,25 @@
     </div>
   </nav>
 </template>
+<script>
+export default {
+  methods: {
+    goto(id) {
+      if (this.$route.path !== "/") {
+        this.$router.push("/");
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      }
+      if (this.$route.path == "/") {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
+};
+</script>
 <style>
 .navbar {
   background-color: #f6f6f9;
+  max-height: 80px;
 }
 .btn-sign-in {
   width: 151px;
@@ -58,7 +78,17 @@
 .nav-item {
   padding-left: 2.5vw;
 }
-.nav-item .router-link-exact-active:before {
+/* .nav-item .router-link-exact-active:before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 30px;
+  border-bottom: 2px solid #f95031;
+} */
+.nav-item .active {
+  color: #f95031 !important;
+}
+.nav-item .active:before {
   content: "";
   position: absolute;
   bottom: 10px;
