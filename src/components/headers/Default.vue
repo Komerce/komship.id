@@ -45,7 +45,12 @@
             >
           </li>
         </ul>
-        <button class="btn btn-outline-primary btn-sign-in">Masuk</button>
+        <button
+          class="btn btn-outline-primary btn-sign-in"
+          @click="openWindow('https://partner.komerce.id/')"
+        >
+          Masuk
+        </button>
       </div>
     </div>
   </nav>
@@ -61,6 +66,9 @@ export default {
       if (this.$route.path == "/") {
         document.getElementById(id).scrollIntoView({ behavior: "smooth" });
       }
+    },
+    openWindow(url) {
+      window.open(url);
     },
   },
 };
