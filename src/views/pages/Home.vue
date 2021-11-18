@@ -72,8 +72,8 @@
                 />
                 <h5 class="title-content">Informasi Penghasilan</h5>
                 <p class="description-content">
-                  Makin mudah pantau penghasilan terupdate kapanpun dan
-                  dimanapun.
+                  Makin mudah pantau penghasilan terupdate kapanpun dan di
+                  manapun.
                 </p>
               </div>
             </div>
