@@ -1,48 +1,42 @@
-import Home from "../../views/pages/Home.vue";
-import About from "../../views/pages/About.vue";
-import Privacy from "../../views/pages/Privacy.vue";
-import Faq from "../../views/pages/Faq.vue";
-import Terms from "../../views/pages/Terms.vue";
-
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: () => import("@/views/pages/Home.vue"),
     meta: {
-      layout: "DefaultLayout",
+      layout: "HomeLayout",
     },
   },
   {
     path: "/about",
     name: "About",
-    component: About,
+    component: () => import("@/views/pages/About.vue"),
     meta: {
-      layout: "DefaultLayout",
+      layout: "HomeLayout",
     },
   },
   {
     path: "/privacy",
     name: "Privacy",
-    component: Privacy,
+    component: () => import("@/views/pages/Privacy.vue"),
     meta: {
-      layout: "DefaultLayout",
+      layout: "HomeLayout",
     },
   },
   {
     path: "/faq",
     name: "Faq",
-    component: Faq,
+    component: () => import("@/views/pages/Faq.vue"),
     meta: {
-      layout: "DefaultLayout",
+      layout: "HomeLayout",
     },
   },
   {
     path: "/terms",
     name: "Terms",
-    component: Terms,
+    component: () => import("@/views/pages/Terms.vue"),
     meta: {
-      layout: "DefaultLayout",
+      layout: "HomeLayout",
     },
   },
 ];

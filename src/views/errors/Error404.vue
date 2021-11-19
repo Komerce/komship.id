@@ -1,10 +1,13 @@
 <template>
   <v-app>
-    <!-- <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <img :src="require('@/assets/img/logo/komship-logo.png')" class="image-navbar" />
-            </div>
-        </nav> -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <img
+          :src="require('@/assets/img/logo/komship-logo.png')"
+          class="image-navbar"
+        />
+      </div>
+    </nav>
     <section class="error-404">
       <div class="container">
         <v-img

@@ -3,14 +3,12 @@
 </template>
 
 <script>
-import "@/assets/css/app.css";
-import DefaultLayout from "@/layouts/Default.vue";
-import ErrorLayout from "@/layouts/Error.vue";
-
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
+import HomeLayout from "@/layouts/HomeLayout.vue";
 export default {
   components: {
     DefaultLayout,
-    ErrorLayout,
+    HomeLayout,
   },
   data() {
     return {
@@ -21,6 +19,8 @@ export default {
     $route(to) {
       if (to.meta.layout !== undefined) {
         this.layout = to.meta.layout;
+      } else {
+        this.layout = DefaultLayout;
       }
     },
   },
