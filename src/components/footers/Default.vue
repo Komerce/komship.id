@@ -87,7 +87,9 @@
               :src="require('@/assets/img/icons/facebook-icon.png')"
               class="ml-3"
               max-width="30px"
-              @click="openLink('https://www.facebook.com/komship')"
+              @click="
+                openLink('https://www.facebook.com/Komship-108512271621741')
+              "
             />
           </div>
         </div>
