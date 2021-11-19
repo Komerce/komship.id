@@ -3,12 +3,12 @@
     <section id="home" class="register-now container">
       <div class="row">
         <img
-          :src="require('@/assets/img/partials/bg-circle.png')"
+          :src="require('@/assets/img/background/bg-circle.png')"
           class="bg-circle"
         />
         <div class="col-lg-5 col-md-6 image-mobile">
           <v-img
-            :src="require('@/assets/img/partials/home-model.png')"
+            :src="require('@/assets/img/hero/home-model.png')"
             max-width="563px"
           />
         </div>
@@ -30,7 +30,7 @@
         </div>
         <div class="col-lg-5 col-md-6 image-desktop">
           <v-img
-            :src="require('@/assets/img/partials/home-model.png')"
+            :src="require('@/assets/img/hero/home-model.png')"
             max-width="563px"
           />
         </div>
@@ -143,19 +143,19 @@
     </section>
     <section id="feature" class="feature">
       <img
-        :src="require('@/assets/img/partials/bg-ellipse.png')"
+        :src="require('@/assets/img/background/bg-ellipse.png')"
         class="bg-ellipse"
       />
       <img
-        :src="require('@/assets/img/partials/bg-dots-primary.png')"
+        :src="require('@/assets/img/background/bg-dots.png')"
         class="bg-dots"
       />
       <img
-        :src="require('@/assets/img/partials/bg-square.png')"
+        :src="require('@/assets/img/background/bg-square.png')"
         class="bg-square"
       />
       <img
-        :src="require('@/assets/img/partials/bg-monster-primary.png')"
+        :src="require('@/assets/img/background/bg-monster.png')"
         class="bg-monster"
       />
       <div class="container">
@@ -232,7 +232,7 @@
     <section class="conclusion">
       <div class="row">
         <img
-          :src="require('@/assets/img/partials/bg-dots.png')"
+          :src="require('@/assets/img/background/bg-dots-white.png')"
           class="bg-dots"
         />
         <div class="col-lg-6 col-md-8 content">
@@ -246,7 +246,7 @@
           </button>
         </div>
         <img
-          :src="require('@/assets/img/partials/bg-monster.png')"
+          :src="require('@/assets/img/background/bg-monster-white.png')"
           class="bg-monster"
         />
       </div>

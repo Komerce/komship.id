@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="col-md-6 image">
-          <v-img :src="require('@/assets/img/partials/about-model.png')" />
+          <v-img :src="require('@/assets/img/hero/about-model.png')" />
         </div>
         <div class="description-mobile">
           <p>
