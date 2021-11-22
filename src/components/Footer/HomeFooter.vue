@@ -1,18 +1,18 @@
 <template>
-  <v-footer style="background-color: #f6f6f9">
+  <footer style="background-color: #f6f6f9">
     <div class="container">
       <div class="col-md-12">
         <div class="row">
           <div class="col-lg-6 col-md-8 profile">
             <router-link to="/">
-              <v-img
+              <img
                 :src="require('@/assets/img/logo/komship-logo.png')"
                 class="profile-image"
               />
             </router-link>
             <div class="row">
               <div class="profile-icon">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/location-icon.png')"
                   max-width="30px"
                   min-width="25px"
@@ -25,7 +25,7 @@
             </div>
             <div class="row">
               <div class="profile-icon">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/email-icon.png')"
                   max-width="30px"
                   min-width="20px"
@@ -35,7 +35,7 @@
             </div>
             <div class="row">
               <div class="profile-icon">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/call-icon.png')"
                   max-width="30px"
                   min-width="20px"
@@ -64,29 +64,26 @@
           <div class="col-lg-3 col-md-8 partner">
             <h5 class="partner-title">Kerjasama Ekspedisi</h5>
             <div class="image-partner">
-              <v-img
+              <img
                 :src="require('@/assets/img/logo/jne-logo.png')"
                 max-width="100px"
               />
             </div>
           </div>
           <div class="col-lg-12 col-md-4 contact">
-            <v-img
+            <img
               :src="require('@/assets/img/icons/whatsapp-icon.png')"
               class="ml-3"
-              max-width="30px"
               @click="openLink('https://wa.me/6281227931840')"
             />
-            <v-img
+            <img
               :src="require('@/assets/img/icons/instagram-icon.png')"
               class="ml-3"
-              max-width="30px"
               @click="openLink('https://instagram.com/komship')"
             />
-            <v-img
+            <img
               :src="require('@/assets/img/icons/facebook-icon.png')"
               class="ml-3"
-              max-width="30px"
               @click="
                 openLink('https://www.facebook.com/Komship-108512271621741')
               "
@@ -98,7 +95,7 @@
         </div>
       </div>
     </div>
-  </v-footer>
+  </footer>
 </template>
 <script>
 export default {
@@ -158,13 +155,22 @@ export default {
   display: flex;
   justify-content: end;
 }
+.contact img {
+  max-width: 30px;
+  max-height: 30px;
+  margin-left: 1vw;
+}
 .copyright {
   color: #828282;
 }
 @media only screen and (max-width: 991px) {
   .contact {
-    padding-top: 0;
+    padding-top: 45px;
     justify-content: start;
+  }
+  .partner .partner-title {
+    font-weight: 600;
+    margin-top: 45px;
   }
 }
 @media only screen and (max-width: 540px) {
@@ -182,7 +188,12 @@ export default {
   }
   .contact {
     padding-top: 5vw;
+    margin-left: 3vw;
     padding-bottom: 8vw;
+  }
+  .copyright {
+    display: flex;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 360px) {

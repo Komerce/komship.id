@@ -78,6 +78,9 @@ export default {
   background-color: #f6f6f9;
   max-height: 80px;
 }
+.image-navbar {
+  margin-left: 5vw;
+}
 .btn-sign-in {
   width: 151px;
   height: 56px;
@@ -115,6 +118,10 @@ export default {
   .close-toggler {
     display: flex;
     float: right;
+  }
+  .close-toggler button {
+    background-color: #f95031;
+    border: none;
   }
   .nav-menu {
     background-color: #f95031;

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <section class="faq">
       <div class="container">
         <div class="header">
@@ -35,7 +35,7 @@
         </div>
       </div>
     </section>
-  </v-app>
+  </div>
 </template>
 <script>
 export default {

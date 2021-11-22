@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <section class="privacy">
       <div class="container">
         <h2 class="title">Kebijakan Privasi</h2>
@@ -52,7 +52,7 @@
         </p>
       </div>
     </section>
-  </v-app>
+  </div>
 </template>
 <style>
 .privacy {

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <section class="terms">
       <div class="container">
         <h2 class="title">Syarat dan Ketentuan</h2>
@@ -88,7 +88,7 @@
         </p>
       </div>
     </section>
-  </v-app>
+  </div>
 </template>
 <style>
 .terms {

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <img
@@ -25,7 +25,7 @@
         </div>
       </div>
     </section>
-  </v-app>
+  </div>
 </template>
 <style>
 .image-navbar {

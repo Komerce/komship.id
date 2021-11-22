@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background-color: #f6f6f9">
+  <div style="background-color: #f6f6f9">
     <section id="home" class="register-now container">
       <div class="row">
         <img
@@ -7,10 +7,7 @@
           class="bg-circle"
         />
         <div class="col-lg-5 col-md-6 image-mobile">
-          <v-img
-            :src="require('@/assets/img/hero/home-model.png')"
-            max-width="563px"
-          />
+          <img :src="require('@/assets/img/hero/home-model.png')" />
         </div>
         <div class="col-lg-7 col-md-6 content">
           <h1 class="title">
@@ -29,10 +26,7 @@
           </button>
         </div>
         <div class="col-lg-5 col-md-6 image-desktop">
-          <v-img
-            :src="require('@/assets/img/hero/home-model.png')"
-            max-width="563px"
-          />
+          <img :src="require('@/assets/img/hero/home-model.png')" />
         </div>
       </div>
     </section>
@@ -52,7 +46,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="card content">
               <div class="card-body">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/rts-icon.png')"
                   class="icons"
                 />
@@ -66,7 +60,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="card content">
               <div class="card-body">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/income-icon.png')"
                   class="icons"
                 />
@@ -81,7 +75,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="card content">
               <div class="card-body">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/analyst-icon.png')"
                   class="icons"
                 />
@@ -96,7 +90,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="card content">
               <div class="card-body">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/monitoring-cs-icon.png')"
                   class="icons"
                 />
@@ -111,7 +105,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="card content">
               <div class="card-body">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/cod-icon.png')"
                   class="icons"
                 />
@@ -126,7 +120,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="card content">
               <div class="card-body">
-                <v-img
+                <img
                   :src="require('@/assets/img/icons/cashback-icon.png')"
                   class="icons"
                 />
@@ -162,14 +156,15 @@
         <h2 class="title">Fitur</h2>
         <div class="row">
           <div class="col-md-6 image-mobile">
-            <v-img
+            <img
               :src="require('@/assets/img/partials/dashboard-feature.png')"
             />
           </div>
           <div class="col-md-6 content">
-            <v-img
+            <img
               :src="require('@/assets/img/icons/dashboard-feature-icon.png')"
               class="icons-content"
+              width="90%"
             />
             <h2 class="title-content">Dashboard Komship</h2>
             <p class="description-content">
@@ -180,20 +175,20 @@
             </p>
           </div>
           <div class="col-md-6 image-desktop">
-            <v-img
+            <img
               :src="require('@/assets/img/partials/dashboard-feature.png')"
             />
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 image-mobile">
-            <v-img :src="require('@/assets/img/partials/income-feature.png')" />
+            <img :src="require('@/assets/img/partials/income-feature.png')" />
           </div>
           <div class="col-md-6 image-desktop">
-            <v-img :src="require('@/assets/img/partials/income-feature.png')" />
+            <img :src="require('@/assets/img/partials/income-feature.png')" />
           </div>
           <div class="col-md-6 content">
-            <v-img
+            <img
               :src="require('@/assets/img/icons/income-feature-icon.png')"
               class="icons-content"
             />
@@ -206,12 +201,12 @@
         </div>
         <div class="row">
           <div class="col-md-6 image-mobile">
-            <v-img
+            <img
               :src="require('@/assets/img/partials/maintenance-feature.png')"
             />
           </div>
           <div class="col-md-6 content">
-            <v-img
+            <img
               :src="require('@/assets/img/icons/maintenance-feature-icon.png')"
               class="icons-content"
             />
@@ -222,7 +217,7 @@
             </p>
           </div>
           <div class="col-md-6 image-desktop">
-            <v-img
+            <img
               :src="require('@/assets/img/partials/maintenance-feature.png')"
             />
           </div>
@@ -251,7 +246,7 @@
         />
       </div>
     </section>
-  </v-app>
+  </div>
 </template>
 <script>
 export default {
@@ -314,6 +309,9 @@ export default {
 }
 .register-now .image-mobile {
   display: none;
+}
+.register-now .image-desktop img {
+  max-width: 100%;
 }
 .register-now .bg-circle {
   position: absolute;
@@ -425,6 +423,7 @@ export default {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  margin-top: 2vw;
   text-align: justify;
 }
 .feature .bg-ellipse {
@@ -447,6 +446,9 @@ export default {
 .feature .bg-square {
   position: absolute;
   bottom: 13vw;
+}
+.feature img {
+  max-width: 90%;
 }
 .feature .image-mobile {
   display: none;
@@ -583,7 +585,13 @@ export default {
     display: none;
   }
   .register-now .image-mobile {
-    display: flex;
+    display: unset;
+  }
+  .register-now .image-mobile img {
+    max-width: 100%;
+  }
+  .service .title {
+    margin-bottom: 5vw;
   }
   .service .content {
     padding: 2vw 4vw;
@@ -595,6 +603,9 @@ export default {
   .feature .title-content {
     margin-top: 1vh;
     font-size: 32px;
+  }
+  .feature .description-content {
+    width: 100%;
   }
   .feature .image-mobile {
     display: flex;
