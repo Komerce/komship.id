@@ -50,7 +50,7 @@
                   :src="require('@/assets/img/icons/rts-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">RTS Rendah</h5>
+                <h3 class="title-content">RTS Rendah</h3>
                 <p class="description-content">
                   Tingkat pengembalian barang rendah, pebisnis semakin untung.
                 </p>
@@ -64,7 +64,7 @@
                   :src="require('@/assets/img/icons/income-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Informasi Penghasilan</h5>
+                <h3 class="title-content">Informasi Penghasilan</h3>
                 <p class="description-content">
                   Makin mudah pantau penghasilan terupdate kapanpun dan di
                   manapun.
@@ -79,7 +79,7 @@
                   :src="require('@/assets/img/icons/analyst-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Analisa Produk Terlaris</h5>
+                <h3 class="title-content">Analisa Produk Terlaris</h3>
                 <p class="description-content">
                   Dapatkan insight pengembangan produk dengan analisa produk
                   terlaris.
@@ -94,7 +94,7 @@
                   :src="require('@/assets/img/icons/monitoring-cs-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Pantau Performa Customer Service</h5>
+                <h3 class="title-content">Pantau Performa Customer Service</h3>
                 <p class="description-content">
                   Makin mudah memaksimalkan kinerja CS dengan sistem pemantauan
                   praktis dan real-time.
@@ -109,7 +109,7 @@
                   :src="require('@/assets/img/icons/cod-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Pencairan Uang COD Kapan Saja</h5>
+                <h3 class="title-content">Pencairan Uang COD Kapan Saja</h3>
                 <p class="description-content">
                   Cashflow pantang terganggu, dengan kemudahan pencaiaran dana
                   kapanpun.
@@ -124,7 +124,7 @@
                   :src="require('@/assets/img/icons/cashback-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Cashback Ongkos Kirim</h5>
+                <h3 class="title-content">Cashback Ongkos Kirim</h3>
                 <p class="description-content">
                   Semakin rajin kirim barang, semakin untung! cashback ongkis
                   kirim menantimu.

@@ -45,7 +45,7 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-4 company">
-            <h5 class="company-title">Perusahaan</h5>
+            <h3 class="company-title">Perusahaan</h3>
             <ul class="company-link">
               <li>
                 <router-link to="about"> Tentang Kami </router-link>
@@ -62,7 +62,7 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-8 partner">
-            <h5 class="partner-title">Kerjasama Ekspedisi</h5>
+            <h3 class="partner-title">Kerjasama Ekspedisi</h3>
             <div class="image-partner">
               <img
                 :src="require('@/assets/img/logo/jne-logo.png')"
@@ -126,6 +126,7 @@ export default {
 }
 .company .company-title {
   font-weight: 600;
+  font-size: 18px;
   margin-top: 60px;
   margin-bottom: 20px;
 }
@@ -145,6 +146,7 @@ export default {
 }
 .partner .partner-title {
   font-weight: 600;
+  font-size: 18px;
   margin-top: 60px;
 }
 .image-partner {
