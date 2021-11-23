@@ -20,7 +20,7 @@
           <p class="description">
             Dengan menggunakan Komship proses pengiriman paket orderan akan
             lebih mudah dan menguntungkan. Tidak hanya itu, kamu akan makin
-            untung dengan adanya cashback biaya pengiriman barang COD dan
+            untung dengan adanya <i>cashback</i> biaya pengiriman barang COD dan
             kemudahan penarikan dana hasil dari transaksi COD kapanpun setelah
             barang diterima pembeli.
           </p>
@@ -72,8 +72,8 @@
                 />
                 <h5 class="title-content">Informasi Penghasilan</h5>
                 <p class="description-content">
-                  Makin mudah pantau penghasilan terupdate kapanpun dan di
-                  manapun.
+                  Makin mudah pantau penghasilan ter<i>update</i> kapanpun dan
+                  di manapun.
                 </p>
               </div>
             </div>
@@ -87,8 +87,8 @@
                 />
                 <h5 class="title-content">Analisa Produk Terlaris</h5>
                 <p class="description-content">
-                  Dapatkan insight pengembangan produk dengan analisa produk
-                  terlaris.
+                  Dapatkan <i>insight</i> pengembangan produk dengan analisa
+                  produk terlaris.
                 </p>
               </div>
             </div>
@@ -103,7 +103,7 @@
                 <h5 class="title-content">Pantau Performa Customer Service</h5>
                 <p class="description-content">
                   Makin mudah memaksimalkan kinerja CS dengan sistem pemantauan
-                  praktis dan real-time.
+                  praktis dan <i>real-time</i>.
                 </p>
               </div>
             </div>
@@ -117,7 +117,7 @@
                 />
                 <h5 class="title-content">Pencairan Uang COD Kapan Saja</h5>
                 <p class="description-content">
-                  Cashflow pantang terganggu, dengan kemudahan pencaiaran dana
+                  <i>Cashflow</i> pantang terganggu, dengan kemudahan pencaiaran dana
                   kapanpun.
                 </p>
               </div>
@@ -130,10 +130,10 @@
                   :src="require('@/assets/img/icons/cashback-icon.png')"
                   class="icons"
                 />
-                <h5 class="title-content">Cashback Ongkos Kirim</h5>
+                <h5 class="title-content"><i>Cashback</i> Ongkos Kirim</h5>
                 <p class="description-content">
-                  Semakin rajin kirim barang, semakin untung! cashback ongkis
-                  kirim menantimu.
+                  Semakin rajin kirim barang, semakin untung!
+                  <i>Cashback</i> ongkir kirim menantimu.
                 </p>
               </div>
             </div>
@@ -173,10 +173,10 @@
             />
             <h2 class="title-content">Dashboard Komship</h2>
             <p class="description-content">
-              Dapatkan informasi terupdate dan insight tentang produk terlaris,
-              customer loyal, top admin order, top customer service, hingga
-              laporan penghasilan penjualan secara realtime hanya di satu
-              dashboard.
+              Dapatkan informasi ter<i>update</i> dan <i>insight</i> tentang
+              produk terlaris, <i>customer loyal</i>, top admin order, top
+              <i>customer service</i>, hingga laporan penghasilan penjualan
+              secara <i>realtime</i> hanya di satu dashboard.
             </p>
           </div>
           <div class="col-md-6 image-desktop">
@@ -217,7 +217,7 @@
             />
             <h2 class="title-content">Pengelolaan Produk</h2>
             <p class="description-content">
-              Penyesuaian daftar produk hingga update stok dapat diatur dengan
+              Penyesuaian daftar produk hingga <i>update</i> stok dapat diatur
               mudah dalam satu sistem yang terintegrasi.
             </p>
           </div>
@@ -239,7 +239,8 @@
           <p class="description-content">
             Komship saat ini telah bekerjasama dengan JNE untuk menjadi mitra
             ekspedisi untuk pengiriman barang. Ketika UMKM menggunakan layanan
-            Komship, maka UMKM akan mendapatkan cashback ongkir sebesar 25%.
+            Komship, maka UMKM akan mendapatkan <i>cashback</i> ongkir sebesar
+            25%.
           </p>
           <button class="btn btn-register-conclusion btn-outline-light">
             Daftar sekarang

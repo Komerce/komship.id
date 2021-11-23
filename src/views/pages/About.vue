@@ -6,7 +6,7 @@
           <h2 class="title">Tentang Kami</h2>
           <div class="description-desktop">
             <p>
-              Komship merupakan platform layanan pengiriman yang bertujuan
+              Komship merupakan <i>platform</i> layanan pengiriman yang
               memudahkan kamu untuk mengirim paket yang didukung dengan metode
               COD atau Non-COD tanpa batas minimum pengiriman. Kamu juga dapat
               mencairkan pendapatan COD kamu kapanpun itu tanpa harus menunggu,

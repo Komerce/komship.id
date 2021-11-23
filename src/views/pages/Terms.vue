@@ -8,10 +8,10 @@
           Syarat dan ketentuan di bawah ini mengatur penggunaan layanan jasa
           yang ditawarkan oleh
           <span>PT. Kampung Marketerindo Berdaya (Komship)</span> terkait
-          penyedia platform pengelola transaksi order barang dari mulai
+          penyedia <i>platform</i> pengelola transaksi order barang dari mulai
           penginputan data barang, sampai dengan proses pengiriman ke pembeli.
           Syarat dan ketentuan ini dapat mempengaruhi hak dan kewajiban pengguna
-          jasa Komerce dan dibawah ketentuan hukum yang berlaku.<br />
+          jasa Komerce dan di bawah ketentuan hukum yang berlaku.<br />
           Dengan menggunakan layanan kami, anda dianggap telah membaca,
           mengerti, dan menyetujui serta terikat dan tunduk dengan segala syarat
           dan ketentuan yang berlaku di sini. Syarat dan ketentuan ini dapat
@@ -63,17 +63,17 @@
           2.5 Pengguna situs Komship tidak diperkenankan untuk mengubah data dan
           memodifikasi sebagian atau keseluruhan isi dari situs maupun aplikasi
           tanpa persetujuan dari pihak Komship.<br />
-          2.6 Pengguna platform Komship disebut Partner
+          2.6 Pengguna platform Komship disebut Partner.
         </p>
         <h5>3. SYARAT PENGGUNA PLATFORM</h5>
         <p>
-          3.1 Pengguna platform Komship merupakan individu atau badan usaha yang
-          bergerak di bidang bisnis online baik Business-to-Business (B2B)
-          maupun Business-to-Consumer (B2C)<br />
-          3.2 Pengguna platform Komship harus dapat memberikan informasi pribadi
-          dan perusahaan dengan sebenar-benarnya<br />
+          3.1 Pengguna <i>platform</i> Komship merupakan individu atau badan
+          usaha yang bergerak di bidang bisnis online baik Business-to-Business
+          maupun Business-to-Consumer (B2C).<br />
+          3.2 Pengguna <i>platform</i> Komship harus dapat memberikan informasi
+          dan perusahaan dengan sebenar-benarnya.<br />
           3.3 Apabila di kemudian hari ditemukan data yang tidak sesuai maka
-          pihak Komerce berhak untuk mengakhiri kerjasama
+          pihak Komerce berhak untuk mengakhiri kerjasama.
         </p>
         <h5>4. KETENTUAN LAINNYA</h5>
         <p>
@@ -84,7 +84,7 @@
           kedua belah pihak.<br />
           4.3 Untuk pertanyaan seputar hal-hal yang tidak disebutkan dalam
           Syarat dan Ketentuan ini, anda dapat bertanya melalui e-mail kami di
-          kontak komship atau menghubungi kami di nomor komship
+          kontak komship atau menghubungi kami di nomor komship.
         </p>
       </div>
     </section>
