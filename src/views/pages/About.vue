@@ -25,7 +25,10 @@
           </div>
         </div>
         <div class="col-md-6 image">
-          <v-img :src="require('@/assets/img/hero/about-model.png')" />
+          <v-img
+            :src="require('@/assets/img/hero/about-model.png')"
+            alt="about komship"
+          />
         </div>
         <div class="description-mobile">
           <p>

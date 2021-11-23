@@ -4,6 +4,7 @@
       <router-link class="navbar-brand" to="/">
         <img
           :src="require('@/assets/img/logo/komship-logo.png')"
+          alt="logo komship"
           class="image-navbar"
         />
       </router-link>
@@ -16,7 +17,10 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <img :src="require('@/assets/img/icons/toggler-icon.png')" />
+        <img
+          :src="require('@/assets/img/icons/toggler-icon.png')"
+          alt="toggler icon"
+        />
       </button>
       <div id="navbarNav" class="collapse navbar-collapse nav-menu">
         <div class="close-toggler">
@@ -27,7 +31,10 @@
             aria-controls="navbarNav"
             aria-label="Close"
           >
-            <img :src="require('@/assets/img/icons/close-icon.png')" />
+            <img
+              :src="require('@/assets/img/icons/close-icon.png')"
+              alt="close icon"
+            />
           </button>
         </div>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

@@ -4,6 +4,7 @@
       <div class="container-fluid">
         <img
           :src="require('@/assets/img/logo/komship-logo.png')"
+          alt="logo komship"
           class="image-navbar"
         />
       </div>
@@ -12,6 +13,7 @@
       <div class="container">
         <v-img
           :src="require('@/assets/img/partials/404.png')"
+          alt="404 image"
           class="image-error"
         />
         <h1 class="title-error">Whoops!</h1>

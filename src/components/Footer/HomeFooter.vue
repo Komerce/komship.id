@@ -7,6 +7,7 @@
             <router-link to="/">
               <v-img
                 :src="require('@/assets/img/logo/komship-logo.png')"
+                alt="logo komship"
                 class="profile-image"
               />
             </router-link>
@@ -14,6 +15,7 @@
               <div class="profile-icon">
                 <v-img
                   :src="require('@/assets/img/icons/location-icon.png')"
+                  alt="location icon"
                   max-width="30px"
                   min-width="25px"
                 />
@@ -27,6 +29,7 @@
               <div class="profile-icon">
                 <v-img
                   :src="require('@/assets/img/icons/email-icon.png')"
+                  alt="email icon"
                   max-width="30px"
                   min-width="20px"
                 />
@@ -37,6 +40,7 @@
               <div class="profile-icon">
                 <v-img
                   :src="require('@/assets/img/icons/call-icon.png')"
+                  alt="call icon"
                   max-width="30px"
                   min-width="20px"
                 />
@@ -66,6 +70,7 @@
             <div class="image-partner">
               <v-img
                 :src="require('@/assets/img/logo/jne-logo.png')"
+                alt="logo jne"
                 max-width="100px"
               />
             </div>
@@ -73,18 +78,21 @@
           <div class="col-lg-12 col-md-4 contact">
             <v-img
               :src="require('@/assets/img/icons/whatsapp-icon.png')"
+              alt="whatsapp icon"
               class="ml-3"
               max-width="30px"
               @click="openLink('https://wa.me/6281227931840')"
             />
             <v-img
               :src="require('@/assets/img/icons/instagram-icon.png')"
+              alt="instagram icon"
               class="ml-3"
               max-width="30px"
               @click="openLink('https://instagram.com/komship')"
             />
             <v-img
               :src="require('@/assets/img/icons/facebook-icon.png')"
+              alt="facebook icon"
               class="ml-3"
               max-width="30px"
               @click="

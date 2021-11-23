@@ -4,11 +4,13 @@
       <div class="row">
         <img
           :src="require('@/assets/img/background/bg-circle.png')"
+          alt="circle background"
           class="bg-circle"
         />
         <div class="col-lg-5 col-md-6 image-mobile">
           <v-img
             :src="require('@/assets/img/hero/home-model.png')"
+            alt="hero image komship"
             max-width="563px"
           />
         </div>
@@ -31,6 +33,7 @@
         <div class="col-lg-5 col-md-6 image-desktop">
           <v-img
             :src="require('@/assets/img/hero/home-model.png')"
+            alt="hero image komship"
             max-width="563px"
           />
         </div>
@@ -54,6 +57,7 @@
               <div class="card-body">
                 <v-img
                   :src="require('@/assets/img/icons/rts-icon.png')"
+                  alt="rts icon"
                   class="icons"
                 />
                 <h5 class="title-content">RTS Rendah</h5>
@@ -68,6 +72,7 @@
               <div class="card-body">
                 <v-img
                   :src="require('@/assets/img/icons/income-icon.png')"
+                  alt="income icon"
                   class="icons"
                 />
                 <h5 class="title-content">Informasi Penghasilan</h5>
@@ -83,6 +88,7 @@
               <div class="card-body">
                 <v-img
                   :src="require('@/assets/img/icons/analyst-icon.png')"
+                  alt="analyst icon"
                   class="icons"
                 />
                 <h5 class="title-content">Analisa Produk Terlaris</h5>
@@ -98,6 +104,7 @@
               <div class="card-body">
                 <v-img
                   :src="require('@/assets/img/icons/monitoring-cs-icon.png')"
+                  alt="montioring icon"
                   class="icons"
                 />
                 <h5 class="title-content">Pantau Performa Customer Service</h5>
@@ -113,12 +120,13 @@
               <div class="card-body">
                 <v-img
                   :src="require('@/assets/img/icons/cod-icon.png')"
+                  alt="cod icon"
                   class="icons"
                 />
                 <h5 class="title-content">Pencairan Uang COD Kapan Saja</h5>
                 <p class="description-content">
-                  <i>Cashflow</i> pantang terganggu, dengan kemudahan pencaiaran dana
-                  kapanpun.
+                  <i>Cashflow</i> pantang terganggu, dengan kemudahan pencaiaran
+                  dana kapanpun.
                 </p>
               </div>
             </div>
@@ -128,6 +136,7 @@
               <div class="card-body">
                 <v-img
                   :src="require('@/assets/img/icons/cashback-icon.png')"
+                  alt="cashboack icon"
                   class="icons"
                 />
                 <h5 class="title-content"><i>Cashback</i> Ongkos Kirim</h5>
@@ -144,18 +153,22 @@
     <section id="feature" class="feature">
       <img
         :src="require('@/assets/img/background/bg-ellipse.png')"
+        alt="background ellipse"
         class="bg-ellipse"
       />
       <img
         :src="require('@/assets/img/background/bg-dots.png')"
+        alt="background dots"
         class="bg-dots"
       />
       <img
         :src="require('@/assets/img/background/bg-square.png')"
+        alt="background square"
         class="bg-square"
       />
       <img
         :src="require('@/assets/img/background/bg-monster.png')"
+        alt="background monster"
         class="bg-monster"
       />
       <div class="container">
@@ -164,11 +177,13 @@
           <div class="col-md-6 image-mobile">
             <v-img
               :src="require('@/assets/img/partials/dashboard-feature.png')"
+              alt="dashboard feature"
             />
           </div>
           <div class="col-md-6 content">
             <v-img
               :src="require('@/assets/img/icons/dashboard-feature-icon.png')"
+              alt="dashboard feature icon"
               class="icons-content"
             />
             <h2 class="title-content">Dashboard Komship</h2>
@@ -182,19 +197,27 @@
           <div class="col-md-6 image-desktop">
             <v-img
               :src="require('@/assets/img/partials/dashboard-feature.png')"
+              alt="dashboard feature"
             />
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 image-mobile">
-            <v-img :src="require('@/assets/img/partials/income-feature.png')" />
+            <v-img
+              :src="require('@/assets/img/partials/income-feature.png')"
+              alt="income feature"
+            />
           </div>
           <div class="col-md-6 image-desktop">
-            <v-img :src="require('@/assets/img/partials/income-feature.png')" />
+            <v-img
+              :src="require('@/assets/img/partials/income-feature.png')"
+              alt="income feature"
+            />
           </div>
           <div class="col-md-6 content">
             <v-img
               :src="require('@/assets/img/icons/income-feature-icon.png')"
+              alt="income feature icon"
               class="icons-content"
             />
             <h2 class="title-content">Informasi Penghasilan</h2>
@@ -208,11 +231,13 @@
           <div class="col-md-6 image-mobile">
             <v-img
               :src="require('@/assets/img/partials/maintenance-feature.png')"
+              alt="maintenance feature"
             />
           </div>
           <div class="col-md-6 content">
             <v-img
               :src="require('@/assets/img/icons/maintenance-feature-icon.png')"
+              alt="maintenance feature icon"
               class="icons-content"
             />
             <h2 class="title-content">Pengelolaan Produk</h2>
@@ -224,6 +249,7 @@
           <div class="col-md-6 image-desktop">
             <v-img
               :src="require('@/assets/img/partials/maintenance-feature.png')"
+              alt="maintenance feature"
             />
           </div>
         </div>
@@ -233,6 +259,7 @@
       <div class="row">
         <img
           :src="require('@/assets/img/background/bg-dots-white.png')"
+          alt="background dots white"
           class="bg-dots"
         />
         <div class="col-lg-6 col-md-8 content">
@@ -248,6 +275,7 @@
         </div>
         <img
           :src="require('@/assets/img/background/bg-monster-white.png')"
+          alt="background monster white"
           class="bg-monster"
         />
       </div>
