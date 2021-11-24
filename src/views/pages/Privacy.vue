@@ -54,6 +54,16 @@
     </section>
   </div>
 </template>
+<script>
+import { useMeta } from "vue-meta";
+export default {
+  setup() {
+    useMeta({
+      title: "Kebijakan Privasi",
+    });
+  },
+};
+</script>
 <style>
 .privacy {
   padding: 7vw 0;

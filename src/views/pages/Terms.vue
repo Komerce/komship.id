@@ -90,6 +90,16 @@
     </section>
   </div>
 </template>
+<script>
+import { useMeta } from "vue-meta";
+export default {
+  setup() {
+    useMeta({
+      title: "Syarat & Ketentuan",
+    });
+  },
+};
+</script>
 <style>
 .terms {
   padding: 7vw 0;

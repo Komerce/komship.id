@@ -423,7 +423,7 @@ export default {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  margin-top: 2vw;
+  margin-top: 1vw;
   text-align: justify;
 }
 .feature .bg-ellipse {

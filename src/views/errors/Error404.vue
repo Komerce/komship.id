@@ -10,7 +10,7 @@
     </nav>
     <section class="error-404">
       <div class="container">
-        <v-img
+        <img
           :src="require('@/assets/img/partials/404.png')"
           class="image-error"
         />
@@ -27,6 +27,16 @@
     </section>
   </div>
 </template>
+<script>
+import { useMeta } from "vue-meta";
+export default {
+  setup() {
+    useMeta({
+      title: "Halaman Tidak Ditemukan",
+    });
+  },
+};
+</script>
 <style>
 .image-navbar {
   margin-left: 5vw;
@@ -37,6 +47,7 @@
 }
 .image-error {
   margin: auto;
+  display: flex;
   width: 300px;
 }
 .title-error {
@@ -64,6 +75,7 @@
   width: 222px;
   height: 50px;
   border-radius: 12px;
+  border: none;
   color: #ffffff;
   font-weight: 600;
   font-size: 16px;

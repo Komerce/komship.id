@@ -55,6 +55,16 @@
     </section>
   </div>
 </template>
+<script>
+import { useMeta } from "vue-meta";
+export default {
+  setup() {
+    useMeta({
+      title: "Tentang Kami",
+    });
+  },
+};
+</script>
 <style>
 .about {
   background-color: #f8f9fa;

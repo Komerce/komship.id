@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  <metainfo>
+    <template v-slot:title="{ content }">{{
+      content ? `${content} ` : `Komship.id`
+    }}</template>
+  </metainfo>
+  <router-view />
 </template>
 <script>
 export default {
