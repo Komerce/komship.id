@@ -42,96 +42,33 @@
             yang bisa kamu dapatkan untuk peningkatan bisnismu.
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-lg-4 col-md-6">
+        <div class="row mt-5 service-desktop">
+          <div
+            class="col-lg-4 col-md-6"
+            v-for="item in service_items"
+            :key="item.id"
+          >
             <div class="card content">
               <div class="card-body">
-                <img
-                  :src="require('@/assets/img/icons/rts-icon.png')"
-                  class="icons"
-                />
-                <h3 class="title-content">RTS Rendah</h3>
-                <p class="description-content">
-                  Tingkat pengembalian barang rendah, pebisnis semakin untung.
-                </p>
+                <img :src="item.image" class="icons" />
+                <h3 class="title-content">{{ item.title }}</h3>
+                <p class="description-content">{{ item.description }}</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card content">
-              <div class="card-body">
-                <img
-                  :src="require('@/assets/img/icons/income-icon.png')"
-                  class="icons"
-                />
-                <h3 class="title-content">Informasi Penghasilan</h3>
-                <p class="description-content">
-                  Makin mudah pantau penghasilan terupdate kapanpun dan di
-                  manapun.
-                </p>
+        </div>
+        <div class="service-mobile">
+          <carousel>
+            <slide v-for="item in service_items" :key="item.id">
+              <div class="card mx-3">
+                <div class="card-body">
+                  <img :src="item.image" class="icons mb-3" />
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.description }}</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card content">
-              <div class="card-body">
-                <img
-                  :src="require('@/assets/img/icons/analyst-icon.png')"
-                  class="icons"
-                />
-                <h3 class="title-content">Analisa Produk Terlaris</h3>
-                <p class="description-content">
-                  Dapatkan insight pengembangan produk dengan analisa produk
-                  terlaris.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card content">
-              <div class="card-body">
-                <img
-                  :src="require('@/assets/img/icons/monitoring-cs-icon.png')"
-                  class="icons"
-                />
-                <h3 class="title-content">Pantau Performa Customer Service</h3>
-                <p class="description-content">
-                  Makin mudah memaksimalkan kinerja CS dengan sistem pemantauan
-                  praktis dan real-time.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card content">
-              <div class="card-body">
-                <img
-                  :src="require('@/assets/img/icons/cod-icon.png')"
-                  class="icons"
-                />
-                <h3 class="title-content">Pencairan Uang COD Kapan Saja</h3>
-                <p class="description-content">
-                  Cashflow pantang terganggu, dengan kemudahan pencaiaran dana
-                  kapanpun.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card content">
-              <div class="card-body">
-                <img
-                  :src="require('@/assets/img/icons/cashback-icon.png')"
-                  class="icons"
-                />
-                <h3 class="title-content">Cashback Ongkos Kirim</h3>
-                <p class="description-content">
-                  Semakin rajin kirim barang, semakin untung! cashback ongkis
-                  kirim menantimu.
-                </p>
-              </div>
-            </div>
-          </div>
+            </slide>
+          </carousel>
         </div>
       </div>
     </section>
@@ -249,7 +186,61 @@
   </div>
 </template>
 <script>
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide } from "vue3-carousel";
 export default {
+  components: {
+    Carousel,
+    Slide,
+  },
+  data() {
+    return {
+      service_items: [
+        {
+          id: 1,
+          title: "RTS Rendah",
+          image: require("@/assets/img/icons/rts-icon.png"),
+          description:
+            "Tingkat pengembalian barang rendah, pebisnis semakin untung.",
+        },
+        {
+          id: 2,
+          title: "Informasi Penghasilan",
+          image: require("@/assets/img/icons/income-icon.png"),
+          description:
+            "Makin mudah pantau penghasilan terupdate kapanpun dan di manapun.",
+        },
+        {
+          id: 3,
+          title: "Analisa Produk Terlaris",
+          image: require("@/assets/img/icons/analyst-icon.png"),
+          description:
+            "Dapatkan insight pengembangan produk dengan analisa produk terlaris.",
+        },
+        {
+          id: 4,
+          title: "Pantau Performa Customer Service",
+          image: require("@/assets/img/icons/monitoring-cs-icon.png"),
+          description:
+            "Makin mudah memaksimalkan kinerja CS dengan sistem pemantauan praktis dan real-time.",
+        },
+        {
+          id: 5,
+          title: "Pencairan Uang COD Kapan Saja",
+          image: require("@/assets/img/icons/cod-icon.png"),
+          description:
+            "Cashflow pantang terganggu, dengan kemudahan pencaiaran dana kapanpun.",
+        },
+        {
+          id: 6,
+          title: "Cashback Ongkos Kirim",
+          image: require("@/assets/img/icons/cashback-icon.png"),
+          description:
+            "Semakin rajin kirim barang, semakin untung! cashback ongkis kirim menantimu.",
+        },
+      ],
+    };
+  },
   created() {
     window.addEventListener("scroll", this.homeScroll);
     window.addEventListener("scroll", this.serviceScroll);
@@ -355,6 +346,9 @@ export default {
   padding-top: 5vw;
   background-color: #f8f9fa;
   scroll-margin-top: 70px;
+}
+.service-mobile {
+  display: none;
 }
 .service .title {
   font-weight: 700;
@@ -590,11 +584,23 @@ export default {
   .register-now .image-mobile img {
     max-width: 100%;
   }
-  .service .title {
-    margin-bottom: 5vw;
+  .service-desktop {
+    display: none;
   }
-  .service .content {
-    padding: 2vw 4vw;
+  .service-mobile {
+    display: unset;
+  }
+  .service-mobile .card {
+    margin-top: 20px;
+    min-height: 200px;
+    border: none;
+    border-radius: 10px;
+  }
+  .service-mobile h3 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .service .title {
     margin-bottom: 5vw;
   }
   .feature .row {
@@ -641,6 +647,12 @@ export default {
   }
   .feature .title-content {
     font-size: 26px;
+  }
+  .service-mobile .card {
+    min-height: 250px;
+  }
+  .service-mobile p {
+    font-size: 14px;
   }
 }
 </style>
