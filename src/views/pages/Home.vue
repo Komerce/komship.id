@@ -4,6 +4,7 @@
       <div class="row">
         <img
           :src="require('@/assets/img/background/bg-circle.png')"
+          alt="circle background"
           class="bg-circle"
         />
         <div class="col-lg-5 col-md-6 image-mobile">
@@ -17,7 +18,7 @@
           <p class="description">
             Dengan menggunakan Komship proses pengiriman paket orderan akan
             lebih mudah dan menguntungkan. Tidak hanya itu, kamu akan makin
-            untung dengan adanya cashback biaya pengiriman barang COD dan
+            untung dengan adanya <i>cashback</i> biaya pengiriman barang COD dan
             kemudahan penarikan dana hasil dari transaksi COD kapanpun setelah
             barang diterima pembeli.
           </p>
@@ -75,18 +76,22 @@
     <section id="feature" class="feature">
       <img
         :src="require('@/assets/img/background/bg-ellipse.png')"
+        alt="background ellipse"
         class="bg-ellipse"
       />
       <img
         :src="require('@/assets/img/background/bg-dots.png')"
+        alt="background dots"
         class="bg-dots"
       />
       <img
         :src="require('@/assets/img/background/bg-square.png')"
+        alt="background square"
         class="bg-square"
       />
       <img
         :src="require('@/assets/img/background/bg-monster.png')"
+        alt="background monster"
         class="bg-monster"
       />
       <div class="container">
@@ -95,25 +100,28 @@
           <div class="col-md-6 image-mobile">
             <img
               :src="require('@/assets/img/partials/dashboard-feature.png')"
+              alt="dashboard feature"
             />
           </div>
           <div class="col-md-6 content">
             <img
               :src="require('@/assets/img/icons/dashboard-feature-icon.png')"
+              alt="dashboard feature icon"
               class="icons-content"
               width="90%"
             />
             <h2 class="title-content">Dashboard Komship</h2>
             <p class="description-content">
-              Dapatkan informasi terupdate dan insight tentang produk terlaris,
-              customer loyal, top admin order, top customer service, hingga
-              laporan penghasilan penjualan secara realtime hanya di satu
-              dashboard.
+              Dapatkan informasi ter<i>update</i> dan <i>insight</i> tentang
+              produk terlaris, <i>customer loyal</i>, top admin order, top
+              <i>customer service</i>, hingga laporan penghasilan penjualan
+              secara <i>realtime</i> hanya di satu dashboard.
             </p>
           </div>
           <div class="col-md-6 image-desktop">
             <img
               :src="require('@/assets/img/partials/dashboard-feature.png')"
+              alt="dashboard feature"
             />
           </div>
         </div>
@@ -127,6 +135,7 @@
           <div class="col-md-6 content">
             <img
               :src="require('@/assets/img/icons/income-feature-icon.png')"
+              alt="income feature icon"
               class="icons-content"
             />
             <h2 class="title-content">Informasi Penghasilan</h2>
@@ -140,22 +149,25 @@
           <div class="col-md-6 image-mobile">
             <img
               :src="require('@/assets/img/partials/maintenance-feature.png')"
+              alt="maintenance feature"
             />
           </div>
           <div class="col-md-6 content">
             <img
               :src="require('@/assets/img/icons/maintenance-feature-icon.png')"
+              alt="maintenance feature icon"
               class="icons-content"
             />
             <h2 class="title-content">Pengelolaan Produk</h2>
             <p class="description-content">
-              Penyesuaian daftar produk hingga update stok dapat diatur dengan
+              Penyesuaian daftar produk hingga <i>update</i> stok dapat diatur
               mudah dalam satu sistem yang terintegrasi.
             </p>
           </div>
           <div class="col-md-6 image-desktop">
             <img
               :src="require('@/assets/img/partials/maintenance-feature.png')"
+              alt="maintenance feature"
             />
           </div>
         </div>
@@ -165,13 +177,15 @@
       <div class="row">
         <img
           :src="require('@/assets/img/background/bg-dots-white.png')"
+          alt="background dots white"
           class="bg-dots"
         />
         <div class="col-lg-6 col-md-8 content">
           <p class="description-content">
             Komship saat ini telah bekerjasama dengan JNE untuk menjadi mitra
             ekspedisi untuk pengiriman barang. Ketika UMKM menggunakan layanan
-            Komship, maka UMKM akan mendapatkan cashback ongkir sebesar 25%.
+            Komship, maka UMKM akan mendapatkan <i>cashback</i> ongkir sebesar
+            25%.
           </p>
           <button class="btn btn-register-conclusion btn-outline-light">
             Daftar sekarang
@@ -179,6 +193,7 @@
         </div>
         <img
           :src="require('@/assets/img/background/bg-monster-white.png')"
+          alt="background monster white"
           class="bg-monster"
         />
       </div>

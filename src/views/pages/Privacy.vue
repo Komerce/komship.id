@@ -6,13 +6,13 @@
         <p>
           <span>PT. Kampung Marketerindo Berdaya</span> yang kemudian disebut
           “Komship” atau “Kami” adalah pemilik konten, grafis, dan pengembang
-          dari situs dan platform Komship.Kami berkomitmen untuk melindungi dan
+          dari situs dan platform Komship. Kami berkomitmen untuk melindungi dan
           menghargai privasi dan informasi pribadi maupun perusahaan yang kami
           miliki.
         </p>
         <p>
-          Anda wajib membaca dan maemahami Kebijakan Privasi kami sebelum
-          menggunakan layanan Komship. Dengan menggunakan layanan Komship, Kami
+          Anda wajib membaca dan memahami Kebijakan Privasi kami sebelum
+          menggunakan layanan Komship. Dengan menggunakan layanan Komship, kami
           menganggap anda telah setuju dengan Kebijakan Privasi kami.
         </p>
         <h5>PEROLEHAN DATA</h5>
