@@ -22,7 +22,10 @@
             kemudahan penarikan dana hasil dari transaksi COD kapanpun setelah
             barang diterima pembeli.
           </p>
-          <button class="btn btn-primary btn-register-now">
+          <button
+            class="btn btn-primary btn-register-now"
+            @click="openWindow('https://partner.komerce.id/komship-register')"
+          >
             Daftar sekarang juga
           </button>
         </div>
@@ -187,7 +190,10 @@
             Komship, maka UMKM akan mendapatkan <i>cashback</i> ongkir sebesar
             25%.
           </p>
-          <button class="btn btn-register-conclusion btn-outline-light">
+          <button
+            class="btn btn-register-conclusion btn-outline-light"
+            @click="openWindow('https://partner.komerce.id/komship-register')"
+          >
             Daftar sekarang
           </button>
         </div>
@@ -270,6 +276,9 @@ export default {
     document.getElementById("menuHome").classList.add("active");
   },
   methods: {
+    openWindow(url) {
+      window.open(url);
+    },
     homeScroll() {
       const el = document.getElementById("home");
       const elTop = document.body.getBoundingClientRect().top;
