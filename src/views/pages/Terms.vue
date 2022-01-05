@@ -12,7 +12,7 @@
           penginputan data barang, sampai dengan proses pengiriman ke pembeli.
           Syarat dan ketentuan ini dapat mempengaruhi hak dan kewajiban pengguna
           jasa Komerce dan di bawah ketentuan hukum yang berlaku.<br />
-          Dengan menggunakan layanan kami, anda dianggap telah membaca,
+          Dengan menggunakan layanan kami, Anda dianggap telah membaca,
           mengerti, dan menyetujui serta terikat dan tunduk dengan segala syarat
           dan ketentuan yang berlaku di sini. Syarat dan ketentuan ini dapat
           diubah oleh kami dengan pemberitahuan terlebih dahulu.
@@ -26,33 +26,33 @@
           1.3 "Partner" : Orang yang menggunakan jasa Komship<br />
           1.4 "Ekspedisi" : Perusahaan penyedia jasa pengiriman<br />
           1.5 "UMKM" : Bisnis yang dijalankan oleh perseorangan, rumah tangga,
-          atau badan usaha yang memenuhi kriteria yang ditetapkan oleh Undang-
-          undang No. 20 tahun 2008<br />
-          1.6 "Pebinsis online" : Perusahaan atau perseorangan yang menjalankan
+          atau badan usaha yang memenuhi kriteria yang ditetapkan oleh
+          Undang-Undang No. 20 tahun 2008<br />
+          1.6 Pebinsis online : Perusahaan atau perseorangan yang menjalankan
           bisnisnya melalui sistem digital atau elektronik<br />
           1.7 "COD" : Cash on Delivery. Sistem pembelian atau transaksi yang
           pembayarannya dilakukan setelah barang diterima oleh pembeli<br />
           1.8 "Pickup" : Penjemputan barang ke toko penjual untuk diantarkan ke
           kantor ekspedisi<br />
           1.9 "Data Pribadi" : Data-data pribadi Pengguna yang diberikan kepada
-          pihak Komerce yang tak terbatas pada meliputi nama, jenis kelamin,
+          pihak Komerce yang tidak terbatas pada meliputi nama, jenis kelamin,
           nomor telepon, alamat lengkap, informasi bisnis sebagaimana yang
           diminta dalam proses pemberdayaan Talent.
         </p>
         <h5>2. PENGGUNA JASA</h5>
         <p>
-          Dengan menjadi pengguna platform Komship, maka anda dianggap telah
+          Dengan menjadi pengguna platform Komship, maka Anda dianggap telah
           mampu untuk memenuhi syarat dan ketentuan sebagai berikut:
         </p>
         <p>
           2.1 Anda tidak diperkenankan untuk menggunakan situs Komship, sebagian
           atau keseluruhan konten dari situs Komship untuk keperluan pribadi.
-          Hal ini dapat diartikan bahwa anda hanya diperkenankan menggunakan
+          Hal ini dapat diartikan bahwa Anda hanya diperkenankan menggunakan
           situs, aplikasi, dan konten dari Komship untuk keperluan individu atau
           bisnis yang menyediakan pengelolaan transaksi barang.<br />
           2.2 Penyalahgunaan situs Komship untuk kepentingan pribadi maupun
           kelompok yang melanggar hukum akan ditindak sesuai dengan peraturan
-          yang diatur dalan Undang-Undang yang berlaku di Republik Indonesia.<br />
+          yang diatur dalam Undang-Undang yang berlaku di Republik Indonesia.<br />
           2.3 Pengguna jasa pengelola transaksi Komship yang terbukti
           menyalahgunakan kerjasama dengan Komerce untuk tindakan yang melanggar
           hukum akan ditindak sesuai dengan peraturan perundang-undangan yang
@@ -83,8 +83,8 @@
           fleksibel, kesepakatan dapat dicapai dengan diskusi yang melibatkan
           kedua belah pihak.<br />
           4.3 Untuk pertanyaan seputar hal-hal yang tidak disebutkan dalam
-          Syarat dan Ketentuan ini, anda dapat bertanya melalui e-mail kami di
-          kontak komship atau menghubungi kami di nomor komship.
+          Syarat dan Ketentuan ini, Anda dapat bertanya melalui e-mail kami di
+          kontak Komship atau menghubungi kami di nomor Komship.
         </p>
       </div>
     </section>
