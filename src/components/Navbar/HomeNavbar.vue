@@ -48,7 +48,7 @@
           </li>
           <li class="nav-item">
             <a id="menuService" class="nav-link" @click="goto('alur')"
-              >AlurPengiriman</a
+              >Alur Pengiriman</a
             >
           </li>
           <li class="nav-item">

@@ -82,16 +82,16 @@
             class="bg-gambar"
           />
         </div>
-        <div class="col-lg-6 col-md-8 content">
-          <p class="description-content" style="font-size: 24px">
+        <div class="col-lg-6 col-md-10 content">
+          <p class="description-content" style="font-size: 28px">
             Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
-            pengiriman COD dan Non-COD
+            pengiriman COD dan non COD
           </p>
         </div>
         <img
-          :src="require('@/assets/img/logo/jne-logo.png')"
+          :src="require('@/assets/img/icons/jne.png')"
           alt="logo jne"
-          class="bg-monster"
+          class="bg-monster1"
         />
       </div>
     </section>
@@ -247,22 +247,6 @@
         </div>
       </div>
     </section>
-    <section class="conclusion1">
-      <div class="row">
-        <div class="col-md-1 image-mobile">
-          <img
-            :src="require('@/assets/img/background/foto2.png')"
-            class="bg-gambar"
-          />
-        </div>
-        <div class="col-lg-6 col-md-8 content">
-          <p class="description-content" style="font-size: 24px">
-            Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
-            pengiriman COD dan Non-COD
-          </p>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 <script>
@@ -279,14 +263,14 @@ export default {
         {
           id: 1,
           title: "Terima Pembayaran Mudah",
-          image: require("@/assets/img/icons/wallet-check.png"),
+          image: require("@/assets/img/icons/bgwallet.png"),
           description:
             "Langsung bisa terima pembayaran dari customer dengan mudah dan tanpa syarat.",
         },
         {
           id: 2,
           title: "Pencarian Setiap Hari",
-          image: require("@/assets/img/icons/income-icon.png"),
+          image: require("@/assets/img/icons/calender.png"),
           description:
             "Kamu bisa tarik dana COD kapanpun karena pencairan dapat dilakukan setiap hari.",
         },
@@ -300,20 +284,20 @@ export default {
         {
           id: 4,
           title: "Biaya COD Termurah",
-          image: require("@/assets/img/icons/monitoring-cs-icon.png"),
+          image: require("@/assets/img/icons/empty-wallet1.png"),
           description: "Biaya COD cuma 2,8%, Nggak pake mahal!",
         },
         {
           id: 5,
           title: "Gratis Biaya Retur",
-          image: require("@/assets/img/icons/rts-icon.png"),
+          image: require("@/assets/img/icons/rts-icon1.png"),
           description:
             "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD   *S&K berlaku.",
         },
         {
           id: 6,
           title: "Gratis Jemput Paket",
-          image: require("@/assets/img/icons/cashback-icon.png"),
+          image: require("@/assets/img/icons/kendaraan.png"),
           description:
             "Cukup tunggu saja di rumah, ekspedisi akan mendatangi lokasimu untuk mengambil paket TANPA MINIMUM ORDER.",
         },
@@ -591,6 +575,13 @@ export default {
   right: -4px;
   width: 186px;
   height: 286px;
+}
+.conclusion .bg-monster1 {
+  position: absolute;
+  width: 186px;
+  height: 59.12px;
+  right: 100px;
+  top: 100px;
 }
 .conclusion .bg-gambar {
   position: absolute;
