@@ -95,101 +95,28 @@
         />
       </div>
     </section>
-    <section id="feature" class="feature">
-      <img
-        :src="require('@/assets/img/background/bg-ellipse.png')"
-        alt="background ellipse"
-        class="bg-ellipse"
-      />
-      <img
-        :src="require('@/assets/img/background/bg-dots.png')"
-        alt="background dots"
-        class="bg-dots"
-      />
-      <img
-        :src="require('@/assets/img/background/bg-square.png')"
-        alt="background square"
-        class="bg-square"
-      />
-      <img
-        :src="require('@/assets/img/background/bg-monster.png')"
-        alt="background monster"
-        class="bg-monster"
-      />
+    <section id="alur" class="feature">
       <div class="container">
-        <h2 class="title">Fitur</h2>
         <div class="row">
-          <div class="col-md-6 image-mobile">
+          <div class="col-md-1 image-mobile"></div>
+          <div class="col-md-6 content">
+            <h2 class="title-content">Alur pengiriman</h2>
+            <h2 class="title-content">
+              menggunakan
+              <span class="order" style="color: #fba63c">Komship</span>
+            </h2>
+            <div class="row mt-5 service-desktop">
+              <div v-for="item in services_item" :key="item.id">
+                <img :src="item.image" class="icons" />
+                <h1 class="title-content">{{ item.title1 }}</h1>
+                <img :src="item.gambar" class="icons" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 image-desktop">
             <img
-              :src="require('@/assets/img/partials/dashboard-feature.png')"
+              :src="require('@/assets/img/icons/dashboard.png')"
               alt="dashboard feature"
-            />
-          </div>
-          <div class="col-md-6 content">
-            <img
-              :src="require('@/assets/img/icons/dashboard-feature-icon.png')"
-              alt="dashboard feature icon"
-              class="icons-content"
-              width="90%"
-            />
-            <h2 class="title-content">Dashboard Komship</h2>
-            <p class="description-content">
-              Dapatkan informasi ter<i>update</i> dan <i>insight</i> tentang
-              produk terlaris, <i>customer loyal</i>, top admin order, top
-              <i>customer service</i>, hingga laporan penghasilan penjualan
-              secara <i>realtime</i> hanya di satu dashboard.
-            </p>
-          </div>
-          <div class="col-md-6 image-desktop">
-            <img
-              :src="require('@/assets/img/partials/dashboard-feature.png')"
-              alt="dashboard feature"
-            />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 image-mobile">
-            <img :src="require('@/assets/img/partials/income-feature.png')" />
-          </div>
-          <div class="col-md-6 image-desktop">
-            <img :src="require('@/assets/img/partials/income-feature.png')" />
-          </div>
-          <div class="col-md-6 content">
-            <img
-              :src="require('@/assets/img/icons/income-feature-icon.png')"
-              alt="income feature icon"
-              class="icons-content"
-            />
-            <h2 class="title-content">Informasi Penghasilan</h2>
-            <p class="description-content">
-              Pebisnis akan semakin mudah menganalisa data penghasilan baik dari
-              transaksi menggunakan metode COD ataupun transfer bank.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 image-mobile">
-            <img
-              :src="require('@/assets/img/partials/maintenance-feature.png')"
-              alt="maintenance feature"
-            />
-          </div>
-          <div class="col-md-6 content">
-            <img
-              :src="require('@/assets/img/icons/maintenance-feature-icon.png')"
-              alt="maintenance feature icon"
-              class="icons-content"
-            />
-            <h2 class="title-content">Pengelolaan Produk</h2>
-            <p class="description-content">
-              Penyesuaian daftar produk hingga <i>update</i> stok dapat diatur
-              mudah dalam satu sistem yang terintegrasi.
-            </p>
-          </div>
-          <div class="col-md-6 image-desktop">
-            <img
-              :src="require('@/assets/img/partials/maintenance-feature.png')"
-              alt="maintenance feature"
             />
           </div>
         </div>

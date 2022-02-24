@@ -47,7 +47,7 @@
             >
           </li>
           <li class="nav-item">
-            <a id="menuService" class="nav-link" @click="goto('alur')"
+            <a id="menuAlur" class="nav-link" @click="goto('alur')"
               >Alur Pengiriman</a
             >
           </li>
@@ -73,6 +73,9 @@ export default {
     goto(id) {
       if (this.$route.path !== "/") {
         this.$router.push("/");
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      }
+      if (this.$route.path == "/") {
         document.getElementById(id).scrollIntoView({ behavior: "smooth" });
       }
       if (this.$route.path == "/") {
