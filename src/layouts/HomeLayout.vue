@@ -1,0 +1,33 @@
+<template>
+  <metainfo>
+    <template v-slot:title="{ content }">{{
+      content ? `${content} ` : `Komship.id`
+    }}</template>
+  </metainfo>
+  <div>
+    <Navbar />
+    <div style="padding-top: 80px">
+      <router-view />
+    </div>
+    <Footer />
+  </div>
+</template>
+<script>
+import "@/assets/css/app.css";
+import Navbar from "@/components/Navbar/HomeNavbar.vue";
+import Footer from "@/components/Footer/HomeFooter.vue";
+import { useMeta } from "vue-meta";
+export default {
+  name: "HomeLayout",
+  components: {
+    Navbar,
+    Footer,
+  },
+  setup() {
+    useMeta({
+      title: "Komship.id",
+      htmlAttrs: { lang: "id", amp: true },
+    });
+  },
+};
+</script>
