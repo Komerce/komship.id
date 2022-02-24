@@ -2,19 +2,15 @@
   <div style="background-color: #f6f6f9">
     <section id="home" class="register-now container">
       <div class="row">
-        <img
-          :src="require('@/assets/img/background/bg-circle.png')"
-          alt="circle background"
-          class="bg-circle"
-        />
         <div class="col-lg-5 col-md-6 image-mobile">
-          <img :src="require('@/assets/img/hero/home-model.png')" />
+          <img :src="require('@/assets/img/hero/model.png')" />
         </div>
-        <div class="col-lg-7 col-md-6 content">
+        <div class="col-lg-6 col-md-7 content">
           <h1 class="title">
             Juaranya Platform Kirim Barang, Mudah dan Murah dengan
             <span class="order">Komship</span>
           </h1>
+
           <p class="description">
             Dapatkan <i>CASHBACK</i> mulai dari 25% dan GRATIS biaya retur!
             Pelajari lebih lanjut untuk dapat tawaran menarik.
@@ -26,8 +22,11 @@
             Mulai Sekarang
           </button>
         </div>
-        <div class="col-lg-5 col-md-6 image-desktop">
-          <img :src="require('@/assets/img/hero/home-model.png')" />
+        <div class="col-lg-5 col-md-7 image-desktop">
+          <img
+            :src="require('@/assets/img/hero/model.png')"
+            style="margin-right: 10px; margin-left: 200px"
+          />
         </div>
       </div>
     </section>
@@ -75,7 +74,13 @@
       </div>
     </section>
     <section class="conclusion">
-      <div class="row">
+      <div
+        class="row"
+        style="
+          background: linear-gradient(to bottom, #ff6a3a 0%, #ff6a3a 100%)
+            no-repeat;
+        "
+      >
         <div class="col-md-2 image-mobile">
           <img
             :src="require('@/assets/img/background/bg-gambar.png')"
@@ -88,11 +93,12 @@
             pengiriman COD dan non COD
           </p>
         </div>
-        <img
-          :src="require('@/assets/img/icons/jne.png')"
-          alt="logo jne"
-          class="bg-monster1"
-        />
+        <div class="image-partner1">
+          <img
+            :src="require('@/assets/img/logo/jne-logo.png')"
+            alt="logo jne"
+          />
+        </div>
       </div>
     </section>
     <section id="alur" class="feature">
@@ -229,6 +235,43 @@ export default {
             "Cukup tunggu saja di rumah, ekspedisi akan mendatangi lokasimu untuk mengambil paket TANPA MINIMUM ORDER.",
         },
       ],
+      services_item: [
+        {
+          id: 1,
+          title2: "tes",
+          image: require("@/assets/img/icons/circle1.png"),
+          gambar: require("@/assets/img/icons/arrow.png"),
+        },
+        {
+          id: 2,
+          title2: "tes",
+          image: require("@/assets/img/icons/gram1.png"),
+          gambar: require("@/assets/img/icons/arrow.png"),
+        },
+        {
+          id: 3,
+          title2: "tes",
+          image: require("@/assets/img/icons/seller2.png"),
+          gambar: require("@/assets/img/icons/arrow.png"),
+        },
+        {
+          id: 4,
+          title2: "tes",
+          image: require("@/assets/img/icons/ekspedisi.png"),
+          gambar: require("@/assets/img/icons/arrow.png"),
+        },
+        {
+          id: 5,
+          title2: "tes",
+          image: require("@/assets/img/icons/barangditerima.png"),
+          gambar: require("@/assets/img/icons/arrow.png"),
+        },
+        {
+          id: 6,
+          title2: "tes",
+          image: require("@/assets/img/icons/dana.png"),
+        },
+      ],
       service_item: [
         {
           id: 1,
@@ -321,34 +364,54 @@ export default {
 .register-now .image-desktop img {
   max-width: 100%;
 }
-.register-now .bg-circle {
-  position: absolute;
-  width: 124px;
-  margin-top: 4vw;
-  margin-left: -2vw;
-}
 .register-now .content {
   margin-top: 5vw;
 }
 .register-now .title {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 40px;
-  line-height: 160%;
+  position: static;
+  width: 540px;
+  font-style: normal;
+  height: 180px;
+  line-height: 150%;
+  margin: 16px 0px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 .register-now .title .kepada {
   display: flex;
+}
+.image-partner {
+  position: absolute;
+  width: 186px;
+  height: 59.12px;
+  left: 962px;
+  top: 1798px;
 }
 .register-now .title .order {
   color: #ff6a3a;
 }
 .register-now .description {
-  margin-top: 2vw;
-  width: 80%;
-  color: #828282;
-  font-size: 18px;
-  line-height: 28.8px;
-  font-weight: 400;
+  position: static;
+  width: 491px;
+  height: 48px;
+  left: 0px;
+  top: 232px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+
   text-align: justify;
+  letter-spacing: 0.5px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 16px 0px;
 }
 .register-now .btn-register-now {
   margin-top: 1vw;
@@ -471,12 +534,33 @@ export default {
   background-color: #ff6a3a;
   color: #ffffff;
 }
+.alur .title-content {
+  position: static;
+  width: 290px;
+  height: 24px;
+  left: 20px;
+  top: 0px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  color: #828282;
+}
 .conclusion1 {
+  position: absolute;
   display: flex;
   justify-content: left;
-  height: 316px;
-  background-size: 50px;
-  background-color: #ff6a3a;
+  height: 255px;
+  width: 1284px;
+  left: -4px;
+  background: linear-gradient();
+  top: 1716px;
   color: #ffffff;
 }
 .conclusion .content {
@@ -507,6 +591,7 @@ export default {
   position: absolute;
   width: 186px;
   height: 59.12px;
+  background: linear-gradient(#ff6a3a 100%, #ff6a3c 100%);
   right: 100px;
   top: 100px;
 }
