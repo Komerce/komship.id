@@ -76,29 +76,27 @@
     </section>
     <section class="conclusion">
       <div class="row">
+        <div class="col-md-2 image-mobile">
+          <img
+            :src="require('@/assets/img/background/bg-gambar.png')"
+            class="bg-gambar"
+          />
+        </div>
         <div class="col-lg-6 col-md-8 content">
-          <p class="description-content">
-            Komship saat ini telah bekerjasama dengan JNE untuk menjadi mitra
-            ekspedisi untuk pengiriman barang. Ketika UMKM menggunakan layanan
-            Komship, maka UMKM akan mendapatkan <i>cashback</i> ongkir sebesar
-            25%.
+          <p class="description-content" style="font-size: 24px">
+            Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+            pengiriman COD dan Non-COD
           </p>
-          <button
-            class="btn btn-register-conclusion btn-outline-light"
-            @click="openWindow('https://partner.komerce.id/komship-register')"
-          >
-            Daftar sekarang
-          </button>
         </div>
         <img
-          :src="require('@/assets/img/background/bg-monster-white.png')"
-          alt="background monster white"
+          :src="require('@/assets/img/logo/jne-logo.png')"
+          alt="logo jne"
           class="bg-monster"
         />
       </div>
     </section>
     <section id="feature" class="feature">
-      <!-- <img
+      <img
         :src="require('@/assets/img/background/bg-ellipse.png')"
         alt="background ellipse"
         class="bg-ellipse"
@@ -117,8 +115,9 @@
         :src="require('@/assets/img/background/bg-monster.png')"
         alt="background monster"
         class="bg-monster"
-      /> -->
+      />
       <div class="container">
+        <h2 class="title">Fitur</h2>
         <div class="row">
           <div class="col-md-6 image-mobile">
             <img
@@ -126,12 +125,14 @@
               alt="dashboard feature"
             />
           </div>
-          <div class="col-md-3 content">
-            <h1 class="title">
-              Alur pengiriman Mudah menggunakan<span class="order"
-                >Komship</span
-              >
-            </h1>
+          <div class="col-md-6 content">
+            <img
+              :src="require('@/assets/img/icons/dashboard-feature-icon.png')"
+              alt="dashboard feature icon"
+              class="icons-content"
+              width="90%"
+            />
+            <h2 class="title-content">Dashboard Komship</h2>
             <p class="description-content">
               Dapatkan informasi ter<i>update</i> dan <i>insight</i> tentang
               produk terlaris, <i>customer loyal</i>, top admin order, top
@@ -194,6 +195,74 @@
         </div>
       </div>
     </section>
+    <section id="service" class="service">
+      <div class="container">
+        <h2 class="title">Fitur Tambahan</h2>
+        <div class="row mt-5 service-desktop">
+          <div
+            class="col-lg-4 col-md-6"
+            v-for="item in service_item"
+            :key="item.id"
+          >
+            <div
+              class="card content"
+              style="background-color: #ff6a3a border-radius: 24px;width:338px; height:381px;"
+            >
+              <div
+                class="card-body"
+                style="background-color: #ff6a3a; border-radius: 24px"
+              >
+                <img
+                  :src="item.image"
+                  class="icons"
+                  style="
+                    width: 307.68px;
+                    height: 263.4px;
+                    background-color: white;
+                    border-radius: 24px;
+                  "
+                />
+                <h3
+                  class="title-content"
+                  style="text-align: center; color: white"
+                >
+                  {{ item.title1 }}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-mobile">
+          <carousel>
+            <slide v-for="item in service_items" :key="item.id">
+              <div class="card mx-3">
+                <div class="card-body">
+                  <img :src="item.image" class="icons mb-3" />
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.description }}</p>
+                </div>
+              </div>
+            </slide>
+          </carousel>
+        </div>
+      </div>
+    </section>
+    <section class="conclusion1">
+      <div class="row">
+        <div class="col-md-1 image-mobile">
+          <img
+            :src="require('@/assets/img/background/foto2.png')"
+            class="bg-gambar"
+          />
+        </div>
+        <div class="col-lg-6 col-md-8 content">
+          <p class="description-content" style="font-size: 24px">
+            Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+            pengiriman COD dan Non-COD
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>
@@ -210,7 +279,7 @@ export default {
         {
           id: 1,
           title: "Terima Pembayaran Mudah",
-          image: require("@/assets/img/icons/rts-icon.png"),
+          image: require("@/assets/img/icons/wallet-check.png"),
           description:
             "Langsung bisa terima pembayaran dari customer dengan mudah dan tanpa syarat.",
         },
@@ -247,6 +316,29 @@ export default {
           image: require("@/assets/img/icons/cashback-icon.png"),
           description:
             "Cukup tunggu saja di rumah, ekspedisi akan mendatangi lokasimu untuk mengambil paket TANPA MINIMUM ORDER.",
+        },
+      ],
+      service_item: [
+        {
+          id: 1,
+          title1: "Terima Pembayaran Mudah",
+          image: require("@/assets/img/background/bgfitur.png"),
+          description:
+            "Langsung bisa terima pembayaran dari customer dengan mudah dan tanpa syarat.",
+        },
+        {
+          id: 2,
+          title1: "Customer Loyal",
+          image: require("@/assets/img/background/bgcustomer.png"),
+          description:
+            "Kamu bisa tarik dana COD kapanpun karena pencairan dapat dilakukan setiap hari.",
+        },
+        {
+          id: 3,
+          title1: "Top Admin Order",
+          image: require("@/assets/img/background/bgorder.png"),
+          description:
+            "Dapatkan cashback ongkos kirim MULAI dari 25%! Lebih hemat dibandingkan yang lain.",
         },
       ],
     };
@@ -468,34 +560,45 @@ export default {
   background-color: #ff6a3a;
   color: #ffffff;
 }
+.conclusion1 {
+  display: flex;
+  justify-content: left;
+  height: 316px;
+  background-size: 50px;
+  background-color: #ff6a3a;
+  color: #ffffff;
+}
 .conclusion .content {
   margin: auto;
-  text-align: center;
-  font-size: 16px;
+  text-align: left;
+  font-size: 18px;
   line-height: 150%;
 }
 .conclusion .description-content {
   color: #ffffff;
+  margin-right: 30px;
 }
 .conclusion .btn-register-conclusion {
   width: 208px;
   height: 60px;
   border-radius: 12px;
 }
-.conclusion .bg-dots {
-  position: absolute;
-  left: -33px;
-  margin-top: 45px;
-  width: 117px;
-  height: 216px;
-}
+
 .conclusion .bg-monster {
   position: absolute;
   display: block;
   margin-top: 15px;
-  right: -40px;
-  width: 200px;
+  right: -4px;
+  width: 186px;
   height: 286px;
+}
+.conclusion .bg-gambar {
+  position: absolute;
+  display: block;
+  margin-top: 1px;
+  left: 56px;
+  width: 290px;
+  height: 350px;
 }
 @media only screen and (max-width: 1024px) {
   .register-now .bg-circle {
@@ -648,7 +751,7 @@ export default {
     display: none;
   }
   .conclusion .description-content {
-    width: 85%;
+    width: 80%;
     margin: auto;
   }
   .conclusion .btn-register-conclusion {
