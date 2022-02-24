@@ -166,6 +166,7 @@ export default {
   justify-content: end;
 }
 .contact img {
+  cursor: pointer;
   max-width: 30px;
   max-height: 30px;
   margin-left: 1vw;

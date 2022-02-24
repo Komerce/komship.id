@@ -93,16 +93,12 @@ export default {
   height: 56px;
   margin: auto 5vw;
 }
+.nav-link {
+  cursor: pointer;
+}
 .nav-item {
   padding-left: 2.5vw;
 }
-/* .nav-item .router-link-exact-active:before {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  width: 30px;
-  border-bottom: 2px solid #f95031;
-} */
 .nav-item .active {
   color: #f95031 !important;
 }

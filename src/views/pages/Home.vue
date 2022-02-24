@@ -41,7 +41,7 @@
             <h2 class="title">Kenapa Harus Komship?</h2>
           </div>
           <div class="col-lg-7 col-md-6 description">
-            Dengan komship proses pengelolaan orderan tidak sebatas pada
+            Dengan Komship proses pengelolaan orderan tidak sebatas pada
             pengiriman barang saja. Namun banyak manfaat dari layanan Komship
             yang bisa kamu dapatkan untuk peningkatan bisnismu.
           </div>
