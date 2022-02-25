@@ -12,7 +12,7 @@
               />
             </router-link>
             <div class="row">
-              <div class="profile-icon">
+              <div class="profile-icon" style="padding-right: 0px;">
                 <img
                   :src="require('@/assets/img/icons/location-icon.png')"
                   alt="location icon"
@@ -20,7 +20,7 @@
                   min-width="25px"
                 />
               </div>
-              <div class="profile-desc" style="margin-left: 30">
+              <div class="profile-desc p-0">
                 Head Office Komerce
               </div>
               <div class="profile-desc">
@@ -29,7 +29,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="profile-icon">
+              <div class="profile-icon" style="padding-right: 0px;">
                 <img
                   :src="require('@/assets/img/icons/email-icon.png')"
                   alt="email icon"
@@ -37,7 +37,7 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc">bd@komship.id</div>
+              <div class="profile-desc p-0">bd@komship.id</div>
             </div>
             <div class="row">
               <div class="profile-icon">
@@ -48,7 +48,7 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc">081227931840</div>
+              <div class="profile-desc p-0">081227931840</div>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 company">
@@ -72,7 +72,7 @@
             <h3 class="partner-title">Kerjasama Ekspedisi</h3>
             <div class="image-partner">
               <img
-                :src="require('@/assets/img/logo/jne-logo.png')"
+                :src="require('@/assets/img/logo/logo_jne.png')"
                 alt="logo jne"
                 max-width="100px"
               />
