@@ -128,6 +128,7 @@
         </div>
       </div>
     </section>
+    
     <section id="service" class="service">
       <div class="container">
         <h2 class="title">Fitur Tambahan</h2>
@@ -165,33 +166,98 @@
             </div>
           </div>
         </div>
-        <div class="service-mobile">
-          <carousel>
-            <slide v-for="item in service_items" :key="item.id">
-              <div class="card mx-3">
-                <div class="card-body">
-                  <img :src="item.image" class="icons mb-3" />
-                  <h3>{{ item.title }}</h3>
-                  <p>{{ item.description }}</p>
-                </div>
-              </div>
-            </slide>
-          </carousel>
-        </div>
       </div>
     </section>
+
+    <section id="contactkomerce" class="contactkomerce">
+      <div class="contactkomerce__left">
+        <h5 class="contactkomerce__left--text">Hubungi kami untuk informasi lebih lanjut</h5>
+        <img :src="require('@/assets/img/person/contactleft.png')" class="contactkomerce__left--img" />
+        <a class="contactkomerce__left--link" href="https://wa.me/6281328014170" target="_blank">
+          <span class="contactkomerce__left--link--text">WhatsApp</span>
+          <img :src="require('@/assets/img/icons/whatsapp-contact.png')" class="contactkomerce__left--link-img" />
+        </a>
+      </div>
+      <div class="contactkomerce__right">
+        <h5 class="contactkomerce__right--text">Percayakan Pengiriman Ordermu Pada Komship!</h5>
+        <img :src="require('@/assets/img/person/contactright.png')" class="contactkomerce__right--img" />
+        <a class="contactkomerce__right--link" href="https://wa.me/6281328014170" target="_blank">
+          <span class="contactkomerce__right--link-text">WhatsApp</span>
+          <img :src="require('@/assets/img/icons/whatsapp-contact.png')" class="contactkomerce__right--link-img" />
+        </a>
+      </div>
+    </section>
+
+    <!-- testimoni -->
+    <carousel :settings="settingscarousel" :wrapAround="true" :breakpoints="breakpoints">
+      <slide v-for="item in testimoniesData" :key="item.id">
+        <div class="carousel__item">
+          <div class="slidertestimoni">
+            <div class="slidertestimoni__head">
+              <div>
+                <h5 class="slidertestimoni__head--text">{{ item.name }}</h5>
+              </div>
+              <div class="slidertestimoni__head--wrapperimg">
+                <img :src="item.image" class="slidertestimoni__head--img" />
+              </div>
+            </div>
+            <div class="slidertestimoni__body">
+              <p class="slidertestimoni__body--text">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+      </slide>
+      <template #addons>
+        <Pagination />
+      </template>
+    </carousel>
   </div>
 </template>
 <script>
 import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide } from "vue3-carousel";
+import { Carousel, Slide, Pagination } from "vue3-carousel";
 export default {
   components: {
     Carousel,
     Slide,
+    Pagination,
   },
   data() {
     return {
+      // carousel settings
+      settingscarousel: {
+        itemsToShow: 1,
+        snapAlign: 'center',
+      },
+      breakpoints: {
+        // 700px and up
+        700: {
+          itemsToShow: 2.5,
+          snapAlign: 'center',
+        },
+      },
+      testimoniesData: [
+        {
+          name: "Eko Sulistiyono",
+          image: require("@/assets/img/person/testimoni-eko-s.png"),
+          description: "Baru ada platform yang sekeren ini dan sangat menguntungkan bagi kami karena lebih murah biaya CODnya dan cashback super besar, uang bisa cair tiap hari dan mudah dipakainya.",
+        },
+        {
+          name: "Agus David Saputra",
+          image: require("@/assets/img/person/testimoni-agus.png"),
+          description: "Alhamdulilah lancar mba, fiturnya mudah di pahami juga. Apalagi, Kalau ada kendala team Komship siap membantu dan fast respon. Pemakaiannya juga simple, beda sama Aplikasi serupa yang lain.",
+        },
+        {
+          name: "Diki Arliansyah",
+          image: require("@/assets/img/person/testimoni-default.png"),
+          description: "Komship sangat membantu untuk Umkm, merasa terbantu dengan adanya komship, membuat proses input order jadi lebih mudah, apalagi dengan fitur2 komship yg simpel dan mudah dipahami + tentunya dengan cashback 25% 😁🙏",
+        },
+        {
+          name: "Ananda Bagas",
+          image: require("@/assets/img/person/testimoni-default.png"),
+          description: "Absolutely perfect ! Sangat terbantu dengan fiturnya yang lengkap & praktis untuk memproses orderan. cashback ongkir 25% yang lumayan gurih, ditambah pencairan dana setiap hari yang dapat memperlancar cash flow.",
+        },
+      ],
       service_items: [
         {
           id: 1,
@@ -351,6 +417,202 @@ export default {
 };
 </script>
 <style>
+/* contactkomerce */
+.contactkomerce {
+  height: 275.15px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.contactkomerce__left {
+  position: relative;
+  height: 100%;
+  background: #FBA63C;
+}
+.contactkomerce__left--text {
+  position: absolute;
+  width: 282px;
+  height: 72px;
+  left: 247px;
+  top: 57.07px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+.contactkomerce__left--img {
+  position: absolute;
+  width: 209px;
+  height: 311.83px;
+  left: 0px;
+  top: 0px;
+}
+.contactkomerce__left--link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  width: 189px;
+  height: 56px;
+  left: 247px;
+  top: 163.07px;
+  background: #1FCB32;
+  border-radius: 8px;
+}
+.contactkomerce__right--link-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+.contactkomerce__right--link-img {
+  width: 28px;
+  height: 28px;
+  background: #FDFDFD;
+}
+.contactkomerce__right {
+  position: relative;
+  height: 100%;
+  background: #FCEBBE;
+}
+.contactkomerce__right--text {
+  position: absolute;
+  width: 282px;
+  height: 72px;
+  left: 247px;
+  top: 57.07px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+.contactkomerce__right--img {
+  position: absolute;
+  width: 209px;
+  height: 311.83px;
+  left: 0px;
+  top: 0px;
+}
+.contactkomerce__right--link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  position: absolute;
+  width: 189px;
+  height: 56px;
+  left: 247px;
+  top: 163.07px;
+  background: #1FCB32;
+  border-radius: 8px;
+}
+/* end contactkomerce */
+/* slider testimoni */
+.slidertestimoni {
+  width: 570px;
+  height: 279px;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+}
+.slidertestimoni__head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85px;
+  background: #FF6A3A;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+}
+.slidertestimoni__head--text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+.slidertestimoni__head--wrapperimg {
+  position: absolute;
+  width: 106px;
+  height: 106px;
+  left: 43px;
+  top: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slidertestimoni__head--img {
+  object-fit: contain;
+  border-radius: 50%;
+  width: 94.8px;
+  height: 94.8px;
+}
+.slidertestimoni__body {
+  width: 100%;
+  height: calc(100% - 85px);
+  border-radius: 0px 0px 20px 20px;
+  padding: 51px 19px 55px;
+}
+.slidertestimoni__body--text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.5px;
+  width: 80%;
+  margin: 0px auto;
+  color: #000000;
+}
+.carousel__track {
+  padding: 16px;
+}
+ol.carousel__pagination {
+  margin-bottom: 0px;
+}
+.carousel__pagination-button {
+  margin: var(--vc-pgn-margin);
+  width: 10px;
+  height: 10px;
+  border-radius: var(--vc-pgn-height);
+  border: 0;
+  cursor: pointer;
+  background-color: #FFECE9;
+}
+.carousel__pagination-button--active {
+  background-color: #FF6A3A;
+}
+.carousel__slide > .carousel__item {
+  transform: scale(1);
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.carousel__slide--visible > .carousel__item {
+  opacity: 1;
+  transform: rotateY(0);
+}
+.carousel__slide--next > .carousel__item {
+  transform: scale(0.9) translate(-10px);
+}
+.carousel__slide--prev > .carousel__item {
+  transform: scale(0.9) translate(10px);
+}
+.carousel__slide--active > .carousel__item {
+  transform: scale(1.1);
+}
+/* end slider testimoni */
 .register-now {
   display: flex;
   width: 100%;
