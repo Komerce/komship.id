@@ -222,7 +222,7 @@
       <h2 class="testimoniwrapper--text">
         <span style="color: #FF6A3A;">Komship</span>&nbsp;telah dipercaya oleh UMKM 
       </h2>
-      <carousel :settings="settingscarousel" :wrapAround="true" :breakpoints="breakpoints">
+      <carousel :autoplay="15000" :settings="settingscarousel" :wrapAround="true" :breakpoints="breakpoints">
         <slide v-for="item in testimoniesData" :key="item.id">
           <div class="carousel__item">
             <div class="slidertestimoni">
