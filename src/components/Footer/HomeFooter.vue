@@ -20,7 +20,7 @@
                   min-width="25px"
                 />
               </div>
-              <div class="profile-desc p-0">
+              <div class="profile-desc">
                 Head Office Komerce
               </div>
               <div class="profile-desc">
@@ -37,7 +37,7 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc p-0">bd@komship.id</div>
+              <div class="profile-desc">bd@komship.id</div>
             </div>
             <div class="row">
               <div class="profile-icon">
@@ -48,7 +48,7 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc p-0">081227931840</div>
+              <div class="profile-desc">081227931840</div>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 company">
@@ -58,7 +58,7 @@
                 <router-link to="about"> Tentang Kami </router-link>
               </li>
               <li>
-                <router-link to="terms"> Syarat & Ketentuan </router-link>
+                <router-link to="terms"> Syarat &amp; Ketentuan </router-link>
               </li>
               <li>
                 <router-link to="privacy"> Kebijakan privasi </router-link>
@@ -74,16 +74,14 @@
               <img
                 :src="require('@/assets/img/logo/logo_jne.png')"
                 alt="logo jne"
-                max-width="100px"
+                class="image-partner-img"
               />
             </div>
           </div>
           <div class="col-lg-12 col-md-4 contact">
             <img
-              :src="require('@/assets/img/icons/whatsapp-icon.png')"
-              alt="whatsapp icon"
-              class="ml-3"
-              @click="openLink('https://wa.me/6281328014170')"
+              :src="require('@/assets/img/icons/facebook-icon.png')"
+              alt="facebook icon"
             />
             <img
               :src="require('@/assets/img/icons/instagram-icon.png')"
@@ -92,9 +90,10 @@
               @click="openLink('https://instagram.com/komship')"
             />
             <img
-              :src="require('@/assets/img/icons/facebook-icon.png')"
-              alt="facebook icon"
+              :src="require('@/assets/img/icons/whatsapp-icon.png')"
+              alt="whatsapp icon"
               class="ml-3"
+              @click="openLink('https://wa.me/6281328014170')"
             />
           </div>
         </div>
@@ -158,7 +157,10 @@ export default {
   margin-top: 60px;
 }
 .image-partner {
-  margin-left: 3vw;
+  margin-left: 10px;
+}
+.image-partner-img {
+  width: 100px;
 }
 .contact {
   padding-top: 50px;

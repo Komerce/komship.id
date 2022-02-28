@@ -3,7 +3,7 @@
     <section id="home" class="register-now container">
       <div class="row">
         <div class="col-lg-5 col-md-6 image-mobile">
-          <img :src="require('@/assets/img/hero/model.png')" />
+          <img :src="require('@/assets/img/person/bghome-person.png')" />
         </div>
         <div class="col-lg-6 col-md-7 content">
           <h1 class="title">
@@ -24,12 +24,14 @@
         </div>
         <div class="col-lg-5 col-md-7 image-desktop">
           <img
-            :src="require('@/assets/img/hero/model.png')"
+            :src="require('@/assets/img/person/bghome-person.png')"
             style="margin-right: 10px; margin-left: 200px"
           />
         </div>
       </div>
     </section>
+    
+    <!-- service -->
     <section id="service" class="service">
       <div class="container">
         <div class="row">
@@ -69,6 +71,9 @@
                 </div>
               </div>
             </slide>
+            <template #addons>
+              <Pagination />
+            </template>
           </carousel>
         </div>
       </div>
@@ -110,7 +115,7 @@
       </div>
     </section>
 
-    <!-- feature -->
+    <!-- alur pengiriman -->
     <section id="alur" class="feature">
       <div class="container">
         <div class="row">
@@ -121,7 +126,7 @@
               menggunakan
               <span class="order" style="color: #fba63c">Komship</span>
             </h2>
-            <div class="row mt-5 service-desktop">
+            <div class="row mt-5">
               <div v-for="(item, idx) in services_item" :key="item.id">
                 <img :src="item.image" class="icons" />
                 <h1 class="title-content">{{ item.title1 }}</h1>
@@ -139,10 +144,45 @@
       </div>
     </section>
     
-    <!-- service -->
-    <section id="service" class="service">
+    <!-- feature -->
+    <section id="feature" class="service">
       <div class="container">
         <h2 class="title">Fitur Tambahan</h2>
+        <div class="service-mobile">
+          <carousel :items-to-show="1.25">
+            <slide v-for="item in service_item" :key="item.id">
+              <div
+                class="card content"
+                style="background-color: #ff6a3a border-radius: 24px;width:338px; height:350px; margin-right: 10px;"
+              >
+                <div
+                  class="card-body"
+                  style="background-color: #ff6a3a; border-radius: 24px; display:grid; align-items: center;padding: 1rem 1rem 0px;"
+                >
+                  <img
+                    :src="item.image"
+                    class="icons"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      background-color: white;
+                      border-radius: 24px;
+                    "
+                  />
+                  <h3
+                    class="title-content"
+                    style="text-align: center; color: white"
+                  >
+                    {{ item.title1 }}
+                  </h3>
+                </div>
+              </div>
+            </slide>
+            <template #addons>
+              <Pagination />
+            </template>
+          </carousel>
+        </div>
         <div class="row mt-5 service-desktop">
           <div
             class="col-lg-4 col-md-6"
@@ -151,7 +191,7 @@
           >
             <div
               class="card content"
-              style="background-color: #ff6a3a border-radius: 24px;width:338px; height:381px;"
+              style="background-color: #ff6a3a border-radius: 24px;width:338px; height:350px; justify-content: center; margin: 0px auto 1em;"
             >
               <div
                 class="card-body"
@@ -265,9 +305,17 @@ export default {
         snapAlign: 'center',
       },
       breakpoints: {
-        // 700px and up
         600: {
           itemsToShow: 2.95,
+          snapAlign: 'center',
+        },
+      },
+      settingscarouselservice: {
+        itemsToShow: 1.5,
+      },
+      breakpointsservice: {
+        1024: {
+          itemsToShow: 2.5,
           snapAlign: 'center',
         },
       },
@@ -398,58 +446,12 @@ export default {
       ],
     };
   },
-  created() {
-    window.addEventListener("scroll", this.homeScroll);
-    window.addEventListener("scroll", this.serviceScroll);
-    window.addEventListener("scroll", this.featureScroll);
-  },
-  unmounted() {
-    window.removeEventListener("scroll", this.homeScroll);
-    window.removeEventListener("scroll", this.serviceScroll);
-    window.removeEventListener("scroll", this.featureScroll);
-  },
-  mounted() {
-    document.getElementById("menuHome").classList.add("active");
-  },
   methods: {
     openWindow(url = '') {
       if (url) {
         window.open(this.defaultRedirectURL);
       }
       return;
-    },
-    homeScroll() {
-      const el = document.getElementById("home");
-      const elTop = document.body.getBoundingClientRect().top;
-      const elBottom = el.getBoundingClientRect().bottom;
-      if (elTop >= 0 || elBottom <= 0) {
-        document.getElementById("menuHome").classList.remove("active");
-      }
-      if (elTop <= 0 && elBottom >= 0) {
-        document.getElementById("menuHome").classList.add("active");
-      }
-    },
-    serviceScroll() {
-      const el = document.getElementById("service");
-      const elTop = el.getBoundingClientRect().top;
-      const elBottom = el.getBoundingClientRect().bottom;
-      if (elTop >= 0 || elBottom <= 0) {
-        document.getElementById("menuService").classList.remove("active");
-      }
-      if (elTop <= 0 && elBottom >= 0) {
-        document.getElementById("menuService").classList.add("active");
-      }
-    },
-    featureScroll() {
-      const el = document.getElementById("feature");
-      const elTop = el.getBoundingClientRect().top;
-      const elBottom = el.getBoundingClientRect().bottom;
-      if (elTop >= 0 || elBottom <= 0) {
-        document.getElementById("menuFeature").classList.remove("active");
-      }
-      if (elTop <= 0 && elBottom >= 0) {
-        document.getElementById("menuFeature").classList.add("active");
-      }
     },
   },
 };
@@ -682,7 +684,6 @@ ol.carousel__pagination {
   display: flex;
   width: 100%;
   padding-bottom: 5vw;
-  scroll-margin-top: 70px;
   font-family: "Poppins", sans-serif;
 }
 .register-now .image-mobile {
@@ -697,54 +698,31 @@ ol.carousel__pagination {
 .register-now .title {
   font-weight: bold;
   font-size: 40px;
-  position: static;
-  width: 540px;
+  max-width: 540px;
   font-style: normal;
-  height: 180px;
   line-height: 150%;
   margin: 16px 0px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 .register-now .title .kepada {
   display: flex;
-}
-.image-partner {
-  position: absolute;
-  width: 186px;
-  height: 59.12px;
-  left: 962px;
-  top: 1798px;
 }
 .register-now .title .order {
   color: #ff6a3a;
 }
 .register-now .description {
-  position: static;
-  width: 491px;
-  height: 48px;
-  left: 0px;
-  top: 232px;
-  font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
-  /* or 24px */
-
   text-align: justify;
   letter-spacing: 0.5px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
   margin: 16px 0px;
 }
 .register-now .btn-register-now {
   margin-top: 1vw;
   font-weight: 600;
   font-size: 16px;
-  min-width: 231px;
+  max-width: 231px;
   height: 60px;
 }
 
@@ -752,7 +730,6 @@ ol.carousel__pagination {
 .service {
   padding-top: 5vw;
   background-color: #f8f9fa;
-  scroll-margin-top: 70px;
   margin-bottom: 150px;
 }
 .service-mobile {
@@ -794,7 +771,6 @@ ol.carousel__pagination {
 /* feature */
 .feature {
   background-color: #f8f9fa;
-  scroll-margin-top: 70px;
   margin: 101px 0px 0px;
 }
 .feature .title {
@@ -1024,7 +1000,7 @@ ol.carousel__pagination {
   }
   .contactkomerce__left {
     display: grid;
-    justify-content: center;
+    justify-content: end;
     align-content: center;
   }
   .contactkomerce__right {
@@ -1056,12 +1032,13 @@ ol.carousel__pagination {
   }
   .conclusion__text {
     top: 21px;
+    width: 440px;
     right: 0px;
   }
   .conclusion__logojne {
-    bottom: 40px;
+    bottom: 30px;
     top: unset;
-    right: 405px;
+    right: 260px;
   }
   .register-now .bg-circle {
     width: 80px;
@@ -1110,6 +1087,10 @@ ol.carousel__pagination {
   }
 }
 @media only screen and (max-width: 540px) {
+  .register-now .btn-register-now {
+    width: 227px;
+    height: 50px;
+  }
   .testimoniwrapper--text {
     font-size: 18px;
     width: 25%;
@@ -1147,6 +1128,48 @@ ol.carousel__pagination {
     font-size: 12px;
     width: 85%;
   }
+  .contactkomerce__right {
+    justify-content: start;
+  }
+  .contactkomerce__left {
+    justify-content: end;
+  }
+  .contactkomerce__left--text {
+    font-weight: 600;
+    width: 220px;
+    height: unset;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 150%
+  }
+  .contactkomerce__left--link {
+    width: 149px;
+    height: 46px;
+  }
+  .contactkomerce__left--link-img {
+    width: 22px;
+    height: 22px;
+  }
+  .contactkomerce__right--text {
+    font-size: 16px;
+    width: 278px;
+    height: unset;
+    margin-bottom: 12px;
+    transform: translateX(20px);
+  }
+  .contactkomerce__right--link {
+    padding: 12px 16px;
+    width: 156px;
+    height: 45px;
+    transform: translateX(20px);
+  }
+  .contactkomerce__right--link-text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
   .conclusion {
     display: none;
   }
@@ -1168,6 +1191,9 @@ ol.carousel__pagination {
   .register-now .image-mobile img {
     max-width: 100%;
   }
+  .service {
+    margin-bottom: 84px;
+  }
   .service-desktop {
     display: none;
   }
@@ -1186,6 +1212,10 @@ ol.carousel__pagination {
   }
   .service .title {
     margin-bottom: 5vw;
+    justify-content: flex-start;
+  }
+  .feature {
+    margin-top: 48px;
   }
   .feature .row {
     padding-bottom: 5vh;
