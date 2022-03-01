@@ -27,6 +27,7 @@ export default {
     useMeta({
       title: "Komship.id",
       htmlAttrs: { lang: "id", amp: true },
+      link: [{ rel: "icon", href: require("@/assets/img/logo/komship.png") }],
     });
   },
 };

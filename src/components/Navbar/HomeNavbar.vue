@@ -39,15 +39,38 @@
         </div>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a id="menuHome" class="nav-link" @click="goto('home')">Beranda</a>
+            <a
+              id="navmenuhome"
+              href="#home"
+              class="nav-link"
+              @click="goto('home')"
+              >Beranda</a
+            >
           </li>
           <li class="nav-item">
-            <a id="menuService" class="nav-link" @click="goto('service')"
+            <a
+              id="navmenuservice"
+              href="#service"
+              class="nav-link"
+              @click="goto('service')"
               >Layanan</a
             >
           </li>
           <li class="nav-item">
-            <a id="menuFeature" class="nav-link" @click="goto('feature')"
+            <a
+              id="navmenualur"
+              class="nav-link"
+              href="#alur"
+              @click="goto('alur')"
+              >Alur Pengiriman</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              id="navmenufeature"
+              class="nav-link"
+              href="#feature"
+              @click="goto('feature')"
               >Fitur</a
             >
           </li>
@@ -64,18 +87,38 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      hashrouteid: "home",
+    };
+  },
+  watch: {
+    hashrouteid(val, oldval) {
+      if (!oldval) {
+        this.toggleClassNav(`navmenu${val}`);
+      } else {
+        this.toggleClassNav(`navmenu${val}`);
+        this.toggleClassNav(`navmenu${oldval}`);
+      }
+    },
+  },
+  mounted() {
+    this.toggleClassNav("navmenuhome");
+  },
   methods: {
+    toggleClassNav(id) {
+      document.getElementById(id).classList.toggle("active");
+    },
     goto(id) {
-      if (this.$route.path !== "/") {
-        this.$router.push("/");
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-      }
-      if (this.$route.path == "/") {
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-      }
+      this.hashrouteid = id;
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     },
     openWindow(url) {
       window.open(url);
+    },
+    onItemChanged(event, currentItem, lastActiveItem) {
+      console.log(event, currentItem, lastActiveItem);
+      // here you have access to everything you need regarding that event
     },
   },
 };
@@ -84,6 +127,7 @@ export default {
 .navbar {
   background-color: #f6f6f9;
   max-height: 80px;
+  font-family: "Poppins", sans-serif;
 }
 .image-navbar {
   margin-left: 5vw;

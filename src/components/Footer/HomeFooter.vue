@@ -12,7 +12,7 @@
               />
             </router-link>
             <div class="row">
-              <div class="profile-icon">
+              <div class="profile-icon" style="padding-right: 0px">
                 <img
                   :src="require('@/assets/img/icons/location-icon.png')"
                   alt="location icon"
@@ -20,13 +20,14 @@
                   min-width="25px"
                 />
               </div>
+              <div class="profile-desc">Head Office Komerce</div>
               <div class="profile-desc">
                 Jl. Raya Tamansari, Kompleks Karangwuni, Desa Tamansari,
-                Karangmoncol, Kab. Purbalingga, Jawa Tengah 53355
+                Karangmoncol, Kab. Purbalingga, Jawa Tengah (53355)
               </div>
             </div>
             <div class="row">
-              <div class="profile-icon">
+              <div class="profile-icon" style="padding-right: 0px">
                 <img
                   :src="require('@/assets/img/icons/email-icon.png')"
                   alt="email icon"
@@ -34,7 +35,7 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc">support@komship.id</div>
+              <div class="profile-desc">bd@komship.id</div>
             </div>
             <div class="row">
               <div class="profile-icon">
@@ -55,7 +56,7 @@
                 <router-link to="about"> Tentang Kami </router-link>
               </li>
               <li>
-                <router-link to="terms"> Syarat & Ketentuan </router-link>
+                <router-link to="terms"> Syarat &amp; Ketentuan </router-link>
               </li>
               <li>
                 <router-link to="privacy"> Kebijakan privasi </router-link>
@@ -69,18 +70,16 @@
             <h3 class="partner-title">Kerjasama Ekspedisi</h3>
             <div class="image-partner">
               <img
-                :src="require('@/assets/img/logo/jne-logo.png')"
+                :src="require('@/assets/img/logo/logo_jne.png')"
                 alt="logo jne"
-                max-width="100px"
+                class="image-partner-img"
               />
             </div>
           </div>
           <div class="col-lg-12 col-md-4 contact">
             <img
-              :src="require('@/assets/img/icons/whatsapp-icon.png')"
-              alt="whatsapp icon"
-              class="ml-3"
-              @click="openLink('https://wa.me/6281227931840')"
+              :src="require('@/assets/img/icons/facebook-icon.png')"
+              alt="facebook icon"
             />
             <img
               :src="require('@/assets/img/icons/instagram-icon.png')"
@@ -89,17 +88,15 @@
               @click="openLink('https://instagram.com/komship')"
             />
             <img
-              :src="require('@/assets/img/icons/facebook-icon.png')"
-              alt="facebook icon"
+              :src="require('@/assets/img/icons/whatsapp-icon.png')"
+              alt="whatsapp icon"
               class="ml-3"
-              @click="
-                openLink('https://www.facebook.com/Komship-108512271621741')
-              "
+              @click="openLink('https://wa.me/6281328014170')"
             />
           </div>
         </div>
         <div class="copyright row d-flex">
-          Copyright 2021 komship.id. All rights reserved.
+          Copyright 2022 komship.id. All rights reserved.
         </div>
       </div>
     </div>
@@ -158,7 +155,10 @@ export default {
   margin-top: 60px;
 }
 .image-partner {
-  margin-left: 3vw;
+  margin-left: 10px;
+}
+.image-partner-img {
+  width: 100px;
 }
 .contact {
   padding-top: 50px;
