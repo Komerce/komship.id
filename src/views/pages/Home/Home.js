@@ -61,7 +61,7 @@ export default {
         },
         {
           id: 2,
-          title: "Pencarian Setiap Hari",
+          title: "Pencairan Setiap Hari",
           image: require("@/assets/img/icons/calender.png"),
           description:
             "Kamu bisa tarik dana COD kapanpun karena pencairan dapat dilakukan setiap hari.",
@@ -97,38 +97,38 @@ export default {
       services_item: [
         {
           id: 1,
-          title2: "tes",
-          image: require("@/assets/img/icons/circle1.png"),
+          text: "Order masuk dari customer",
           gambar: require("@/assets/img/icons/arrow.png"),
         },
         {
           id: 2,
-          title2: "tes",
-          image: require("@/assets/img/icons/gram1.png"),
+          text: "Seller menyiapkan orderan",
           gambar: require("@/assets/img/icons/arrow.png"),
         },
         {
           id: 3,
-          title2: "tes",
-          image: require("@/assets/img/icons/seller2.png"),
+          text: "Seller menginput data di Komship",
           gambar: require("@/assets/img/icons/arrow.png"),
         },
         {
           id: 4,
-          title2: "tes",
-          image: require("@/assets/img/icons/ekspedisi.png"),
+          text: "Ekspedisi menjemput barang ke lokasi seller",
           gambar: require("@/assets/img/icons/arrow.png"),
         },
         {
           id: 5,
-          title2: "tes",
-          image: require("@/assets/img/icons/barangditerima.png"),
+          text: "Barang diterima customer",
           gambar: require("@/assets/img/icons/arrow.png"),
         },
         {
           id: 6,
-          title2: "tes",
-          image: require("@/assets/img/icons/dana.png"),
+          text: "Non COD (selesai) / COD (uang diterima)",
+          gambar: require("@/assets/img/icons/arrow.png"),
+        },
+        {
+          id: 7,
+          text: "Dana dicairkan",
+          gambar: require("@/assets/img/icons/arrow.png"),
         },
       ],
       service_item: [

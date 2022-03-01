@@ -1,6 +1,6 @@
 <template>
   <div class="wrapperContainerHomePage">
-    <section id="home" class="register-now container">
+    <section id="homesection" class="register-now container">
       <div class="row">
         <div class="col-lg-5 col-md-6 image-mobile">
           <img :src="require('@/assets/img/person/bghome-person.png')" />
@@ -32,7 +32,7 @@
     </section>
     
     <!-- service -->
-    <section id="service" class="service">
+    <section id="servicesection" class="service">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 col-md-6">
@@ -116,7 +116,7 @@
     </section>
 
     <!-- alur pengiriman -->
-    <section id="alur" class="feature">
+    <section id="alursection" class="feature">
       <div class="container">
         <div class="row">
           <div class="col-md-1 image-mobile"></div>
@@ -127,9 +127,11 @@
               <span class="order" style="color: #fba63c">Komship</span>
             </h2>
             <div class="row mt-5">
-              <div v-for="(item, idx) in services_item" :key="item.id">
-                <img :src="item.image" class="icons" />
-                <h1 class="title-content">{{ item.title1 }}</h1>
+              <div v-for="(item, idx) in services_item" :key="item.id" class="alur__contentwrap">
+                <div class="alur__content">
+                  <div class="alur__content--icon"></div>
+                  <h5 class="alur__content--text">{{ item.text }}</h5>
+                </div>
                 <img v-if="(services_item.length - 1) !== idx" :src="item.gambar" class="icons" />
               </div>
             </div>
@@ -145,7 +147,7 @@
     </section>
     
     <!-- feature -->
-    <section id="feature" class="service">
+    <section id="featuresection" class="service">
       <div class="container">
         <h2 class="title">Fitur Tambahan</h2>
         <div class="service-mobile">
@@ -222,38 +224,15 @@
 
     <!-- contactkomerce -->
     <section id="contactkomerce" class="contactkomerce">
-      <div class="contactkomerce__left">
-        <h5 class="contactkomerce__left--text">Hubungi kami untuk informasi lebih lanjut</h5>
-        <img :src="require('@/assets/img/person/contactleft.png')" class="contactkomerce__left--img" />
-        <a class="contactkomerce__left--link" href="https://wa.me/6281328014170" target="_blank">
-          <span class="contactkomerce__left--link--text">WhatsApp</span>
-          <img :src="require('@/assets/img/icons/whatsapp-contact.png')" class="contactkomerce__left--link-img" />
-        </a>
-      </div>
       <div class="contactkomerce__right">
-        <h5 class="contactkomerce__right--text">Percayakan Pengiriman Ordermu Pada Komship!</h5>
-        <img :src="require('@/assets/img/person/contactright.png')" class="contactkomerce__right--img" />
-        <a class="contactkomerce__right--link" :href="defaultRedirectURL" target="_blank">
-          <span class="contactkomerce__right--link-text">Daftar Sekarang</span>
-        </a>
-      </div>
-    </section>
-     <!-- contactkomerce mobile -->
-    <section id="contactkomercemobile" class="contactkomercemobile">
-      <div class="contactkomerce__right">
-        <h5 class="contactkomerce__right--text">Percayakan Pengiriman Ordermu Pada Komship!</h5>
-        <img :src="require('@/assets/img/person/contactright.png')" class="contactkomerce__right--img" />
-        <a class="contactkomerce__right--link" :href="defaultRedirectURL" target="_blank">
-          <span class="contactkomerce__right--link-text">Daftar Sekarang</span>
-        </a>
-      </div>
-      <div class="contactkomerce__left">
-        <h5 class="contactkomerce__left--text">Hubungi kami untuk informasi lebih lanjut</h5>
         <img :src="require('@/assets/img/person/contactleft.png')" class="contactkomerce__left--img" />
-        <a class="contactkomerce__left--link" href="https://wa.me/6281328014170" target="_blank">
-          <span class="contactkomerce__left--link--text">WhatsApp</span>
-          <img :src="require('@/assets/img/icons/whatsapp-contact.png')" class="contactkomerce__left--link-img" />
-        </a>
+        <img :src="require('@/assets/img/person/contactright.png')" class="contactkomerce__right--img" />
+        <div class="contactkomerce__right--content">
+          <h5 class="contactkomerce__right--text">Percayakan Pengiriman Ordermu Pada Komship!</h5>
+          <a class="contactkomerce__right--link" :href="defaultRedirectURL" target="_blank">
+            <span class="contactkomerce__right--link-text">Daftar Sekarang</span>
+          </a>
+        </div>
       </div>
     </section>
 

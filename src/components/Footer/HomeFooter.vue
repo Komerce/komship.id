@@ -12,7 +12,7 @@
               />
             </router-link>
             <div class="row">
-              <div class="profile-icon" style="padding-right: 0px">
+              <div class="col-1" style="padding-right: 0px">
                 <img
                   :src="require('@/assets/img/icons/location-icon.png')"
                   alt="location icon"
@@ -20,14 +20,14 @@
                   min-width="25px"
                 />
               </div>
-              <div class="profile-desc">Head Office Komerce</div>
-              <div class="profile-desc">
+              <div class="col-11">Head Office Komerce</div>
+              <div class="col-11 offset-1">
                 Jl. Raya Tamansari, Kompleks Karangwuni, Desa Tamansari,
                 Karangmoncol, Kab. Purbalingga, Jawa Tengah (53355)
               </div>
             </div>
             <div class="row">
-              <div class="profile-icon" style="padding-right: 0px">
+              <div class="col-1" style="padding-right: 0px">
                 <img
                   :src="require('@/assets/img/icons/email-icon.png')"
                   alt="email icon"
@@ -35,10 +35,10 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc">bd@komship.id</div>
+              <div class="col-11">bd@komship.id</div>
             </div>
             <div class="row">
-              <div class="profile-icon">
+              <div class="col-1">
                 <img
                   :src="require('@/assets/img/icons/call-icon.png')"
                   alt="call icon"
@@ -46,7 +46,7 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc">081227931840</div>
+              <div class="col-11">081227931840</div>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 company">
