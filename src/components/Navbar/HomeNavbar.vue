@@ -111,28 +111,28 @@ export default {
     },
     goto(id) {
       this.hashrouteid = id;
-      let offsetPosition = 0;
+      // let offsetPosition = 0;
       // document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-      // const element = document.getElementById(id);
-      // const headerOffset = 80; // height container header nav
-      // const elementPosition = element.getBoundingClientRect().top;
+      const element = document.getElementById(`${id}section`);
+      const headerOffset = 80; // height container header nav
+      const elementPosition = element.getBoundingClientRect().top;
       // console.log('window.pageYOffset', window.pageYOffset)
       // console.log('elementPosition', elementPosition)
-      // const offsetPosition = elementPosition - headerOffset;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
       // console.log('offsetPosition', offsetPosition)
-      switch(id) {
-        case 'service':
-          offsetPosition = 600
-          break;
-        case 'alur':
-          offsetPosition = 1800
-          break;
-        case 'feature':
-          offsetPosition = 2600
-          break;
-        default:
-          break;
-      }
+      // switch(id) {
+      //   case 'service':
+      //     offsetPosition = 600
+      //     break;
+      //   case 'alur':
+      //     offsetPosition = 1800
+      //     break;
+      //   case 'feature':
+      //     offsetPosition = 2600
+      //     break;
+      //   default:
+      //     break;
+      // }
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth"
