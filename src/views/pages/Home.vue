@@ -29,7 +29,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- service -->
     <section id="service" class="service">
       <div class="container">
@@ -88,7 +88,8 @@
         class="conclusion__bggambar"
       />
       <p class="conclusion__text">
-        Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung pengiriman COD dan non COD
+        Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+        pengiriman COD dan non COD
       </p>
       <img
         :src="require('@/assets/img/logo/logo_jne.png')"
@@ -104,7 +105,8 @@
       />
       <div class="conclusionmobile__content">
         <p class="conclusionmobile__text">
-          Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung pengiriman COD dan non COD
+          Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+          pengiriman COD dan non COD
         </p>
         <img
           :src="require('@/assets/img/logo/logo_jne.png')"
@@ -129,7 +131,11 @@
               <div v-for="(item, idx) in services_item" :key="item.id">
                 <img :src="item.image" class="icons" />
                 <h1 class="title-content">{{ item.title1 }}</h1>
-                <img v-if="(services_item.length - 1) !== idx" :src="item.gambar" class="icons" />
+                <img
+                  v-if="services_item.length - 1 !== idx"
+                  :src="item.gambar"
+                  class="icons"
+                />
               </div>
             </div>
           </div>
@@ -142,7 +148,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- feature -->
     <section id="feature" class="service">
       <div class="container">
@@ -156,7 +162,13 @@
               >
                 <div
                   class="card-body"
-                  style="background-color: #ff6a3a; border-radius: 24px; display:grid; align-items: center;padding: 1rem 1rem 0px;"
+                  style="
+                    background-color: #ff6a3a;
+                    border-radius: 24px;
+                    display: grid;
+                    align-items: center;
+                    padding: 1rem 1rem 0px;
+                  "
                 >
                   <img
                     :src="item.image"
@@ -222,7 +234,9 @@
     <!-- contactkomerce -->
     <section id="contactkomerce" class="contactkomerce">
       <div class="contactkomerce__left">
-        <h5 class="contactkomerce__left--text">Hubungi kami untuk informasi lebih lanjut</h5>
+        <h5 class="contactkomerce__left--text">
+          Hubungi kami untuk informasi lebih lanjut
+        </h5>
         <img
           :src="require('@/assets/img/person/contactleft.png')"
           class="contactkomerce__left--img"
@@ -240,28 +254,58 @@
         </a>
       </div>
       <div class="contactkomerce__right">
-        <h5 class="contactkomerce__right--text">Percayakan Pengiriman Ordermu Pada Komship!</h5>
-        <img :src="require('@/assets/img/person/contactright.png')" class="contactkomerce__right--img" />
-        <a class="contactkomerce__right--link" :href="defaultRedirectURL" target="_blank">
+        <h5 class="contactkomerce__right--text">
+          Percayakan Pengiriman Ordermu Pada Komship!
+        </h5>
+        <img
+          :src="require('@/assets/img/person/contactright.png')"
+          class="contactkomerce__right--img"
+        />
+        <a
+          class="contactkomerce__right--link"
+          :href="defaultRedirectURL"
+          target="_blank"
+        >
           <span class="contactkomerce__right--link-text">Daftar Sekarang</span>
         </a>
       </div>
     </section>
-     <!-- contactkomerce mobile -->
+    <!-- contactkomerce mobile -->
     <section id="contactkomercemobile" class="contactkomercemobile">
       <div class="contactkomerce__right">
-        <h5 class="contactkomerce__right--text">Percayakan Pengiriman Ordermu Pada Komship!</h5>
-        <img :src="require('@/assets/img/person/contactright.png')" class="contactkomerce__right--img" />
-        <a class="contactkomerce__right--link" :href="defaultRedirectURL" target="_blank">
+        <h5 class="contactkomerce__right--text">
+          Percayakan Pengiriman Ordermu Pada Komship!
+        </h5>
+        <img
+          :src="require('@/assets/img/person/contactright.png')"
+          class="contactkomerce__right--img"
+        />
+        <a
+          class="contactkomerce__right--link"
+          :href="defaultRedirectURL"
+          target="_blank"
+        >
           <span class="contactkomerce__right--link-text">Daftar Sekarang</span>
         </a>
       </div>
       <div class="contactkomerce__left">
-        <h5 class="contactkomerce__left--text">Hubungi kami untuk informasi lebih lanjut</h5>
-        <img :src="require('@/assets/img/person/contactleft.png')" class="contactkomerce__left--img" />
-        <a class="contactkomerce__left--link" href="https://wa.me/6281328014170" target="_blank">
+        <h5 class="contactkomerce__left--text">
+          Hubungi kami untuk informasi lebih lanjut
+        </h5>
+        <img
+          :src="require('@/assets/img/person/contactleft.png')"
+          class="contactkomerce__left--img"
+        />
+        <a
+          class="contactkomerce__left--link"
+          href="https://wa.me/6281328014170"
+          target="_blank"
+        >
           <span class="contactkomerce__left--link--text">WhatsApp</span>
-          <img :src="require('@/assets/img/icons/whatsapp-contact.png')" class="contactkomerce__left--link-img" />
+          <img
+            :src="require('@/assets/img/icons/whatsapp-contact.png')"
+            class="contactkomerce__left--link-img"
+          />
         </a>
       </div>
     </section>
@@ -269,9 +313,15 @@
     <!-- testimoni -->
     <div id="testimoniwrapper" class="testimoniwrapper">
       <h2 class="testimoniwrapper--text">
-        <span style="color: #FF6A3A;">Komship</span>&nbsp;telah dipercaya oleh UMKM 
+        <span style="color: #ff6a3a">Komship</span>&nbsp;telah dipercaya oleh
+        UMKM
       </h2>
-      <carousel :autoplay="15000" :settings="settingscarousel" :wrapAround="true" :breakpoints="breakpoints">
+      <carousel
+        :autoplay="15000"
+        :settings="settingscarousel"
+        :wrapAround="true"
+        :breakpoints="breakpoints"
+      >
         <slide v-for="item in testimoniesData" :key="item.id">
           <div class="carousel__item">
             <div class="slidertestimoni">
@@ -284,7 +334,9 @@
                 </div>
               </div>
               <div class="slidertestimoni__body">
-                <p class="slidertestimoni__body--text">{{ item.description }}</p>
+                <p class="slidertestimoni__body--text">
+                  {{ item.description }}
+                </p>
               </div>
             </div>
           </div>
@@ -311,12 +363,12 @@ export default {
       // carousel settings
       settingscarousel: {
         itemsToShow: 1,
-        snapAlign: 'center',
+        snapAlign: "center",
       },
       breakpoints: {
         600: {
           itemsToShow: 2.95,
-          snapAlign: 'center',
+          snapAlign: "center",
         },
       },
       settingscarouselservice: {
@@ -325,29 +377,33 @@ export default {
       breakpointsservice: {
         1024: {
           itemsToShow: 2.5,
-          snapAlign: 'center',
+          snapAlign: "center",
         },
       },
       testimoniesData: [
         {
           name: "Eko Sulistiyono",
           image: require("@/assets/img/person/testimoni-eko-s.png"),
-          description: "Baru ada platform yang sekeren ini dan sangat menguntungkan bagi kami karena lebih murah biaya CODnya dan cashback super besar, uang bisa cair tiap hari dan mudah dipakainya.",
+          description:
+            "Baru ada platform yang sekeren ini dan sangat menguntungkan bagi kami karena lebih murah biaya CODnya dan cashback super besar, uang bisa cair tiap hari dan mudah dipakainya.",
         },
         {
           name: "Agus David Saputra",
           image: require("@/assets/img/person/testimoni-agus.png"),
-          description: "Alhamdulilah lancar mba, fiturnya mudah di pahami juga. Apalagi, Kalau ada kendala team Komship siap membantu dan fast respon. Pemakaiannya juga simple, beda sama Aplikasi serupa yang lain.",
+          description:
+            "Alhamdulilah lancar mba, fiturnya mudah di pahami juga. Apalagi, Kalau ada kendala team Komship siap membantu dan fast respon. Pemakaiannya juga simple, beda sama Aplikasi serupa yang lain.",
         },
         {
           name: "Diki Arliansyah",
           image: require("@/assets/img/person/testimoni-diki.png"),
-          description: "Komship sangat membantu untuk Umkm, merasa terbantu dengan adanya komship, membuat proses input order jadi lebih mudah, apalagi dengan fitur2 komship yg simpel dan mudah dipahami + tentunya dengan cashback 25% 😁🙏",
+          description:
+            "Komship sangat membantu untuk Umkm, merasa terbantu dengan adanya komship, membuat proses input order jadi lebih mudah, apalagi dengan fitur2 komship yg simpel dan mudah dipahami + tentunya dengan cashback 25% 😁🙏",
         },
         {
           name: "Ananda Bagas",
           image: require("@/assets/img/person/testimoni-ananda.png"),
-          description: "Absolutely perfect ! Sangat terbantu dengan fiturnya yang lengkap & praktis untuk memproses orderan. cashback ongkir 25% yang lumayan gurih, ditambah pencairan dana setiap hari yang dapat memperlancar cash flow.",
+          description:
+            "Absolutely perfect ! Sangat terbantu dengan fiturnya yang lengkap & praktis untuk memproses orderan. cashback ongkir 25% yang lumayan gurih, ditambah pencairan dana setiap hari yang dapat memperlancar cash flow.",
         },
       ],
       service_items: [
@@ -456,7 +512,7 @@ export default {
     };
   },
   methods: {
-    openWindow(url = '') {
+    openWindow(url = "") {
       if (url) {
         window.open(this.defaultRedirectURL);
       }
@@ -478,12 +534,12 @@ export default {
   margin-bottom: 140.36px;
   height: 275.15px;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .contactkomerce__left {
   position: relative;
   height: 100%;
-  background: #FBA63C;
+  background: #fba63c;
 }
 .contactkomerce__left--text {
   position: absolute;
@@ -496,7 +552,7 @@ export default {
   font-size: 24px;
   line-height: 150%;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
   z-index: 1;
 }
 .contactkomerce__left--img {
@@ -516,7 +572,7 @@ export default {
   height: 56px;
   right: 205px;
   top: 163.07px;
-  background: #1FCB32;
+  background: #1fcb32;
   border-radius: 8px;
 }
 .contactkomerce__left--link--text {
@@ -525,7 +581,7 @@ export default {
   line-height: 150%;
   text-align: center;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .contactkomerce__left--link-img {
   width: 28px;
@@ -534,7 +590,7 @@ export default {
 .contactkomerce__right {
   position: relative;
   height: 100%;
-  background: #FCEBBE;
+  background: #fcebbe;
 }
 .contactkomerce__right--text {
   position: absolute;
@@ -568,7 +624,7 @@ export default {
   height: 56px;
   left: 82px;
   top: 162.64px;
-  background: #FF6A3A;
+  background: #ff6a3a;
   border-radius: 8px;
 }
 .contactkomerce__right--link-text {
@@ -578,7 +634,7 @@ export default {
   line-height: 150%;
   text-align: center;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 /* end contactkomerce */
 /* slider testimoni */
@@ -598,7 +654,7 @@ export default {
 .slidertestimoni {
   width: 570px;
   min-height: 279px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.03);
   border-radius: 20px;
 }
@@ -608,7 +664,7 @@ export default {
   justify-content: center;
   width: 100%;
   height: 85px;
-  background: #FF6A3A;
+  background: #ff6a3a;
   border-radius: 20px 20px 0px 0px;
   position: relative;
 }
@@ -618,7 +674,7 @@ export default {
   font-size: 20px;
   line-height: 150%;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .slidertestimoni__head--wrapperimg {
   position: absolute;
@@ -665,10 +721,10 @@ ol.carousel__pagination {
   border-radius: var(--vc-pgn-height);
   border: 0;
   cursor: pointer;
-  background-color: #FFECE9;
+  background-color: #ffece9;
 }
 .carousel__pagination-button--active {
-  background-color: #FF6A3A;
+  background-color: #ff6a3a;
 }
 .carousel__slide > .carousel__item {
   transform: scale(1);
@@ -839,13 +895,13 @@ ol.carousel__pagination {
 .conclusion {
   position: relative;
   height: 255px;
-  background: linear-gradient(90deg, #FF6A3A -20.91%, #FBA63C 85.49%);
+  background: linear-gradient(90deg, #ff6a3a -20.91%, #fba63c 85.49%);
 }
 .conclusion__rect {
   position: absolute;
   width: 131px;
   height: 11px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 20px;
   z-index: 1;
 }
@@ -870,7 +926,7 @@ ol.carousel__pagination {
   font-size: 24px;
   line-height: 150%;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
   z-index: 2;
 }
 .conclusion__bggambar {
@@ -893,7 +949,7 @@ ol.carousel__pagination {
   display: none;
   position: relative;
   height: 174px;
-  background: linear-gradient(90deg, #FF6A3A -20.91%, #FBA63C 85.49%);
+  background: linear-gradient(90deg, #ff6a3a -20.91%, #fba63c 85.49%);
 }
 .conclusionmobile__content {
   display: grid;
@@ -997,7 +1053,7 @@ ol.carousel__pagination {
   }
 }
 @media only screen and (max-width: 991px) {
-  .contactkomercemobile{
+  .contactkomercemobile {
     display: grid;
     margin-bottom: 60px;
     height: unset;
@@ -1149,7 +1205,7 @@ ol.carousel__pagination {
     height: unset;
     font-size: 16px;
     margin-bottom: 20px;
-    line-height: 150%
+    line-height: 150%;
   }
   .contactkomerce__left--link {
     width: 149px;
