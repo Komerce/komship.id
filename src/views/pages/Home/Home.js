@@ -12,12 +12,12 @@ export default {
       // carousel settings
       settingscarousel: {
         itemsToShow: 1,
-        snapAlign: 'center',
+        snapAlign: "center",
       },
       breakpoints: {
         600: {
           itemsToShow: 2.95,
-          snapAlign: 'center',
+          snapAlign: "center",
         },
       },
       settingscarouselservice: {
@@ -26,29 +26,33 @@ export default {
       breakpointsservice: {
         1024: {
           itemsToShow: 2.5,
-          snapAlign: 'center',
+          snapAlign: "center",
         },
       },
       testimoniesData: [
         {
           name: "Eko Sulistiyono",
           image: require("@/assets/img/person/testimoni-eko-s.png"),
-          description: "Baru ada platform yang sekeren ini dan sangat menguntungkan bagi kami karena lebih murah biaya CODnya dan cashback super besar, uang bisa cair tiap hari dan mudah dipakainya.",
+          description:
+            "Baru ada platform yang sekeren ini dan sangat menguntungkan bagi kami karena lebih murah biaya CODnya dan cashback super besar, uang bisa cair tiap hari dan mudah dipakainya.",
         },
         {
           name: "Agus David Saputra",
           image: require("@/assets/img/person/testimoni-agus.png"),
-          description: "Alhamdulilah lancar mba, fiturnya mudah di pahami juga. Apalagi, Kalau ada kendala team Komship siap membantu dan fast respon. Pemakaiannya juga simple, beda sama Aplikasi serupa yang lain.",
+          description:
+            "Alhamdulilah lancar mba, fiturnya mudah di pahami juga. Apalagi, Kalau ada kendala team Komship siap membantu dan fast respon. Pemakaiannya juga simple, beda sama Aplikasi serupa yang lain.",
         },
         {
           name: "Diki Arliansyah",
           image: require("@/assets/img/person/testimoni-diki.png"),
-          description: "Komship sangat membantu untuk Umkm, merasa terbantu dengan adanya komship, membuat proses input order jadi lebih mudah, apalagi dengan fitur2 komship yg simpel dan mudah dipahami + tentunya dengan cashback 25% 😁🙏",
+          description:
+            "Komship sangat membantu untuk Umkm, merasa terbantu dengan adanya komship, membuat proses input order jadi lebih mudah, apalagi dengan fitur2 komship yg simpel dan mudah dipahami + tentunya dengan cashback 25% 😁🙏",
         },
         {
           name: "Ananda Bagas",
           image: require("@/assets/img/person/testimoni-ananda.png"),
-          description: "Absolutely perfect ! Sangat terbantu dengan fiturnya yang lengkap & praktis untuk memproses orderan. cashback ongkir 25% yang lumayan gurih, ditambah pencairan dana setiap hari yang dapat memperlancar cash flow.",
+          description:
+            "Absolutely perfect ! Sangat terbantu dengan fiturnya yang lengkap & praktis untuk memproses orderan. cashback ongkir 25% yang lumayan gurih, ditambah pencairan dana setiap hari yang dapat memperlancar cash flow.",
         },
       ],
       service_items: [
@@ -157,7 +161,7 @@ export default {
     };
   },
   methods: {
-    openWindow(url = '') {
+    openWindow(url = "") {
       if (url) {
         window.open(this.defaultRedirectURL);
       }

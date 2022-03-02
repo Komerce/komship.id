@@ -30,7 +30,6 @@
         </div>
       </div>
     </section>
-    
     <!-- service -->
     <section id="servicesection" class="service">
       <div class="container">
@@ -89,7 +88,8 @@
         class="conclusion__bggambar"
       />
       <p class="conclusion__text">
-        Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung pengiriman COD dan non COD
+        Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+        pengiriman COD dan non COD
       </p>
       <img
         :src="require('@/assets/img/logo/logo_jne.png')"
@@ -105,7 +105,8 @@
       />
       <div class="conclusionmobile__content">
         <p class="conclusionmobile__text">
-          Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung pengiriman COD dan non COD
+          Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+          pengiriman COD dan non COD
         </p>
         <img
           :src="require('@/assets/img/logo/logo_jne.png')"
@@ -127,12 +128,20 @@
               <span class="order" style="color: #fba63c">Komship</span>
             </h2>
             <div class="row mt-5">
-              <div v-for="(item, idx) in services_item" :key="item.id" class="alur__contentwrap">
+              <div
+                v-for="(item, idx) in services_item"
+                :key="item.id"
+                class="alur__contentwrap"
+              >
                 <div class="alur__content">
                   <div class="alur__content--icon"></div>
                   <h5 class="alur__content--text">{{ item.text }}</h5>
                 </div>
-                <img v-if="(services_item.length - 1) !== idx" :src="item.gambar" class="icons" />
+                <img
+                  v-if="services_item.length - 1 !== idx"
+                  :src="item.gambar"
+                  class="icons"
+                />
               </div>
             </div>
           </div>
@@ -145,7 +154,6 @@
         </div>
       </div>
     </section>
-    
     <!-- feature -->
     <section id="featuresection" class="service">
       <div class="container">
@@ -159,7 +167,13 @@
               >
                 <div
                   class="card-body"
-                  style="background-color: #ff6a3a; border-radius: 24px; display:grid; align-items: center;padding: 1rem 1rem 0px;"
+                  style="
+                    background-color: #ff6a3a;
+                    border-radius: 24px;
+                    display: grid;
+                    align-items: center;
+                    padding: 1rem 1rem 0px;
+                  "
                 >
                   <img
                     :src="item.image"
@@ -225,12 +239,27 @@
     <!-- contactkomerce -->
     <section id="contactkomerce" class="contactkomerce">
       <div class="contactkomerce__right">
-        <img :src="require('@/assets/img/person/contactleft.png')" class="contactkomerce__left--img" />
-        <img :src="require('@/assets/img/person/contactright.png')" class="contactkomerce__right--img" />
+        <img
+          :src="require('@/assets/img/person/contactleft.png')"
+          class="contactkomerce__left--img"
+        />
+        <img
+          :src="require('@/assets/img/person/contactright.png')"
+          class="contactkomerce__right--img"
+        />
         <div class="contactkomerce__right--content">
-          <h5 class="contactkomerce__right--text">Percayakan Pengiriman Ordermu Pada Komship!</h5>
-          <a class="contactkomerce__right--link" :href="defaultRedirectURL" target="_blank">
-            <span class="contactkomerce__right--link-text">Daftar Sekarang</span>
+          <h5 class="contactkomerce__right--text">
+            Percayakan Pengiriman Ordermu Pada Komship!
+          </h5>
+          <a
+            class="contactkomerce__right--link"
+            :href="defaultRedirectURL"
+            onClick="fbq('track', 'Lead')"
+            target="_blank"
+          >
+            <span class="contactkomerce__right--link-text"
+              >Daftar Sekarang</span
+            >
           </a>
         </div>
       </div>
@@ -239,9 +268,15 @@
     <!-- testimoni -->
     <div id="testimoniwrapper" class="testimoniwrapper">
       <h2 class="testimoniwrapper--text">
-        <span style="color: #FF6A3A;">Komship</span>&nbsp;telah dipercaya oleh UMKM 
+        <span style="color: #ff6a3a">Komship</span>&nbsp;telah dipercaya oleh
+        UMKM
       </h2>
-      <carousel :autoplay="15000" :settings="settingscarousel" :wrapAround="true" :breakpoints="breakpoints">
+      <carousel
+        :autoplay="15000"
+        :settings="settingscarousel"
+        :wrapAround="true"
+        :breakpoints="breakpoints"
+      >
         <slide v-for="item in testimoniesData" :key="item.id">
           <div class="carousel__item">
             <div class="slidertestimoni">
@@ -254,7 +289,9 @@
                 </div>
               </div>
               <div class="slidertestimoni__body">
-                <p class="slidertestimoni__body--text">{{ item.description }}</p>
+                <p class="slidertestimoni__body--text">
+                  {{ item.description }}
+                </p>
               </div>
             </div>
           </div>
