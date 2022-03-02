@@ -22,8 +22,7 @@
               </div>
               <div class="col-11">Head Office Komerce</div>
               <div class="col-11 offset-1">
-                Jl. Raya Tamansari, Kompleks Karangwuni, Desa Tamansari,
-                Karangmoncol, Kab. Purbalingga, Jawa Tengah (53355)
+                Jln. Sawah Tengah No. 1 Desa Tunjungmuli Kecamatan Karangmoncol Kabupaten Purbalingga (53355)
               </div>
             </div>
             <div class="row">
@@ -46,14 +45,14 @@
                   min-width="20px"
                 />
               </div>
-              <div class="col-11">081227931840</div>
+              <div class="col-11">081328014170</div>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 company">
             <h3 class="company-title">Perusahaan</h3>
             <ul class="company-link">
               <li>
-                <router-link to="about"> Tentang Kami </router-link>
+                <router-link to="about" @click="resetNavBarActive()"> Tentang Kami </router-link>
               </li>
               <li>
                 <router-link to="terms"> Syarat &amp; Ketentuan </router-link>
@@ -96,7 +95,7 @@
           </div>
         </div>
         <div class="copyright row d-flex">
-          Copyright 2022 komship.id. All rights reserved.
+          Copyright 2022 Komship.id. All rights reserved.
         </div>
       </div>
     </div>
@@ -107,6 +106,12 @@ export default {
   methods: {
     openLink(link) {
       window.open(link);
+    },
+    resetNavBarActive() {
+      document.getElementById('navmenuhome').classList.remove("active");
+      document.getElementById('navmenuservice').classList.remove("active");
+      document.getElementById('navmenualur').classList.remove("active");
+      document.getElementById('navmenufeature').classList.remove("active");
     },
   },
 };

@@ -25,7 +25,7 @@
         <div class="col-lg-5 col-md-7 image-desktop">
           <img
             :src="require('@/assets/img/person/bghome-person.png')"
-            style="margin-right: 10px; margin-left: 200px"
+            style="margin-right: 10px; margin-left: 170px"
           />
         </div>
       </div>
