@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
-      <router-link class="navbar-brand" to="/">
+      <router-link class="navbar-brand" to="/" @click="goto('home')">
         <img
           :src="require('@/assets/img/logo/komship-logo.png')"
           alt="logo komship"
@@ -41,7 +41,7 @@
           <li class="nav-item">
             <a
               id="navmenuhome"
-              href="#home"
+              href="/#"
               class="nav-link"
               @click="goto('home')"
               >Beranda</a
@@ -50,7 +50,7 @@
           <li class="nav-item">
             <a
               id="navmenuservice"
-              href="#service"
+              href="/#service"
               class="nav-link"
               @click="goto('service')"
               >Layanan</a
@@ -60,7 +60,7 @@
             <a
               id="navmenualur"
               class="nav-link"
-              href="#alur"
+              href="/#alur"
               @click="goto('alur')"
               >Alur Pengiriman</a
             >
@@ -69,7 +69,7 @@
             <a
               id="navmenufeature"
               class="nav-link"
-              href="#feature"
+              href="/#feature"
               @click="goto('feature')"
               >Fitur</a
             >
@@ -89,7 +89,7 @@
 export default {
   data() {
     return {
-      hashrouteid: "home",
+      hashrouteid: "",
     };
   },
   watch: {
@@ -103,15 +103,48 @@ export default {
     },
   },
   mounted() {
-    this.toggleClassNav("navmenuhome");
+    if(this.$route.hash && this.$route.hash !== '#') {
+      this.goto(this.$route.hash.substring(1))
+    } else {
+      this.toggleClassNav("navmenuhome");
+    }
   },
   methods: {
     toggleClassNav(id) {
-      document.getElementById(id).classList.toggle("active");
+      if (document.getElementById(id)) {
+        document.getElementById(id).classList.toggle("active");
+      }
     },
     goto(id) {
       this.hashrouteid = id;
-      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      // let offsetPosition = 0;
+      // document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      const element = document.getElementById(`${id}section`);
+      const headerOffset = 80; // height container header nav
+      if (element) {
+        const elementPosition = element.getBoundingClientRect().top;
+        // console.log('window.pageYOffset', window.pageYOffset)
+        // console.log('elementPosition', elementPosition)
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        // console.log('offsetPosition', offsetPosition)
+        // switch(id) {
+        //   case 'service':
+        //     offsetPosition = 600
+        //     break;
+        //   case 'alur':
+        //     offsetPosition = 1800
+        //     break;
+        //   case 'feature':
+        //     offsetPosition = 2600
+        //     break;
+        //   default:
+        //     break;
+        // }
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     },
     openWindow(url) {
       window.open(url);
@@ -130,7 +163,7 @@ export default {
   font-family: "Poppins", sans-serif;
 }
 .image-navbar {
-  margin-left: 5vw;
+  margin-left: 4vw;
 }
 .btn-sign-in {
   width: 151px;

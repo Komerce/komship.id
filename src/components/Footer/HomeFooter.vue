@@ -12,7 +12,7 @@
               />
             </router-link>
             <div class="row">
-              <div class="profile-icon" style="padding-right: 0px">
+              <div class="col-1" style="padding-right: 0px">
                 <img
                   :src="require('@/assets/img/icons/location-icon.png')"
                   alt="location icon"
@@ -20,14 +20,13 @@
                   min-width="25px"
                 />
               </div>
-              <div class="profile-desc">Head Office Komerce</div>
-              <div class="profile-desc">
-                Jl. Raya Tamansari, Kompleks Karangwuni, Desa Tamansari,
-                Karangmoncol, Kab. Purbalingga, Jawa Tengah (53355)
+              <div class="col-11">Head Office Komerce</div>
+              <div class="col-11 offset-1">
+                Jln. Sawah Tengah No. 1 Desa Tunjungmuli Kecamatan Karangmoncol Kabupaten Purbalingga (53355)
               </div>
             </div>
             <div class="row">
-              <div class="profile-icon" style="padding-right: 0px">
+              <div class="col-1" style="padding-right: 0px">
                 <img
                   :src="require('@/assets/img/icons/email-icon.png')"
                   alt="email icon"
@@ -35,10 +34,10 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc">bd@komship.id</div>
+              <div class="col-11">bd@komship.id</div>
             </div>
             <div class="row">
-              <div class="profile-icon">
+              <div class="col-1">
                 <img
                   :src="require('@/assets/img/icons/call-icon.png')"
                   alt="call icon"
@@ -46,14 +45,14 @@
                   min-width="20px"
                 />
               </div>
-              <div class="profile-desc">081227931840</div>
+              <div class="col-11">081328014170</div>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 company">
             <h3 class="company-title">Perusahaan</h3>
             <ul class="company-link">
               <li>
-                <router-link to="about"> Tentang Kami </router-link>
+                <router-link to="about" @click="resetNavBarActive()"> Tentang Kami </router-link>
               </li>
               <li>
                 <router-link to="terms"> Syarat &amp; Ketentuan </router-link>
@@ -96,7 +95,7 @@
           </div>
         </div>
         <div class="copyright row d-flex">
-          Copyright 2022 komship.id. All rights reserved.
+          Copyright 2022 Komship.id. All rights reserved.
         </div>
       </div>
     </div>
@@ -107,6 +106,12 @@ export default {
   methods: {
     openLink(link) {
       window.open(link);
+    },
+    resetNavBarActive() {
+      document.getElementById('navmenuhome').classList.remove("active");
+      document.getElementById('navmenuservice').classList.remove("active");
+      document.getElementById('navmenualur').classList.remove("active");
+      document.getElementById('navmenufeature').classList.remove("active");
     },
   },
 };

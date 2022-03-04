@@ -1,0 +1,307 @@
+<template>
+  <div class="wrapperContainerHomePage">
+    <section id="homesection" class="register-now container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 image-mobile">
+          <img :src="require('@/assets/img/person/bghome-person.png')" />
+        </div>
+        <div class="col-lg-6 col-md-7 content">
+          <h1 class="title">
+            Juaranya Platform Kirim Barang, Mudah dan Murah dengan
+            <span class="order">Komship</span>
+          </h1>
+
+          <p class="description">
+            Dapatkan <i>CASHBACK</i> mulai dari 25% dan GRATIS biaya retur!
+            Pelajari lebih lanjut untuk dapat tawaran menarik.
+          </p>
+          <button
+            class="btn btn-primary btn-register-now"
+            @click="openWindow(defaultRedirectURL)"
+          >
+            Mulai Sekarang
+          </button>
+        </div>
+        <div class="col-lg-5 col-md-7 image-desktop">
+          <img
+            :src="require('@/assets/img/person/bghome-person.png')"
+            style="margin-right: 10px; margin-left: 170px"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- service -->
+    <section id="servicesection" class="service">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6">
+            <h2 class="title">Sering kirim barang?</h2>
+          </div>
+          <div class="col-lg-6 col-md-6 description">
+            Sudah saatnya kamu beralih ke platform yang bisa memberikan berlipat
+            keuntungan dan kenyamanan dalam melakukan pengiriman barang. Komship
+            kini hadir untuk memudahkan pengiriman kamu dengan berbagai benefit
+            TANPA MINIMUM JUMLAH PENGIRIMAN.
+          </div>
+        </div>
+        <div class="row mt-5 service-desktop">
+          <div
+            class="col-lg-4 col-md-6"
+            v-for="item in service_items"
+            :key="item.id"
+          >
+            <div class="card content">
+              <div class="card-body">
+                <img :src="item.image" class="icons" />
+                <h3 class="title-content">{{ item.title }}</h3>
+                <p class="description-content">{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-mobile">
+          <carousel>
+            <slide v-for="item in service_items" :key="item.id">
+              <div class="card mx-3">
+                <div class="card-body">
+                  <img :src="item.image" class="icons mb-3" />
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.description }}</p>
+                </div>
+              </div>
+            </slide>
+            <template #addons>
+              <Pagination />
+            </template>
+          </carousel>
+        </div>
+      </div>
+    </section>
+    <!-- conclusion -->
+    <section class="conclusion">
+      <div class="conclusion__rect conclusion__rect1"></div>
+      <div class="conclusion__rect conclusion__rect2"></div>
+      <div class="conclusion__rect conclusion__rect3"></div>
+      <img
+        :src="require('@/assets/img/background/bg-gambar.png')"
+        alt="bg gambar"
+        class="conclusion__bggambar"
+      />
+      <p class="conclusion__text">
+        Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+        pengiriman COD dan non COD
+      </p>
+      <img
+        :src="require('@/assets/img/logo/logo_jne.png')"
+        class="conclusion__logojne"
+        alt="logo jne"
+      />
+    </section>
+    <section class="conclusionmobile">
+      <img
+        :src="require('@/assets/img/person/conclusion-person-mobile.png')"
+        alt="bg gambar"
+        class="conclusionmobile__bggambar"
+      />
+      <div class="conclusionmobile__content">
+        <p class="conclusionmobile__text">
+          Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+          pengiriman COD dan non COD
+        </p>
+        <img
+          :src="require('@/assets/img/logo/logo_jne.png')"
+          class="conclusionmobile__logojne"
+          alt="logo jne"
+        />
+      </div>
+    </section>
+
+    <!-- alur pengiriman -->
+    <section id="alursection" class="feature">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1 image-mobile"></div>
+          <div class="col-md-6 content">
+            <h2 class="title-content">Alur pengiriman</h2>
+            <h2 class="title-content">
+              menggunakan
+              <span class="order" style="color: #fba63c">Komship</span>
+            </h2>
+            <div class="row mt-5">
+              <div
+                v-for="(item, idx) in services_item"
+                :key="item.id"
+                class="alur__contentwrap"
+              >
+                <div class="alur__content">
+                  <div class="alur__content--icon"></div>
+                  <h5 class="alur__content--text">{{ item.text }}</h5>
+                </div>
+                <img
+                  v-if="services_item.length - 1 !== idx"
+                  :src="item.gambar"
+                  class="icons"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 image-desktop">
+            <img
+              :src="require('@/assets/img/icons/dashboard.png')"
+              alt="dashboard feature"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feature -->
+    <section id="featuresection" class="service">
+      <div class="container">
+        <h2 class="title">Fitur Tambahan</h2>
+        <div class="service-mobile">
+          <carousel :items-to-show="1.25">
+            <slide v-for="item in service_item" :key="item.id">
+              <div
+                class="card content"
+                style="background-color: #ff6a3a border-radius: 24px;width:338px; height:350px; margin-right: 10px;"
+              >
+                <div
+                  class="card-body"
+                  style="
+                    background-color: #ff6a3a;
+                    border-radius: 24px;
+                    display: grid;
+                    align-items: center;
+                    padding: 1rem 1rem 0px;
+                  "
+                >
+                  <img
+                    :src="item.image"
+                    class="icons"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      background-color: white;
+                      border-radius: 24px;
+                    "
+                  />
+                  <h3
+                    class="title-content"
+                    style="text-align: center; color: white"
+                  >
+                    {{ item.title1 }}
+                  </h3>
+                </div>
+              </div>
+            </slide>
+            <template #addons>
+              <Pagination />
+            </template>
+          </carousel>
+        </div>
+        <div class="row mt-5 service-desktop">
+          <div
+            class="col-lg-4 col-md-6"
+            v-for="item in service_item"
+            :key="item.id"
+          >
+            <div
+              class="card content"
+              style="background-color: #ff6a3a border-radius: 24px;width:338px; height:350px; justify-content: center; margin: 0px auto 1em;"
+            >
+              <div
+                class="card-body"
+                style="background-color: #ff6a3a; border-radius: 24px"
+              >
+                <img
+                  :src="item.image"
+                  class="icons"
+                  style="
+                    width: 307.68px;
+                    height: 263.4px;
+                    background-color: white;
+                    border-radius: 24px;
+                  "
+                />
+                <h3
+                  class="title-content"
+                  style="text-align: center; color: white"
+                >
+                  {{ item.title1 }}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contactkomerce -->
+    <section id="contactkomerce" class="contactkomerce">
+      <div class="contactkomerce__right">
+        <img
+          :src="require('@/assets/img/person/contactleft.png')"
+          class="contactkomerce__left--img"
+        />
+        <img
+          :src="require('@/assets/img/person/contactright.png')"
+          class="contactkomerce__right--img"
+        />
+        <div class="contactkomerce__right--content">
+          <h5 class="contactkomerce__right--text">
+            Percayakan Pengiriman Ordermu Pada Komship!
+          </h5>
+          <a
+            class="contactkomerce__right--link"
+            :href="defaultRedirectURL"
+            onClick="fbq('track', 'Lead')"
+            target="_blank"
+          >
+            <span class="contactkomerce__right--link-text"
+              >Daftar Sekarang</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimoni -->
+    <div id="testimoniwrapper" class="testimoniwrapper">
+      <h2 class="testimoniwrapper--text">
+        <span style="color: #ff6a3a">Komship</span>&nbsp;telah dipercaya oleh
+        UMKM
+      </h2>
+      <carousel
+        :autoplay="15000"
+        :settings="settingscarousel"
+        :wrapAround="true"
+        :breakpoints="breakpoints"
+      >
+        <slide v-for="item in testimoniesData" :key="item.id">
+          <div class="carousel__item">
+            <div class="slidertestimoni">
+              <div class="slidertestimoni__head">
+                <div>
+                  <h5 class="slidertestimoni__head--text">{{ item.name }}</h5>
+                </div>
+                <div class="slidertestimoni__head--wrapperimg">
+                  <img :src="item.image" class="slidertestimoni__head--img" />
+                </div>
+              </div>
+              <div class="slidertestimoni__body">
+                <p class="slidertestimoni__body--text">
+                  {{ item.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </slide>
+        <template #addons>
+          <Pagination />
+        </template>
+      </carousel>
+    </div>
+  </div>
+</template>
+<script src="./Home.js"></script>
+<style src="./Home.css"></style>

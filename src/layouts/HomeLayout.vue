@@ -1,9 +1,5 @@
 <template>
-  <metainfo>
-    <template v-slot:title="{ content }">{{
-      content ? `${content} ` : `Komship.id`
-    }}</template>
-  </metainfo>
+  <metainfo></metainfo>
   <div>
     <Navbar />
     <div style="padding-top: 80px">
