@@ -139,7 +139,7 @@ export default {
         {
           id: 1,
           title1: "Produk Terlaris",
-          image: require("@/assets/img/background/bgfitur.png"),
+          image: require("@/assets/img/background/produk_terlaris.png"),
           description:
             "Langsung bisa terima pembayaran dari customer dengan mudah dan tanpa syarat.",
         },
