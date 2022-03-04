@@ -41,7 +41,7 @@
           <li class="nav-item">
             <a
               id="navmenuhome"
-              href="#"
+              href="/#"
               class="nav-link"
               @click="goto('home')"
               >Beranda</a
@@ -50,7 +50,7 @@
           <li class="nav-item">
             <a
               id="navmenuservice"
-              href="#service"
+              href="/#service"
               class="nav-link"
               @click="goto('service')"
               >Layanan</a
@@ -60,7 +60,7 @@
             <a
               id="navmenualur"
               class="nav-link"
-              href="#alur"
+              href="/#alur"
               @click="goto('alur')"
               >Alur Pengiriman</a
             >
@@ -69,7 +69,7 @@
             <a
               id="navmenufeature"
               class="nav-link"
-              href="#feature"
+              href="/#feature"
               @click="goto('feature')"
               >Fitur</a
             >
@@ -89,7 +89,7 @@
 export default {
   data() {
     return {
-      hashrouteid: "home",
+      hashrouteid: "",
     };
   },
   watch: {
@@ -103,11 +103,17 @@ export default {
     },
   },
   mounted() {
-    this.toggleClassNav("navmenuhome");
+    if(this.$route.hash && this.$route.hash !== '#') {
+      this.goto(this.$route.hash.substring(1))
+    } else {
+      this.toggleClassNav("navmenuhome");
+    }
   },
   methods: {
     toggleClassNav(id) {
-      document.getElementById(id).classList.toggle("active");
+      if (document.getElementById(id)) {
+        document.getElementById(id).classList.toggle("active");
+      }
     },
     goto(id) {
       this.hashrouteid = id;
@@ -115,28 +121,30 @@ export default {
       // document.getElementById(id).scrollIntoView({ behavior: "smooth" });
       const element = document.getElementById(`${id}section`);
       const headerOffset = 80; // height container header nav
-      const elementPosition = element.getBoundingClientRect().top;
-      // console.log('window.pageYOffset', window.pageYOffset)
-      // console.log('elementPosition', elementPosition)
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      // console.log('offsetPosition', offsetPosition)
-      // switch(id) {
-      //   case 'service':
-      //     offsetPosition = 600
-      //     break;
-      //   case 'alur':
-      //     offsetPosition = 1800
-      //     break;
-      //   case 'feature':
-      //     offsetPosition = 2600
-      //     break;
-      //   default:
-      //     break;
-      // }
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      if (element) {
+        const elementPosition = element.getBoundingClientRect().top;
+        // console.log('window.pageYOffset', window.pageYOffset)
+        // console.log('elementPosition', elementPosition)
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        // console.log('offsetPosition', offsetPosition)
+        // switch(id) {
+        //   case 'service':
+        //     offsetPosition = 600
+        //     break;
+        //   case 'alur':
+        //     offsetPosition = 1800
+        //     break;
+        //   case 'feature':
+        //     offsetPosition = 2600
+        //     break;
+        //   default:
+        //     break;
+        // }
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     },
     openWindow(url) {
       window.open(url);

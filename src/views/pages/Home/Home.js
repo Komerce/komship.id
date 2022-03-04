@@ -138,7 +138,7 @@ export default {
       service_item: [
         {
           id: 1,
-          title1: "Terima Pembayaran Mudah",
+          title1: "Produk Terlaris",
           image: require("@/assets/img/background/bgfitur.png"),
           description:
             "Langsung bisa terima pembayaran dari customer dengan mudah dan tanpa syarat.",
