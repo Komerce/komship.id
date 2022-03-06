@@ -8,7 +8,7 @@ import HomeLayout from "@/layouts/HomeLayout.vue";
 export default {
   components: {
     DefaultLayout,
-    // HomeLayout,
+    HomeLayout,
   },
   data() {
     return {
