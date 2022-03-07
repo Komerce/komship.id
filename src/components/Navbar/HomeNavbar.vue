@@ -39,12 +39,8 @@
         </div>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a
-              id="navmenuhome"
-              href="/#"
-              class="nav-link"
-              @click="goto('home')"
-              >Beranda</a
+            <a id="navmenuhome" href="/#" class="nav-link" @click="goto('home')"
+              >Home</a
             >
           </li>
           <li class="nav-item">
