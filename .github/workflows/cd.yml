@@ -19,7 +19,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist-folder
-          path: dist
+          path: |
+            dist/
   deploy:
     name: Deploy
     needs: build
@@ -31,7 +32,8 @@ jobs:
         uses: actions/download-artifact@v3
         with: 
           name: dist-folder
-          path: dist
+          path: |
+            dist/
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
