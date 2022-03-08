@@ -39,7 +39,11 @@
         </div>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a href="/#home" class="nav-link active" @click="setMenuActive('navmenuhome')">
+            <a
+              href="/#home"
+              :class="menu === 'navmenuhome' ? 'nav-link active' : 'nav-link'"
+              @click="setMenuActive('navmenuhome')"
+            >
               Beranda
             </a>
           </li>

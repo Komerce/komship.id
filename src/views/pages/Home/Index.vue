@@ -31,7 +31,7 @@
     </section>
     <!-- service -->
     <section id="service" class="service">
-      <div class="container">
+      <div class="container pt-4">
         <div class="row">
           <div class="col-lg-5 col-md-6">
             <h2 class="title">Sering kirim barang?</h2>
@@ -129,16 +129,16 @@
             alt="logo jne"
           />
           <div class="d-flex">
-            <span style="font-size: 14px; color: #ffffff;">Segera Hadir: </span>
+            <span style="font-size: 14px; color: #ffffff">Segera Hadir: </span>
             <img
               :src="require('@/assets/img/logo/logo-id-express.svg')"
               alt="logo id express"
-              style="width: 65px;"
+              style="width: 65px"
             />
             <img
               :src="require('@/assets/img/logo/logo-sicepat.svg')"
               alt="logo sicepat"
-              style="width: 100px;"
+              style="width: 100px"
             />
           </div>
         </div>
@@ -186,7 +186,7 @@
       <!-- New Alur Desktop -->
       <div class="container new-mode-alur-desktop">
         <div class="row justify-content-center mb-5">
-          <div class="col-md-5 px-3 text-center mt-5 pt-4">
+          <div class="col-md-5 px-3 text-center mt-5 pt-5">
             <span class="new-title-alur">
               Alur pengiriman menggunakan
               <span style="color: #ff6a3a !important">Komship</span>
@@ -381,7 +381,10 @@
                 >
               </div>
               <div>
-                <img :src="require('@/assets/img/icons/icon-alur-4.svg')" style="width: 300px;" />
+                <img
+                  :src="require('@/assets/img/icons/icon-alur-4.svg')"
+                  style="width: 300px"
+                />
               </div>
             </div>
             <div>
@@ -413,7 +416,10 @@
                 >
               </div>
               <div>
-                <img :src="require('@/assets/img/icons/icon-alur-6.svg')" style="width: 300px;" />
+                <img
+                  :src="require('@/assets/img/icons/icon-alur-6.svg')"
+                  style="width: 300px"
+                />
               </div>
             </div>
             <div>
@@ -430,20 +436,17 @@
                 <img :src="require('@/assets/img/icons/icon-alur-7.svg')" />
               </div>
               <div style="margin-left: -10px">
-                <span class="title-content-alur-mobile"
-                  >Dana dicairkan</span
-                >
+                <span class="title-content-alur-mobile">Dana dicairkan</span>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- feature -->
     <section id="feature" class="service">
-      <div class="container">
+      <div class="container pt-4">
         <h2 class="title">Fitur Tambahan</h2>
         <div class="service-mobile">
           <carousel :items-to-show="1.25">
