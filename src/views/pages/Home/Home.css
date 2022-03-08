@@ -350,7 +350,7 @@ ol.carousel__pagination {
 .conclusion__text {
   position: absolute;
   width: 591px;
-  right: 324px;
+  right: 400px;
   top: 69px;
   font-weight: 600;
   font-size: 24px;
@@ -367,18 +367,43 @@ ol.carousel__pagination {
   height: 393.61px;
   z-index: 2;
 }
-.conclusion__logojne {
+.conclusion__wrapperlogo {
   position: absolute;
+  right: 122px;
+  top: 58px;
+  display: grid;
+}
+.conclusion__imgtext {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  margin: 14.88px 0px 3px;
+}
+.conclusion__logojne {
   width: 186px;
   height: 59.12px;
-  right: 132px;
-  top: 82px;
   z-index: 2;
+}
+.conclusion__wrapperotheimg {
+  display: flex;
+}
+.conclusion__logoidx {
+  width: 102px;
+  margin-right: 3px;
+  height: 76.5px;
+}
+.conclusion__logosicepat {
+  width: 139px;
+  height: 65.16px;
 }
 .conclusionmobile {
   display: none;
   position: relative;
-  height: 174px;
+  min-height: 225px;
   background: linear-gradient(90deg, #FF6A3A -20.91%, #FBA63C 85.49%);
 }
 .conclusionmobile__content {
@@ -447,6 +472,52 @@ ol.carousel__pagination {
   color: #828282;
   margin-bottom: 0px;
 }
+
+/* Improve */
+.new-title-alur {
+  font-weight: bold;
+  font-size: 32px;
+  color: #222222;
+  font-family: Poppins;
+}
+
+.number-alur {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Poppins;
+  color: #FF6A3A;
+  border: 1px solid #FF6A3A;
+  padding: 5px 15px;
+  border-radius: 50%;
+  background-color: #FFECE9;
+}
+
+.number-alur-mobile {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Poppins;
+  color: #FF6A3A;
+  border: 1px solid #FF6A3A;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #FFECE9;
+}
+
+.title-content-alur {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Poppins;
+  color: #FF6A3A;
+}
+
+.title-content-alur-mobile {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Poppins;
+  color: #828282;
+}
+/* ==== */
+
 @media only screen and (max-width: 1260px) {
   .conclusion__bggambar {
     left: 0px;
@@ -602,6 +673,19 @@ ol.carousel__pagination {
     background: #FF6A3A;
     border-radius: 8px;
     margin: 0px auto;
+  }
+}
+@media only screen and (min-width: 578px) {
+  .new-mode-alur-mobile {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 577px) {
+  .new-mode-alur-mobile {
+    display: inline-block;
+  }
+  .new-mode-alur-desktop {
+    display: none;
   }
 }
 @media only screen and (max-width: 540px) {
