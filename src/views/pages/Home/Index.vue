@@ -1,18 +1,15 @@
 <template>
   <div class="wrapperContainerHomePage">
     <section id="home" class="register-now container">
-      <div class="row pt-5">
-        <div class="col-lg-5 col-md-6 image-mobile">
-          <img :src="require('@/assets/img/hero/new-bg-hero.svg')" />
-        </div>
-        <div class="col-lg-6 col-md-7 content pt-3">
+      <div class="row">
+        <div class="col-lg-6 col-md-7 content pt-5">
           <h1 class="title">
             Juaranya Platform Kirim Barang, Mudah dan Murah dengan
             <span class="order">Komship</span>
           </h1>
           <p class="description">
-            Dapatkan <i>CASHBACK</i> mulai dari 25% dan GRATIS biaya retur!
-            Pelajari lebih lanjut untuk dapat tawaran menarik.
+            Dapatkan CASHBACK mulai dari 25% dan GRATIS biaya retur! Pelajari
+            lebih lanjut untuk dapat tawaran menarik.
           </p>
           <button
             class="btn btn-primary btn-register-now px-5"
@@ -21,11 +18,14 @@
             Mulai Sekarang
           </button>
         </div>
-        <div class="col-lg-5 col-md-7 image-desktop pt-5">
+        <div class="col-lg-5 col-md-7 image-desktop pt-5 mt-5">
           <img
             :src="require('@/assets/img/hero/new-bg-hero.svg')"
             style="margin-right: 10px; margin-left: 170px"
           />
+        </div>
+        <div class="col-lg-5 col-md-6 image-mobile mt-4">
+          <img :src="require('@/assets/img/hero/new-bg-hero.svg')" />
         </div>
       </div>
     </section>
@@ -53,26 +53,31 @@
               <div class="card-body">
                 <img :src="item.image" class="icons" />
                 <h3 class="title-content">{{ item.title }}</h3>
-                <p class="description-content">{{ item.description }}</p>
+                <p class="description-content">
+                  {{ item.description }}
+                  <span v-if="item.id === 5" class="text-black"
+                    >*S&K berlaku.</span
+                  >
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div class="service-mobile">
-          <carousel>
-            <slide v-for="item in service_items" :key="item.id">
-              <div class="card mx-3">
-                <div class="card-body">
-                  <img :src="item.image" class="icons mb-3" />
-                  <h3>{{ item.title }}</h3>
-                  <p>{{ item.description }}</p>
-                </div>
+          <div v-for="item in service_items" :key="item.id">
+            <div class="card mx-3">
+              <div class="card-body">
+                <img :src="item.image" class="icons mb-3" />
+                <h3>{{ item.title }}</h3>
+                <p>
+                  {{ item.description }}
+                  <span v-if="item.id === 5" class="text-black"
+                    >*S&K berlaku.</span
+                  >
+                </p>
               </div>
-            </slide>
-            <template #addons>
-              <Pagination />
-            </template>
-          </carousel>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -88,7 +93,7 @@
       />
       <p class="conclusion__text">
         Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
-        pengiriman COD dan non COD
+        pengiriman COD dan Non-COD
       </p>
       <div class="conclusion__wrapperlogo">
         <img

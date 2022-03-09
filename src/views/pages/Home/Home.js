@@ -1,5 +1,29 @@
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination } from "vue3-carousel";
+window.addEventListener("scroll", () => {
+  if (window.history.state.current === '/' || window.history.state.current === '/#home' || window.history.state.current === '/#service' || window.history.state.current === '/#alur' || window.history.state.current === '/#feature') {
+    if (window.pageYOffset < 540) {
+      document.getElementById('navmenuhome').classList.add('active')
+    } else {
+      document.getElementById('navmenuhome').classList.remove('active')
+    }
+    if (window.pageYOffset > 540 && window.pageYOffset < 1780) {
+      document.getElementById('navmenuservice').classList.add('active')
+    } else {
+      document.getElementById('navmenuservice').classList.remove('active')
+    }
+    if (window.pageYOffset > 1780 && window.pageYOffset < 2850) {
+      document.getElementById('navmenualur').classList.add('active')
+    } else {
+      document.getElementById('navmenualur').classList.remove('active')
+    }
+    if (window.pageYOffset > 2850) {
+      document.getElementById('navmenufitur').classList.add('active')
+    } else {
+      document.getElementById('navmenufitur').classList.remove('active')
+    }
+  }
+});
 export default {
   components: {
     Carousel,
@@ -88,7 +112,7 @@ export default {
           title: "Gratis Biaya Retur",
           image: require("@/assets/img/icons/rts-icon1.png"),
           description:
-            "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD   *S&K berlaku.",
+            "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD",
         },
         {
           id: 6,
