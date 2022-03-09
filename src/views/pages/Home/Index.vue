@@ -1,11 +1,11 @@
 <template>
   <div class="wrapperContainerHomePage">
     <section id="home" class="register-now container">
-      <div class="row">
+      <div class="row pt-5">
         <div class="col-lg-5 col-md-6 image-mobile">
           <img :src="require('@/assets/img/hero/new-bg-hero.svg')" />
         </div>
-        <div class="col-lg-6 col-md-7 content">
+        <div class="col-lg-6 col-md-7 content pt-3">
           <h1 class="title">
             Juaranya Platform Kirim Barang, Mudah dan Murah dengan
             <span class="order">Komship</span>
@@ -21,7 +21,7 @@
             Mulai Sekarang
           </button>
         </div>
-        <div class="col-lg-5 col-md-7 image-desktop">
+        <div class="col-lg-5 col-md-7 image-desktop pt-5">
           <img
             :src="require('@/assets/img/hero/new-bg-hero.svg')"
             style="margin-right: 10px; margin-left: 170px"
