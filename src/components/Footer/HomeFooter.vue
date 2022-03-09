@@ -66,7 +66,7 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-8 partner">
-            <h3 class="partner-title mb-5">Kerjasama Ekspedisi</h3>
+            <h3 class="partner-title mb-4">Kerjasama Ekspedisi</h3>
             <div class="image-partner">
               <img
                 :src="require('@/assets/img/logo/logo_jne.png')"
@@ -81,7 +81,7 @@
                 :src="require('@/assets/img/logo/logo-id-express.svg')"
                 alt="logo jne"
                 class="image-partner-img"
-                style="margin-left: -30px;"
+                style="margin-left: -30px; width: 80px;"
               />
               <img
                 :src="require('@/assets/img/logo/logo-sicepat.svg')"
