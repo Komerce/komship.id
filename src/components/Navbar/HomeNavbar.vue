@@ -38,18 +38,9 @@
           </button>
         </div>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a
-              href="/#home"
-              :class="menu === 'navmenuhome' ? 'nav-link active' : 'nav-link'"
-              @click="setMenuActive('navmenuhome')"
-            >
-              Beranda
-            </a>
-          </li>
           <li
             class="nav-item"
-            v-for="(items, index) in listMenu.slice(1, listMenu.length)"
+            v-for="(items, index) in listMenu"
             :key="index + 1"
           >
             <a
@@ -76,7 +67,7 @@
 export default {
   data() {
     return {
-      menu: "navmenuhome",
+      menu: 'navmenuhome',
       hashrouteid: "",
 
       listMenu: [
@@ -101,6 +92,7 @@ export default {
           value: "feature",
         },
       ],
+      navBerandaIsActive: true,
     };
   },
   watch: {
@@ -113,13 +105,13 @@ export default {
       }
     },
   },
-  mounted() {
-    if (this.$route.hash && this.$route.hash !== "#") {
-      this.goto(this.$route.hash.substring(1));
-    } else {
-      this.toggleClassNav("navmenuhome");
-    }
-  },
+  // mounted() {
+  //   if (this.$route.hash && this.$route.hash !== "#") {
+  //     this.goto(this.$route.hash.substring(1));
+  //   } else {
+  //     this.toggleClassNav("navmenuhome");
+  //   }
+  // },
   methods: {
     toggleClassNav(id) {
       if (document.getElementById(id)) {
@@ -166,6 +158,11 @@ export default {
       // here you have access to everything you need regarding that event
     },
     setMenuActive(id) {
+      if (this.navBerandaIsActive === true) {
+        this.navBerandaIsActive = false;
+      } else {
+        this.navBerandaIsActive = true;
+      }
       this.menu = id;
     },
   },
