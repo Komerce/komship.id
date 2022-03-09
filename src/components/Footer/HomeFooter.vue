@@ -6,7 +6,7 @@
           <div class="col-lg-6 col-md-8 profile">
             <router-link to="/">
               <img
-                :src="require('@/assets/img/logo/komship-logo.png')"
+                :src="require('@/assets/img/logo/logo-by-komship.svg')"
                 alt="logo komship"
                 class="profile-image"
               />
@@ -66,10 +66,25 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-8 partner">
-            <h3 class="partner-title">Kerjasama Ekspedisi</h3>
+            <h3 class="partner-title mb-4">Kerjasama Ekspedisi</h3>
             <div class="image-partner">
               <img
                 :src="require('@/assets/img/logo/logo_jne.png')"
+                alt="logo jne"
+                class="image-partner-img mb-3"
+                style="margin-left: 20px;"
+              />
+              <p class="text-black" style="margin-left: 20px;">
+                Segera Hadir :
+              </p>
+              <img
+                :src="require('@/assets/img/logo/logo-id-express.svg')"
+                alt="logo jne"
+                class="image-partner-img"
+                style="margin-left: -30px; width: 80px;"
+              />
+              <img
+                :src="require('@/assets/img/logo/logo-sicepat.svg')"
                 alt="logo jne"
                 class="image-partner-img"
               />

@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/" @click="goto('home')">
         <img
-          :src="require('@/assets/img/logo/komship-logo.png')"
+          :src="require('@/assets/img/logo/logo-by-komship.svg')"
           alt="logo komship"
           class="image-navbar"
         />
@@ -40,39 +40,26 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a
-              id="navmenuhome"
-              href="/#"
-              class="nav-link"
-              @click="goto('home')"
-              >Beranda</a
+              href="/#home"
+              :class="menu === 'navmenuhome' ? 'nav-link active' : 'nav-link'"
+              @click="setMenuActive('navmenuhome')"
             >
+              Beranda
+            </a>
           </li>
-          <li class="nav-item">
+          <li
+            class="nav-item"
+            v-for="(items, index) in listMenu.slice(1, listMenu.length)"
+            :key="index + 1"
+          >
             <a
-              id="navmenuservice"
-              href="/#service"
-              class="nav-link"
-              @click="goto('service')"
-              >Layanan</a
+              :id="items.id"
+              :href="`/#${items.value}`"
+              :class="menu === items.id ? 'nav-link active' : 'nav-link'"
+              @click="setMenuActive(items.id)"
             >
-          </li>
-          <li class="nav-item">
-            <a
-              id="navmenualur"
-              class="nav-link"
-              href="/#alur"
-              @click="goto('alur')"
-              >Alur Pengiriman</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              id="navmenufeature"
-              class="nav-link"
-              href="/#feature"
-              @click="goto('feature')"
-              >Fitur</a
-            >
+              {{ items.title }}
+            </a>
           </li>
         </ul>
         <button
@@ -89,7 +76,31 @@
 export default {
   data() {
     return {
+      menu: "navmenuhome",
       hashrouteid: "",
+
+      listMenu: [
+        {
+          id: "navmenuhome",
+          title: "Beranda",
+          value: "home",
+        },
+        {
+          id: "navmenuservice",
+          title: "Layanan",
+          value: "service",
+        },
+        {
+          id: "navmenualur",
+          title: "Alur Pengiriman",
+          value: "alur",
+        },
+        {
+          id: "navmenufitur",
+          title: "Fitur",
+          value: "feature",
+        },
+      ],
     };
   },
   watch: {
@@ -103,8 +114,8 @@ export default {
     },
   },
   mounted() {
-    if(this.$route.hash && this.$route.hash !== '#') {
-      this.goto(this.$route.hash.substring(1))
+    if (this.$route.hash && this.$route.hash !== "#") {
+      this.goto(this.$route.hash.substring(1));
     } else {
       this.toggleClassNav("navmenuhome");
     }
@@ -125,7 +136,8 @@ export default {
         const elementPosition = element.getBoundingClientRect().top;
         // console.log('window.pageYOffset', window.pageYOffset)
         // console.log('elementPosition', elementPosition)
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
         // console.log('offsetPosition', offsetPosition)
         // switch(id) {
         //   case 'service':
@@ -142,7 +154,7 @@ export default {
         // }
         window.scrollTo({
           top: offsetPosition,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       }
     },
@@ -152,6 +164,9 @@ export default {
     onItemChanged(event, currentItem, lastActiveItem) {
       console.log(event, currentItem, lastActiveItem);
       // here you have access to everything you need regarding that event
+    },
+    setMenuActive(id) {
+      this.menu = id;
     },
   },
 };
