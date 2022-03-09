@@ -1,7 +1,6 @@
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination } from "vue3-carousel";
 window.addEventListener("scroll", () => {
-  console.log(window.history)
   if (window.history.state.current === '/' || window.history.state.current === '/#home' || window.history.state.current === '/#service' || window.history.state.current === '/#alur' || window.history.state.current === '/#feature') {
     if (window.pageYOffset < 540) {
       document.getElementById('navmenuhome').classList.add('active')
