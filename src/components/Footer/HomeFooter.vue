@@ -55,13 +55,13 @@
                 <router-link to="about" @click="resetNavBarActive()"> Tentang Kami </router-link>
               </li>
               <li>
-                <router-link to="terms"> Syarat &amp; Ketentuan </router-link>
+                <router-link to="terms"  @click="resetNavBarActive()"> Syarat &amp; Ketentuan </router-link>
               </li>
               <li>
-                <router-link to="privacy"> Kebijakan privasi </router-link>
+                <router-link to="privacy"  @click="resetNavBarActive()"> Kebijakan privasi </router-link>
               </li>
               <li>
-                <router-link to="faq"> FAQ </router-link>
+                <router-link to="faq"  @click="resetNavBarActive()"> FAQ </router-link>
               </li>
             </ul>
           </div>
@@ -81,7 +81,7 @@
                 :src="require('@/assets/img/logo/logo-id-express.svg')"
                 alt="logo jne"
                 class="image-partner-img"
-                style="margin-left: -30px; width: 80px;"
+                style="margin-left: -20px; width: 80px;"
               />
               <img
                 :src="require('@/assets/img/logo/logo-sicepat.svg')"
@@ -124,9 +124,9 @@ export default {
     },
     resetNavBarActive() {
       document.getElementById('navmenuhome').classList.remove("active");
-      document.getElementById('navmenuservice').classList.remove("active");
-      document.getElementById('navmenualur').classList.remove("active");
-      document.getElementById('navmenufeature').classList.remove("active");
+      document.getElementById('navmenuservice').classList.remove('active')
+      document.getElementById('navmenualur').classList.remove('active')
+      document.getElementById('navmenufitur').classList.remove('active')
     },
   },
 };
