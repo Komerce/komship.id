@@ -238,7 +238,14 @@ export default {
     font-weight: 700;
   }
   .btn-sign-in {
-    display: none !important;
+    padding: 0px !important;
+    margin: 0px 0px 0px 6px;
+    width: 200px;
+    height: 42px;
+    border-radius: 8px !important;
+    color: #dc3545 !important;
+    font-weight: 600 !important;
+    background-color: white !important;
   }
 }
 @media only screen and (max-width: 540px) {
