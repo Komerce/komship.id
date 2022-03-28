@@ -52,6 +52,16 @@
               {{ items.title }}
             </a>
           </li>
+          <li class="nav-item">
+            <router-link
+              id="cek-ongkir"
+              class="nav-link"
+              to="/cek-ongkir"
+              @click="setRouterActive('cek-ongkir')"
+            >
+              Cek Ongkir
+            </router-link>
+          </li>
         </ul>
         <button
           class="btn btn-outline-primary btn-sign-in"
@@ -164,6 +174,14 @@ export default {
         this.navBerandaIsActive = true;
       }
       this.menu = id;
+    },
+    async setRouterActive(link) {
+      let active = document.getElementsByClassName("nav-link");
+      if (active.length > 0) {
+        active[0].classList.remove("active");
+      }
+      let menu = document.getElementById(link);
+      menu.classList.add("active");
     },
   },
 };
