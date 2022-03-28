@@ -39,5 +39,13 @@ const routes = [
       layout: "HomeLayout",
     },
   },
+  {
+    path: "/cek-ongkir",
+    name: "ShippingCost",
+    component: () => import("@/views/pages/ShippingCost.vue"),
+    meta: {
+      layout: "HomeLayout",
+    },
+  },
 ];
 export default routes;

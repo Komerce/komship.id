@@ -1,5 +1,5 @@
 {
-  "name": "Komship.id",
+  "name": "komship.id",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,12 +10,14 @@
   "dependencies": {
     "@mdi/font": "5.9.55",
     "@popperjs/core": "^2.10.2",
+    "axios": "^0.26.1",
     "bootstrap": "^5.1.3",
     "core-js": "^3.6.5",
     "roboto-fontface": "*",
     "vue": "^3.0.0",
     "vue-meta": "^3.0.0-alpha.9",
     "vue-router": "^4.0.0-0",
+    "vue-select": "^4.0.0-beta.3",
     "vue3-carousel": "^0.1.30"
   },
   "devDependencies": {
