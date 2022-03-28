@@ -67,7 +67,7 @@
 export default {
   data() {
     return {
-      menu: 'navmenuhome',
+      menu: "navmenuhome",
       hashrouteid: "",
 
       listMenu: [

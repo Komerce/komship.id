@@ -22,7 +22,8 @@
               </div>
               <div class="col-11">Head Office Komerce</div>
               <div class="col-11 offset-1">
-                Jln. Sawah Tengah No. 1 Desa Tunjungmuli Kecamatan Karangmoncol Kabupaten Purbalingga (53355)
+                Jln. Sawah Tengah No. 1 Desa Tunjungmuli Kecamatan Karangmoncol
+                Kabupaten Purbalingga (53355)
               </div>
             </div>
             <div class="row">
@@ -52,16 +53,24 @@
             <h3 class="company-title">Perusahaan</h3>
             <ul class="company-link">
               <li>
-                <router-link to="about" @click="resetNavBarActive()"> Tentang Kami </router-link>
+                <router-link to="about" @click="resetNavBarActive()">
+                  Tentang Kami
+                </router-link>
               </li>
               <li>
-                <router-link to="terms"  @click="resetNavBarActive()"> Syarat &amp; Ketentuan </router-link>
+                <router-link to="terms" @click="resetNavBarActive()">
+                  Syarat &amp; Ketentuan
+                </router-link>
               </li>
               <li>
-                <router-link to="privacy"  @click="resetNavBarActive()"> Kebijakan privasi </router-link>
+                <router-link to="privacy" @click="resetNavBarActive()">
+                  Kebijakan privasi
+                </router-link>
               </li>
               <li>
-                <router-link to="faq"  @click="resetNavBarActive()"> FAQ </router-link>
+                <router-link to="faq" @click="resetNavBarActive()">
+                  FAQ
+                </router-link>
               </li>
             </ul>
           </div>
@@ -72,16 +81,14 @@
                 :src="require('@/assets/img/logo/logo_jne.png')"
                 alt="logo jne"
                 class="image-partner-img mb-3"
-                style="margin-left: 20px;"
+                style="margin-left: 20px"
               />
-              <p class="text-black" style="margin-left: 20px;">
-                Segera Hadir :
-              </p>
+              <p class="text-black" style="margin-left: 20px">Segera Hadir :</p>
               <img
                 :src="require('@/assets/img/logo/logo-id-express.svg')"
                 alt="logo jne"
                 class="image-partner-img"
-                style="margin-left: -20px; width: 80px;"
+                style="margin-left: -20px; width: 80px"
               />
               <img
                 :src="require('@/assets/img/logo/logo-sicepat.svg')"
@@ -123,10 +130,10 @@ export default {
       window.open(link);
     },
     resetNavBarActive() {
-      document.getElementById('navmenuhome').classList.remove("active");
-      document.getElementById('navmenuservice').classList.remove('active')
-      document.getElementById('navmenualur').classList.remove('active')
-      document.getElementById('navmenufitur').classList.remove('active')
+      document.getElementById("navmenuhome").classList.remove("active");
+      document.getElementById("navmenuservice").classList.remove("active");
+      document.getElementById("navmenualur").classList.remove("active");
+      document.getElementById("navmenufitur").classList.remove("active");
     },
   },
 };
