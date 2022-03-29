@@ -8,9 +8,20 @@
             <span class="order">Komship</span>
           </h1>
           <p class="description">
-            Dapatkan CASHBACK mulai dari 25% dan GRATIS biaya retur! Pelajari
-            lebih lanjut untuk dapat tawaran menarik.
+            Dapatkan diskon ongkir mulai dari 25% dan GRATIS biaya retur!
+            Pelajari lebih lanjut untuk dapat tawaran menarik
           </p>
+          <div class="row">
+            <div class="col-md-4">
+              <span class="hap-2000">2.000+</span>
+            </div>
+            <div class="col-md-8">
+              <span class="hap-description"
+                >Pebisnis online sudah bergabung dengan
+                <span class="hap-komship">Komship</span></span
+              >
+            </div>
+          </div>
           <button
             class="btn btn-primary btn-register-now px-5"
             @click="openWindow(defaultRedirectURL)"
