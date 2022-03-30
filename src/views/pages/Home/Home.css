@@ -269,7 +269,6 @@ ol.carousel__pagination {
 .service {
     padding-top: 5vw;
     background-color: #f8f9fa;
-    margin-bottom: 150px;
 }
 
 .service-mobile {
@@ -405,38 +404,53 @@ p {
     display: none;
 }
 
+
+/* conclusion */
+
 .conclusion {
+    text-align: -webkit-center;
+    margin-top: -50px;
+}
+
+.conclusion-dekstop {
+    width: 70%;
+    padding: 40px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+}
+
+.conclusion__logo {
+    max-width: 120px;
+}
+
+.conclusion__text {
+    text-align: left;
+    padding-right: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+}
+
+.COD {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FF783A;
+}
+
+.conclusion_logo {
+    align-self: center;
+}
+
+
+/* .conclusion {
     position: relative;
     height: 255px;
     background-color: #FFFFFF;
     width: 80%;
-    text-align: -webkit-center;
+    text-align: center;
 }
-
-
-/* .conclusion__rect {
-    position: absolute;
-    width: 131px;
-    height: 11px;
-    background: #FFFFFF;
-    border-radius: 20px;
-    z-index: 1;
-}
-
-.conclusion__rect1 {
-    left: -64px;
-    top: 76px;
-}
-
-.conclusion__rect2 {
-    left: 16px;
-    top: 113px;
-}
-
-.conclusion__rect3 {
-    left: -84px;
-    top: 150px;
-} */
 
 .conclusion__text {
     position: absolute;
@@ -444,10 +458,10 @@ p {
     right: 340px;
     top: 69px;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.5px;
-    color: #FFFFFF;
+    color: #222222;
     z-index: 2;
 }
 
@@ -541,7 +555,7 @@ p {
 .conclusionmobile__logojne {
     width: 65px;
     height: 20.66px;
-}
+} */
 
 .alur .title-content {
     position: static;
@@ -993,6 +1007,9 @@ p {
     }
     .conclusion .btn-register-conclusion {
         margin-top: 5vw;
+    }
+    .pt-5 {
+        padding-top: 0%;
     }
 }
 

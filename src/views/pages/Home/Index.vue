@@ -65,10 +65,9 @@
                 <img :src="item.image" class="icons" />
                 <h3 class="title-content">{{ item.title }}</h3>
                 <p class="description-content">
-                  {{ item.description }}</p>
-                  <p v-if="item.id === 5" class="text-black"
-                    >*S&K berlaku.</p
-                  >
+                  {{ item.description }}
+                </p>
+                <p v-if="item.id === 5" class="text-black">*S&K berlaku.</p>
               </div>
             </div>
           </div>
@@ -93,40 +92,43 @@
     </section>
     <!-- conclusion -->
     <section class="conclusion">
-      <div class="conclusion__rect conclusion__rect1"></div>
-      <div class="conclusion__rect conclusion__rect2"></div>
-      <div class="conclusion__rect conclusion__rect3"></div>
-      <!-- <img
-        :src="require('@/assets/img/background/bg-gambar.png')"
-        alt="bg gambar"
-        class="conclusion__bggambar"
-      /> -->
-      <p class="conclusion__text">
-        Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
-        pengiriman <span class="COD">COD dan Non-COD</span>
-      </p>
-      <div class="conclusion__wrapperlogo">
-        <img
-          :src="require('@/assets/img/logo/logo_jne.png')"
-          class="conclusion__logojne"
-          alt="logo jne"
-        />
-        <p class="conclusion__imgtext">Segera hadir :</p>
-        <div class="conclusion__wrapperotheimg">
-          <img
-            :src="require('@/assets/img/logo/logo-id-express.svg')"
-            alt="imgdata"
-            class="conclusion__logoidx"
-          />
-          <img
-            :src="require('@/assets/img/logo/logo-sicepat.svg')"
-            alt="imgdata"
-            class="conclusion__logosicepat"
-          />
+      <div class="row conclusion-dekstop">
+        <div class="col-lg-6 col-md-6 col-12">
+          <p class="conclusion__text">
+            Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+            pengiriman <span class="COD">COD dan Non-COD</span>
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-4 conclusion_logo">
+          <div class="conclusion__wrapperlogo">
+            <img
+              :src="require('@/assets/img/logo/logo_jne.png')"
+              class="conclusion__logo"
+              alt="logo jne"
+            />
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-4 conclusion_logo">
+          <div class="conclusion__wrapperotheimg">
+            <img
+              :src="require('@/assets/img/logo/logo_sicepat.png')"
+              alt="imgdata"
+              class="conclusion__logo"
+            />
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-4 conclusion_logo">
+          <div class="conclusion__wrapperotheimg">
+            <img
+              :src="require('@/assets/img/logo/logo_idexpress.png')"
+              alt="imgdata"
+              class="conclusion__logo"
+            />
+          </div>
         </div>
       </div>
     </section>
-    <section class="conclusionmobile">
+    <!-- <section class="conclusionmobile">
       <img
         :src="require('@/assets/img/person/conclusion-person-mobile.png')"
         alt="bg gambar"
@@ -157,6 +159,22 @@
             />
           </div>
         </div>
+      </div>
+    </section> -->
+
+<!-- Benefit -->
+    <section>
+      <div class="row benefit1">
+        <div class="col-lg-3 col-md-3 benefit">
+          Benefit
+        </div>
+        <div class="col-lg-3 col-md-3 kurir">
+          JNE
+        </div>
+        <div class="col-lg-3 col-md-3 kurir">
+          SiCepat
+        </div>
+        <div class="col-lg-3 col-md-3 kurir">IDExpress</div>
       </div>
     </section>
 
