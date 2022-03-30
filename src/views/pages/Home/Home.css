@@ -276,6 +276,14 @@ ol.carousel__pagination {
     display: none;
 }
 
+.service-desktop {
+    background-image: linear-gradient(to right, #FF6A3A, #FBA63C);
+    border-radius: 16px;
+    padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .service .title {
     font-weight: 700;
     font-size: 32px;
@@ -293,25 +301,35 @@ ol.carousel__pagination {
 .service .content {
     border: none;
     border-radius: 10px;
-    min-height: 275px;
-    margin-bottom: 1.8vw;
+    min-height: 190px;
+    margin-bottom: 80px;
 }
 
 .service .title-content {
     margin-top: 1.5vw;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 24px;
     font-weight: 600;
 }
 
 .service .description-content {
     color: #828282;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 21px;
 }
 
 .service .icons {
     width: 80px;
+    margin-top: -70px;
+}
+
+.service.text-black {
+    margin-top: -25px;
+}
+
+p {
+    margin: 0px;
 }
 
 
@@ -390,10 +408,13 @@ ol.carousel__pagination {
 .conclusion {
     position: relative;
     height: 255px;
-    background: linear-gradient(90deg, #FF6A3A -20.91%, #FBA63C 85.49%);
+    background-color: #FFFFFF;
+    width: 80%;
+    text-align: -webkit-center;
 }
 
-.conclusion__rect {
+
+/* .conclusion__rect {
     position: absolute;
     width: 131px;
     height: 11px;
@@ -415,7 +436,7 @@ ol.carousel__pagination {
 .conclusion__rect3 {
     left: -84px;
     top: 150px;
-}
+} */
 
 .conclusion__text {
     position: absolute;
@@ -428,6 +449,13 @@ ol.carousel__pagination {
     letter-spacing: 0.5px;
     color: #FFFFFF;
     z-index: 2;
+}
+
+.COD {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #FE783A;
 }
 
 .conclusion__bggambar {

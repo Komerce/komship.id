@@ -11,7 +11,7 @@
             Dapatkan diskon ongkir mulai dari 25% dan GRATIS biaya retur!
             Pelajari lebih lanjut untuk dapat tawaran menarik
           </p>
-          <div class="row">
+          <div class="row hap-row1">
             <div class="col-md-4">
               <span class="hap-2000">2.000+</span>
             </div>
@@ -56,7 +56,7 @@
         </div>
         <div class="row mt-5 service-desktop">
           <div
-            class="col-lg-4 col-md-6"
+            class="col-xl-4 col-lg-4 col-md-6"
             v-for="item in service_items"
             :key="item.id"
           >
@@ -65,11 +65,10 @@
                 <img :src="item.image" class="icons" />
                 <h3 class="title-content">{{ item.title }}</h3>
                 <p class="description-content">
-                  {{ item.description }}
-                  <span v-if="item.id === 5" class="text-black"
-                    >*S&K berlaku.</span
+                  {{ item.description }}</p>
+                  <p v-if="item.id === 5" class="text-black"
+                    >*S&K berlaku.</p
                   >
-                </p>
               </div>
             </div>
           </div>
@@ -97,14 +96,14 @@
       <div class="conclusion__rect conclusion__rect1"></div>
       <div class="conclusion__rect conclusion__rect2"></div>
       <div class="conclusion__rect conclusion__rect3"></div>
-      <img
+      <!-- <img
         :src="require('@/assets/img/background/bg-gambar.png')"
         alt="bg gambar"
         class="conclusion__bggambar"
-      />
+      /> -->
       <p class="conclusion__text">
         Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
-        pengiriman COD dan Non-COD
+        pengiriman <span class="COD">COD dan Non-COD</span>
       </p>
       <div class="conclusion__wrapperlogo">
         <img
