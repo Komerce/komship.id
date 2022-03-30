@@ -180,6 +180,8 @@ export default {
       if (active.length > 0) {
         active[0].classList.remove("active");
       }
+      let menufitur = document.getElementById("navmenufitur");
+      menufitur.classList.add("active");
       let menu = document.getElementById(link);
       menu.classList.add("active");
     },
