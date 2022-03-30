@@ -81,6 +81,92 @@
 /* end contactkomerce */
 
 
+/* benefit */
+
+#benefit {
+    text-align: -webkit-center;
+    margin-top: 5%;
+}
+
+.benefit {
+    text-align: center;
+    width: 80%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.benefit1 {
+    margin-bottom: 2%;
+    /* background-color: #FFFFFF; */
+}
+
+.benefit_2 {
+    background-color: #FBA63C;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    align-self: center;
+    padding: 15px;
+}
+
+.benefit_3 {
+    background-color: #FBA63C;
+    background-size: cover;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    align-self: center;
+    /* padding-top: 30px; */
+    /* padding-bottom: 30px; */
+}
+
+.benefit-content {
+    align-self: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #FFFFFF;
+    background-size: cover;
+}
+
+.benefit1 li {
+    list-style: none;
+}
+
+.material-icons {
+    font-size: 10px;
+    color: #F95031;
+}
+
+.kurir {
+    background-color: #FF6A3A;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    padding: 15px;
+}
+
+.benefit-SK {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+
+/* benefit end*/
+
+
 /* slider testimoni */
 
 .testimoniwrapper {
@@ -214,6 +300,9 @@ ol.carousel__pagination {
     width: 100%;
     padding-bottom: 5vw;
     font-family: "Poppins", sans-serif;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 .register-now .image-mobile {
@@ -226,6 +315,7 @@ ol.carousel__pagination {
 
 .register-now .content {
     margin-top: 5vw;
+    margin-left: 3vw;
 }
 
 .register-now .title {
@@ -267,7 +357,6 @@ ol.carousel__pagination {
 /* serviceYYY */
 
 .service {
-    padding-top: 5vw;
     background-color: #f8f9fa;
 }
 
@@ -283,11 +372,16 @@ ol.carousel__pagination {
     padding-right: 50px;
 }
 
+.service-title {
+    align-self: center;
+}
+
 .service .title {
     font-weight: 700;
     font-size: 32px;
     display: flex;
     justify-content: center;
+    align-self: center;
 }
 
 .service .description {

@@ -1,7 +1,7 @@
 <template>
   <div class="wrapperContainerHomePage">
-    <section id="home" class="register-now container">
-      <div class="row">
+    <section id="home" class="register-now container-fluid">
+      <div class="row container">
         <div class="col-lg-6 col-md-7 content pt-5">
           <h1 class="title">
             Juaranya Platform Kirim Barang, Mudah dan Murah dengan
@@ -32,7 +32,7 @@
         <div class="col-lg-5 col-md-7 image-desktop pt-5 mt-5">
           <img
             :src="require('@/assets/img/hero/new-bg-hero.svg')"
-            style="margin-right: 10px; margin-left: 170px"
+            style="margin-right: 10px; margin-left: 43%"
           />
         </div>
         <div class="col-lg-5 col-md-6 image-mobile mt-4">
@@ -44,7 +44,7 @@
     <section id="service" class="service">
       <div class="container pt-4">
         <div class="row">
-          <div class="col-lg-5 col-md-6">
+          <div class="col-lg-5 col-md-6 service-title">
             <h2 class="title">Sering kirim barang?</h2>
           </div>
           <div class="col-lg-6 col-md-6 description">
@@ -162,19 +162,83 @@
       </div>
     </section> -->
 
-<!-- Benefit -->
-    <section>
-      <div class="row benefit1">
-        <div class="col-lg-3 col-md-3 benefit">
-          Benefit
+    <!-- Benefit -->
+    <section id="benefit">
+      <div class="benefit">
+        <div class="row benefit1">
+          <div class="col-lg-3 col-md-3 benefit_2">Benefit</div>
+          <div class="col-lg-3 col-md-3 kurir">JNE</div>
+          <div class="col-lg-3 col-md-3 kurir">SiCepat</div>
+          <div class="col-lg-3 col-md-3 kurir">IDExpress</div>
         </div>
-        <div class="col-lg-3 col-md-3 kurir">
-          JNE
+        <div class="row benefit1">
+          <div class="col-lg-3 col-md-3 benefit_3">Diskon Ongkir</div>
+          <div class="col-lg-3 col-md-3 benefit-content">Reg 25%</div>
+          <div class="col-lg-3 col-md-3 benefit-content">
+            <li><i class="material-icons li-benefit">brightness_1</i> 30%</li>
+            <li class="li-benefit">
+              Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
+            </li>
+          </div>
+          <div class="col-lg-3 col-md-3 benefit-content">
+            <li class="li-benefit">Reg 25% (>1/2 kg)</li>
+            <li class="li-benefit">&lt;1/2 Kg bayar 1/2-nya * + diskon 15%</li>
+          </div>
         </div>
-        <div class="col-lg-3 col-md-3 kurir">
-          SiCepat
+        <div class="row benefit1">
+          <div class="col-lg-3 col-md-3 benefit_3">Biaya COD</div>
+          <div class="col-lg-3 col-md-3 benefit-content">
+            2.8% (PPN ditanggung Komship)
+          </div>
+          <div class="col-lg-3 col-md-3 benefit-content">
+            2.8% (PPN ditanggung Komship)
+          </div>
+          <div class="col-lg-3 col-md-3 benefit-content">
+            2.8% (PPN ditanggung Komship)
+          </div>
         </div>
-        <div class="col-lg-3 col-md-3 kurir">IDExpress</div>
+        <div class="row benefit1">
+          <div class="col-lg-3 col-md-3 benefit_3">Diskon Biaya Retur</div>
+          <div class="col-lg-3 col-md-3 benefit-content">
+            <li class="li-benefit">Gratis se-Jawa Bali</li>
+            <li class="li-benefit">Non Jawa Bali 50%</li>
+          </div>
+          <div class="col-lg-3 col-md-3 benefit-content">
+            Gratis se-lndonesia
+          </div>
+          <div class="col-lg-3 col-md-3 benefit-content">
+            <li class="li-benefit">Gratis se-Jawa Bali</li>
+            <li class="li-benefit">Non Jawa Bali 50%</li>
+          </div>
+        </div>
+        <div class="benefit-SK">*S&K berlaku</div>
+      </div>
+    </section>
+    <!-- Rekomendasi -->
+    <section id="recommendation">
+      <div class="head-rec">Rekomendasi untuk Kamu</div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+          <img src="@/assets/img/partials/jne-counter.png" alt="jne counter" />
+          <div class="subhead">
+            Makin tenang kirim orderan dengan gerai terbanyak dan cakupan
+            terluas di Indonesia
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <img src="@/assets/img/partials/sicepat-counter.png" alt="sicepat counter" />
+          <div class="subhead">
+            Makin untung dan hemat kirim orderan bahkan ke pelosok Indonesia.
+            Kirim pakai Cargo gak kalah hematnya!
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <img src="@/assets/img/partials/idexpress-counter.png" alt="id express counter" />
+          <div class="subhead">
+            Cocok bagi pebisnis dengan paket ringan. kirim orderan makin hemat
+            dan mantap
+          </div>
+        </div>
       </div>
     </section>
 
