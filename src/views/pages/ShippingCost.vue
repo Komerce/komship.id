@@ -148,6 +148,14 @@ export default {
     shippingTypeLabel(value) {
       if (value === "STD") {
         return "STANDARD";
+      } else if (value === "REG19") {
+        return "REGULER";
+      } else if (value === "SIUNT") {
+        return "SIUNTUNG";
+      } else if (value === "GOKIL") {
+        return "GOKIL (CARGO)";
+      } else if (value === "-") {
+        return "?";
       }
       return value;
     },
