@@ -177,12 +177,19 @@
           <div class="col-lg-3 col-md-3 benefit-content">
             <li><i class="material-icons li-benefit">brightness_1</i> 30%</li>
             <li class="li-benefit">
+              <i class="material-icons li-benefit">brightness_1</i>
               Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
             </li>
           </div>
           <div class="col-lg-3 col-md-3 benefit-content">
-            <li class="li-benefit">Reg 25% (>1/2 kg)</li>
-            <li class="li-benefit">&lt;1/2 Kg bayar 1/2-nya * + diskon 15%</li>
+            <li class="li-benefit">
+              <i class="material-icons li-benefit">brightness_1</i>Reg 25% (>1/2
+              kg)
+            </li>
+            <li class="li-benefit">
+              <i class="material-icons li-benefit">brightness_1</i>&lt;1/2 Kg
+              bayar 1/2-nya * + diskon 15%
+            </li>
           </div>
         </div>
         <div class="row benefit1">
@@ -200,43 +207,69 @@
         <div class="row benefit1">
           <div class="col-lg-3 col-md-3 benefit_3">Diskon Biaya Retur</div>
           <div class="col-lg-3 col-md-3 benefit-content">
-            <li class="li-benefit">Gratis se-Jawa Bali</li>
-            <li class="li-benefit">Non Jawa Bali 50%</li>
+            <li class="li-benefit">
+              <i class="material-icons li-benefit">brightness_1</i>Gratis
+              se-Jawa Bali
+            </li>
+            <li class="li-benefit">
+              <i class="material-icons li-benefit">brightness_1</i>Non Jawa Bali
+              50%
+            </li>
           </div>
           <div class="col-lg-3 col-md-3 benefit-content">
             Gratis se-lndonesia
           </div>
           <div class="col-lg-3 col-md-3 benefit-content">
-            <li class="li-benefit">Gratis se-Jawa Bali</li>
-            <li class="li-benefit">Non Jawa Bali 50%</li>
+            <li class="li-benefit">
+              <i class="material-icons li-benefit">brightness_1</i>Gratis
+              se-Jawa Bali
+            </li>
+            <li class="li-benefit">
+              <i class="material-icons li-benefit">brightness_1</i>Non Jawa Bali
+              50%
+            </li>
           </div>
         </div>
         <div class="benefit-SK">*S&K berlaku</div>
       </div>
     </section>
-    <!-- Rekomendasi -->
+    <!-- kurir-counter -->
     <section id="recommendation">
-      <div class="head-rec">Rekomendasi untuk Kamu</div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-12">
+      <div class="head-rec container">Rekomendasi untuk Kamu</div>
+      <div class="row row-kurir">
+        <div class="col-lg-4 col-md-4 col-12 icon-counter">
           <img src="@/assets/img/partials/jne-counter.png" alt="jne counter" />
-          <div class="subhead">
-            Makin tenang kirim orderan dengan gerai terbanyak dan cakupan
-            terluas di Indonesia
+          <div class="subhead-kurir">
+            Makin tenang kirim orderan dengan
+            <span class="kurir-orange"
+              >gerai terbanyak dan cakupan terluas</span
+            >
+            di Indonesia
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-12">
-          <img src="@/assets/img/partials/sicepat-counter.png" alt="sicepat counter" />
-          <div class="subhead">
-            Makin untung dan hemat kirim orderan bahkan ke pelosok Indonesia.
-            Kirim pakai Cargo gak kalah hematnya!
+        <div class="col-lg-4 col-md-4 col-12 icon-counter">
+          <img
+            src="@/assets/img/partials/sicepat-counter.png"
+            alt="sicepat counter"
+          />
+          <div class="subhead-kurir">
+            Makin <span class="kurir-orange">untung</span> dan
+            <span class="kurir-orange">hemat</span> kirim orderan bahkan ke
+            pelosok Indonesia. Kirim pakai
+            <span class="kurir-orange">Cargo</span> gak kalah
+            <span class="kurir-orange">hemat</span>nya!
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-12">
-          <img src="@/assets/img/partials/idexpress-counter.png" alt="id express counter" />
-          <div class="subhead">
-            Cocok bagi pebisnis dengan paket ringan. kirim orderan makin hemat
-            dan mantap
+        <div class="col-lg-4 col-md-4 col-12 icon-counter">
+          <img
+            src="@/assets/img/partials/idexpress-counter.png"
+            alt="id express counter"
+          />
+          <div class="subhead-kurir">
+            <span class="kurir-orange"
+              >Cocok bagi pebisnis dengan paket ringan.</span
+            >
+            <span> kirim orderan makin hemat dan mantap</span>
           </div>
         </div>
       </div>
@@ -281,259 +314,261 @@
       </div> -->
 
       <!-- New Alur Desktop -->
-      <div class="container new-mode-alur-desktop">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-5 px-3 text-center mt-5 pt-5">
-            <span class="new-title-alur">
-              Alur pengiriman menggunakan
-              <span style="color: #ff6a3a !important">Komship</span>
-            </span>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-md-4 mb-5">
-            <div class="row text-center">
-              <div class="col-md-auto">
-                <span
-                  class="number-alur"
-                  style="
-                    padding-left: 18px;
-                    padding-right: 18px;
-                    margin-right: -25px;
-                    margin-left: 35px;
-                  "
-                  >1</span
-                >
-              </div>
-              <div class="col-md-8">
-                <img
-                  style="margin-top: -30px"
-                  :src="require('@/assets/img/icons/icon-alur-1.svg')"
-                />
-              </div>
-            </div>
-            <div class="row text-center">
-              <span class="title-content-alur" style="margin-top: -17px"
-                >Order masuk dari customer</span
-              >
+      <div class="new-mode-alur-desktop">
+        <div class="container new-mode-alur-desktop">
+          <div class="row justify-content-left mb-5">
+            <div class="col-md-5 px-3 text-left pt-3">
+              <span class="new-title-alur">
+                Alur pengiriman menggunakan
+                <span style="color: #ff6a3a !important">Komship</span>
+              </span>
             </div>
           </div>
-          <div class="col-md-4 mb-5">
-            <div class="row justify-content-center mb-3">
-              <div class="col-md-auto">
-                <span class="number-alur">2</span>
+          <div class="row justify-content-center">
+            <div class="col-md-3 mb-5">
+              <div class="row text-center">
+                <div class="col-md-auto">
+                  <span
+                    class="number-alur"
+                    style="
+                      padding-left: 18px;
+                      padding-right: 18px;
+                      margin-right: -25px;
+                      margin-left: 35px;
+                    "
+                    >1</span
+                  >
+                </div>
+                <div class="col-md-8 icon-alur-khusus">
+                  <img :src="require('@/assets/img/icons/alur-icon1.png')" />
+                </div>
               </div>
-              <div class="col-md-8">
-                <img :src="require('@/assets/img/icons/icon-alur-2.svg')" />
-              </div>
-            </div>
-            <div class="row text-center">
-              <span class="title-content-alur">Seller menyiapkan orderan</span>
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <div class="row justify-content-center mb-3">
-              <div class="col-md-auto">
-                <span class="number-alur">3</span>
-              </div>
-              <div class="col-md-8">
-                <img :src="require('@/assets/img/icons/icon-alur-3.svg')" />
-              </div>
-            </div>
-            <div class="row text-center">
-              <span class="title-content-alur"
-                >Seller meginput data di Komship</span
-              >
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <div class="row justify-content-center mb-3">
-              <div class="col-md-auto">
-                <span class="number-alur">4</span>
-              </div>
-              <div class="col-md-8">
-                <img :src="require('@/assets/img/icons/icon-alur-4.svg')" />
-              </div>
-            </div>
-            <div class="row text-center">
-              <span class="title-content-alur"
-                >Ekspedisi menjemput barang ke lokasi seller</span
-              >
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <div class="row justify-content-center mb-3">
-              <div class="col-md-auto">
-                <span class="number-alur">5</span>
-              </div>
-              <div class="col-md-8">
-                <img :src="require('@/assets/img/icons/icon-alur-5.svg')" />
-              </div>
-            </div>
-            <div class="row text-center">
-              <span class="title-content-alur">Barang diterima customer</span>
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <div class="row justify-content-center mb-4">
-              <div class="col-md-auto">
-                <span class="number-alur">6</span>
-              </div>
-              <div class="col-md-8">
-                <img :src="require('@/assets/img/icons/icon-alur-6.svg')" />
-              </div>
-            </div>
-            <div class="row text-center">
-              <span class="title-content-alur"
-                >Non COD (selesai) / COD (uang diterima)</span
-              >
-            </div>
-          </div>
-          <div class="col-md-4 mb-5">
-            <div class="row justify-content-center mb-3">
-              <div class="col-md-auto">
-                <span class="number-alur">7</span>
-              </div>
-              <div class="col-md-8">
-                <img :src="require('@/assets/img/icons/icon-alur-7.svg')" />
-              </div>
-            </div>
-            <div class="row text-center">
-              <span class="title-content-alur">Dana dicairkan</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- New Alur Mobile -->
-      <div class="container new-mode-alur-mobile">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-5 px-3 text-center">
-            <span class="new-title-alur">
-              Alur pengiriman menggunakan
-              <span style="color: #ff6a3a !important">Komship</span>
-            </span>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="d-flex mb-5">
-            <div>
-              <span
-                class="number-alur-mobile"
-                style="padding-left: 13px; padding-right: 13px"
-                >1</span
-              >
-            </div>
-            <div class="d-flex align-items-center">
-              <div>
-                <img :src="require('@/assets/img/icons/icon-alur-1.svg')" />
-              </div>
-              <div style="margin-left: -10px">
-                <span class="title-content-alur-mobile"
-                  >Order masuk dari customer</span
+              <div class="row justify-content-center text-center">
+                <span class="title-content-alur"
+                  >Order masuk dari pelanggan</span
                 >
               </div>
             </div>
-          </div>
-
-          <div class="d-flex mb-5">
-            <div class="d-flex align-items-center">
-              <div class="ms-2">
-                <span class="title-content-alur-mobile"
+            <div class="col-md-3 mb-5">
+              <div class="row justify-content-center mb-3">
+                <div class="col-md-auto">
+                  <span class="number-alur">2</span>
+                </div>
+                <div class="col-md-8">
+                  <img :src="require('@/assets/img/icons/alur-icon2.png')" />
+                </div>
+              </div>
+              <div class="row justify-content-center text-center">
+                <span class="title-content-alur"
                   >Seller menyiapkan orderan</span
                 >
               </div>
-              <div>
-                <img :src="require('@/assets/img/icons/icon-alur-2.svg')" />
+            </div>
+            <div class="col-md-3 mb-5">
+              <div class="row justify-content-center mb-3">
+                <div class="col-md-auto">
+                  <span class="number-alur">3</span>
+                </div>
+                <div class="col-md-8">
+                  <img :src="require('@/assets/img/icons/alur-icon3.png')" />
+                </div>
               </div>
-            </div>
-            <div>
-              <span class="number-alur-mobile">2</span>
-            </div>
-          </div>
-
-          <div class="d-flex mb-5">
-            <div class="me-3">
-              <span class="number-alur-mobile">3</span>
-            </div>
-            <div class="d-flex align-items-center">
-              <div class="me-3">
-                <img :src="require('@/assets/img/icons/icon-alur-3.svg')" />
-              </div>
-              <div style="margin-left: -10px">
-                <span class="title-content-alur-mobile"
-                  >Seller meginput data di Komship</span
+              <div class="row justify-content-center text-center">
+                <span class="title-content-alur"
+                  >Seller memasukan data di dashboard Komship</span
                 >
               </div>
             </div>
-          </div>
-
-          <div class="d-flex mb-5">
-            <div class="d-flex align-items-center">
-              <div class="ms-2">
-                <span class="title-content-alur-mobile"
+            <div class="col-md-3 mb-5">
+              <div class="row justify-content-center mb-3">
+                <div class="col-md-auto">
+                  <span class="number-alur">4</span>
+                </div>
+                <div class="col-md-8">
+                  <img :src="require('@/assets/img/icons/alur-icon4.png')" />
+                </div>
+              </div>
+              <div class="row justify-content-center text-center">
+                <span class="title-content-alur"
                   >Ekspedisi menjemput barang ke lokasi seller</span
                 >
               </div>
-              <div>
-                <img
-                  :src="require('@/assets/img/icons/icon-alur-4.svg')"
-                  style="width: 300px"
-                />
+            </div>
+            <div class="col-md-3 mb-5">
+              <div class="row justify-content-center mb-3">
+                <div class="col-md-auto">
+                  <span class="number-alur">5</span>
+                </div>
+                <div class="col-md-8">
+                  <img :src="require('@/assets/img/icons/icon-alur-5.svg')" />
+                </div>
               </div>
-            </div>
-            <div>
-              <span class="number-alur-mobile">4</span>
-            </div>
-          </div>
-
-          <div class="d-flex mb-5">
-            <div class="me-3">
-              <span class="number-alur-mobile">5</span>
-            </div>
-            <div class="d-flex align-items-center">
-              <div class="me-3">
-                <img :src="require('@/assets/img/icons/icon-alur-5.svg')" />
-              </div>
-              <div style="margin-left: -10px">
-                <span class="title-content-alur-mobile"
-                  >Barang diterima customer</span
+              <div class="row justify-content-center text-center">
+                <span class="title-content-alur"
+                  >Barang diterima pelanggan</span
                 >
               </div>
             </div>
-          </div>
-
-          <div class="d-flex mb-5">
-            <div class="d-flex align-items-center">
-              <div class="ms-2">
-                <span class="title-content-alur-mobile"
+            <div class="col-md-3 mb-5">
+              <div class="row justify-content-center mb-4">
+                <div class="col-md-auto">
+                  <span class="number-alur">6</span>
+                </div>
+                <div class="col-md-8">
+                  <img :src="require('@/assets/img/icons/alur-icon6.png')" />
+                </div>
+              </div>
+              <div class="row justify-content-center text-center">
+                <span class="title-content-alur"
                   >Non COD (selesai) / COD (uang diterima)</span
                 >
               </div>
-              <div>
-                <img
-                  :src="require('@/assets/img/icons/icon-alur-6.svg')"
-                  style="width: 300px"
-                />
+            </div>
+            <div class="col-md-3 mb-5">
+              <div class="row justify-content-center mb-3">
+                <div class="col-md-auto">
+                  <span class="number-alur">7</span>
+                </div>
+                <div class="col-md-8">
+                  <img :src="require('@/assets/img/icons/alur-icon7.png')" />
+                </div>
+              </div>
+              <div class="row justify-content-center text-center">
+                <span class="title-content-alur">Dana dicairkan</span>
               </div>
             </div>
-            <div>
-              <span class="number-alur-mobile">6</span>
+          </div>
+        </div>
+
+        <!-- New Alur Mobile -->
+        <div class="container new-mode-alur-mobile">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-5 px-3 text-center">
+              <span class="new-title-alur">
+                Alur pengiriman menggunakan
+                <span style="color: #ff6a3a !important">Komship</span>
+              </span>
             </div>
           </div>
 
-          <div class="d-flex mb-5">
-            <div class="me-3">
-              <span class="number-alur-mobile">7</span>
-            </div>
-            <div class="d-flex align-items-center">
-              <div class="me-3">
-                <img :src="require('@/assets/img/icons/icon-alur-7.svg')" />
+          <div class="row justify-content-center">
+            <div class="d-flex mb-5">
+              <div>
+                <span
+                  class="number-alur-mobile"
+                  style="padding-left: 13px; padding-right: 13px"
+                  >1</span
+                >
               </div>
-              <div style="margin-left: -10px">
-                <span class="title-content-alur-mobile">Dana dicairkan</span>
+              <div class="d-flex align-items-center">
+                <div>
+                  <img :src="require('@/assets/img/icons/icon-alur-1.svg')" />
+                </div>
+                <div style="margin-left: -10px">
+                  <span class="title-content-alur-mobile"
+                    >Order masuk dari customer</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div class="d-flex align-items-center">
+                <div class="ms-2">
+                  <span class="title-content-alur-mobile"
+                    >Seller menyiapkan orderan</span
+                  >
+                </div>
+                <div>
+                  <img :src="require('@/assets/img/icons/icon-alur-2.svg')" />
+                </div>
+              </div>
+              <div>
+                <span class="number-alur-mobile">2</span>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div class="me-3">
+                <span class="number-alur-mobile">3</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="me-3">
+                  <img :src="require('@/assets/img/icons/icon-alur-3.svg')" />
+                </div>
+                <div style="margin-left: -10px">
+                  <span class="title-content-alur-mobile"
+                    >Seller meginput data di Komship</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div class="d-flex align-items-center">
+                <div class="ms-2">
+                  <span class="title-content-alur-mobile"
+                    >Ekspedisi menjemput barang ke lokasi seller</span
+                  >
+                </div>
+                <div>
+                  <img
+                    :src="require('@/assets/img/icons/icon-alur-4.svg')"
+                    style="width: 300px"
+                  />
+                </div>
+              </div>
+              <div>
+                <span class="number-alur-mobile">4</span>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div class="me-3">
+                <span class="number-alur-mobile">5</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="me-3">
+                  <img :src="require('@/assets/img/icons/icon-alur-5.svg')" />
+                </div>
+                <div style="margin-left: -10px">
+                  <span class="title-content-alur-mobile"
+                    >Barang diterima customer</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div class="d-flex align-items-center">
+                <div class="ms-2">
+                  <span class="title-content-alur-mobile"
+                    >Non COD (selesai) / COD (uang diterima)</span
+                  >
+                </div>
+                <div>
+                  <img
+                    :src="require('@/assets/img/icons/icon-alur-6.svg')"
+                    style="width: 300px"
+                  />
+                </div>
+              </div>
+              <div>
+                <span class="number-alur-mobile">6</span>
+              </div>
+            </div>
+
+            <div class="d-flex mb-5">
+              <div class="me-3">
+                <span class="number-alur-mobile">7</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="me-3">
+                  <img :src="require('@/assets/img/icons/icon-alur-7.svg')" />
+                </div>
+                <div style="margin-left: -10px">
+                  <span class="title-content-alur-mobile">Dana dicairkan</span>
+                </div>
               </div>
             </div>
           </div>
@@ -542,7 +577,7 @@
     </section>
 
     <!-- feature -->
-    <section id="feature" class="service">
+    <!-- <section id="feature" class="service">
       <div class="container pt-4">
         <h2 class="title">Fitur Tambahan</h2>
         <div class="service-mobile">
@@ -621,7 +656,82 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <!-- new feature -->
+
+    <section id="feature" class="container-fluid">
+      <div class="feature">
+        <div class="container">
+          <div class="head-feature">Fitur Tambahan</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row justify-content-center">
+              <div class="col-md-3 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/produk-terlaris.png"
+                  alt="produk terlaris"
+                />
+              </div>
+              <div class="col-md-7">
+                <div class="subhead-feature">Produk Terlaris</div>
+                <div class="content-feature">
+                  Jika kamu memiliki produk dengan variasi yang berbeda, maka
+                  fitur produk terlaris ini dapat membantu kamu mengetahui
+                  produk mana yang menjadi best seller dalam kurun waktu 1 bulan
+                  atau 7 hari terakhir.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row justify-content-center">
+              <div class="col-md-3 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/customer-loyal.png"
+                  alt="customer loyal"
+                />
+              </div>
+              <div class="col-md-7">
+                <div class="subhead-feature">Customer Loyal</div>
+                <div class="content-feature">
+                  Merupakan data Customer yang sering melakukan order kembali
+                  (repeat order). Dengan mengetahui Customer Loyal kita, maka
+                  proses orderan akan semakin cepat.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row justify-content-center">
+              <div class="col-md-3 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/top-admin-order.png"
+                  alt="top admin order"
+                />
+              </div>
+              <div class="col-md-7">
+                <div class="subhead-feature">Top Admin Order</div>
+                <div class="content-feature">
+                  Fitur yang akan mempermudah para pebisnis memantau
+                  produktifitas para admin dengan melihat data akumulasi
+                  performa masing-masing admin yang ada. Makin mudah juga untuk
+                  mengambil keputusan seperti pemberian bonus dan meningkatkan
+                  semangat kerja para admin.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- new feature end -->
 
     <!-- contactkomerce -->
     <section id="contactkomerce" class="contactkomerce">
@@ -655,8 +765,9 @@
     <!-- testimoni -->
     <div id="testimoniwrapper" class="testimoniwrapper">
       <h2 class="testimoniwrapper--text">
-        <span style="color: #ff6a3a">Komship</span>&nbsp;telah dipercaya oleh
-        UMKM
+        <p><span style="color: #ff6a3a">Komship</span>&nbsp;telah dipercaya
+        oleh</p> 
+        <p>Pebisnis dan UMKM di Indonesia</p>
       </h2>
       <carousel
         :autoplay="15000"
