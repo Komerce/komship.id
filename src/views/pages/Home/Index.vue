@@ -1,8 +1,8 @@
 <template>
   <div class="wrapperContainerHomePage">
-    <section id="home" class="register-now container-fluid">
+    <section id="home" class="register-now">
       <div class="row container">
-        <div class="col-lg-6 col-md-7 content">
+        <div class="col-lg-6 col-md-6 content">
           <h1 class="title">
             Juaranya Platform Kirim Barang, Mudah dan Murah dengan
             <span class="order">Komship</span>
@@ -29,7 +29,7 @@
             Mulai Sekarang
           </button>
         </div>
-        <div class="col-lg-5 col-md-7 image-desktop pt-5 mt-5">
+        <div class="col-lg-5 col-md-5 image-desktop pt-5 mt-5">
           <img
             :src="require('@/assets/img/hero/new-bg-hero.svg')"
             style="margin-right: 10px; margin-left: 43%"
@@ -43,11 +43,11 @@
     <!-- service -->
     <section id="service" class="service">
       <div class="container pt-4">
-        <div class="row container">
-          <div class="col-lg-5 col-md-6 service-title">
+        <div class="row">
+          <div class="col-lg-5 col-md-4 service-title">
             <h2 class="title">Sering kirim barang?</h2>
           </div>
-          <div class="col-lg-6 col-md-6 description">
+          <div class="col-lg-7 col-md-8 description">
             Sudah saatnya kamu beralih ke platform yang bisa memberikan berlipat
             keuntungan dan kenyamanan dalam melakukan pengiriman barang. Komship
             kini hadir untuk memudahkan pengiriman kamu dengan berbagai benefit
@@ -72,7 +72,9 @@
             </div>
           </div>
         </div>
-        <!-- <div class="service-mobile">
+      </div>
+    </section>
+    <!-- <div class="service-mobile">
           <div v-for="item in service_items" :key="item.id">
             <div class="card mx-3">
               <div class="card-body">
@@ -88,11 +90,42 @@
             </div>
           </div>
         </div> -->
-        <!-- new service mobile -->
-
-        <!-- new service mobile -->
-      </div>
+    <!-- new service mobile -->
+    <section id="service-mobile">
+      <carousel
+        :autoplay="15000"
+        :settings="settingscarousel"
+        :wrapAround="true"
+        :breakpoints="breakpoints"
+      >
+        <slide v-for="item in service_items" :key="item.id">
+          <div class="carousel__item">
+            <div class="slidertestimoni">
+              <div class="card content">
+                <div class="card-content">
+                  <img :src="item.image" class="icons" />
+                  <h3 class="title-content-mobile">{{ item.title }}</h3>
+                  <p class="description-content-mobile">
+                    {{ item.description }}
+                  </p>
+                  <p v-if="item.id === 5" class="text-black"></p>
+                </div>
+              </div>
+              <!-- <div class="slidertestimoni__body"> -->
+                <!-- <p class="slidertestimoni__body--text"> -->
+                  <!-- {{ item.description }} -->
+                <!-- </p> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </slide>
+        <template #addons>
+          <Pagination />
+        </template>
+      </carousel>
     </section>
+    <!-- new service mobile -->
+
     <!-- conclusion -->
     <section class="conclusion">
       <div class="row conclusion-dekstop">
@@ -178,7 +211,7 @@
           <div class="col-lg-3 col-md-3 benefit_4">Diskon Ongkir</div>
           <div class="col-lg-3 col-md-3 benefit-content">Reg 25%</div>
           <div class="col-lg-3 col-md-3 benefit-content">
-            <li><i class="material-icons li-benefit">brightness_1</i> 30%</li>
+            <li><i class="material-icons li-benefit">brightness_1</i>Reg 30%</li>
             <li class="li-benefit">
               <i class="material-icons li-benefit">brightness_1</i>
               Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
@@ -323,7 +356,7 @@
       <div class="new-mode-alur-desktop">
         <div class="container new-mode-alur-desktop">
           <div class="row justify-content-left mb-5">
-            <div class="col-md-5 px-3 text-left pt-3">
+            <div class="col-md-6 px-3 text-left pt-3">
               <span class="new-title-alur">
                 Alur pengiriman menggunakan
                 <span style="color: #ff6a3a !important">Komship</span>
@@ -360,7 +393,7 @@
                 <div class="col-md-auto">
                   <span class="number-alur">2</span>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 icon-alur-khusus">
                   <img :src="require('@/assets/img/icons/alur-icon2.png')" />
                 </div>
               </div>
@@ -375,7 +408,7 @@
                 <div class="col-md-auto">
                   <span class="number-alur">3</span>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 icon-alur-khusus">
                   <img :src="require('@/assets/img/icons/alur-icon3.png')" />
                 </div>
               </div>
@@ -390,7 +423,7 @@
                 <div class="col-md-auto">
                   <span class="number-alur">4</span>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 icon-alur-khusus">
                   <img :src="require('@/assets/img/icons/alur-icon4.png')" />
                 </div>
               </div>
@@ -405,7 +438,7 @@
                 <div class="col-md-auto">
                   <span class="number-alur">5</span>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 icon-alur-khusus">
                   <img :src="require('@/assets/img/icons/icon-alur-5.svg')" />
                 </div>
               </div>
@@ -420,7 +453,7 @@
                 <div class="col-md-auto">
                   <span class="number-alur">6</span>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 icon-alur-khusus">
                   <img :src="require('@/assets/img/icons/alur-icon6.png')" />
                 </div>
               </div>
@@ -435,7 +468,7 @@
                 <div class="col-md-auto">
                   <span class="number-alur">7</span>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 icon-alur-khusus">
                   <img :src="require('@/assets/img/icons/alur-icon7.png')" />
                 </div>
               </div>
@@ -829,7 +862,7 @@
 
     <!-- testimoni -->
     <div class="row justify-content-center testimoniwrapper--text">
-      <div class="col-lg-5 col-11">
+      <div class="col-lg-6 col-md-6 col-11">
         <span style="color: #ff6a3a">Komship</span>&nbsp;telah dipercaya oleh
         Pebisnis dan UMKM di Indonesia
       </div>
