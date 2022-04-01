@@ -41,8 +41,8 @@ const routes = [
   },
   {
     path: "/cek-ongkir",
-    name: "ShippingCost",
-    component: () => import("@/views/pages/ShippingCost.vue"),
+    name: "CekOngkir",
+    component: () => import("@/views/pages/CekOngkir"),
     meta: {
       layout: "HomeLayout",
     },
