@@ -73,6 +73,21 @@ export default {
                     image: require("@/assets/img/person/testimoni-ananda.png"),
                     description: "Absolutely perfect ! Sangat terbantu dengan fiturnya yang lengkap & praktis untuk memproses orderan. cashback ongkir 25% yang lumayan gurih, ditambah pencairan dana setiap hari yang dapat memperlancar cash flow.",
                 },
+                {
+                    name: "Mansur",
+                    image: require("@/assets/img/person/testimoni-mansur.png"),
+                    description: "Komship bagus banget konsepnya, menciptakan kemudahan penjual untuk mengirim barang, apalagi ada fitur COD tanpa harus daftar ribet ke jasa kirim, UI nya juga mudah dipahami untuk pemula",
+                },
+                {
+                    name: "Nursiswanto",
+                    image: require("@/assets/img/person/testimoni-nursiswanto.png"),
+                    description: "Komship Mantap👍👍👍 Cashbacknya besar, kalau bisa ditingkatkan lagi 🤑🤑 Pencairan setiap hari bikin cash flow aman",
+                },
+                {
+                    name: "Diki Moh. Ghani ",
+                    image: require("@/assets/img/person/testimoni-ghani.png"),
+                    description: "Komship lebih easy user, fitur-fiturnya juga bagus, kita bisa tahu secara otomatis CS yang jualannya paling kenceng dan yang paling kurang kenceng.Selain itu juga ada fitur keuangannya jadi sangat membantu banget. Dan jika ada kendala Tim Supportnya fast respon",
+                },
             ],
             service_items: [{
                     id: 1,
