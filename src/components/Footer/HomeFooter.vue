@@ -2,7 +2,7 @@
   <footer style="background-color: #f6f6f9">
     <div class="container">
       <div class="col-md-12">
-        <div class="row">
+        <div class="row container">
           <div class="col-lg-6 col-md-8 profile">
             <router-link to="/">
               <img

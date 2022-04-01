@@ -1259,6 +1259,9 @@
         #feature {
             display: none;
         }
+        .feature-mobile {
+            margin-bottom: 40px;
+        }
         .head-feature {
             font-size: 24px;
             line-height: 36px;
@@ -1273,6 +1276,22 @@
         .content-feature {
             font-size: 12px;
             line-height: 18px;
+            letter-spacing: 0.5px;
+        }
+        .icon-newfeature img {
+            width: 124px;
+        }
+        .content-feature {
+            padding-right: 0px;
+        }
+        .subhead-feature-mobile {
+            align-self: center;
+        }
+        .testimoniwrapper--text {
+            width: 90%;
+        }
+        .contactkomerce {
+            margin-bottom: 60px;
         }
     }
     /* new feature mobile end */

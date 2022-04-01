@@ -739,17 +739,17 @@
         <div class="head-feature-mobile">
           <div class="head-feature">Fitur Tambahan</div>
         </div>
-        <div class="row container justify-content-center">
+        <div class="row container justify-content-center mb-3">
           <div class="col-6 icon-newfeature">
             <img
               src="@/assets/img/partials/produk-terlaris.png"
               alt="produk terlaris"
             />
           </div>
-          <div class="col-6">
+          <div class="col-6 subhead-feature-mobile">
             <div class="subhead-feature">Produk Terlaris</div>
           </div>
-          <div class="col-11">
+          <div class="col-12">
             <div class="content-feature">
               Jika kamu memiliki produk dengan variasi yang berbeda, maka fitur
               produk terlaris ini dapat membantu kamu mengetahui produk mana
@@ -758,8 +758,8 @@
             </div>
           </div>
         </div>
-        <div class="row container justify-content-center">
-          <div class="col-6">
+        <div class="row container justify-content-center mb-3">
+          <div class="col-6 subhead-feature-mobile">
             <div class="subhead-feature">Customer Loyal</div>
           </div>
           <div class="col-6 icon-newfeature">
@@ -768,7 +768,7 @@
               alt="customer loyal"
             />
           </div>
-          <div class="col-11">
+          <div class="col-12">
             <div class="content-feature">
               Merupakan data Customer yang sering melakukan order kembali
               (repeat order). Dengan mengetahui Customer Loyal kita, maka proses
@@ -776,17 +776,17 @@
             </div>
           </div>
         </div>
-        <div class="row container justify-content-center">
-          <div class="col-6 icon-newfeature">
+        <div class="row container justify-content-center mb-3">
+          <div class="col-5 icon-newfeature">
             <img
               src="@/assets/img/partials/top-admin-order.png"
               alt="top admin order"
             />
           </div>
-          <div class="col-6">
+          <div class="col-7 subhead-feature-mobile">
             <div class="subhead-feature">Top Admin Order</div>
           </div>
-          <div class="col-11">
+          <div class="col-12">
             <div class="content-feature">
               Fitur yang akan mempermudah para pebisnis memantau produktifitas
               para admin dengan melihat data akumulasi performa masing-masing
@@ -829,7 +829,7 @@
 
     <!-- testimoni -->
     <div class="row justify-content-center testimoniwrapper--text">
-      <div class="col-lg-5">
+      <div class="col-lg-5 col-11">
         <span style="color: #ff6a3a">Komship</span>&nbsp;telah dipercaya oleh
         Pebisnis dan UMKM di Indonesia
       </div>
