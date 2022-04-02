@@ -190,7 +190,7 @@ export default {
 </script>
 <style>
 .navbar {
-  background-color: #f6f6f9;
+  background-color: #ffffff;
   max-height: 80px;
   font-family: "Poppins", sans-serif;
 }
