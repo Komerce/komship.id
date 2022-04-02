@@ -94,7 +94,31 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
-
+.benefit-nav {
+    --bs-breadcrumb-divider: '|';
+}
+.benefit-nav .breadcrumb-item+.breadcrumb-item::before{
+    color: #C2C2C2 !important;
+}
+.benefit-nav .breadcrumb-item a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #C2C2C2 !important;
+}
+.benefit-nav .breadcrumb-item a.active {
+    color: #F95031 !important;
+}
+.benefit-mobile {
+    display: none;
+}
+@media (max-width: 767.98px) {
+    .benefit-desktop {
+        display: none;
+    }
+    .benefit-mobile {
+        display: unset;
+    }
+}
 .benefit1 {
     margin-bottom: 2%;
     background-color: #FFFFFF;
@@ -1313,9 +1337,6 @@ p {
     }
     .conclusionmobile {
         display: block;
-    }
-    .benefit {
-        display: none;
     }
     .head-rec {
         font-size: 24px;

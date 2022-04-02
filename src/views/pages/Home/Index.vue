@@ -112,9 +112,9 @@
                 </div>
               </div>
               <!-- <div class="slidertestimoni__body"> -->
-                <!-- <p class="slidertestimoni__body--text"> -->
-                  <!-- {{ item.description }} -->
-                <!-- </p> -->
+              <!-- <p class="slidertestimoni__body--text"> -->
+              <!-- {{ item.description }} -->
+              <!-- </p> -->
               <!-- </div> -->
             </div>
           </div>
@@ -201,72 +201,197 @@
     <!-- Benefit -->
     <section id="benefit">
       <div class="benefit">
-        <div class="row benefit1">
-          <div class="col-lg-3 col-md-3 benefit_2">Benefit</div>
-          <div class="col-lg-3 col-md-3 kurir">JNE</div>
-          <div class="col-lg-3 col-md-3 kurir">SiCepat</div>
-          <div class="col-lg-3 col-md-3 kurir">IDExpress</div>
+        <div class="benefit-desktop">
+          <div class="row benefit1">
+            <div class="col-md-3 benefit_2">Benefit</div>
+            <div class="col-md-3 kurir">JNE</div>
+            <div class="col-md-3 kurir">SiCepat</div>
+            <div class="col-md-3 kurir">IDExpress</div>
+          </div>
+          <div class="row benefit1">
+            <div class="col-md-3 benefit_4">Diskon Ongkir</div>
+            <div class="col-md-3 benefit-content">Reg 25%</div>
+            <div class="col-md-3 benefit-content">
+              <li>
+                <i class="material-icons li-benefit">brightness_1</i>Reg 30%
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>
+                Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
+              </li>
+            </div>
+            <div class="col-md-3 benefit-content">
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Reg 25%
+                (>1/2 kg)
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>&lt;1/2 Kg
+                bayar 1/2-nya * + diskon 15%
+              </li>
+            </div>
+          </div>
+          <div class="row benefit1">
+            <div class="col-md-3 benefit_3">Biaya COD</div>
+            <div class="col-md-3 benefit-content">
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+            <div class="col-md-3 benefit-content">
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+            <div class="col-md-3 benefit-content">
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+          </div>
+          <div class="row benefit1">
+            <div class="col-md-3 benefit_3">Diskon Biaya Retur</div>
+            <div class="col-md-3 benefit-content">
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Gratis
+                se-Jawa Bali
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Non Jawa
+                Bali 50%
+              </li>
+            </div>
+            <div class="col-md-3 benefit-content">Gratis se-lndonesia</div>
+            <div class="col-md-3 benefit-content">
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Gratis
+                se-Jawa Bali
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Non Jawa
+                Bali 50%
+              </li>
+            </div>
+          </div>
         </div>
-        <div class="row benefit1">
-          <div class="col-lg-3 col-md-3 benefit_4">Diskon Ongkir</div>
-          <div class="col-lg-3 col-md-3 benefit-content">Reg 25%</div>
-          <div class="col-lg-3 col-md-3 benefit-content">
-            <li><i class="material-icons li-benefit">brightness_1</i>Reg 30%</li>
-            <li class="li-benefit">
-              <i class="material-icons li-benefit">brightness_1</i>
-              Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
-            </li>
+        <div class="benefit-mobile">
+          <nav class="benefit-nav" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a
+                  :class="benefitContent === 'JNE' ? 'active' : ''"
+                  @click="benefitTabs('JNE')"
+                  >JNE</a
+                >
+              </li>
+              <li class="breadcrumb-item">
+                <a
+                  :class="benefitContent === 'SICEPAT' ? 'active' : ''"
+                  @click="benefitTabs('SICEPAT')"
+                >
+                  SiCepat
+                </a>
+              </li>
+              <li class="breadcrumb-item">
+                <a
+                  :class="benefitContent === 'IDEXPRESS' ? 'active' : ''"
+                  @click="benefitTabs('IDEXPRESS')"
+                >
+                  IDExpress
+                </a>
+              </li>
+            </ol>
+          </nav>
+          <div class="row benefit1">
+            <div class="col-6 benefit_2">Benefit</div>
+            <div v-if="benefitContent === 'JNE'" class="col-6 kurir">JNE</div>
+            <div v-if="benefitContent === 'SICEPAT'" class="col-6 kurir">
+              SiCepat
+            </div>
+            <div v-if="benefitContent === 'IDEXPRESS'" class="col-6 kurir">
+              IDExpress
+            </div>
           </div>
-          <div class="col-lg-3 col-md-3 benefit-content">
-            <li class="li-benefit">
-              <i class="material-icons li-benefit">brightness_1</i>Reg 25% (>1/2
-              kg)
-            </li>
-            <li class="li-benefit">
-              <i class="material-icons li-benefit">brightness_1</i>&lt;1/2 Kg
-              bayar 1/2-nya * + diskon 15%
-            </li>
+          <div class="row benefit1">
+            <div class="col-6 benefit_4">Diskon Ongkir</div>
+            <div v-if="benefitContent === 'JNE'" class="col-6 benefit-content">
+              Reg 25%
+            </div>
+            <div
+              v-if="benefitContent === 'SICEPAT'"
+              class="col-6 benefit-content"
+            >
+              <li>
+                <i class="material-icons li-benefit">brightness_1</i>Reg 30%
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>
+                Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
+              </li>
+            </div>
+            <div
+              v-if="benefitContent === 'IDEXPRESS'"
+              class="col-6 benefit-content"
+            >
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Reg 25%
+                (>1/2 kg)
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>&lt;1/2 Kg
+                bayar 1/2-nya * + diskon 15%
+              </li>
+            </div>
           </div>
-        </div>
-        <div class="row benefit1">
-          <div class="col-lg-3 col-md-3 benefit_3">Biaya COD</div>
-          <div class="col-lg-3 col-md-3 benefit-content">
-            2.8%
-            <div>(PPN ditanggung Komship)</div>
+          <div class="row benefit1">
+            <div class="col-6 benefit_3">Biaya COD</div>
+            <div v-if="benefitContent === 'JNE'" class="col-6 benefit-content">
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+            <div
+              v-if="benefitContent === 'SICEPAT'"
+              class="col-6 benefit-content"
+            >
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+            <div
+              v-if="benefitContent === 'IDEXPRESS'"
+              class="col-6 benefit-content"
+            >
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
           </div>
-          <div class="col-lg-3 col-md-3 benefit-content">
-            2.8%
-            <div>(PPN ditanggung Komship)</div>
-          </div>
-          <div class="col-lg-3 col-md-3 benefit-content">
-            2.8%
-            <div>(PPN ditanggung Komship)</div>
-          </div>
-        </div>
-        <div class="row benefit1">
-          <div class="col-lg-3 col-md-3 benefit_3">Diskon Biaya Retur</div>
-          <div class="col-lg-3 col-md-3 benefit-content">
-            <li class="li-benefit">
-              <i class="material-icons li-benefit">brightness_1</i>Gratis
-              se-Jawa Bali
-            </li>
-            <li class="li-benefit">
-              <i class="material-icons li-benefit">brightness_1</i>Non Jawa Bali
-              50%
-            </li>
-          </div>
-          <div class="col-lg-3 col-md-3 benefit-content">
-            Gratis se-lndonesia
-          </div>
-          <div class="col-lg-3 col-md-3 benefit-content">
-            <li class="li-benefit">
-              <i class="material-icons li-benefit">brightness_1</i>Gratis
-              se-Jawa Bali
-            </li>
-            <li class="li-benefit">
-              <i class="material-icons li-benefit">brightness_1</i>Non Jawa Bali
-              50%
-            </li>
+          <div class="row benefit1">
+            <div class="col-6 benefit_3">Diskon Biaya Retur</div>
+            <div v-if="benefitContent === 'JNE'" class="col-6 benefit-content">
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Gratis
+                se-Jawa Bali
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Non Jawa
+                Bali 50%
+              </li>
+            </div>
+            <div
+              v-if="benefitContent === 'SICEPAT'"
+              class="col-6 benefit-content"
+            >
+              Gratis se-lndonesia
+            </div>
+            <div
+              v-if="benefitContent === 'IDEXPRESS'"
+              class="col-6 benefit-content"
+            >
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Gratis
+                se-Jawa Bali
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Non Jawa
+                Bali 50%
+              </li>
+            </div>
           </div>
         </div>
         <div class="benefit-SK">*S&K berlaku</div>

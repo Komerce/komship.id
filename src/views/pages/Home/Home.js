@@ -38,6 +38,7 @@ export default {
   },
   data() {
     return {
+      benefitContent: "JNE",
       defaultRedirectURL: "https://partner.komerce.id/komship-register",
       // carousel settings
       settingscarousel: {
@@ -214,6 +215,9 @@ export default {
         window.open(this.defaultRedirectURL);
       }
       return;
+    },
+    benefitTabs(value) {
+      this.benefitContent = value;
     },
   },
 };
