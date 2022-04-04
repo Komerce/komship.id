@@ -45,14 +45,14 @@
           >
             <a
               :id="items.id"
-              :href="`/#${items.value}`"
+              :href="items.id !== 'cek-ongkir' ? `/#${items.value}` : `/${items.value}`"
               :class="menu === items.id ? 'nav-link active' : 'nav-link'"
               @click="setMenuActive(items.id)"
             >
               {{ items.title }}
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link
               id="cek-ongkir"
               class="nav-link"
@@ -61,7 +61,7 @@
             >
               Cek Ongkir
             </router-link>
-          </li>
+          </li> -->
         </ul>
         <button
           class="btn btn-outline-primary btn-sign-in"
@@ -74,6 +74,7 @@
   </nav>
 </template>
 <script>
+
 export default {
   data() {
     return {
@@ -101,6 +102,11 @@ export default {
           title: "Fitur",
           value: "feature",
         },
+        {
+          id: "cek-ongkir",
+          title: "Cek Ongkir",
+          value: "cek-ongkir",
+        },
       ],
       navBerandaIsActive: true,
     };
@@ -115,13 +121,28 @@ export default {
       }
     },
   },
-  // mounted() {
-  //   if (this.$route.hash && this.$route.hash !== "#") {
-  //     this.goto(this.$route.hash.substring(1));
-  //   } else {
-  //     this.toggleClassNav("navmenuhome");
-  //   }
-  // },
+  mounted() {
+    // if (this.$route.hash && this.$route.hash !== "#") {
+    //   this.goto(this.$route.hash.substring(1));
+    // } else {
+    //   this.toggleClassNav("navmenuhome");
+    // }
+    if (window.history.state.current === '/cek-ongkir') {
+      this.menu = 'cek-ongkir'
+    }
+    if (window.history.state.current === '/#home') {
+      window.scrollTo(0, 0)
+    }
+    if (window.history.state.current === '/#service') {
+      window.scrollTo(0, 608)
+    }
+    if (window.history.state.current === '/#alur') {
+      window.scrollTo(0, 2546)
+    }
+    if (window.history.state.current === '/#feature') {
+      window.scrollTo(0, 3436)
+    }
+  },
   methods: {
     toggleClassNav(id) {
       if (document.getElementById(id)) {

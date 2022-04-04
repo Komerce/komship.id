@@ -13,7 +13,12 @@
             placeholder="Alamat Asal"
             class="form-address"
             @search="getDestination"
-          />
+          >
+            <template
+              v-slot:no-options
+              class="none"
+            >{{ '' }}</template>
+          </v-select>
         </div>
         <div class="col-lg-3 mb-2">
           <v-select
@@ -22,7 +27,12 @@
             placeholder="Alamat Tujuan"
             class="form-address"
             @search="getDestination"
-          />
+          >
+            <template
+              v-slot:no-options
+              class="none"
+            >{{ '' }}</template>
+          </v-select>
         </div>
         <div class="col-lg-3 mb-2">
           <div class="input-group">
@@ -39,6 +49,13 @@
         </div>
         <div class="col-lg-2 mb-2 d-flex justify-content-end">
           <button class="btn btn-primary btn-cek-ongkir" @click="calculate()">
+            <div
+              v-if="loadingCekOngkir"
+              class="spinner-border spinner-border-sm text-light"
+              role="status"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
             Cek Ongkir
           </button>
         </div>
