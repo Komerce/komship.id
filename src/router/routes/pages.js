@@ -39,5 +39,13 @@ const routes = [
       layout: "HomeLayout",
     },
   },
+  {
+    path: "/cek-ongkir",
+    name: "CekOngkir",
+    component: () => import("@/views/pages/CekOngkir"),
+    meta: {
+      layout: "HomeLayout",
+    },
+  },
 ];
 export default routes;
