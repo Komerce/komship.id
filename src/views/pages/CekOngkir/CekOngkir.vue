@@ -14,10 +14,7 @@
             class="form-address"
             @search="getDestination"
           >
-            <template
-              v-slot:no-options
-              class="none"
-            >{{ '' }}</template>
+            <template v-slot:no-options class="none">{{ "" }}</template>
           </v-select>
         </div>
         <div class="col-lg-3 mb-2">
@@ -28,10 +25,7 @@
             class="form-address"
             @search="getDestination"
           >
-            <template
-              v-slot:no-options
-              class="none"
-            >{{ '' }}</template>
+            <template v-slot:no-options class="none">{{ "" }}</template>
           </v-select>
         </div>
         <div class="col-lg-3 mb-2">
@@ -102,9 +96,18 @@
           </tr>
         </tbody>
       </table>
-      <span v-else class="result-false"
+      <!-- <span v-else class="result-false"
         >Cek ongkir kamu akan muncul disini</span
-      >
+      > -->
+      <div v-else class="row justify-content-center text-center">
+        <div>
+          <img
+            src="../../../assets/img/illustration/ilustration-before-cek.svg"
+            width="595"
+            class="img-fluid"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </template>
