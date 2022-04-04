@@ -2,7 +2,7 @@
   <footer style="background-color: #f6f6f9">
     <div class="container">
       <div class="col-md-12">
-        <div class="row">
+        <div class="row container">
           <div class="col-lg-6 col-md-8 profile">
             <router-link to="/">
               <img
@@ -21,7 +21,7 @@
                 />
               </div>
               <div class="col-11">Head Office Komerce</div>
-              <div class="col-11 offset-1">
+              <div class="col-10 offset-1">
                 Jln. Sawah Tengah No. 1 Desa Tunjungmuli Kecamatan Karangmoncol
                 Kabupaten Purbalingga (53355)
               </div>
@@ -81,19 +81,19 @@
                 :src="require('@/assets/img/logo/logo_jne.png')"
                 alt="logo jne"
                 class="image-partner-img mb-3"
-                style="margin-left: 20px"
-              />
-              <p class="text-black" style="margin-left: 20px">Segera Hadir :</p>
-              <img
-                :src="require('@/assets/img/logo/logo-id-express.svg')"
-                alt="logo jne"
-                class="image-partner-img"
-                style="margin-left: -20px; width: 80px"
+                style="widht=109px"
               />
               <img
-                :src="require('@/assets/img/logo/logo-sicepat.svg')"
+                :src="require('@/assets/img/logo/Sicepat_logo.png')"
                 alt="logo jne"
                 class="image-partner-img"
+                style="widht=139px"
+              />
+              <img
+                :src="require('@/assets/img/logo/id_express_logo.png')"
+                alt="logo jne"
+                class="image-partner-img"
+                style="widht=139px"
               />
             </div>
           </div>

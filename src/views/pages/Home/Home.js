@@ -38,6 +38,7 @@ export default {
   },
   data() {
     return {
+      benefitContent: "JNE",
       defaultRedirectURL: "https://partner.komerce.id/komship-register",
       // carousel settings
       settingscarousel: {
@@ -84,14 +85,32 @@ export default {
           description:
             "Absolutely perfect ! Sangat terbantu dengan fiturnya yang lengkap & praktis untuk memproses orderan. cashback ongkir 25% yang lumayan gurih, ditambah pencairan dana setiap hari yang dapat memperlancar cash flow.",
         },
+        {
+          name: "Mansur",
+          image: require("@/assets/img/person/testimoni-mansur.png"),
+          description:
+            "Komship bagus banget konsepnya, menciptakan kemudahan penjual untuk mengirim barang, apalagi ada fitur COD tanpa harus daftar ribet ke jasa kirim, UI nya juga mudah dipahami untuk pemula",
+        },
+        {
+          name: "Nursiswanto",
+          image: require("@/assets/img/person/testimoni-nursiswanto.png"),
+          description:
+            "Komship Mantap👍👍👍 Cashbacknya besar, kalau bisa ditingkatkan lagi 🤑🤑 Pencairan setiap hari bikin cash flow aman",
+        },
+        {
+          name: "Diki Moh. Ghani ",
+          image: require("@/assets/img/person/testimoni-ghani.png"),
+          description:
+            "Komship lebih easy user, fitur-fiturnya juga bagus, kita bisa tahu secara otomatis CS yang jualannya paling kenceng dan yang paling kurang kenceng.Selain itu juga ada fitur keuangannya jadi sangat membantu banget. Dan jika ada kendala Tim Supportnya fast respon",
+        },
       ],
       service_items: [
         {
           id: 1,
-          title: "Terima Pembayaran Mudah",
+          title: "Terima Pembayaran COD Instan",
           image: require("@/assets/img/icons/bgwallet.png"),
           description:
-            "Langsung bisa terima pembayaran dari customer dengan mudah dan tanpa syarat.",
+            "Semua bisa COD di Komship. Otomatis dan tanpa ribet urus persyaratan kerjasama satu persatu ke ekspedisi.",
         },
         {
           id: 2,
@@ -105,7 +124,7 @@ export default {
           title: "Lebih Hemat",
           image: require("@/assets/img/icons/analyst-icon.png"),
           description:
-            "Dapatkan cashback ongkos kirim MULAI dari 25%! Lebih hemat dibandingkan yang lain.",
+            "Dapatkan diskon ongkos kirim MULAI dari 25% (Berlaku COD dan Non COD) lebih hemat dibandingkan yang lain.",
         },
         {
           id: 4,
@@ -118,14 +137,14 @@ export default {
           title: "Gratis Biaya Retur",
           image: require("@/assets/img/icons/rts-icon1.png"),
           description:
-            "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD",
+            "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD.",
         },
         {
           id: 6,
           title: "Gratis Jemput Paket",
           image: require("@/assets/img/icons/kendaraan.png"),
           description:
-            "Cukup tunggu saja di rumah, ekspedisi akan mendatangi lokasimu untuk mengambil paket TANPA MINIMUM ORDER.",
+            "Cukup tunggu saja di rumah, kurir akan mendatangi lokasimu untuk mengambil paket TANPA MINIMUM ORDER.",
         },
       ],
       services_item: [
@@ -196,6 +215,9 @@ export default {
         window.open(this.defaultRedirectURL);
       }
       return;
+    },
+    benefitTabs(value) {
+      this.benefitContent = value;
     },
   },
 };
