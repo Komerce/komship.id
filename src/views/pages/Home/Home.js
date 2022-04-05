@@ -8,6 +8,7 @@ export default {
   },
   data() {
     return {
+      totalPartners: null,
       benefitContent: "JNE",
       service_items: [
         {
@@ -158,12 +159,21 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.countPartners();
+  },
   methods: {
     openWindow(url) {
       window.open(url);
     },
     benefitTabs(value) {
       this.benefitContent = value;
+    },
+    countPartners() {
+      this.$http.get("countPartners").then((res) => {
+        const { data } = res.data;
+        this.totalPartners = data;
+      });
     },
   },
 };

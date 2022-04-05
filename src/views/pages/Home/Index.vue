@@ -13,7 +13,7 @@
               Pelajari lebih lanjut untuk dapat tawaran menarik
             </p>
             <div class="info">
-              <span class="number">2.000+</span>
+              <span class="number">{{ totalPartners }}+</span>
               <span class="label"
                 >Pebisnis online sudah bergabung dengan
                 <span style="color: #f95031">Komship</span>
