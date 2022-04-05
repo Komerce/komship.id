@@ -2,7 +2,7 @@ import axios from "axios";
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
 
-const apiUrl = "https://komshipdev.komerce.id/api/v2/landingpage/";
+const apiUrl = "https://komship.komerce.id/api/v2/landingpage/";
 
 export default {
   components: { vSelect },
@@ -18,7 +18,7 @@ export default {
     };
   },
   mounted() {
-    this.getDestination()
+    this.getDestination();
   },
   methods: {
     formatNumber: (value) =>
@@ -45,13 +45,13 @@ export default {
             },
           })
           .then((res) => {
-            this.loadingCekOngkir = false
+            this.loadingCekOngkir = false;
             const { data } = res.data;
             this.itemsCekOngkir = data;
             this.isCekOngkir = true;
           });
       } else {
-        this.loadingCekOngkir = false
+        this.loadingCekOngkir = false;
         this.itemsCekOngkir = null;
         this.isCekOngkir = false;
       }
@@ -62,9 +62,9 @@ export default {
       } else if (value === "REG19") {
         return "REGULER";
       } else if (value === "OKE19") {
-        return "OKE"
-      } else if (value === 'YES19') {
-        return "YES"
+        return "OKE";
+      } else if (value === "YES19") {
+        return "YES";
       } else if (value === "SIUNT") {
         return "SIUNTUNG";
       } else if (value === "GOKIL") {

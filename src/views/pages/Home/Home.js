@@ -1,7 +1,7 @@
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination } from "vue3-carousel";
 window.addEventListener("scroll", () => {
-  console.log(window.pageYOffset)
+  console.log(window.pageYOffset);
   if (
     window.history.state.current === "/" ||
     window.history.state.current === "/#home" ||
