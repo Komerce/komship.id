@@ -94,23 +94,29 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
 .benefit-nav {
     --bs-breadcrumb-divider: '|';
 }
-.benefit-nav .breadcrumb-item+.breadcrumb-item::before{
+
+.benefit-nav .breadcrumb-item+.breadcrumb-item::before {
     color: #C2C2C2 !important;
 }
+
 .benefit-nav .breadcrumb-item a {
     text-decoration: none;
     cursor: pointer;
     color: #C2C2C2 !important;
 }
+
 .benefit-nav .breadcrumb-item a.active {
     color: #F95031 !important;
 }
+
 .benefit-mobile {
     display: none;
 }
+
 @media (max-width: 767.98px) {
     .benefit-desktop {
         display: none;
@@ -119,9 +125,12 @@
         display: unset;
     }
 }
+
 .benefit1 {
     margin-bottom: 2%;
     background-color: #FFFFFF;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .benefit_2 {
@@ -187,6 +196,17 @@
     margin-right: 5px;
 }
 
+.kurir3 {
+    background-color: #FF6A3A;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    padding: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 .kurir {
     background-color: #FF6A3A;
     font-weight: 500;
@@ -230,18 +250,20 @@
 .subhead-kurir {
     background-color: #FFFFFF;
     max-width: 350px;
-    height: 150px;
+    height: 170px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    padding: 25px;
+    padding: 20px;
     letter-spacing: 0.7px;
+    font-family: 'Poppins';
 }
 
 .kurir-orange {
     color: #F95031;
+    font-weight: 600;
 }
 
 
@@ -364,14 +386,22 @@ ol.carousel__pagination {
 
 .carousel__slide--next>.carousel__item {
     transform: scale(0.9) translate(-10px);
+    background-color: #000000;
 }
 
 .carousel__slide--prev>.carousel__item {
     transform: scale(0.9) translate(10px);
+    background-color: #000000;
 }
 
 .carousel__slide--active>.carousel__item {
     transform: scale(1);
+}
+
+.carousel__prev,
+.carousel__next {
+    box-sizing: content-box;
+    border: 5px solid white;
 }
 
 
@@ -1010,6 +1040,9 @@ p {
     .subhead-kurir {
         max-width: 300px;
     }
+    .head-alur-pengiriman {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -1224,6 +1257,8 @@ p {
     .new-mode-alur-mobile {
         display: block;
         margin-top: 20px;
+        padding-top: 20px;
+        background-color: #FFFFFF;
     }
     .service-desktop {
         background: none;

@@ -22,7 +22,7 @@
               </div>
               <div class="col-11">Head Office Komerce</div>
               <div class="col-10 offset-1">
-                Jln. Sawah Tengah No. 1 Desa Tunjungmuli Kecamatan Karangmoncol
+                Jln. Sawah Tengah No. 3 Desa Tunjungmuli Kecamatan Karangmoncol
                 Kabupaten Purbalingga (53355)
               </div>
             </div>
@@ -99,8 +99,10 @@
           </div>
           <div class="col-lg-12 col-md-4 contact">
             <img
-              :src="require('@/assets/img/icons/facebook-icon.png')"
-              alt="facebook icon"
+              :src="require('@/assets/img/icons/whatsapp-icon.png')"
+              alt="whatsapp icon"
+              class="ml-3"
+              @click="openLink('https://wa.me/6281328014170')"
             />
             <img
               :src="require('@/assets/img/icons/instagram-icon.png')"
@@ -109,10 +111,10 @@
               @click="openLink('https://instagram.com/komship')"
             />
             <img
-              :src="require('@/assets/img/icons/whatsapp-icon.png')"
-              alt="whatsapp icon"
+              :src="require('@/assets/img/icons/facebook-icon.png')"
+              alt="facebook icon"
               class="ml-3"
-              @click="openLink('https://wa.me/6281328014170')"
+              @click="openLink('https://www.facebook.com/komship')"
             />
           </div>
         </div>

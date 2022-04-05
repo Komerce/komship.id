@@ -13,7 +13,7 @@
           </p>
           <div class="row hap-row1">
             <div class="col-md-4 col-4">
-              <span class="hap-2000">2.000+</span>
+              <span class="hap-2000">{{ totalUser }}+</span>
             </div>
             <div class="col-md-8 col-8">
               <span class="hap-description"
@@ -206,7 +206,7 @@
             <div class="col-md-3 benefit_2">Benefit</div>
             <div class="col-md-3 kurir">JNE</div>
             <div class="col-md-3 kurir">SiCepat</div>
-            <div class="col-md-3 kurir">IDExpress</div>
+            <div class="col-md-3 kurir3">IDExpress</div>
           </div>
           <div class="row benefit1">
             <div class="col-md-3 benefit_4">Diskon Ongkir</div>
@@ -481,7 +481,7 @@
       <div class="new-mode-alur-desktop">
         <div class="container new-mode-alur-desktop">
           <div class="row justify-content-left mb-5">
-            <div class="col-md-6 px-3 text-left pt-3">
+            <div class="col-md-5 px-3 text-left pt-3 head-alur-pengiriman">
               <span class="new-title-alur">
                 Alur pengiriman menggunakan
                 <span style="color: #ff6a3a !important">Komship</span>
@@ -564,7 +564,7 @@
                   <span class="number-alur">5</span>
                 </div>
                 <div class="col-md-8 icon-alur-khusus">
-                  <img :src="require('@/assets/img/icons/icon-alur-5.svg')" />
+                  <img :src="require('@/assets/img/icons/alur-icon5.png')" />
                 </div>
               </div>
               <div class="row justify-content-center text-center">
@@ -628,7 +628,7 @@
             </div>
             <div class="d-flex align-items-center">
               <div class="icon-alur-mobile">
-                <img :src="require('@/assets/img/icons/icon-alur-1.svg')" />
+                <img :src="require('@/assets/img/icons/alur-icon1.png')" />
               </div>
               <div>
                 <span class="title-content-alur-mobile"
@@ -646,7 +646,7 @@
                 >
               </div>
               <div class="icon-alur-mobile">
-                <img :src="require('@/assets/img/icons/icon-alur-2.svg')" />
+                <img :src="require('@/assets/img/icons/alur-icon2.png')" />
               </div>
             </div>
             <div>
@@ -660,7 +660,7 @@
             </div>
             <div class="d-flex align-items-center">
               <div class="me-3 icon-alur-mobile">
-                <img :src="require('@/assets/img/icons/icon-alur-3.svg')" />
+                <img :src="require('@/assets/img/icons/alur-icon3.png')" />
               </div>
               <div>
                 <span class="title-content-alur-mobile"
@@ -678,7 +678,7 @@
                 >
               </div>
               <div class="icon-alur-mobile">
-                <img :src="require('@/assets/img/icons/icon-alur-4.svg')" />
+                <img :src="require('@/assets/img/icons/alur-icon4.png')" />
               </div>
             </div>
             <div>
@@ -692,7 +692,7 @@
             </div>
             <div class="d-flex align-items-center">
               <div class="icon-alur-mobile">
-                <img :src="require('@/assets/img/icons/icon-alur-5.svg')" />
+                <img :src="require('@/assets/img/icons/alur-icon5.png')" />
               </div>
               <div>
                 <span class="title-content-alur-mobile"
@@ -710,7 +710,7 @@
                 >
               </div>
               <div class="icon-alur-mobile">
-                <img :src="require('@/assets/img/icons/icon-alur-6.svg')" />
+                <img :src="require('@/assets/img/icons/alur-icon6.png')" />
               </div>
             </div>
             <div>
@@ -724,7 +724,7 @@
             </div>
             <div class="d-flex align-items-center">
               <div class="me-3 icon-alur-mobile">
-                <img :src="require('@/assets/img/icons/icon-alur-7.svg')" />
+                <img :src="require('@/assets/img/icons/alur-icon7.png')" />
               </div>
               <div style="margin-left: -10px">
                 <span class="title-content-alur-mobile">Dana dicairkan</span>
@@ -1019,9 +1019,29 @@
           </div>
         </slide>
         <template #addons>
+          <Navigation />
           <Pagination />
         </template>
       </carousel>
+      <!-- <button
+        class="carousel-control-prev"
+        type="button"
+        input="#testimoniwrapper"
+        data-bs-target="#testimoniwrapper"
+        data-bs-slide="prev"
+      >
+        <span aria-hidden="true"><i class="chevron material-icons">chevron_left</i></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="carousel"
+        data-bs-slide="next"
+      >
+        <span aria-hidden="true"><i class="chevron material-icons">chevron_right</i></span>
+        <span class="visually-hidden">Next</span>
+      </button> -->
     </div>
   </div>
 </template>

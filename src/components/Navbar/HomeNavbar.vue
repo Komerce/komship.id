@@ -45,7 +45,11 @@
           >
             <a
               :id="items.id"
-              :href="items.id !== 'cek-ongkir' ? `/#${items.value}` : `/${items.value}`"
+              :href="
+                items.id !== 'cek-ongkir'
+                  ? `/#${items.value}`
+                  : `/${items.value}`
+              "
               :class="menu === items.id ? 'nav-link active' : 'nav-link'"
               @click="setMenuActive(items.id)"
             >
@@ -74,7 +78,6 @@
   </nav>
 </template>
 <script>
-
 export default {
   data() {
     return {
@@ -127,20 +130,20 @@ export default {
     // } else {
     //   this.toggleClassNav("navmenuhome");
     // }
-    if (window.history.state.current === '/cek-ongkir') {
-      this.menu = 'cek-ongkir'
+    if (window.history.state.current === "/cek-ongkir") {
+      this.menu = "cek-ongkir";
     }
-    if (window.history.state.current === '/#home') {
-      window.scrollTo(0, 0)
+    if (window.history.state.current === "/#home") {
+      window.scrollTo(0, 0);
     }
-    if (window.history.state.current === '/#service') {
-      window.scrollTo(0, 608)
+    if (window.history.state.current === "/#service") {
+      window.scrollTo(0, 608);
     }
-    if (window.history.state.current === '/#alur') {
-      window.scrollTo(0, 2546)
+    if (window.history.state.current === "/#alur") {
+      window.scrollTo(0, 2546);
     }
-    if (window.history.state.current === '/#feature') {
-      window.scrollTo(0, 3436)
+    if (window.history.state.current === "/#feature") {
+      window.scrollTo(0, 3436);
     }
   },
   methods: {
@@ -216,7 +219,7 @@ export default {
   font-family: "Poppins", sans-serif;
 }
 .image-navbar {
-  margin-left: 4vw;
+  margin-left: 3vw;
 }
 .btn-sign-in {
   width: 151px;
