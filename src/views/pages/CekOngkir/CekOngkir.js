@@ -17,6 +17,9 @@ export default {
       itemsCekOngkir: null,
     };
   },
+  mounted() {
+    this.getDestination()
+  },
   methods: {
     formatNumber: (value) =>
       `${value}`.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, "."),
@@ -42,11 +45,13 @@ export default {
             },
           })
           .then((res) => {
+            this.loadingCekOngkir = false
             const { data } = res.data;
             this.itemsCekOngkir = data;
             this.isCekOngkir = true;
           });
       } else {
+        this.loadingCekOngkir = false
         this.itemsCekOngkir = null;
         this.isCekOngkir = false;
       }
@@ -56,6 +61,10 @@ export default {
         return "STANDARD";
       } else if (value === "REG19") {
         return "REGULER";
+      } else if (value === "OKE19") {
+        return "OKE"
+      } else if (value === 'YES19') {
+        return "YES"
       } else if (value === "SIUNT") {
         return "SIUNTUNG";
       } else if (value === "GOKIL") {
