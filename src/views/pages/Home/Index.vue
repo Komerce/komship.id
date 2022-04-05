@@ -43,11 +43,11 @@
     <!-- service -->
     <section id="service" class="service">
       <div class="container pt-4">
-        <div class="row">
-          <div class="col-lg-5 col-md-4 service-title">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-4 col-11 service-title">
             <h2 class="title">Sering kirim barang?</h2>
           </div>
-          <div class="col-lg-7 col-md-8 description">
+          <div class="col-lg-7 col-md-8 col-11 description">
             Sudah saatnya kamu beralih ke platform yang bisa memberikan berlipat
             keuntungan dan kenyamanan dalam melakukan pengiriman barang. Komship
             kini hadir untuk memudahkan pengiriman kamu dengan berbagai benefit
@@ -97,6 +97,7 @@
         :settings="settingscarousel"
         :wrapAround="true"
         :breakpoints="breakpoints"
+        ref="carousel"
       >
         <slide v-for="item in service_items" :key="item.id">
           <div class="carousel__item">
@@ -111,15 +112,11 @@
                   <p v-if="item.id === 5" class="text-black"></p>
                 </div>
               </div>
-              <!-- <div class="slidertestimoni__body"> -->
-              <!-- <p class="slidertestimoni__body--text"> -->
-              <!-- {{ item.description }} -->
-              <!-- </p> -->
-              <!-- </div> -->
             </div>
           </div>
         </slide>
         <template #addons>
+          <Navigation />
           <Pagination />
         </template>
       </carousel>
@@ -1019,29 +1016,17 @@
           </div>
         </slide>
         <template #addons>
-          <Navigation />
+          <Navigation>
+            <template #next>
+              <span> <i class="chevron material-icons">chevron_right</i> </span>
+            </template>
+            <template #prev>
+              <span> <i class="chevron material-icons">chevron_left</i> </span>
+            </template>
+          </Navigation>
           <Pagination />
         </template>
       </carousel>
-      <!-- <button
-        class="carousel-control-prev"
-        type="button"
-        input="#testimoniwrapper"
-        data-bs-target="#testimoniwrapper"
-        data-bs-slide="prev"
-      >
-        <span aria-hidden="true"><i class="chevron material-icons">chevron_left</i></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="carousel"
-        data-bs-slide="next"
-      >
-        <span aria-hidden="true"><i class="chevron material-icons">chevron_right</i></span>
-        <span class="visually-hidden">Next</span>
-      </button> -->
     </div>
   </div>
 </template>

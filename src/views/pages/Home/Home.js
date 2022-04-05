@@ -218,8 +218,5 @@ export default {
             }
             return;
         },
-        benefitTabs(value) {
-            this.benefitContent = value;
-        },
     },
 };

@@ -96,11 +96,18 @@
 }
 
 .benefit-nav {
-    --bs-breadcrumb-divider: '|';
+    /* --bs-breadcrumb-divider: '|'; */
+}
+
+.breadcrumb-item {
+    padding: 5px 10px 5px 10px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .benefit-nav .breadcrumb-item+.breadcrumb-item::before {
-    color: #C2C2C2 !important;
+    content: none;
 }
 
 .benefit-nav .breadcrumb-item a {
@@ -113,8 +120,16 @@
     color: #F95031 !important;
 }
 
+.breadcrumb-item:hover {
+    border: solid 1px #F95031;
+}
+
 .benefit-mobile {
     display: none;
+}
+
+ :root {
+    --carousel-color-primary: red;
 }
 
 @media (max-width: 767.98px) {
@@ -373,6 +388,19 @@ ol.carousel__pagination {
     background-color: #FF6A3A;
 }
 
+.carousel__next {
+    padding-right: 3200px;
+}
+
+.carousel__prev {
+    padding-left: 3200px;
+}
+
+.carousel__prev,
+.carousel__next {
+    background: none;
+}
+
 .carousel__slide>.carousel__item {
     transform: scale(1);
     opacity: 0.5;
@@ -398,10 +426,10 @@ ol.carousel__pagination {
     transform: scale(1);
 }
 
-.carousel__prev,
-.carousel__next {
-    box-sizing: content-box;
-    border: 5px solid white;
+.chevron {
+    font-size: 70px;
+    font-weight: thin;
+    color: #222222;
 }
 
 
@@ -437,6 +465,7 @@ ol.carousel__pagination {
     font-style: normal;
     line-height: 150%;
     margin: 16px 0px;
+    text-align: center;
 }
 
 .register-now .title .kepada {
@@ -500,7 +529,7 @@ ol.carousel__pagination {
     color: #828282;
     font-weight: 400;
     line-height: 24px;
-    text-align: justify;
+    text-align: left;
 }
 
 .service .content {
@@ -959,6 +988,10 @@ p {
     padding-left: 0px;
 }
 
+.carousel__viewport {
+    overflow: unset;
+}
+
 
 /* ==== */
 
@@ -1197,6 +1230,15 @@ p {
     .testimoniwrapper--text {
         font-size: 22px;
         line-height: 32px;
+    }
+    .service .description {
+        padding: 0%;
+    }
+    .carousel__next {
+        padding-right: 3300px;
+    }
+    .carousel__prev {
+        padding-left: 3300px;
     }
 }
 
@@ -1530,13 +1572,37 @@ p {
     .card-content img {
         width: 60px;
         margin-bottom: 10px;
+        margin-top: -50px;
     }
     .card-content {
         background: none;
         height: 200px;
-        border-radius: 26px;
         text-align: left;
         padding: 10px;
+    }
+    .card {
+        border-radius: 16px;
+    }
+    .carousel__next {
+        padding-right: 1880px;
+    }
+    .carousel__prev {
+        padding-left: 1900px;
+    }
+    .chevron {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 430px) {
+    .carousel__next {
+        padding-right: 2130px;
+    }
+    .carousel__prev {
+        padding-left: 2140px;
+    }
+    .chevron {
+        font-size: 50px;
     }
 }
 
@@ -1555,5 +1621,20 @@ p {
     }
     .service-mobile p {
         font-size: 14px;
+    }
+    .conclusion__logo {
+        max-width: 70px
+    }
+    .conclusion__text {
+        width: 300px;
+    }
+    .carousel__next {
+        padding-right: 1600px;
+    }
+    .carousel__prev {
+        padding-left: 1610px;
+    }
+    .chevron {
+        font-size: 50px;
     }
 }
