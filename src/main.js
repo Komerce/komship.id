@@ -14,6 +14,8 @@ axios.defaults.baseURL = process.env.VUE_APP_API_URL;
 const app = createApp(App);
 app.use(router);
 app.config.globalProperties.$http = axios;
-app.AOS = new AOS.init();
+app.AOS = new AOS.init({
+    once: true,
+});
 app.use(createMetaManager());
 app.mount("#app");
