@@ -1,11 +1,13 @@
 h2 {
     font-size: 40px;
     font-weight: 700;
+    font-family: 'Poppins';
 }
 
 h3 {
     font-size: 32px;
     font-weight: 700;
+    font-family: 'Poppins';
 }
 
 .register-now {
@@ -13,6 +15,7 @@ h3 {
     width: 100%;
     padding-bottom: 5vw;
     scroll-margin-top: 70px;
+    font-family: 'Poppins';
 }
 
 .register-now .image-desktop img {
@@ -29,17 +32,20 @@ h3 {
     line-height: 24px;
     font-weight: 400;
     padding-top: 10px;
+    font-family: 'Poppins';
 }
 
 .register-now .info {
     display: flex;
     margin: 15px 0;
+    font-family: 'Poppins';
 }
 
 .register-now .info .number {
     font-size: 48px;
     font-weight: 600;
     color: #FE783A;
+    font-family: 'Poppins';
 }
 
 .register-now .info .label {
@@ -47,6 +53,7 @@ h3 {
     font-weight: 500;
     margin: auto 0;
     margin-left: 20px;
+    font-family: 'Poppins';
 }
 
 .register-now .btn-register-now {
@@ -54,6 +61,7 @@ h3 {
     font-size: 16px;
     min-width: 231px;
     height: 60px;
+    font-family: 'Poppins';
 }
 
 
@@ -79,6 +87,7 @@ h3 {
     display: flex;
     text-align: center;
     justify-content: center;
+    font-family: 'Poppins';
 }
 
 .service .description {
@@ -86,19 +95,22 @@ h3 {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    font-family: 'Poppins';
 }
 
 .service .content {
     border: none;
     border-radius: 10px;
     padding: 0 10px;
-    min-height: 200px;
+    min-height: 230px;
     margin-bottom: 50px;
+    font-family: 'Poppins';
 }
 
 .service .title-content {
     font-size: 18px;
     font-weight: 600;
+    font-family: 'Poppins';
 }
 
 .service .description-content {
@@ -106,7 +118,8 @@ h3 {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    margin-top: 10px
+    margin-top: 10px;
+    font-family: 'Poppins';
 }
 
 .service .icons {
@@ -129,10 +142,12 @@ h3 {
     padding: 10px 20px;
     border-radius: 30px;
     border: none;
+    font-family: 'Poppins';
 }
 
 .benefit .list-benefit::marker {
     color: #F95031;
+    font-family: 'Poppins';
 }
 
 .benefit .logo {
@@ -143,6 +158,7 @@ h3 {
 .benefit .content {
     font-size: 18px;
     font-weight: 600;
+    font-family: 'Poppins';
 }
 
 .benefit-table-desktop {
@@ -158,14 +174,19 @@ h3 {
     padding: 0;
     margin-bottom: 10px;
     overflow-x: hidden;
+    font-family: 'Poppins';
 }
 
 .benefit-table-desktop .head {
     background-color: #FBA63C;
+    font-family: 'Poppins';
+    font-size: 20px;
 }
 
 .benefit-table-desktop .subhead {
     background-color: #FF6A3A;
+    font-family: 'Poppins';
+    font-size: 20px;
 }
 
 .benefit-table-mobile {
@@ -182,6 +203,7 @@ h3 {
     padding: 4px 12px;
     font-size: 16px;
     font-weight: 500;
+    font-family: 'Poppins';
 }
 
 .benefit-table-mobile .btn-menu:hover {
@@ -220,6 +242,7 @@ h3 {
     font-size: 16px;
     font-weight: 600;
     text-align: center;
+    font-family: 'Poppins';
 }
 
 .flow {
@@ -234,6 +257,8 @@ h3 {
 .flow h3 {
     max-width: 450px;
     padding: 30px 0;
+    font-family: 'Poppins';
+    letter-spacing: 0.7px;
 }
 
 .flow .number {
@@ -242,6 +267,7 @@ h3 {
     background-color: #FFECE9;
     border: 1px solid #FF6A3A;
     border-radius: 50%;
+    font-family: 'Poppins';
 }
 
 .flow .number span {
@@ -250,6 +276,7 @@ h3 {
     display: block;
     text-align: center;
     margin-top: 6px;
+    font-family: 'Poppins';
 }
 
 .flow .image {
@@ -261,20 +288,23 @@ h3 {
 
 .flow .image img {
     height: 200px;
+    width: 200px;
 }
 
 .flow .description {
     display: flex;
     justify-content: center;
+    font-family: 'Poppins';
 }
 
 .flow .description span {
-    width: 150px;
+    width: 200px;
     text-align: center;
     position: relative;
     font-weight: 500;
     font-size: 16px;
     color: #FF6A3A;
+    font-family: 'Poppins';
 }
 
 .feature {
@@ -289,16 +319,19 @@ h3 {
     width: 70%;
     margin: auto 0;
     z-index: 1;
+    font-family: 'Poppins';
 }
 
 .feature .title {
     font-size: 18px;
     font-weight: 600;
     color: #F95031;
+    font-family: 'Poppins';
 }
 
 .feature .description {
     font-size: 14px;
+    font-family: 'Poppins';
 }
 
 .image-feature {
@@ -322,16 +355,19 @@ h3 {
     text-align: center;
     margin: auto 0;
     font-weight: 600;
+    font-family: 'Poppins';
 }
 
 .conclusion .content .title {
     font-size: 32px;
+    font-family: 'Poppins';
 }
 
 .conclusion .content .btn {
     font-weight: 600;
     font-size: 16px;
     padding: 16px 24px;
+    font-family: 'Poppins';
 }
 
 .btn-check:focus+.btn-primary,
@@ -355,6 +391,7 @@ h3 {
     margin-top: 50px;
     margin-bottom: 30px;
     text-align: center;
+    font-family: 'Poppins';
 }
 
 .testimoni .card {
@@ -363,6 +400,7 @@ h3 {
     border-radius: 20px;
     min-height: 230px;
     margin: 10px 0;
+    font-family: 'Poppins';
 }
 
 .testimoni .card .head {
@@ -392,6 +430,7 @@ h3 {
     padding: 30px 40px;
     margin-top: 15px;
     font-size: 16px;
+    font-family: 'Poppins';
 }
 
 .testimoni .card .name {
@@ -400,6 +439,7 @@ h3 {
     margin: auto 30px;
     padding-top: 10px;
     text-align: left;
+    font-family: 'Poppins';
 }
 
 .testimoni .carousel__prev,

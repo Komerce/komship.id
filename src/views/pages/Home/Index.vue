@@ -43,7 +43,7 @@
     <section id="service" class="service">
       <div class="container">
         <div class="row mb-1" data-aos="fade-up" data-aos-duration="1500">
-          <div class="col-md-5">
+          <div class="col-md-5 align-self-center">
             <h3 class="title">Sering kirim barang?</h3>
           </div>
           <div class="col-md-7 description">
@@ -168,15 +168,9 @@
         </div>
         <div class="row" data-aos="fade-right" data-aos-duration="1500">
           <div class="col-md-3 p-4 head">Diskon Biaya Retur</div>
-          <div class="col-md-3 p-4">
-            <li class="list-benefit">Gratis se-Jawa Bali</li>
-            <li class="list-benefit">Non Jawa Bali 50%</li>
-          </div>
-          <div class="col-md-3 p-4">Gratis se-lndonesia</div>
-          <div class="col-md-3 p-4">
-            <li class="list-benefit">Gratis se-Jawa Bali</li>
-            <li class="list-benefit">Non Jawa Bali 50%</li>
-          </div>
+          <div class="col-md-3 p-4">Gratis se-lndonesia*</div>
+          <div class="col-md-3 p-4">Gratis se-lndonesia*</div>
+          <div class="col-md-3 p-4">Gratis se-lndonesia*</div>
         </div>
       </div>
       <div class="benefit-table-mobile">
@@ -254,15 +248,13 @@
         <div class="row" data-aos="zoom-in" data-aos-duration="1500">
           <div class="col-6 p-3 head">Diskon Biaya Retur</div>
           <div v-if="benefitContent === 'JNE'" class="col-6 p-3">
-            <li class="list-benefit">Gratis se-Jawa Bali</li>
-            <li class="list-benefit">Non Jawa Bali 50%</li>
+           Gratis se-lndonesia*
           </div>
           <div v-if="benefitContent === 'SICEPAT'" class="col-6 p-3">
-            Gratis se-lndonesia
+            Gratis se-lndonesia*
           </div>
           <div v-if="benefitContent === 'IDEXPRESS'" class="col-6 p-3">
-            <li class="list-benefit">Gratis se-Jawa Bali</li>
-            <li class="list-benefit">Non Jawa Bali 50%</li>
+            Gratis se-lndonesia*
           </div>
         </div>
       </div>
@@ -332,7 +324,7 @@
                 <span style="color: #f95031"
                   >Cocok bagi pebisnis dengan paket ringan.</span
                 >
-                kirim orderan makin hemat dan mantap
+                Kirim orderan makin hemat dan mantap
               </span>
             </div>
           </div>
