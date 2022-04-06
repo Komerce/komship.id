@@ -29,10 +29,10 @@
               Mulai Sekarang
             </button>
           </div>
-          <div class="col-md-6 image-desktop">
+        </div>
+          <div class="col-lg-6 col-md-6 image-desktop">
             <img :src="require('@/assets/img/hero/new-bg-hero.svg')" />
           </div>
-        </div>
       </div>
     </section>
     <section id="service" class="service">
