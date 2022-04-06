@@ -68,6 +68,8 @@ export default {
         return "OKE";
       } else if (value === "YES19") {
         return "YES";
+      } else if (value === "CTC19") {
+        return "CTC"
       } else if (value === "SIUNT") {
         return "SIUNTUNG";
       } else if (value === "GOKIL") {
