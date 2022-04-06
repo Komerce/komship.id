@@ -17,24 +17,30 @@
             </div>
             <div class="col-md-8 col-8">
               <span class="hap-description"
-
                 >Pebisnis online sudah bergabung dengan
-                <span style="color: #f95031">Komship</span>
-              </span>
+                <span class="hap-komship">Komship</span></span
+              >
             </div>
-            <button
-              class="btn btn-primary btn-register-now"
-              @click="openWindow('https://partner.komerce.id/komship-register')"
-            >
-              Mulai Sekarang
-            </button>
           </div>
-          <div class="col-md-6 image-desktop">
-            <img :src="require('@/assets/img/hero/new-bg-hero.svg')" />
-          </div>
+          <button
+            class="btn btn-primary btn-register-now px-5"
+            @click="openWindow(defaultRedirectURL)"
+          >
+            Mulai Sekarang
+          </button>
+        </div>
+        <div class="col-lg-5 col-md-5 image-desktop pt-5 mt-5">
+          <img
+            :src="require('@/assets/img/hero/new-bg-hero.svg')"
+            style="margin-right: 10px; margin-left: 43%"
+          />
+        </div>
+        <div class="col-lg-5 col-md-6 image-mobile mt-4">
+          <img :src="require('@/assets/img/hero/new-bg-hero.svg')" />
         </div>
       </div>
     </section>
+    <!-- service -->
     <section id="service" class="service">
       <div class="container pt-4">
         <div class="row justify-content-center">
@@ -42,7 +48,6 @@
             <h2 class="title">Sering kirim barang?</h2>
           </div>
           <div class="col-lg-7 col-md-8 col-11 description">
-
             Sudah saatnya kamu beralih ke platform yang bisa memberikan berlipat
             keuntungan dan kenyamanan dalam melakukan pengiriman barang. Komship
             kini hadir untuk memudahkan pengiriman kamu dengan berbagai benefit
@@ -51,7 +56,7 @@
         </div>
         <div class="row mt-5 service-desktop">
           <div
-            class="col-lg-4 col-md-6"
+            class="col-xl-4 col-lg-4 col-md-6"
             v-for="item in service_items"
             :key="item.id"
           >
@@ -59,7 +64,10 @@
               <div class="card-body">
                 <img :src="item.image" class="icons" />
                 <h3 class="title-content">{{ item.title }}</h3>
-                <p class="description-content">{{ item.description }}</p>
+                <p class="description-content">
+                  {{ item.description }}
+                </p>
+                <p v-if="item.id === 5" class="text-black">*S&K berlaku.</p>
               </div>
             </div>
           </div>
@@ -97,8 +105,11 @@
               <div class="card content">
                 <div class="card-content">
                   <img :src="item.image" class="icons" />
-                  <h3 class="title">{{ item.title }}</h3>
-                  <p class="description">{{ item.description }}</p>
+                  <h3 class="title-content-mobile">{{ item.title }}</h3>
+                  <p class="description-content-mobile">
+                    {{ item.description }}
+                  </p>
+                  <p v-if="item.id === 5" class="text-black"></p>
                 </div>
               </div>
             </div>
@@ -150,28 +161,35 @@
         </div>
       </div>
     </section>
-    <section class="benefit container">
-      <div class="card benefit-head">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-lg-6 content">
-              Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
-              pengiriman <span style="color: #f95031">COD dan Non-COD</span>
-            </div>
-            <div class="col-lg-6 d-flex justify-between">
-              <img
-                class="logo"
-                :src="require('@/assets/img/logo/logo_jne.png')"
-              />
-              <img
-                class="logo"
-                :src="require('@/assets/img/logo/logo_sicepat.png')"
-              />
-              <img
-                class="logo"
-                :src="require('@/assets/img/logo/logo_idexpress.png')"
-              />
-            </div>
+    <!-- <section class="conclusionmobile">
+      <img
+        :src="require('@/assets/img/person/conclusion-person-mobile.png')"
+        alt="bg gambar"
+        class="conclusionmobile__bggambar"
+      />
+      <div class="conclusionmobile__content">
+        <p class="conclusionmobile__text">
+          Kami telah bekerjasama dengan Ekspedisi ternama yang mendukung
+          pengiriman COD dan non COD
+        </p>
+        <div>
+          <img
+            :src="require('@/assets/img/logo/logo_jne.png')"
+            class="conclusionmobile__logojne"
+            alt="logo jne"
+          />
+          <div class="d-flex">
+            <span style="font-size: 14px; color: #ffffff">Segera Hadir: </span>
+            <img
+              :src="require('@/assets/img/logo/logo-id-express.svg')"
+              alt="logo id express"
+              style="width: 65px"
+            />
+            <img
+              :src="require('@/assets/img/logo/logo-sicepat.svg')"
+              alt="logo sicepat"
+              style="width: 100px"
+            />
           </div>
         </div>
       </div>
@@ -187,89 +205,271 @@
             <div class="col-md-3 kurir">SiCepat</div>
             <div class="col-md-3 kurir3">IDExpress</div>
           </div>
+          <div class="row benefit1">
+            <div class="col-md-3 benefit_4">Diskon Ongkir</div>
+            <div class="col-md-3 benefit-content">Reg 25%</div>
+            <div class="col-md-3 benefit-content">
+              <li>
+                <i class="material-icons li-benefit">brightness_1</i>Reg 30%
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>
+                Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
+              </li>
+            </div>
+            <div class="col-md-3 benefit-content">
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Reg 25%
+                (>1/2 kg)
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>&lt;1/2 Kg
+                bayar 1/2-nya * + diskon 15%
+              </li>
+            </div>
+          </div>
+          <div class="row benefit1">
+            <div class="col-md-3 benefit_3">Biaya COD</div>
+            <div class="col-md-3 benefit-content">
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+            <div class="col-md-3 benefit-content">
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+            <div class="col-md-3 benefit-content">
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+          </div>
+          <div class="row benefit1">
+            <div class="col-md-3 benefit_3">Diskon Biaya Retur</div>
+            <div class="col-md-3 benefit-content">
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Gratis
+                se-Jawa Bali
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Non Jawa
+                Bali 50%
+              </li>
+            </div>
+            <div class="col-md-3 benefit-content">Gratis se-lndonesia</div>
+            <div class="col-md-3 benefit-content">
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Gratis
+                se-Jawa Bali
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Non Jawa
+                Bali 50%
+              </li>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 p-4 head">Biaya COD</div>
-          <div class="col-md-3 p-4">
-            2.8%
-            <div>(PPN ditanggung Komship)</div>
+        <div class="benefit-mobile">
+          <nav class="benefit-nav" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a
+                  :class="benefitContent === 'JNE' ? 'active' : ''"
+                  @click="benefitTabs('JNE')"
+                  >JNE</a
+                >
+              </li>
+              <li class="breadcrumb-item">
+                <a
+                  :class="benefitContent === 'SICEPAT' ? 'active' : ''"
+                  @click="benefitTabs('SICEPAT')"
+                >
+                  SiCepat
+                </a>
+              </li>
+              <li class="breadcrumb-item">
+                <a
+                  :class="benefitContent === 'IDEXPRESS' ? 'active' : ''"
+                  @click="benefitTabs('IDEXPRESS')"
+                >
+                  IDExpress
+                </a>
+              </li>
+            </ol>
+          </nav>
+          <div class="row benefit1">
+            <div class="col-6 benefit_2">Benefit</div>
+            <div v-if="benefitContent === 'JNE'" class="col-6 kurir">JNE</div>
+            <div v-if="benefitContent === 'SICEPAT'" class="col-6 kurir">
+              SiCepat
+            </div>
+            <div v-if="benefitContent === 'IDEXPRESS'" class="col-6 kurir">
+              IDExpress
+            </div>
           </div>
-          <div class="col-md-3 p-4">
-            2.8%
-            <div>(PPN ditanggung Komship)</div>
+          <div class="row benefit1">
+            <div class="col-6 benefit_4">Diskon Ongkir</div>
+            <div v-if="benefitContent === 'JNE'" class="col-6 benefit-content">
+              Reg 25%
+            </div>
+            <div
+              v-if="benefitContent === 'SICEPAT'"
+              class="col-6 benefit-content"
+            >
+              <li>
+                <i class="material-icons li-benefit">brightness_1</i>Reg 30%
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>
+                Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
+              </li>
+            </div>
+            <div
+              v-if="benefitContent === 'IDEXPRESS'"
+              class="col-6 benefit-content"
+            >
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Reg 25%
+                (>1/2 kg)
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>&lt;1/2 Kg
+                bayar 1/2-nya * + diskon 15%
+              </li>
+            </div>
           </div>
-          <div class="col-md-3 p-4">
-            2.8%
-            <div>(PPN ditanggung Komship)</div>
+          <div class="row benefit1">
+            <div class="col-6 benefit_3">Biaya COD</div>
+            <div v-if="benefitContent === 'JNE'" class="col-6 benefit-content">
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+            <div
+              v-if="benefitContent === 'SICEPAT'"
+              class="col-6 benefit-content"
+            >
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+            <div
+              v-if="benefitContent === 'IDEXPRESS'"
+              class="col-6 benefit-content"
+            >
+              2.8%
+              <div>(PPN ditanggung Komship)</div>
+            </div>
+          </div>
+          <div class="row benefit1">
+            <div class="col-6 benefit_3">Diskon Biaya Retur</div>
+            <div v-if="benefitContent === 'JNE'" class="col-6 benefit-content">
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Gratis
+                se-Jawa Bali
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Non Jawa
+                Bali 50%
+              </li>
+            </div>
+            <div
+              v-if="benefitContent === 'SICEPAT'"
+              class="col-6 benefit-content"
+            >
+              Gratis se-lndonesia
+            </div>
+            <div
+              v-if="benefitContent === 'IDEXPRESS'"
+              class="col-6 benefit-content"
+            >
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Gratis
+                se-Jawa Bali
+              </li>
+              <li class="li-benefit">
+                <i class="material-icons li-benefit">brightness_1</i>Non Jawa
+                Bali 50%
+              </li>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 p-4 head">Diskon Biaya Retur</div>
-          <div class="col-md-3 p-4">
-            <li class="list-benefit">Gratis se-Jawa Bali</li>
-            <li class="list-benefit">Non Jawa Bali 50%</li>
+        <div class="benefit-SK">*S&K berlaku</div>
+      </div>
+    </section>
+    <!-- kurir-counter -->
+    <section id="recommendation">
+      <div class="head-rec container">Rekomendasi untuk Kamu</div>
+      <div class="row row-kurir">
+        <div class="col-lg-4 col-md-4 col-12 icon-counter">
+          <img src="@/assets/img/partials/jne-counter.png" alt="jne counter" />
+          <div class="subhead-kurir">
+            Makin tenang kirim orderan dengan
+            <span class="kurir-orange"
+              >gerai terbanyak dan cakupan terluas</span
+            >
+            di Indonesia
           </div>
-          <div class="col-md-3 p-4">Gratis se-lndonesia</div>
-          <div class="col-md-3 p-4">
-            <li class="list-benefit">Gratis se-Jawa Bali</li>
-            <li class="list-benefit">Non Jawa Bali 50%</li>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 icon-counter">
+          <img
+            src="@/assets/img/partials/sicepat-counter.png"
+            alt="sicepat counter"
+          />
+          <div class="subhead-kurir">
+            Makin <span class="kurir-orange">untung</span> dan
+            <span class="kurir-orange">hemat</span> kirim orderan bahkan ke
+            pelosok Indonesia. Kirim pakai
+            <span class="kurir-orange">Cargo</span> gak kalah
+            <span class="kurir-orange">hemat</span>nya!
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 icon-counter">
+          <img
+            src="@/assets/img/partials/idexpress-counter.png"
+            alt="id express counter"
+          />
+          <div class="subhead-kurir">
+            <span class="kurir-orange"
+              >Cocok bagi pebisnis dengan paket ringan.</span
+            >
+            <span> kirim orderan makin hemat dan mantap</span>
           </div>
         </div>
       </div>
-      <div class="benefit-table-mobile">
-        <nav class="benefit-nav" aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a
-                :class="benefitContent === 'JNE' ? 'active' : ''"
-                @click="benefitTabs('JNE')"
-                >JNE</a
-              >
-            </li>
-            <li class="breadcrumb-item">
-              <a
-                :class="benefitContent === 'SICEPAT' ? 'active' : ''"
-                @click="benefitTabs('SICEPAT')"
-              >
-                SiCepat
-              </a>
-            </li>
-            <li class="breadcrumb-item">
-              <a
-                :class="benefitContent === 'IDEXPRESS' ? 'active' : ''"
-                @click="benefitTabs('IDEXPRESS')"
-              >
-                IDExpress
-              </a>
-            </li>
-          </ol>
-        </nav>
+    </section>
+
+    <!-- alur pengiriman -->
+    <section id="alur" class="feature mt-4">
+      <!-- <div class="container">
         <div class="row">
-          <div class="col-6 p-3 head">Benefit</div>
-          <div v-if="benefitContent === 'JNE'" class="col-6 p-3 subhead">
-            JNE
+          <div class="col-md-1 image-mobile"></div>
+          <div class="col-md-6 content">
+            <h2 class="title-content">Alur pengiriman</h2>
+            <h2 class="title-content">
+              menggunakan
+              <span class="order" style="color: #fba63c">Komship</span>
+            </h2>
+            <div class="row mt-5">
+              <div
+                v-for="(item, idx) in services_item"
+                :key="item.id"
+                class="alur__contentwrap"
+              >
+                <div class="alur__content">
+                  <div class="alur__content--icon"></div>
+                  <h5 class="alur__content--text">{{ item.text }}</h5>
+                </div>
+                <img
+                  v-if="services_item.length - 1 !== idx"
+                  :src="item.gambar"
+                  class="icons"
+                />
+              </div>
+            </div>
           </div>
-          <div v-if="benefitContent === 'SICEPAT'" class="col-6 p-3 subhead">
-            SiCepat
-          </div>
-          <div v-if="benefitContent === 'IDEXPRESS'" class="col-6 p-3 subhead">
-            IDExpress
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 p-3 head">Diskon Ongkir</div>
-          <div v-if="benefitContent === 'JNE'" class="col-6 p-3">Reg 25%</div>
-          <div v-if="benefitContent === 'SICEPAT'" class="col-6 p-3">
-            <li class="list-benefit">Reg 30%</li>
-            <li class="list-benefit">
-              Cargo mulai dari 2.500/kg + diskon 5% (min. 10Kg)
-            </li>
-          </div>
-          <div v-if="benefitContent === 'IDEXPRESS'" class="col-6 p-3">
-            <li class="list-benefit">Reg 25% (>1/2 kg)</li>
-            <li class="list-benefit">
-              &lt;1/2 Kg bayar 1/2-nya * + diskon 15%
-            </li>
+          <div class="col-md-6 image-desktop">
+            <img
+              :src="require('@/assets/img/icons/dashboard.png')"
+              alt="dashboard feature"
+            />
           </div>
         </div>
       </div> -->
@@ -399,9 +599,18 @@
               </div>
             </div>
           </div>
-          <div v-if="benefitContent === 'IDEXPRESS'" class="col-6 p-3">
-            2.8%
-            <div>(PPN ditanggung Komship)</div>
+        </div>
+      </div>
+    </section>
+    <!-- New Alur Mobile -->
+    <section>
+      <div class="container new-mode-alur-mobile">
+        <div class="row container justify-content-center mb-5">
+          <div class="col-md-5 px-3 text-left">
+            <span class="new-title-alur-mobile">
+              Alur pengiriman menggunakan
+              <span style="color: #ff6a3a !important">Komship</span>
+            </span>
           </div>
         </div>
 
@@ -500,10 +709,9 @@
               <div class="icon-alur-mobile">
                 <img :src="require('@/assets/img/icons/alur-icon6.png')" />
               </div>
-              <span class="content">
-                Makin untung dan hemat kirim orderan bahkan ke pelosok
-                Indonesia. Kirim pakai Cargo gak kalah hematnya!
-              </span>
+            </div>
+            <div>
+              <span class="number-alur-mobile">6</span>
             </div>
           </div>
 
@@ -518,98 +726,292 @@
               <div style="margin-left: -10px">
                 <span class="title-content-alur-mobile">Dana dicairkan</span>
               </div>
-              <span class="content">
-                Cocok bagi pebisnis dengan paket ringan. kirim orderan makin
-                hemat dan mantap
-              </span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="alur" class="flow">
-      <div class="container">
-        <h3>
-          Alur pengiriman menggunakan
-          <span style="color: #f95031">Komship</span>
-        </h3>
-        <div class="row justify-content-center">
+
+    <!-- feature -->
+    <!-- <section id="feature" class="service">
+      <div class="container pt-4">
+        <h2 class="title">Fitur Tambahan</h2>
+        <div class="service-mobile">
+          <carousel :items-to-show="1.25">
+            <slide v-for="item in service_item" :key="item.id">
+              <div
+                class="card content"
+                style="background-color: #ff6a3a border-radius: 24px;width:338px; height:350px; margin-right: 10px;"
+              >
+                <div
+                  class="card-body"
+                  style="
+                    background-color: #ff6a3a;
+                    border-radius: 24px;
+                    display: grid;
+                    align-items: center;
+                    padding: 1rem 1rem 0px;
+                  "
+                >
+                  <img
+                    :src="item.image"
+                    class="icons"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      background-color: white;
+                      border-radius: 24px;
+                    "
+                  />
+                  <h3
+                    class="title-content"
+                    style="text-align: center; color: white"
+                  >
+                    {{ item.title1 }}
+                  </h3>
+                </div>
+              </div>
+            </slide>
+            <template #addons>
+              <Pagination />
+            </template>
+          </carousel>
+        </div>
+        <div class="row mt-5 service-desktop">
           <div
-            v-for="item in flow_items"
+            class="col-lg-4 col-md-6"
+            v-for="item in service_item"
             :key="item.id"
-            class="col-lg-3 col-md-4 col-sm-6 mb-2 px-0"
           >
-            <div class="number">
-              <span>{{ item.id }}</span>
-            </div>
-            <div class="image">
-              <img :src="item.image" />
-            </div>
-            <div class="description">
-              <span>{{ item.title }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="feature" class="opsional-feature">
-      <div class="container mt-4">
-        <h3>Fitur Tambahan</h3>
-        <div class="row">
-          <div class="col-lg-7 col-12">
-            <div v-for="item in feature_items" :key="item.id" class="d-flex">
-              <img :src="item.image" style="width: 30%" />
-              <div class="content">
-                <span class="title">{{ item.title }}</span>
-                <br />
-                <span class="description">{{ item.description }}</span>
+            <div
+              class="card content"
+              style="background-color: #ff6a3a border-radius: 24px;width:338px; height:350px; justify-content: center; margin: 0px auto 1em;"
+            >
+              <div
+                class="card-body"
+                style="background-color: #ff6a3a; border-radius: 24px"
+              >
+                <img
+                  :src="item.image"
+                  class="icons"
+                  style="
+                    width: 307.68px;
+                    height: 263.4px;
+                    background-color: white;
+                    border-radius: 24px;
+                  "
+                />
+                <h3
+                  class="title-content"
+                  style="text-align: center; color: white"
+                >
+                  {{ item.title1 }}
+                </h3>
               </div>
             </div>
           </div>
-          <div class="col-lg-5 image-feature">
+        </div>
+      </div>
+    </section> -->
+
+    <!-- new feature -->
+
+    <section id="feature" class="container-fluid">
+      <div class="feature">
+        <div class="container">
+          <div class="head-feature">Fitur Tambahan</div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row justify-content-center">
+              <div class="col-md-3 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/produk-terlaris.png"
+                  alt="produk terlaris"
+                />
+              </div>
+              <div class="col-md-7">
+                <div class="subhead-feature">Produk Terlaris</div>
+                <div class="content-feature">
+                  Jika kamu memiliki produk dengan variasi yang berbeda, maka
+                  fitur produk terlaris ini dapat membantu kamu mengetahui
+                  produk mana yang menjadi best seller dalam kurun waktu 1 bulan
+                  atau 7 hari terakhir.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row justify-content-center">
+              <div class="col-md-3 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/customer-loyal.png"
+                  alt="customer loyal"
+                />
+              </div>
+              <div class="col-md-7">
+                <div class="subhead-feature">Customer Loyal</div>
+                <div class="content-feature">
+                  Merupakan data Customer yang sering melakukan order kembali
+                  (repeat order). Dengan mengetahui Customer Loyal kita, maka
+                  proses orderan akan semakin cepat.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row justify-content-center">
+              <div class="col-md-3 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/top-admin-order.png"
+                  alt="top admin order"
+                />
+              </div>
+              <div class="col-md-7">
+                <div class="subhead-feature">Top Admin Order</div>
+                <div class="content-feature">
+                  Fitur yang akan mempermudah para pebisnis memantau
+                  produktifitas para admin dengan melihat data akumulasi
+                  performa masing-masing admin yang ada. Makin mudah juga untuk
+                  mengambil keputusan seperti pemberian bonus dan meningkatkan
+                  semangat kerja para admin.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- new feature end -->
+    <!-- new feature mobile -->
+    <section id="feature-mobile" class="container">
+      <div class="feature-mobile">
+        <div class="head-feature-mobile">
+          <div class="head-feature">Fitur Tambahan</div>
+        </div>
+        <div class="row container justify-content-center mb-3">
+          <div class="col-6 icon-newfeature">
             <img
-              :src="require('@/assets/img/partials/bg-opsional-feature.svg')"
+              src="@/assets/img/partials/produk-terlaris.png"
+              alt="produk terlaris"
             />
           </div>
+          <div class="col-6 subhead-feature-mobile">
+            <div class="subhead-feature">Produk Terlaris</div>
+          </div>
+          <div class="col-12">
+            <div class="content-feature">
+              Jika kamu memiliki produk dengan variasi yang berbeda, maka fitur
+              produk terlaris ini dapat membantu kamu mengetahui produk mana
+              yang menjadi best seller dalam kurun waktu 1 bulan atau 7 hari
+              terakhir.
+            </div>
+          </div>
+        </div>
+        <div class="row container justify-content-center mb-3">
+          <div class="col-6 subhead-feature-mobile">
+            <div class="subhead-feature">Customer Loyal</div>
+          </div>
+          <div class="col-6 icon-newfeature">
+            <img
+              src="@/assets/img/partials/customer-loyal.png"
+              alt="customer loyal"
+            />
+          </div>
+          <div class="col-12">
+            <div class="content-feature">
+              Merupakan data Customer yang sering melakukan order kembali
+              (repeat order). Dengan mengetahui Customer Loyal kita, maka proses
+              orderan akan semakin cepat.
+            </div>
+          </div>
+        </div>
+        <div class="row container justify-content-center mb-3">
+          <div class="col-5 icon-newfeature">
+            <img
+              src="@/assets/img/partials/top-admin-order.png"
+              alt="top admin order"
+            />
+          </div>
+          <div class="col-7 subhead-feature-mobile">
+            <div class="subhead-feature">Top Admin Order</div>
+          </div>
+          <div class="col-12">
+            <div class="content-feature">
+              Fitur yang akan mempermudah para pebisnis memantau produktifitas
+              para admin dengan melihat data akumulasi performa masing-masing
+              admin yang ada. Makin mudah juga untuk mengambil keputusan seperti
+              pemberian bonus dan meningkatkan semangat kerja para admin.
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section class="conclusion">
-      <img
-        class="bg-model-left"
-        src="@/assets/img/hero/model-conclusion-left.svg"
-      />
-      <div class="content">
-        <h3>Percayakan Pengiriman Orderanmu Pada Komship!</h3>
-        <br />
-        <button
-          class="btn btn-primary btn-register-now"
-          @click="openWindow('https://partner.komerce.id/komship-register')"
-        >
-          Daftar sekarang
-        </button>
+    <!-- new feature mobile end -->
+    <!-- contactkomerce -->
+    <section id="contactkomerce" class="contactkomerce">
+      <div class="contactkomerce__right">
+        <img
+          :src="require('@/assets/img/person/contactleft.png')"
+          class="contactkomerce__left--img"
+        />
+        <img
+          :src="require('@/assets/img/person/contactright.png')"
+          class="contactkomerce__right--img"
+        />
+        <div class="contactkomerce__right--content">
+          <h5 class="contactkomerce__right--text">
+            Percayakan Pengiriman Ordermu Pada Komship!
+          </h5>
+          <a
+            class="contactkomerce__right--link"
+            :href="defaultRedirectURL"
+            onClick="fbq('track', 'Lead')"
+            target="_blank"
+          >
+            <span class="contactkomerce__right--link-text"
+              >Daftar Sekarang</span
+            >
+          </a>
+        </div>
       </div>
-      <img
-        class="bg-model-right"
-        src="@/assets/img/hero/model-conclusion-right.svg"
-      />
     </section>
-    <section class="testimoni">
-      <h3 class="title">
-        <span style="color: #f95031">Komship</span> telah dipercaya oleh
+
+    <!-- testimoni -->
+    <div class="row justify-content-center testimoniwrapper--text">
+      <div class="col-lg-6 col-md-6 col-11">
+        <span style="color: #ff6a3a">Komship</span>&nbsp;telah dipercaya oleh
         Pebisnis dan UMKM di Indonesia
-      </h3>
-      <carousel :itemsToShow="2" :autoplay="3000" :wrap-around="true">
-        <slide v-for="item in testimoni_items" :key="item.id">
-          <div class="card carousel__item">
-            <div class="head">
-              <div class="profile">
-                <img :src="item.image" />
+      </div>
+    </div>
+    <div id="testimoniwrapper" class="testimoniwrapper">
+      <carousel
+        :autoplay="15000"
+        :settings="settingscarousel"
+        :wrapAround="true"
+        :breakpoints="breakpoints"
+      >
+        <slide v-for="item in testimoniesData" :key="item.id">
+          <div class="carousel__item">
+            <div class="slidertestimoni">
+              <div class="slidertestimoni__head">
+                <div>
+                  <h5 class="slidertestimoni__head--text">{{ item.name }}</h5>
+                </div>
+                <div class="slidertestimoni__head--wrapperimg">
+                  <img :src="item.image" class="slidertestimoni__head--img" />
+                </div>
               </div>
-              <span class="name">{{ item.name }}</span>
-            </div>
-            <div class="content">
-              {{ item.description }}
+              <div class="slidertestimoni__body">
+                <p class="slidertestimoni__body--text">
+                  {{ item.description }}
+                </p>
+              </div>
             </div>
           </div>
         </slide>
@@ -625,7 +1027,7 @@
           <Pagination />
         </template>
       </carousel>
-    </section>
+    </div>
   </div>
 </template>
 <script src="./Home.js"></script>
