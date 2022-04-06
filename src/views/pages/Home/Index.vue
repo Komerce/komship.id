@@ -35,7 +35,7 @@
         </div>
       </div>
     </section>
-    <section id="service" class="service"
+    <section id="service" class="service">
       <div class="container pt-4">
         <div class="row justify-content-center">
           <div class="col-lg-5 col-md-4 col-11 service-title">
