@@ -3,11 +3,15 @@
     <section id="home" style="background-color: #ffffff">
       <div class="register-now container">
         <div class="row">
-          <div class="col-md-6 content">
-            <h3 class="title">
+          <div
+            class="col-md-6 content"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <h2 class="title">
               Juaranya Platform Kirim Barang, Mudah dan Murah dengan
               <span style="color: #f95031">Komship</span>
-            </h3>
+            </h2>
             <p class="description">
               Dapatkan diskon ongkir mulai dari 25% dan GRATIS biaya retur!
               Pelajari lebih lanjut untuk dapat tawaran menarik
@@ -26,7 +30,11 @@
               Mulai Sekarang
             </button>
           </div>
-          <div class="col-md-6 image-desktop">
+          <div
+            class="col-md-6 image-desktop"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
             <img :src="require('@/assets/img/hero/new-bg-hero.svg')" />
           </div>
         </div>
@@ -34,11 +42,11 @@
     </section>
     <section id="service" class="service">
       <div class="container">
-        <div class="row mb-1">
-          <div class="col-lg-5 col-md-6">
+        <div class="row mb-1" data-aos="fade-up" data-aos-duration="1500">
+          <div class="col-md-5">
             <h3 class="title">Sering kirim barang?</h3>
           </div>
-          <div class="col-lg-7 col-md-6 description">
+          <div class="col-md-7 description">
             Sudah saatnya kamu beralih ke platform yang bisa memberikan berlipat
             keuntungan dan kenyamanan dalam melakukan pengiriman barang. Komship
             kini hadir untuk memudahkan pengiriman kamu dengan berbagai benefit
@@ -48,35 +56,55 @@
         <div class="row mt-5 service-desktop">
           <div
             class="col-lg-4 col-md-6"
+            data-aos="zoom-in-down"
+            data-aos-duration="1500"
             v-for="item in service_items"
             :key="item.id"
           >
             <div class="card content">
               <div class="card-body">
-                <img :src="item.image" class="icons" />
-                <h3 class="title-content">{{ item.title }}</h3>
+                <img :src="item.image" class="icons" /><br />
+                <span class="title-content">{{ item.title }}</span>
                 <p class="description-content">{{ item.description }}</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="service-mobile">
+        <div class="service-mobile" data-aos="zoom-in" data-aos-duration="1500">
           <carousel :autoplay="2000" :wrap-around="true">
             <slide v-for="item in service_items" :key="item.id">
               <div class="card">
                 <div class="card-body">
-                  <img :src="item.image" class="icons" />
-                  <h3 class="title">{{ item.title }}</h3>
+                  <img :src="item.image" class="icons" /><br />
+                  <span class="title-content">{{ item.title }}</span>
                   <p class="description">{{ item.description }}</p>
                 </div>
               </div>
             </slide>
+            <template #addons>
+              <Navigation>
+                <template #next>
+                  <img
+                    :src="require('@/assets/img/icons/arrow-right-white.svg')"
+                  />
+                </template>
+                <template #prev>
+                  <img
+                    :src="require('@/assets/img/icons/arrow-left-white.svg')"
+                  />
+                </template>
+              </Navigation>
+            </template>
           </carousel>
         </div>
       </div>
     </section>
     <section class="benefit container">
-      <div class="card benefit-head">
+      <div
+        class="card benefit-head"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
         <div class="card-body">
           <div class="row">
             <div class="col-lg-6 content">
@@ -101,13 +129,13 @@
         </div>
       </div>
       <div class="benefit-table-desktop">
-        <div class="row">
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
           <div class="col-md-3 p-4 head">Benefit</div>
           <div class="col-md-3 p-4 subhead">JNE</div>
           <div class="col-md-3 p-4 subhead">SiCepat</div>
           <div class="col-md-3 p-4 subhead">IDExpress</div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
           <div class="col-md-3 p-4 head">Diskon Ongkir</div>
           <div class="col-md-3 p-4">Reg 25%</div>
           <div class="col-md-3 p-4">
@@ -123,7 +151,7 @@
             </li>
           </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
           <div class="col-md-3 p-4 head">Biaya COD</div>
           <div class="col-md-3 p-4">
             2.8%
@@ -138,7 +166,7 @@
             <div>(PPN ditanggung Komship)</div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
           <div class="col-md-3 p-4 head">Diskon Biaya Retur</div>
           <div class="col-md-3 p-4">
             <li class="list-benefit">Gratis se-Jawa Bali</li>
@@ -152,34 +180,35 @@
         </div>
       </div>
       <div class="benefit-table-mobile">
-        <nav class="benefit-nav" aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a
-                :class="benefitContent === 'JNE' ? 'active' : ''"
-                @click="benefitTabs('JNE')"
-                >JNE</a
-              >
-            </li>
-            <li class="breadcrumb-item">
-              <a
-                :class="benefitContent === 'SICEPAT' ? 'active' : ''"
-                @click="benefitTabs('SICEPAT')"
-              >
-                SiCepat
-              </a>
-            </li>
-            <li class="breadcrumb-item">
-              <a
-                :class="benefitContent === 'IDEXPRESS' ? 'active' : ''"
-                @click="benefitTabs('IDEXPRESS')"
-              >
-                IDExpress
-              </a>
-            </li>
-          </ol>
-        </nav>
-        <div class="row">
+        <div
+          class="mt-4 mb-2"
+          style="text-align: left !important"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
+          <button
+            :class="benefitContent === 'JNE' ? 'active' : ''"
+            class="btn btn-sm btn-menu"
+            @click="benefitTabs('JNE')"
+          >
+            JNE
+          </button>
+          <button
+            :class="benefitContent === 'SICEPAT' ? 'active' : ''"
+            class="btn btn-sm btn-menu"
+            @click="benefitTabs('SICEPAT')"
+          >
+            SiCepat
+          </button>
+          <button
+            :class="benefitContent === 'IDEXPRESS' ? 'active' : ''"
+            class="btn btn-sm btn-menu"
+            @click="benefitTabs('IDEXPRESS')"
+          >
+            IDExpress
+          </button>
+        </div>
+        <div class="row" data-aos="zoom-in" data-aos-duration="1500">
           <div class="col-6 p-3 head">Benefit</div>
           <div v-if="benefitContent === 'JNE'" class="col-6 p-3 subhead">
             JNE
@@ -191,7 +220,7 @@
             IDExpress
           </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="zoom-in" data-aos-duration="1500">
           <div class="col-6 p-3 head">Diskon Ongkir</div>
           <div v-if="benefitContent === 'JNE'" class="col-6 p-3">Reg 25%</div>
           <div v-if="benefitContent === 'SICEPAT'" class="col-6 p-3">
@@ -207,7 +236,7 @@
             </li>
           </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="zoom-in" data-aos-duration="1500">
           <div class="col-6 p-3 head">Biaya COD</div>
           <div v-if="benefitContent === 'JNE'" class="col-6 p-3">
             2.8%
@@ -222,7 +251,7 @@
             <div>(PPN ditanggung Komship)</div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="zoom-in" data-aos-duration="1500">
           <div class="col-6 p-3 head">Diskon Biaya Retur</div>
           <div v-if="benefitContent === 'JNE'" class="col-6 p-3">
             <li class="list-benefit">Gratis se-Jawa Bali</li>
@@ -237,59 +266,92 @@
           </div>
         </div>
       </div>
-      <span style="font-weight: 500">*S&K berlaku</span>
+      <span
+        style="font-weight: 500"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        >*S&K berlaku</span
+      >
     </section>
     <section class="recommend mt-5">
       <div class="container">
-        <h3 class="d-block text-center mb-4">Rekomendasi untuk Kamu</h3>
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
+        <h3
+          class="d-block text-center mb-4"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Rekomendasi untuk Kamu
+        </h3>
+        <div class="row justify-content-center">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+          >
             <div class="card">
               <div class="image">
                 <img src="@/assets/img/partials/jne-counter.png" />
               </div>
               <span class="content">
-                Makin tenang kirim orderan dengan gerai terbanyak dan cakupan
-                terluas di Indonesia
+                Makin tenang kirim orderan dengan
+                <span style="color: #f95031">
+                  gerai terbanyak dan cakupan terluas
+                </span>
+                di Indonesia
               </span>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+          >
             <div class="card">
               <div class="image">
                 <img src="@/assets/img/partials/sicepat-counter.png" />
               </div>
               <span class="content">
-                Makin untung dan hemat kirim orderan bahkan ke pelosok
-                Indonesia. Kirim pakai Cargo gak kalah hematnya!
+                Makin <span style="color: #f95031">untung</span> dan
+                <span style="color: #f95031">hemat</span> kirim orderan bahkan
+                ke pelosok Indonesia. Kirim pakai
+                <span style="color: #f95031">Cargo</span> gak kalah
+                <span style="color: #f95031">hemat</span>!
               </span>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+          >
             <div class="card">
               <div class="image">
                 <img src="@/assets/img/partials/idexpress-counter.png" />
               </div>
               <span class="content">
-                Cocok bagi pebisnis dengan paket ringan. kirim orderan makin
-                hemat dan mantap
+                <span style="color: #f95031"
+                  >Cocok bagi pebisnis dengan paket ringan.</span
+                >
+                kirim orderan makin hemat dan mantap
               </span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="alur" class="flow">
+    <section id="alur" class="flow pb-4">
       <div class="container">
-        <h3>
+        <h3 data-aos="fade-up" data-aos-duration="1500">
           Alur pengiriman menggunakan
           <span style="color: #f95031">Komship</span>
         </h3>
-        <div class="row justify-content-center">
+        <div class="content-desktop row justify-content-center">
           <div
             v-for="item in flow_items"
             :key="item.id"
             class="col-lg-3 col-md-4 col-sm-6 mb-2 px-0"
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
           >
             <div class="number">
               <span>{{ item.id }}</span>
@@ -302,14 +364,56 @@
             </div>
           </div>
         </div>
+        <div class="content-mobile">
+          <div v-for="item in flow_items" :key="item.id">
+            <div
+              v-if="item.id % 2 === 1"
+              class="d-flex"
+              data-aos="zoom-in-right"
+              data-aos-duration="1500"
+            >
+              <div class="number-mobile">
+                <span>{{ item.id }}</span>
+              </div>
+              <div class="image-mobile">
+                <img :src="item.image" />
+              </div>
+              <div class="description-mobile">
+                <span>{{ item.title }}</span>
+              </div>
+            </div>
+            <div
+              v-else
+              class="d-flex"
+              data-aos="zoom-in-left"
+              data-aos-duration="1500"
+            >
+              <div class="description-mobile">
+                <span>{{ item.title }}</span>
+              </div>
+              <div class="image-mobile d-flex justify-content-end">
+                <img :src="item.image" />
+              </div>
+              <div class="number-mobile">
+                <span>{{ item.id }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="feature" class="opsional-feature">
+    <section id="feature" class="feature">
       <div class="container mt-4">
-        <h3>Fitur Tambahan</h3>
+        <h3 data-aos="fade-up" data-aos-duration="1500">Fitur Tambahan</h3>
         <div class="row">
           <div class="col-lg-7 col-12">
-            <div v-for="item in feature_items" :key="item.id" class="d-flex">
+            <div
+              v-for="item in feature_items"
+              :key="item.id"
+              class="d-flex"
+              data-aos="zoom-in-right"
+              data-aos-duration="1500"
+            >
               <img :src="item.image" style="width: 30%" />
               <div class="content">
                 <span class="title">{{ item.title }}</span>
@@ -318,24 +422,31 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-5 image-feature">
-            <img
-              :src="require('@/assets/img/partials/bg-opsional-feature.svg')"
-            />
-          </div>
         </div>
       </div>
+      <img
+        class="image-feature"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+        :src="require('@/assets/img/partials/bg-opsional-feature.svg')"
+      />
     </section>
     <section class="conclusion">
       <img
         class="bg-model-left"
+        data-aos="fade-right"
+        data-aos-duration="1500"
         src="@/assets/img/hero/model-conclusion-left.svg"
       />
       <div class="content">
-        <h3>Percayakan Pengiriman Orderanmu Pada Komship!</h3>
+        <h3 data-aos="zoom-in-down" data-aos-duration="1500">
+          Percayakan Pengiriman Orderanmu Pada Komship!
+        </h3>
         <br />
         <button
           class="btn btn-primary btn-register-now"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
           @click="openWindow('https://partner.komerce.id/komship-register')"
         >
           Daftar sekarang
@@ -343,39 +454,70 @@
       </div>
       <img
         class="bg-model-right"
+        data-aos="fade-left"
+        data-aos-duration="1500"
         src="@/assets/img/hero/model-conclusion-right.svg"
       />
     </section>
-    <section class="testimoni">
+    <section class="testimoni" data-aos="fade-up" data-aos-duration="1500">
       <h3 class="title">
         <span style="color: #f95031">Komship</span> telah dipercaya oleh
         Pebisnis dan UMKM di Indonesia
       </h3>
-      <carousel :itemsToShow="2" :autoplay="3000" :wrap-around="true">
-        <slide v-for="item in testimoni_items" :key="item.id">
-          <div class="card carousel__item">
-            <div class="head">
-              <div class="profile">
-                <img :src="item.image" />
+      <div class="content-desktop">
+        <carousel :itemsToShow="2" :autoplay="3000" :wrap-around="true">
+          <slide v-for="item in testimoni_items" :key="item.id">
+            <div class="card carousel__item">
+              <div class="head">
+                <div class="profile">
+                  <img :src="item.image" />
+                </div>
+                <span class="name">{{ item.name }}</span>
               </div>
-              <span class="name">{{ item.name }}</span>
+              <div class="content">
+                {{ item.description }}
+              </div>
             </div>
-            <div class="content">
-              {{ item.description }}
+          </slide>
+          <template #addons>
+            <Navigation>
+              <template #next>
+                <img :src="require('@/assets/img/icons/arrow-right.svg')" />
+              </template>
+              <template #prev>
+                <img :src="require('@/assets/img/icons/arrow-left.svg')" />
+              </template>
+            </Navigation>
+          </template>
+        </carousel>
+      </div>
+      <div class="content-mobile">
+        <carousel :autoplay="3000" :wrap-around="true">
+          <slide v-for="item in testimoni_items" :key="item.id">
+            <div class="card carousel__item">
+              <div class="head">
+                <div class="profile">
+                  <img :src="item.image" />
+                </div>
+                <span class="name">{{ item.name }}</span>
+              </div>
+              <div class="content">
+                {{ item.description }}
+              </div>
             </div>
-          </div>
-        </slide>
-        <template #addons>
-          <Navigation>
-            <template #next>
-              <img :src="require('@/assets/img/icons/arrow-right.svg')" />
-            </template>
-            <template #prev>
-              <img :src="require('@/assets/img/icons/arrow-left.svg')" />
-            </template>
-          </Navigation>
-        </template>
-      </carousel>
+          </slide>
+          <template #addons>
+            <Navigation>
+              <template #next>
+                <img :src="require('@/assets/img/icons/arrow-right.svg')" />
+              </template>
+              <template #prev>
+                <img :src="require('@/assets/img/icons/arrow-left.svg')" />
+              </template>
+            </Navigation>
+          </template>
+        </carousel>
+      </div>
     </section>
   </div>
 </template>

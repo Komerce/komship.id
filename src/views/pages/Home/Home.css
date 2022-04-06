@@ -1,3 +1,7 @@
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
 h3 {
   font-size: 32px;
   font-weight: 700;
@@ -14,17 +18,12 @@ h3 {
 .register-now .content {
   margin: auto 0;
 }
-.register-now .title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 60px;
-}
 .register-now .description {
   color: #828282;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  text-align: justify;
+  padding-top: 10px;
 }
 .register-now .info{
   display: flex;
@@ -62,25 +61,24 @@ h3 {
   display: none;
 }
 .service .title {
-  font-weight: 700;
-  font-size: 32px;
   display: flex;
+  text-align: center;
   justify-content: center;
 }
 .service .description {
   color: #828282;
   font-weight: 400;
+  font-size: 16px;
   line-height: 24px;
-  text-align: justify;
 }
 .service .content {
   border: none;
   border-radius: 10px;
-  min-height: 220px;
+  padding: 0 10px;
+  min-height: 200px;
   margin-bottom: 50px;
 }
 .service .title-content {
-  margin-top: 1.5vw;
   font-size: 18px;
   font-weight: 600;
 }
@@ -89,12 +87,14 @@ h3 {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  margin-top: 10px
 }
 .service .icons {
   width: 60px;
   height: 60px;
   position: relative;
   margin-top: -50px;
+  margin-bottom: 10px;
   border-radius: 12px;
   background-color: transparent;
   -webkit-box-shadow: 2px 4px 5px -1px rgba(0,0,0,0.75);
@@ -142,19 +142,26 @@ h3 {
 .benefit-table-mobile {
   display: none;
 }
-.benefit-nav {
-    --bs-breadcrumb-divider: '|';
+.benefit-table-mobile .btn-menu {
+  width: auto;
+  margin-right: 6px;
+  color: #C2C2C2;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 16px;
+  font-weight: 500;
 }
-.benefit-nav .breadcrumb-item+.breadcrumb-item::before{
-    color: #C2C2C2 !important;
+.benefit-table-mobile .btn-menu:hover {
+  opacity: 0.7;
 }
-.benefit-nav .breadcrumb-item a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #C2C2C2 !important;
+.benefit-table-mobile .btn-menu:focus {
+  box-shadow: unset;
 }
-.benefit-nav .breadcrumb-item a.active {
-    color: #F95031 !important;
+.benefit-table-mobile .active {
+  color: #FF6A3A;
+  border: 1px solid #FF6A3A;
 }
 .recommend .card {
   border: none;
@@ -170,18 +177,22 @@ h3 {
 }
 .recommend .card .content {
   background-color: #ffffff;
-  padding: 10px;
+  padding: 20px;
   min-height: 100px;
   border-radius: 0px 0px 20px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
 }
 .flow {
   background-color: #ffffff;
   margin-top: 20px;
 }
+.flow .content-mobile {
+  display: none;
+}
 .flow h3 {
-  font-size: 32px;
-  font-weight: 700;
-  width: 450px;
+  max-width: 450px;
   padding: 30px 0;
 }
 .flow .number{
@@ -219,26 +230,30 @@ h3 {
   font-size: 16px;
   color: #FF6A3A;
 }
-.opsional-feature h3{
-  font-weight: 700;
-  padding-bottom: 20x;
+.feature{
+  padding: 20px 0;
 }
-.opsional-feature .content{
+.feature h3{
+  padding: 15px 0;
+}
+.feature .content{
   width: 70%;
   margin: auto 0;
+  z-index: 1;
 }
-.opsional-feature .title{
+.feature .title{
   font-size: 18px;
   font-weight: 600;
   color: #F95031;
 }
-.opsional-feature .description {
+.feature .description {
   font-size: 14px;
 }
-.image-feature img{
-  position: relative;
-  margin: auto;
-  margin-top: -50px;
+.image-feature{
+  position: absolute;
+  top: 40px;
+  width: 480px;
+  height: auto;
   right: 0;
 }
 .conclusion {
@@ -254,7 +269,7 @@ h3 {
   margin: auto 0;
   font-weight: 600;
 }
-.conclusion .content h3{
+.conclusion .content .title {
   font-size: 32px;
 }
 .conclusion .content .btn {
@@ -276,7 +291,8 @@ h3 {
 .testimoni .title {
   max-width: 624px;
   margin: 20px auto;
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   text-align: center;
 }
 .testimoni .card {
@@ -346,11 +362,10 @@ h3 {
 .testimoni .carousel__slide--active > .carousel__item {
   transform: scale(1.1);
 }
+.testimoni .content-mobile {
+  display: none;
+}
 @media (max-width: 1199.98px) {
-  .register-now .title {
-    font-size: 36px;
-    line-height: 50px;
-  }
   .register-now .description {
     font-size: 16px;
   }
@@ -363,24 +378,38 @@ h3 {
     min-width: 160px;
     height: 50px;
   }
-  .service .title {
-    font-weight: 700;
-    font-size: 24px;
-  }
+  /* .service .description {
+    font-size: 14px;
+  } */
   .service .content {
-    min-height: 230px;
+    min-height: 255px;
+  }
+  .recommend .card .content{
+    min-height: 140px;
+  }
+  .image-feature{
+    width: 420px;
   }
   .benefit .content {
     margin-bottom: 20px;
+  }
+  .flow .description span {
+    margin-left: 15%;
   }
   .flow .image {
     justify-content: end;
   }
 }
 @media (max-width: 991.98px) {
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 28px;
+    font-weight: 600;
+  }
   .register-now .title {
-    font-size: 24px;
-    line-height: 40px;
     margin-top: 15px;
   }
   .register-now .info .number {
@@ -396,7 +425,10 @@ h3 {
     font-size: 14px;
     width: 100%;
   }
-  .image-feature img{
+  .service .content {
+    min-height: 230px;
+  }
+  .image-feature{
     display: none;
   }
   .service .title {
@@ -424,11 +456,13 @@ h3 {
   }
 }
 @media (max-width: 767.98px) {
+  h2 {
+    font-size: 28px;
+  }
   h3 {
-    font-size: 28px !important;
+    font-size: 26px;
   }
   .register-now .title {
-    font-size: 30px;
     text-align: center;
   }
   .register-now .description {
@@ -458,8 +492,26 @@ h3 {
     margin: 50px 20px;
     width: 100%;
     text-align: left;
-    min-height: 220px;
+    min-height: 180px;
     border-radius: 10px;
+    padding: 0 10px;
+  }
+  .service-mobile .carousel .card .description{
+    margin-top: 10px;
+  }
+  .service-mobile .carousel__prev,
+  .service-mobile .carousel__next {
+    background-color: transparent;
+  }
+  .service-mobile .carousel__prev {
+    position: absolute;
+    left: 45%;
+    top: 92%;
+  }
+  .service-mobile .carousel__next {
+    position: absolute;
+    right: 45%;
+    top: 92%;
   }
   .service .title {
     justify-content: start;
@@ -498,6 +550,26 @@ h3 {
   .benefit-table-mobile .subhead {
     background-color: #FF6A3A;
   }
+  .testimoni .content-desktop {
+    display: none;
+  }
+  .testimoni .content-mobile {
+    display: unset;
+  }
+  .testimoni .content-mobile .carousel__prev,
+  .testimoni .content-mobile .carousel__next {
+    background-color: transparent;
+  }
+  .testimoni .content-mobile .carousel__prev {
+    position: absolute;
+    left: 40%;
+    top: 110%;
+  }
+  .testimoni .content-mobile .carousel__next {
+    position: absolute;
+    right: 40%;
+    top: 110%;
+  }
   .testimoni .card .content {
     font-size: 12px;
   }
@@ -506,31 +578,95 @@ h3 {
     margin-right: 0;
     margin-left: 20px;
   }
-  .conclusion .content h3{
-    font-size: 24px;
+  .conclusion .bg-model-left {
+    width: 100px;
+  }
+  .conclusion .bg-model-right {
+    width: 150px;
   }
   .conclusion .content .btn {
-    font-size: 12px;
+    font-size: 14px;
     padding: 12px 18px;
   }
 
 }
 @media (max-width: 575.98px) {
-  h3 {
-    font-size: 24px !important;
+  h2 {
+    font-size: 26px;
   }
-  .flow .image img {
-    margin: 0 auto;
+  h3 {
+    font-size: 24px;
+  }
+  .flow .content-desktop {
+    display: none;
+  }
+  .flow .content-mobile {
+    display: unset;
+  }
+  .flow .content-mobile .number-mobile{
+    width: 34px;
+    height: 34px;
+    background-color: #FFECE9;
+    border: 1px solid #FF6A3A;
+    border-radius: 50%;
+  }
+  .flow .content-mobile .number-mobile span{
+    font-size: 18px;
+    color: #FF6A3A;
+    margin: 10px;
+  }
+  .flow .content-mobile .image-mobile{
+    width: 50%;
+  }
+  .flow .content-mobile .image-mobile img{
+    width: 90%;
+  }
+  .flow .content-mobile .description-mobile{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    color: #FF6A3A;
+    width: 50%;
+    display: flex;
+    align-items: center!important;
+  }
+  .conclusion h3 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .conclusion .content {
+    padding: 15px;
+  }
+  .conclusion .bg-model-left {
+    width: 80px;
+  }
+  .conclusion .bg-model-right {
+    width: 110px;
+  }
+  .conclusion .content .btn {
+    font-size: 14px;
+    padding: 8px 14px;
   }
 }
-@media only screen and (max-width: 360px) {
-  .register-now .title {
-    font-size: 26px;
+@media (max-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 20px;
   }
   .feature .title-content {
     font-size: 26px;
   }
   .service-mobile .carousel .card{
     min-height: 250px;
+  }
+  .conclusion h3 {
+    font-size: 18px;
+  }
+  .conclusion .content .btn {
+    font-size: 12px;
+    padding: 10px 16px;
   }
 }
