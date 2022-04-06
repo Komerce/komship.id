@@ -1301,6 +1301,9 @@ p {
     .service-desktop {
         background: none;
     }
+    .register-now .title {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 540px) {
