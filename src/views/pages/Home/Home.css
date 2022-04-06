@@ -122,7 +122,6 @@
 
 .breadcrumb-item:hover {
     border: solid 1px #F95031;
-    text-decoration-color: #F95031;
 }
 
 .benefit-mobile {
@@ -462,7 +461,7 @@ ol.carousel__pagination {
     font-style: normal;
     line-height: 150%;
     margin: 16px 0px;
-    text-align: center;
+    text-align: left;
 }
 
 .register-now .title .kepada {
