@@ -2,9 +2,10 @@ import "vue3-carousel/dist/carousel.css";
 import axios from "axios";
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
-import "vue3-carousel/dist/carousel.css";
+import 'vue3-carousel/dist/carousel.css';
 
 const apiUrl = "http://app.komerce.id/api/homepage/komship/countPartners";
+
 
 window.addEventListener("scroll", () => {
     console.log(window.pageYOffset);
