@@ -1,11 +1,18 @@
 import "vue3-carousel/dist/carousel.css";
+import { useMeta } from "vue-meta";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
 export default {
+    setup() {
+        useMeta({
+            title: "FAQ",
+        });
+    },
     components: {
         Carousel,
         Navigation,
         Slide,
     },
+
     data() {
         return {
             totalPartners: null,
@@ -137,6 +144,62 @@ export default {
                     image: require("@/assets/img/avatars/testimoni-6.svg"),
                     name: "Agus David Saputra",
                     description: "Baru ada platform yang sekeren ini dan sangat menguntungkan bagi kami karena lebih murah biaya CODnya dan cashback super besar, uang bisa cair tiap hari dan mudah dipakainya.",
+                },
+            ],
+            items: [{
+                    id: "1",
+                    header: "Apa itu Komship ?",
+                    desc: "Komship merupakan platform layanan pengiriman untuk membantu kamu dalam pengiriman paket baik COD atau Non-COD tanpa minimum pengiriman.",
+                },
+                {
+                    id: "2",
+                    header: "Bagaimana cara daftar Komship?",
+                    desc: "",
+                },
+                {
+                    id: "3",
+                    header: "Apakah ada biaya retur di Komship? Jika ada, berapa biayanya?",
+                    desc: "Biaya retur (Pengembelian COD) gratis se-Indonesia. Biaya yang di gratiskan mencakup ongkir pengembalian paket, pelanggan cukup membayar ongkir pengiriman di awal saja.",
+                },
+                {
+                    id: "4",
+                    header: "Apakah ada diskon ongkir di Komship?",
+                    desc: "",
+                },
+                {
+                    id: "5",
+                    header: "Apakah ada biaya administrasi bulanan ?",
+                    desc: "Iya, ketika akun kamu tidak memiliki transaksi dalam waktu 30 hari maka akun kamu akan dibekukan.",
+                },
+                {
+                    id: "6",
+                    header: "Apakah Komship akan me-nonaktifkan akun jika beberapa bulan tidak terpakai?",
+                    desc: "Betul. Akun akan dinonaktifkan jika dalam waktu 30 hari tidak aktif.",
+                },
+                {
+                    id: "7",
+                    header: "Apakah Komship bisa di gunakan bagi yang berjualan offline?",
+                    desc: "Sangat Bisa. Selagi masih dalam ruang lingkup pengiriman paket orderan.",
+                },
+                {
+                    id: "8",
+                    header: "Bisnis model apa sajakah yang cocok menggunakan Komship?",
+                    desc: "Komship sangat cocok untuk kamu yang memiliki model bisnis seperti distributor, dropshipper, reseller, atau produsen.",
+                },
+                {
+                    id: "9",
+                    header: "Jika sudah bekerja sama dengan ekspedisi apakah bisa menggunakan Komship?",
+                    desc: "Sangat Bisa. Yang terpenting kamu tidak mengirimkan paket yang sama antara dengan Komship dan Ekspedisi.",
+                },
+                {
+                    id: "10",
+                    header: "Berapa biaya penanganan COD di Komship?",
+                    desc: "",
+                },
+                {
+                    id: "11",
+                    header: "Dana COD akan cair maksimal berapa hari setelah barang diterima pembeli?",
+                    desc: "Dana COD dapat langsung dicairkan setelah pesanan selesai.",
                 },
             ],
         };

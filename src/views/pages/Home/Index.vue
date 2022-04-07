@@ -511,6 +511,41 @@
         </carousel>
       </div>
     </section>
+    <section class="faq">
+      <div class="container">
+        <div class="header">
+          <h2 class="header-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="accordion">
+          <div v-for="item in items" :key="item.id" class="accordion-item">
+            <h2 :id="'heading' + item.id" class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                :data-bs-target="'#collapse' + item.id"
+                aria-expanded="true"
+                :aria-controls="'collapse' + item.id"
+              >
+                <div class="item-header">
+                  {{ item.header }}
+                </div>
+              </button>
+            </h2>
+            <div
+              :id="'collapse' + item.id"
+              class="accordion-collapse collapse"
+              :aria-labelledby="'heading' + item.id"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                {{ item.desc }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script src="./Home.js"></script>
