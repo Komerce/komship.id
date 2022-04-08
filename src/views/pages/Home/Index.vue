@@ -35,7 +35,7 @@
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <img :src="require('@/assets/img/hero/new-bg-hero.svg')" />
+            <img :src="require('@/assets/img/hero/komship-hero.png')" />
           </div>
         </div>
       </div>
@@ -499,7 +499,7 @@
         class="bg-model-left"
         data-aos="fade-right"
         data-aos-duration="1500"
-        src="@/assets/img/hero/model-conclusion-left.svg"
+        src="@/assets/img/hero/model-conclusion-left.png"
       />
       <div class="content">
         <h3 data-aos="zoom-in-down" data-aos-duration="1500">
@@ -519,7 +519,7 @@
         class="bg-model-right"
         data-aos="fade-left"
         data-aos-duration="1500"
-        src="@/assets/img/hero/model-conclusion-right.svg"
+        src="@/assets/img/hero/model-conclusion-right.png"
       />
     </section>
     <section class="testimoni" data-aos="fade-up" data-aos-duration="1500">
