@@ -404,7 +404,7 @@
         >
           Fitur Tambahan
         </h3>
-        <div class="row feature-desktop">
+        <div class="row">
           <div class="col-lg-7 col-12">
             <div
               v-for="item in feature_items"
@@ -624,7 +624,7 @@
                     </ul>
                   </div>
                   <div v-else class="desc">
-                    <span>{{ items }}</span>
+                    <span>{{ items==="" ? '&nbsp;' : items }}</span>
                   </div>
                 </div>
               </div>

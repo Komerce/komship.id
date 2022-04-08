@@ -173,9 +173,9 @@ export default {
                                 "Si Cepat Reg 30%, Cargo mulai dari 2.500/kg + diskon 5% ( min. 10kg )",
                                 "ID Express Reg 25% ( >½ kg ), < ½ kg bayar ½-nya + diskon 15%",
                             ]
-                        }
+                        }, "", "Contoh simulasi:", "Ongkir untuk ekspedisi JNE Reg yang dibayarkan oleh customer sebesar 20.000, 25% dari 20.000 adalah 5.000. Maka, kamu dapat diskon ongkir sebesar 5.000 rupiah."
                     ],
-                },
+                }, 
                 {
                     id: "5",
                     header: "Apakah ada biaya administrasi bulanan ?",
