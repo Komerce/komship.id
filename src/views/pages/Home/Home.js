@@ -4,7 +4,7 @@ import { Carousel, Navigation, Slide } from "vue3-carousel";
 export default {
   setup() {
     useMeta({
-      title: "komship",
+      title: "Komship - Platform Kirim Barang",
     });
   },
   components: {
