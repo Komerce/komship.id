@@ -13,8 +13,8 @@
               <span style="color: #f95031">Komship</span>
             </h2>
             <p class="description">
-              Dapatkan diskon ongkir mulai dari 25% dan GRATIS biaya retur se-Indonesia!
-              Pelajari lebih lanjut untuk dapat tawaran menarik
+              Dapatkan diskon ongkir mulai dari 25% dan GRATIS biaya retur
+              se-Indonesia! Pelajari lebih lanjut untuk dapat tawaran menarik
             </p>
             <div class="info">
               <span class="number">{{ totalPartners }}+</span>
@@ -248,7 +248,7 @@
         <div class="row" data-aos="zoom-in" data-aos-duration="1500">
           <div class="col-6 p-3 head">Diskon Biaya Retur</div>
           <div v-if="benefitContent === 'JNE'" class="col-6 p-3">
-           Gratis se-lndonesia*
+            Gratis se-lndonesia*
           </div>
           <div v-if="benefitContent === 'SICEPAT'" class="col-6 p-3">
             Gratis se-lndonesia*
@@ -396,8 +396,15 @@
     </section>
     <section id="feature" class="feature">
       <div class="container mt-4">
-        <h3 data-aos="fade-up" data-aos-duration="1500" style="font-size: 32px; !important" class="fitur">Fitur Tambahan</h3>
-        <div class="row">
+        <h3
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          style="font-size: 32px; !important"
+          class="fitur"
+        >
+          Fitur Tambahan
+        </h3>
+        <div class="row feature-desktop">
           <div class="col-lg-7 col-12">
             <div
               v-for="item in feature_items"
@@ -411,6 +418,70 @@
                 <span class="title">{{ item.title }}</span>
                 <br />
                 <span class="description">{{ item.description }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="feature-mobile" class="container">
+          <div class="feature-mobile">
+            <div class="head-feature-mobile">
+              <div class="head-feature">Fitur Tambahan</div>
+            </div>
+            <div class="row container justify-content-center mb-3">
+              <div class="col-6 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/produk-terlaris.svg"
+                  alt="produk terlaris"
+                />
+              </div>
+              <div class="col-6 subhead-feature-mobile">
+                <div class="subhead-feature">Produk Terlaris</div>
+              </div>
+              <div class="col-12">
+                <div class="content-feature">
+                  Jika kamu memiliki produk dengan variasi yang berbeda, maka
+                  fitur produk terlaris ini dapat membantu kamu mengetahui
+                  produk mana yang menjadi best seller dalam kurun waktu 1 bulan
+                  atau 7 hari terakhir.
+                </div>
+              </div>
+            </div>
+            <div class="row container justify-content-center mb-3">
+              <div class="col-6 subhead-feature-mobile">
+                <div class="subhead-feature">Customer Loyal</div>
+              </div>
+              <div class="col-6 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/customer-loyal.svg"
+                  alt="customer loyal"
+                />
+              </div>
+              <div class="col-12">
+                <div class="content-feature">
+                  Merupakan data Customer yang sering melakukan order kembali
+                  (repeat order). Dengan mengetahui Customer Loyal kita, maka
+                  proses orderan akan semakin cepat.
+                </div>
+              </div>
+            </div>
+            <div class="row container justify-content-center mb-3">
+              <div class="col-5 icon-newfeature">
+                <img
+                  src="@/assets/img/partials/top-admin.svg"
+                  alt="top admin order"
+                />
+              </div>
+              <div class="col-7 subhead-feature-mobile">
+                <div class="subhead-feature">Top Admin Order</div>
+              </div>
+              <div class="col-12">
+                <div class="content-feature">
+                  Fitur yang akan mempermudah para pebisnis memantau
+                  produktifitas para admin dengan melihat data akumulasi
+                  performa masing-masing admin yang ada. Makin mudah juga untuk
+                  mengambil keputusan seperti pemberian bonus dan meningkatkan
+                  semangat kerja para admin.
+                </div>
               </div>
             </div>
           </div>
@@ -539,16 +610,23 @@
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-               <div v-for= "items in item.desc">
-                  <div v-if="items?.subdesc" >
-                   <ul v-for="val in items.data" style="margin-bottom: 1px">
-                    <li style="list-style-type: disc !important; margin-top: 1px !important">{{val}}</li>
-                   </ul>
+                <div v-for="items in item.desc">
+                  <div v-if="items?.subdesc">
+                    <ul v-for="val in items.data" style="margin-bottom: 1px">
+                      <li
+                        style="
+                          list-style-type: disc !important;
+                          margin-top: 1px !important;
+                        "
+                      >
+                        {{ val }}
+                      </li>
+                    </ul>
                   </div>
                   <div v-else class="desc">
                     <span>{{ items }}</span>
-                    </div>
-               </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -485,6 +485,10 @@ h3 {
     display: none;
 }
 
+#feature-mobile {
+    display: none;
+}
+
 @media (max-width: 1199.98px) {
     .register-now .description {
         font-size: 16px;
@@ -711,9 +715,13 @@ h3 {
         font-size: 14px;
         padding: 12px 18px;
     }
+    
 }
 
 @media (max-width: 575.98px) {
+    .feature-desktop {
+        display: none;
+    }
     h2 {
         font-size: 26px;
     }
