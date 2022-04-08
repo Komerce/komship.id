@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 <template>
-  <footer style="background-color: #f6f6f9">
+  <footer style="background-color: #ffffff">
     <div class="container">
       <div class="col-md-12">
         <div class="row container">
