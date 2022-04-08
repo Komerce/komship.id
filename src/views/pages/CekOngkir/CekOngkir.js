@@ -2,7 +2,7 @@ import axios from "axios";
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
 
-const apiUrl = "https://komshipdev.komerce.id/api/v2/landingpage/";
+const apiUrl = "https://komship.komerce.id/api/v2/landingpage/";
 
 export default {
   components: { vSelect },
@@ -16,6 +16,9 @@ export default {
       loadingCekOngkir: false,
       itemsCekOngkir: null,
     };
+  },
+  mounted() {
+    this.getDestination();
   },
   methods: {
     formatNumber: (value) =>
@@ -42,11 +45,16 @@ export default {
             },
           })
           .then((res) => {
+            this.loadingCekOngkir = false;
             const { data } = res.data;
             this.itemsCekOngkir = data;
             this.isCekOngkir = true;
-          });
+          })
+          .catch(() => {
+            this.loadingCekOngkir = false;
+          })
       } else {
+        this.loadingCekOngkir = false;
         this.itemsCekOngkir = null;
         this.isCekOngkir = false;
       }
@@ -56,6 +64,12 @@ export default {
         return "STANDARD";
       } else if (value === "REG19") {
         return "REGULER";
+      } else if (value === "OKE19") {
+        return "OKE";
+      } else if (value === "YES19") {
+        return "YES";
+      } else if (value === "CTC19") {
+        return "CTC"
       } else if (value === "SIUNT") {
         return "SIUNTUNG";
       } else if (value === "GOKIL") {

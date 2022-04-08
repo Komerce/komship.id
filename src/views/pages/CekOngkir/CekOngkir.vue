@@ -13,7 +13,9 @@
             placeholder="Alamat Asal"
             class="form-address"
             @search="getDestination"
-          />
+          >
+            <template v-slot:no-options class="none">{{ "" }}</template>
+          </v-select>
         </div>
         <div class="col-lg-3 mb-2">
           <v-select
@@ -22,7 +24,9 @@
             placeholder="Alamat Tujuan"
             class="form-address"
             @search="getDestination"
-          />
+          >
+            <template v-slot:no-options class="none">{{ "" }}</template>
+          </v-select>
         </div>
         <div class="col-lg-3 mb-2">
           <div class="input-group">
@@ -39,6 +43,13 @@
         </div>
         <div class="col-lg-2 mb-2 d-flex justify-content-end">
           <button class="btn btn-primary btn-cek-ongkir" @click="calculate()">
+            <div
+              v-if="loadingCekOngkir"
+              class="spinner-border spinner-border-sm text-light"
+              role="status"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
             Cek Ongkir
           </button>
         </div>
@@ -78,16 +89,28 @@
             </td>
             <td>
               Rp {{ formatNumber(item.shipping_cost) }}
-              <div class="alert alert-success items-info-price">
+              <div
+                v-if="item.is_komship_shipment === 1"
+                class="alert alert-success items-info-price"
+              >
                 Rp {{ formatNumber(item.shipping_cost_komship) }}
               </div>
             </td>
           </tr>
         </tbody>
       </table>
-      <span v-else class="result-false"
+      <!-- <span v-else class="result-false"
         >Cek ongkir kamu akan muncul disini</span
-      >
+      > -->
+      <div v-else class="row justify-content-center text-center">
+        <div>
+          <img
+            src="../../../assets/img/illustration/ilustration-before-cek.svg"
+            width="595"
+            class="img-fluid"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </template>
