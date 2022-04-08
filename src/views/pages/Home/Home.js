@@ -4,7 +4,7 @@ import { Carousel, Navigation, Slide } from "vue3-carousel";
 export default {
     setup() {
         useMeta({
-            title: "FAQ",
+            title: "komship",
         });
     },
     components: {
@@ -45,7 +45,7 @@ export default {
                     id: 5,
                     title: "Gratis Biaya Retur",
                     image: require("@/assets/img/icons/rts-icon1.png"),
-                    description: "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD seluruh Indonesia.",
+                    description: "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD seluruh Indonesia. *S&K berlaku.",
                 },
                 {
                     id: 6,
@@ -204,8 +204,16 @@ export default {
                 {
                     id: "10",
                     header: "Berapa biaya penanganan COD di Komship?",
-                    desc: [""],
-                    
+                    desc: ["",
+                    { 
+                        "subdesc": "afasfdasfasf",
+                        "data": [
+                            "Biaya penanganan COD di Komship sebesar 2.8% dari total harga+ongkir.",
+                            "Total harga+ongkir yang dibayarkan oleh customer sebesar 250.000 rupiah, 2.8% dari 250.000 adalah 7.000 rupiah. Maka, biaya penanganan COD yang harus dibayarkan oleh customer sebesar 7.000 rupiah.",
+                        ]
+                    }
+                    ],
+
                 },
                 {
                     id: "11",

@@ -13,7 +13,7 @@
               <span style="color: #f95031">Komship</span>
             </h2>
             <p class="description">
-              Dapatkan diskon ongkir mulai dari 25% dan GRATIS biaya retur!
+              Dapatkan diskon ongkir mulai dari 25% dan GRATIS biaya retur se-Indonesia!
               Pelajari lebih lanjut untuk dapat tawaran menarik
             </p>
             <div class="info">
@@ -396,7 +396,7 @@
     </section>
     <section id="feature" class="feature">
       <div class="container mt-4">
-        <h3 data-aos="fade-up" data-aos-duration="1500">Fitur Tambahan</h3>
+        <h3 data-aos="fade-up" data-aos-duration="1500" style="font-size: 32px; !important" class="fitur">Fitur Tambahan</h3>
         <div class="row">
           <div class="col-lg-7 col-12">
             <div
@@ -542,7 +542,7 @@
                <div v-for= "items in item.desc">
                   <div v-if="items?.subdesc" >
                    <ul v-for="val in items.data" style="margin-bottom: 1px">
-                    <li style="list-style-type: circle !important; margin-top: 1px !important">{{val}}</li>
+                    <li style="list-style-type: disc !important; margin-top: 1px !important">{{val}}</li>
                    </ul>
                   </div>
                   <div v-else class="desc">
