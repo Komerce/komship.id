@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/" @click="goto('home')">
         <img
@@ -247,7 +247,7 @@ export default {
 .close-toggler {
   display: none;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1199.98px) {
   .close-toggler {
     display: flex;
     float: right;
