@@ -677,7 +677,8 @@ h3 {
     }
     .testimoni .content-mobile .carousel__prev,
     .testimoni .content-mobile .carousel__next {
-        background-color: transparent;
+        background-color: #FF6A3A;
+        border-radius: 15px;
     }
     .testimoni .content-mobile .carousel__prev {
         position: absolute;
@@ -801,6 +802,7 @@ h3 {
     background-color: #f8f9fa;
     padding: 10vw 0;
     height: 100%;
+    margin-top: 50px;
 }
 
 .faq .header {

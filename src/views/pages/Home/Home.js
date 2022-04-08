@@ -149,57 +149,68 @@ export default {
             items: [{
                     id: "1",
                     header: "Apa itu Komship ?",
-                    desc: "Komship merupakan platform layanan pengiriman untuk membantu kamu dalam pengiriman paket baik COD atau Non-COD tanpa minimum pengiriman.",
+                    desc: ["Komship merupakan platform layanan pengiriman untuk membantu kamu dalam pengiriman paket baik COD atau Non-COD tanpa minimum pengiriman."],
                 },
                 {
                     id: "2",
                     header: "Bagaimana cara daftar Komship?",
-                    desc: "",
+                    desc:[ "1. Daftar di website Komship.com",  "2. Klik tomblo Mulai Sekarang.", "3. Atau bisa langsung buka https://partner.komerce.cid/komship-register.", "4. Isi form pendaftaran (Isi data yang diminta), Isi form pendaftaran (Isi data yang diminta), lalu centang kotak syarat dan ketentuan dibawahnya.", "5. Klik Daftar.", "6. Lakukan verifikasi dengan membuka email yang kamu pakai untuk registrasi", "7. Akun Komship siap dipakai.", "8. Selanjutnya, kamu tinggal melengkapi profil akun Komship kamu dengan data-data yang valid."],
                 },
                 {
                     id: "3",
                     header: "Apakah ada biaya retur di Komship? Jika ada, berapa biayanya?",
-                    desc: "Biaya retur (Pengembelian COD) gratis se-Indonesia. Biaya yang di gratiskan mencakup ongkir pengembalian paket, pelanggan cukup membayar ongkir pengiriman di awal saja.",
+                    desc: ["Biaya retur (Pengembelian COD) gratis se-Indonesia. Biaya yang di gratiskan mencakup ongkir pengembalian paket, pelanggan cukup membayar ongkir pengiriman di awal saja."],
                 },
                 {
                     id: "4",
                     header: "Apakah ada diskon ongkir di Komship?",
-                    desc: "",
+                    desc: [
+                        "Tentu saja ada, berikut diskon ongkir yang bisa kamu dapatkan dengan menggunakan Komship",
+                        {
+                            "subdesc": "afasfdasfasf",
+                            "data": [
+                                "JNE Reg 25%.",
+                                "Si Cepat Reg 30%, Cargo mulai dari 2.500/kg + diskon 5% ( min. 10kg )",
+                                "ID Express Reg 25% ( >½ kg ), < ½ kg bayar ½-nya + diskon 15%",
+                            ]
+                        }
+                    ],
                 },
                 {
                     id: "5",
                     header: "Apakah ada biaya administrasi bulanan ?",
-                    desc: "Iya, ketika akun kamu tidak memiliki transaksi dalam waktu 30 hari maka akun kamu akan dibekukan.",
+                    desc: ["Tidak, kamu bisa menggunakan Komship tanpa harus membayar biaya administrasi bulanan."],
                 },
                 {
                     id: "6",
                     header: "Apakah Komship akan me-nonaktifkan akun jika beberapa bulan tidak terpakai?",
-                    desc: "Betul. Akun akan dinonaktifkan jika dalam waktu 30 hari tidak aktif.",
+                    desc: ["Betul. Akun akan dinonaktifkan jika dalam waktu 30 hari tidak aktif."],
                 },
                 {
                     id: "7",
                     header: "Apakah Komship bisa di gunakan bagi yang berjualan offline?",
-                    desc: "Sangat Bisa. Selagi masih dalam ruang lingkup pengiriman paket orderan.",
+                    desc: ["Sangat Bisa. Selagi masih dalam ruang lingkup pengiriman paket orderan."],
                 },
                 {
                     id: "8",
                     header: "Bisnis model apa sajakah yang cocok menggunakan Komship?",
-                    desc: "Komship sangat cocok untuk kamu yang memiliki model bisnis seperti distributor, dropshipper, reseller, atau produsen.",
+                    desc: ["Komship sangat cocok untuk kamu yang memiliki model bisnis seperti distributor, dropshipper, reseller, atau produsen."],
                 },
                 {
                     id: "9",
                     header: "Jika sudah bekerja sama dengan ekspedisi apakah bisa menggunakan Komship?",
-                    desc: "Sangat Bisa. Yang terpenting kamu tidak mengirimkan paket yang sama antara dengan Komship dan Ekspedisi.",
+                    desc: ["Sangat Bisa. Yang terpenting kamu tidak mengirimkan paket yang sama antara dengan Komship dan Ekspedisi."],
                 },
                 {
                     id: "10",
                     header: "Berapa biaya penanganan COD di Komship?",
-                    desc: "",
+                    desc: [""],
+                    
                 },
                 {
                     id: "11",
                     header: "Dana COD akan cair maksimal berapa hari setelah barang diterima pembeli?",
-                    desc: "Dana COD dapat langsung dicairkan setelah pesanan selesai.",
+                    desc: ["Dana COD dapat langsung dicairkan setelah pesanan selesai."],
                 },
             ],
         };

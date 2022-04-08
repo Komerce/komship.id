@@ -514,7 +514,7 @@
     <section class="faq">
       <div class="container">
         <div class="header">
-          <h2 class="header-title">Frequently Asked Questions</h2>
+          <h2 class="header-title">FAQ</h2>
         </div>
         <div class="accordion">
           <div v-for="item in items" :key="item.id" class="accordion-item">
@@ -539,7 +539,16 @@
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                {{ item.desc }}
+               <div v-for= "items in item.desc">
+                  <div v-if="items?.subdesc" >
+                   <ul v-for="val in items.data" style="margin-bottom: 1px">
+                    <li style="list-style-type: circle !important; margin-top: 1px !important">{{val}}</li>
+                   </ul>
+                  </div>
+                  <div v-else class="desc">
+                    <span>{{ items }}</span>
+                    </div>
+               </div>
               </div>
             </div>
           </div>
