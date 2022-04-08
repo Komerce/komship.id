@@ -167,7 +167,7 @@
           </div>
         </div>
         <div class="row" data-aos="fade-right" data-aos-duration="1500">
-          <div class="col-md-3 p-4 head">Diskon Biaya Retur</div>
+          <div class="col-md-3 p-4 head">Biaya Retur</div>
           <div class="col-md-3 p-4">Gratis se-lndonesia*</div>
           <div class="col-md-3 p-4">Gratis se-lndonesia*</div>
           <div class="col-md-3 p-4">Gratis se-lndonesia*</div>
@@ -246,7 +246,7 @@
           </div>
         </div>
         <div class="row" data-aos="zoom-in" data-aos-duration="1500">
-          <div class="col-6 p-3 head">Diskon Biaya Retur</div>
+          <div class="col-6 p-3 head">Biaya Retur</div>
           <div v-if="benefitContent === 'JNE'" class="col-6 p-3">
             Gratis se-lndonesia*
           </div>
