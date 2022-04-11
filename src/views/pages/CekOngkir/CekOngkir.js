@@ -63,6 +63,8 @@ export default {
         return "REGULER";
       } else if (value === "OKE19") {
         return "OKE";
+      } else if (value === "CTC19") {
+        return "REGULER"
       } else if (value === "YES19") {
         return "YES";
       } else if (value === "SIUNT") {
