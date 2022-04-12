@@ -1,7 +1,7 @@
 name: cd
 on:
   push:
-    branches: [ dev.komship.id ]
+    branches: [ dev ]
   workflow_dispatch:
 
 jobs:

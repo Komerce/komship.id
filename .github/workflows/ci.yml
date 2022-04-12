@@ -5,9 +5,9 @@ name: ci
 
 on:
   push:
-    branches: [ dev.komship.id ]
+    branches: [ dev ]
   pull_request:
-    branches: [ dev.komship.id ]
+    branches: [ dev ]
 
 jobs:
   ci:
