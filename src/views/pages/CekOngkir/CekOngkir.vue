@@ -84,12 +84,15 @@
               </div>
             </td>
             <td>
-              <span v-if="item.estimasi === '-'">?</span>
+              <span v-if="item.estimasi === '-'">-</span>
               <span v-else>{{ item.estimasi }}</span>
             </td>
             <td>
               Rp {{ formatNumber(item.shipping_cost) }}
-              <div class="alert alert-success items-info-price">
+              <div
+                v-if="item.is_komship_shipment === 1"
+                class="alert alert-success items-info-price"
+              >
                 Rp {{ formatNumber(item.shipping_cost_komship) }}
               </div>
             </td>
