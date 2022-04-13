@@ -268,7 +268,7 @@ h3 {
     border: 1px solid #FF6A3A;
     border-radius: 50%;
     font-family: 'Poppins';
-    padding-top: 2px;
+    padding-top: 1%;
 }
 
 .flow .number span {
@@ -743,7 +743,7 @@ h3 {
         background-color: #FFECE9;
         border: 1px solid #FF6A3A;
         border-radius: 50%;
-        padding-top: 3px;
+        padding-top: 1%;
     }
     .flow .content-mobile .number-mobile span {
         font-size: 18px;
