@@ -65,7 +65,10 @@
               <div class="card-body">
                 <img :src="item.image" class="icons" /><br />
                 <span class="title-content">{{ item.title }}</span>
-                <p class="description-content">{{ item.description }}</p>
+                <p class="description-content">
+                  {{ item.description }}
+                  <strong v-if="item.id === 5">*S&K berlaku.</strong>
+                </p>
               </div>
             </div>
           </div>
@@ -77,7 +80,10 @@
                 <div class="card-body">
                   <img :src="item.image" class="icons" /><br />
                   <span class="title-content">{{ item.title }}</span>
-                  <p class="description">{{ item.description }}</p>
+                  <p class="description">
+                    {{ item.description }}
+                    <strong v-if="item.id === 5">*S&K berlaku.</strong>
+                  </p>
                 </div>
               </div>
             </slide>
@@ -307,7 +313,7 @@
                 <span style="color: #f95031">hemat</span> kirim orderan bahkan
                 ke pelosok Indonesia. Kirim pakai
                 <span style="color: #f95031">Cargo</span> gak kalah
-                <span style="color: #f95031">hemat</span>!
+                <span style="color: #f95031">hematnya</span>!
               </span>
             </div>
           </div>
@@ -399,7 +405,7 @@
         <h3
           data-aos="fade-up"
           data-aos-duration="1500"
-          style="font-size: 32px; !important"
+          style="font-size: 32px; text-align: -webkit-left; !important"
           class="fitur"
         >
           Fitur Tambahan
@@ -631,6 +637,70 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="accordion">
+          <div
+            v-for="item in items2"
+            :key="item.id"
+            class="accordion-item collapse"
+            id="collapseExample"
+          >
+            <h2 :id="'heading' + item.id" class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                :data-bs-target="'#collapse' + item.id"
+                aria-expanded="true"
+                :aria-controls="'collapse' + item.id"
+              >
+                <div class="item-header">
+                  {{ item.header }}
+                </div>
+              </button>
+            </h2>
+            <div
+              :id="'collapse' + item.id"
+              class="accordion-collapse collapse"
+              :aria-labelledby="'heading' + item.id"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <!-- eslint-disable-next-line vue/require-v-for-key -->
+                <div v-for="items in item.desc">
+                  <div v-if="items2?.subdesc">
+                    <!-- eslint-disable-next-line vue/require-v-for-key -->
+                    <ul v-for="val in items2.data" style="margin-bottom: 1px">
+                      <li
+                        style="
+                          list-style-type: disc !important;
+                          margin-top: 1px !important;
+                        "
+                      >
+                        {{ val }}
+                      </li>
+                    </ul>
+                  </div>
+                  <div v-else class="desc">
+                    <span>{{ items2 === "" ? "&nbsp;" : items2 }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="FAQ-button">
+            <button
+              class="accordion-button"
+              style="width: 190px; background-color: #f9f9f9"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              type="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Lihat FAQ lainnya
+            </button>
           </div>
         </div>
       </div>
