@@ -668,7 +668,7 @@
             >
               <div class="accordion-body">
                 <!-- eslint-disable-next-line vue/require-v-for-key -->
-                <div v-for="items in item.desc">
+                <div v-for="items2 in item.desc">
                   <div v-if="items2?.subdesc">
                     <!-- eslint-disable-next-line vue/require-v-for-key -->
                     <ul v-for="val in items2.data" style="margin-bottom: 1px">
