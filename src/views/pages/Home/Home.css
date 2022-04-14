@@ -268,6 +268,7 @@ h3 {
     border: 1px solid #FF6A3A;
     border-radius: 50%;
     font-family: 'Poppins';
+    padding-top: 1%;
 }
 
 .flow .number span {
@@ -718,8 +719,11 @@ h3 {
 }
 
 @media (max-width: 575.98px) {
-    .feature-desktop {
+    .feature-dekstop {
         display: none;
+    }
+    .feature-mobile {
+        display: block;
     }
     h2 {
         font-size: 26px;
@@ -739,6 +743,7 @@ h3 {
         background-color: #FFECE9;
         border: 1px solid #FF6A3A;
         border-radius: 50%;
+        padding-top: 1%;
     }
     .flow .content-mobile .number-mobile span {
         font-size: 18px;
@@ -867,4 +872,7 @@ h3 {
     line-height: 21px !important;
     margin-right: 18%;
     font-family: 'Poppins';
+}
+.faq .FAQ-button {
+    text-align: -webkit-right;
 }

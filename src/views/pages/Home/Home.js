@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import "vue3-carousel/dist/carousel.css";
 import { useMeta } from "vue-meta";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
@@ -50,7 +51,7 @@ export default {
           title: "Gratis Biaya Retur",
           image: require("@/assets/img/icons/rts-icon1.png"),
           description:
-            "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD seluruh Indonesia. *S&K berlaku.",
+            "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD seluruh Indonesia.",
         },
         {
           id: 6,
@@ -114,7 +115,7 @@ export default {
         },
         {
           id: 3,
-          title: "Produk Terlaris",
+          title: "Top Admin Order",
           description:
             "Fitur yang akan mempermudah para pebisnis memantau produktifitas para admin dengan melihat data akumulasi performa masing-masing admin yang ada. Makin mudah juga untuk mengambil keputusan seperti pemberian bonus dan meningkatkan semangat kerja para admin.",
           image: require("@/assets/img/partials/top-admin.svg"),
@@ -219,6 +220,8 @@ export default {
             "Tidak, kamu bisa menggunakan Komship tanpa harus membayar biaya administrasi bulanan.",
           ],
         },
+      ],
+      items2: [
         {
           id: "6",
           header:
@@ -258,9 +261,11 @@ export default {
               subdesc: "afasfdasfasf",
               data: [
                 "Biaya penanganan COD di Komship sebesar 2.8% dari total harga+ongkir.",
-                "Total harga+ongkir yang dibayarkan oleh customer sebesar 250.000 rupiah, 2.8% dari 250.000 adalah 7.000 rupiah. Maka, biaya penanganan COD yang harus dibayarkan oleh customer sebesar 7.000 rupiah.",
               ],
             },
+            "",
+            "Contoh Simulasi:",
+            "Total harga+ongkir yang dibayarkan oleh customer sebesar 250.000 rupiah, 2.8% dari 250.000 adalah 7.000 rupiah. Maka, biaya penanganan COD yang harus dibayarkan oleh customer sebesar 7.000 rupiah.",
           ],
         },
         {
