@@ -179,7 +179,7 @@ export default {
           desc: [
             "1. Daftar di website Komship.com",
             "2. Klik tomblo Mulai Sekarang.",
-            "3. Atau bisa langsung buka https://partner.komerce.cid/komship-register.",
+            "3. Atau bisa langsung buka https://partner.komerce.id/komship-register.",
             "4. Isi form pendaftaran (Isi data yang diminta), Isi form pendaftaran (Isi data yang diminta), lalu centang kotak syarat dan ketentuan dibawahnya.",
             "5. Klik Daftar.",
             "6. Lakukan verifikasi dengan membuka email yang kamu pakai untuk registrasi",
