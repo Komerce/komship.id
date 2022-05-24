@@ -2,7 +2,7 @@ import axios from "axios";
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
 
-const apiUrl = "https://komship.komerce.id/api/v2/landingpage/";
+const apiUrl = "https://komshipdev2.komerce.id/api/v2/landingpage/";
 
 export default {
   components: { vSelect },
@@ -39,8 +39,8 @@ export default {
         axios
           .get(apiUrl + "calculate", {
             params: {
-              origin_code: this.addressFrom.value,
-              tariff_code: this.addressTo.value,
+              shipper_destination: this.addressFrom.id,
+              receiver_destination: this.addressTo.id,
               weight: this.weight,
             },
           })
@@ -49,7 +49,11 @@ export default {
             const { data } = res.data;
             this.itemsCekOngkir = data;
             this.isCekOngkir = true;
-          });
+          })
+          .catch(err => {
+            console.log(err)
+            this.loadingCekOngkir = false;
+          })
       } else {
         this.loadingCekOngkir = false;
         this.itemsCekOngkir = null;
