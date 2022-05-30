@@ -46,12 +46,13 @@ h3 {
     font-weight: 600;
     color: #FE783A;
     font-family: 'Poppins';
+    align-self: center;
 }
 
 .register-now .info .label {
     font-size: 20px;
     font-weight: 500;
-    margin: auto 0;
+    margin: 16px 0;
     margin-left: 20px;
     font-family: 'Poppins';
 }
@@ -268,7 +269,7 @@ h3 {
     border: 1px solid #FF6A3A;
     border-radius: 50%;
     font-family: 'Poppins';
-    padding-top: 1%;
+    padding-top: 1.5vh;
 }
 
 .flow .number span {
@@ -485,8 +486,10 @@ h3 {
 .testimoni .content-mobile {
     display: none;
 }
-
 #feature-mobile {
+    display: none;
+}
+#conclusion-mobile {
     display: none;
 }
 
@@ -523,6 +526,12 @@ h3 {
     }
     .flow .image {
         justify-content: end;
+    }
+    #feature-mobile {
+        display: none;
+    }
+    #conclusion-mobile {
+        display: none;
     }
 }
 
@@ -580,9 +589,18 @@ h3 {
         margin-top: 0;
         width: 200px;
     }
+    #feature-mobile {
+        display: none;
+    }
+    #conclusion-mobile {
+        display: none;
+    }
 }
 
 @media (max-width: 767.98px) {
+    #feature-mobile {
+        display: none;
+    }
     h2 {
         font-size: 28px;
     }
@@ -715,15 +733,35 @@ h3 {
         font-size: 14px;
         padding: 12px 18px;
     }
+    #conclusion-mobile {
+        display: none;
+    }
     
 }
 
 @media (max-width: 575.98px) {
-    .feature-dekstop {
+    .feature {
         display: none;
     }
-    .feature-mobile {
+    #feature-mobile {
         display: block;
+    }
+    .head-feature {
+        padding-top: 40px;
+    }
+    .subhead-feature {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 18px;
+        color: #F95031;
+    }
+    .subhead-feature-mobile {
+        align-self: center;
+    }
+    .content-feature {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 14px;
     }
     h2 {
         font-size: 26px;
@@ -782,6 +820,35 @@ h3 {
     .conclusion .content .btn {
         font-size: 14px;
         padding: 8px 14px;
+    }
+    .register-now .info {
+        border-top: solid 2px #E2E2E2;
+    }
+    #conclusion-mobile {
+        background-color: #FCEBBE;
+        display: block;
+        height: 180px;
+        text-align: -webkit-center;
+    }
+    .conclusion-mobile-left {
+        background-image: url("@/assets/img/hero/model-conclusion-mobile-left.png");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        height: 180px;
+    }
+    .conclusion-mobile-right {
+        background-image: url("@/assets/img/hero/model-conclusion-mobile-right.png");
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+    #conclusion-mobile .content-mobile {
+        padding-top: 40px;
+        width: 60%;
+        text-align: -webkit-center;
+        font-size: 16px;
+    }
+    .conclusion {
+        display: none;
     }
 }
 
@@ -852,17 +919,14 @@ h3 {
 
 .faq .accordion-button:not(.collapsed)::after {
     background-image: url("@/assets/img/icons/minus-icon.png");
+    background-color: unset !important;
+    border-color: unset !important;
+    color: #f95031 !important;
+    box-shadow: unset !important;
 }
 
 .faq .accordion-button:focus {
     border-color: unset !important;
-    box-shadow: unset !important;
-}
-
-.faq .accordion-button:not(.collapsed) {
-    background-color: unset !important;
-    border-color: unset !important;
-    color: #f95031 !important;
     box-shadow: unset !important;
 }
 

@@ -42,7 +42,7 @@
     </section>
     <section id="service" class="service">
       <div class="container">
-        <div class="row mb-1" data-aos="fade-up" data-aos-duration="1500">
+        <div class="row mb-4" data-aos="fade-up" data-aos-duration="1500">
           <div class="col-md-5 align-self-center">
             <h3 class="title">Sering kirim barang?</h3>
           </div>
@@ -67,7 +67,9 @@
                 <span class="title-content">{{ item.title }}</span>
                 <p class="description-content">
                   {{ item.description }}
-                  <strong v-if="item.id === 5">*S&K berlaku.</strong>
+                  <string style="color: #222222" v-if="item.id === 5"
+                    >*S&K berlaku.</string
+                  >
                 </p>
               </div>
             </div>
@@ -82,7 +84,9 @@
                   <span class="title-content">{{ item.title }}</span>
                   <p class="description">
                     {{ item.description }}
-                    <strong v-if="item.id === 5">*S&K berlaku.</strong>
+                    <string style="color: #222222" v-if="item.id === 5"
+                      >*S&K berlaku.</string
+                    >
                   </p>
                 </div>
               </div>
@@ -313,7 +317,7 @@
                 <span style="color: #f95031">hemat</span> kirim orderan bahkan
                 ke pelosok Indonesia. Kirim pakai
                 <span style="color: #f95031">Cargo</span> gak kalah
-                <span style="color: #f95031">hematnya</span>!
+                <span style="color: #f95031">hemat</span>nya!
               </span>
             </div>
           </div>
@@ -428,70 +432,6 @@
             </div>
           </div>
         </div>
-        <div id="feature-mobile" class="container">
-          <div class="feature-mobile">
-            <div class="head-feature-mobile">
-              <div class="head-feature">Fitur Tambahan</div>
-            </div>
-            <div class="row container justify-content-center mb-3">
-              <div class="col-6 icon-newfeature">
-                <img
-                  src="@/assets/img/partials/produk-terlaris.svg"
-                  alt="produk terlaris"
-                />
-              </div>
-              <div class="col-6 subhead-feature-mobile">
-                <div class="subhead-feature">Produk Terlaris</div>
-              </div>
-              <div class="col-12">
-                <div class="content-feature">
-                  Jika kamu memiliki produk dengan variasi yang berbeda, maka
-                  fitur produk terlaris ini dapat membantu kamu mengetahui
-                  produk mana yang menjadi best seller dalam kurun waktu 1 bulan
-                  atau 7 hari terakhir.
-                </div>
-              </div>
-            </div>
-            <div class="row container justify-content-center mb-3">
-              <div class="col-6 subhead-feature-mobile">
-                <div class="subhead-feature">Customer Loyal</div>
-              </div>
-              <div class="col-6 icon-newfeature">
-                <img
-                  src="@/assets/img/partials/customer-loyal.svg"
-                  alt="customer loyal"
-                />
-              </div>
-              <div class="col-12">
-                <div class="content-feature">
-                  Merupakan data Customer yang sering melakukan order kembali
-                  (repeat order). Dengan mengetahui Customer Loyal kita, maka
-                  proses orderan akan semakin cepat.
-                </div>
-              </div>
-            </div>
-            <div class="row container justify-content-center mb-3">
-              <div class="col-5 icon-newfeature">
-                <img
-                  src="@/assets/img/partials/top-admin.svg"
-                  alt="top admin order"
-                />
-              </div>
-              <div class="col-7 subhead-feature-mobile">
-                <div class="subhead-feature">Top Admin Order</div>
-              </div>
-              <div class="col-12">
-                <div class="content-feature">
-                  Fitur yang akan mempermudah para pebisnis memantau
-                  produktifitas para admin dengan melihat data akumulasi
-                  performa masing-masing admin yang ada. Makin mudah juga untuk
-                  mengambil keputusan seperti pemberian bonus dan meningkatkan
-                  semangat kerja para admin.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <img
         class="image-feature"
@@ -499,6 +439,83 @@
         data-aos-duration="1500"
         :src="require('@/assets/img/partials/bg-opsional-feature.svg')"
       />
+    </section>
+    <section id="feature-mobile">
+      <div class="feature-mobile container">
+        <div class="head-feature-mobile text-center">
+          <h2
+            class="head-feature"
+            style="font-family: Poppins; font-size: 24px; font-weight: 700"
+          >
+            Fitur Tambahan
+          </h2>
+        </div>
+        <div class="row justify-content-between mb-3">
+          <div class="col-6 text-left icon-newfeature">
+            <img
+              src="@/assets/img/partials/produk-terlaris.svg"
+              alt="produk terlaris"
+            />
+          </div>
+          <div class="col-6 text-right subhead-feature-mobile">
+            <div class="subhead-feature">Produk Terlaris</div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <div class="content-feature">
+                Jika kamu memiliki produk dengan variasi yang berbeda, maka
+                fitur produk terlaris ini dapat membantu kamu mengetahui produk
+                mana yang menjadi best seller dalam kurun waktu 1 bulan atau 7
+                hari terakhir.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between mb-3">
+          <div class="col-6 text-left subhead-feature-mobile">
+            <div class="subhead-feature" style="padding-left: 20px">
+              Customer Loyal
+            </div>
+          </div>
+          <div class="col-6 text-right icon-newfeature">
+            <img
+              src="@/assets/img/partials/customer-loyal.svg"
+              alt="customer loyal"
+            />
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <div class="content-feature">
+                Merupakan data Customer yang sering melakukan order kembali
+                (repeat order). Dengan mengetahui Customer Loyal kita, maka
+                proses orderan akan semakin cepat.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between mb-3">
+          <div class="col-6 text-left icon-newfeature">
+            <img
+              src="@/assets/img/partials/top-admin.svg"
+              alt="top admin order"
+            />
+          </div>
+          <div class="col-6 text-right subhead-feature-mobile">
+            <div class="subhead-feature">Top Admin Order</div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <div class="content-feature">
+                Fitur yang akan mempermudah para pebisnis memantau produktifitas
+                para admin dengan melihat data akumulasi performa masing-masing
+                admin yang ada. Makin mudah juga untuk mengambil keputusan
+                seperti pemberian bonus dan meningkatkan semangat kerja para
+                admin.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="conclusion">
       <img
@@ -527,6 +544,32 @@
         data-aos-duration="1500"
         src="@/assets/img/hero/model-conclusion-right.png"
       />
+    </section>
+    <section
+      id="conclusion-mobile"
+      class="conclusion-mobile-right"
+    >
+    <div class="conclusion-mobile-left">
+      <div class="content-mobile">
+        <h3
+          data-aos="zoom-in-down"
+          data-aos-duration="1500"
+          style="font-weight: 600; font-size:16px; important!"
+        >
+          Percayakan Pengiriman Orderanmu Pada Komship!
+        </h3>
+        <br />
+        <button
+          class="btn btn-primary btn-register-now"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          style="font-weight: 500; font-size:16px; important!"
+          @click="openWindow('https://partner.komerce.id/komship-register')"
+        >
+          Daftar sekarang
+        </button>
+      </div>
+    </div>
     </section>
     <section class="testimoni" data-aos="fade-up" data-aos-duration="1500">
       <h3 class="title">
