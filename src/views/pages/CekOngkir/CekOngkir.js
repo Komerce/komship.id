@@ -2,7 +2,7 @@ import axios from "axios";
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
 
-const apiUrl = "https://komshipdev2.komerce.id/api/v2/landingpage/";
+const apiUrl = "https://komship.komerce.id/api/v2/landingpage/";
 
 export default {
   components: { vSelect },
