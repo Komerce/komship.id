@@ -35,8 +35,10 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
     "postcss": "^8.4.12",
+    "prerender-spa-plugin": "^3.4.0",
     "prettier": "^2.2.1",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.23",
+    "vue-prerender": "^0.1.2"
   },
   "eslintConfig": {
     "root": true,
