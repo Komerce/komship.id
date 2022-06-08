@@ -533,7 +533,7 @@
           class="btn btn-primary btn-register-now"
           data-aos="zoom-in-up"
           data-aos-duration="1500"
-          @click="openWindow('https://partner.komerce.id/komship-register')"
+          @click="handleDaftar"
         >
           Daftar sekarang
         </button>
