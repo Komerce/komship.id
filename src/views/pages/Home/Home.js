@@ -302,6 +302,10 @@ export default {
     this.countPartners();
   },
   methods: {
+    handleDaftar() {
+      window.fbq('trackCustom', 'signup');
+      this.openWindow('https://partner.komerce.id/komship-register')
+    },
     openWindow(url) {
       window.open(url);
     },
