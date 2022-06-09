@@ -10,7 +10,10 @@
     <title>
         <%= htmlWebpackPlugin.options.title %>
     </title>
-
+    <script>
+        document.dispatchEvent(new Event('render-event'))
+        document.dispatchEvent(new Event('my-document-event'))
+    </script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
