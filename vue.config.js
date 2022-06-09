@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 var PrerenderSpaPlugin = require("prerender-spa-plugin");
 var path = require("path");
-const Renderer = PrerenderSpaPlugin.PuppeteerRenderer
+const Renderer = PrerenderSpaPlugin.PuppeteerRenderer;
 
 module.exports = {
   transpileDependencies: ["vue-meta"],
@@ -10,16 +10,16 @@ module.exports = {
 
     return {
       plugins: [
-        new PrerenderSpaPlugin({
-          staticDir: path.join(__dirname, "dist"),
-          outputDir: path.join(__dirname, "dist"),
-          routes: ["/", "/about", "/privacy", "/terms", "/cek-ongkir"],
-          renderer: new Renderer({
-            maxConcurrentRoutes: 10,
-            headless: true,
-            renderAfterDocumentEvent: 'vue-post-render',
-          })
-        }),
+        new PrerenderSpaPlugin(
+          path.resolve(__dirname, "./dist"),
+          // List of routes to prerender
+          // ["/", "/about", "/privacy", "/faq", "/terms", "/cek-ongkir"],
+          {
+            // options
+            ignoreJSErrors: true,
+          }
+        ),
+
       ],
     };
   },
