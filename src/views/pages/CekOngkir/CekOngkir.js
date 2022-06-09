@@ -50,10 +50,10 @@ export default {
             this.itemsCekOngkir = data;
             this.isCekOngkir = true;
           })
-          .catch(err => {
-            console.log(err)
+          .catch((err) => {
+            console.log(err);
             this.loadingCekOngkir = false;
-          })
+          });
       } else {
         this.loadingCekOngkir = false;
         this.itemsCekOngkir = null;
@@ -68,7 +68,7 @@ export default {
       } else if (value === "OKE19") {
         return "OKE";
       } else if (value === "CTC19") {
-        return "REGULER"
+        return "REGULER";
       } else if (value === "YES19") {
         return "YES";
       } else if (value === "SIUNT") {
