@@ -3,6 +3,44 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- meta landingpage -->
+    <title>Komship - Platform Kirim Barang</title>
+    <meta name="description"
+        content="Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman." />
+    <meta name="keywords" content="komship" />
+    <link rel="canonical" href="https://komship.id/" />
+    <meta property="og:locale" content="id" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Komship - Platform Kirim Barang" />
+    <meta property="og:description"
+        content="Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman." />
+    <meta property="og:url" content="https://komship.id/" />
+    <meta property="og:site_name" content="Komship" />
+    <meta property="og:image" content="<%= require('./img/komship-lp.png')%>" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:see_also" content="https://www.instagram.com/komship/">
+    <meta property="og:see_also" content="https://www.facebook.com/komship/">
+    <!-- end meta landingpage -->
+    <!-- meta cekongkir -->
+    <title>Cek Ongkir JNE, SiCepat, ID Express 2022</title>
+    <meta name="description"
+        content="Cek ongkos kirim secara cepat & akurat dari berbagai ekspedisi (JNE, SiCepat, ID Express). Dapat diskon loh jika kirim pakai Komship." />
+    <meta name="keywords" content="Cek Ongkir JNE, Cek Ongkir SiCepat, Cek Ongkir ID Express" />
+    <link rel="canonical" href="https://komship.id/cek-ongkir/" />
+    <meta property="og:locale" content="id" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cek Ongkir JNE, SiCepat, ID Express 2022" />
+    <meta property="og:description"
+        content="Cek ongkos kirim secara cepat & akurat dari berbagai ekspedisi (JNE, SiCepat, ID Express). Dapat diskon loh jika kirim pakai Komship." />
+    <meta property="og:url" content="https://komship.id/cek-ongkir/" />
+    <meta property="og:site_name" content="Komship" />
+    <meta property="og:image" content="<%= require('./img/cek-ongkir.png')%>" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:see_also" content="https://www.instagram.com/komship/">
+    <meta property="og:see_also" content="https://www.facebook.com/komship/">
+    <!-- end meta cekongkir -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>komship.png">
@@ -15,38 +53,55 @@
         document.dispatchEvent(new Event('my-document-event'))
     </script>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-T38MLQS');</script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T38MLQS');
+    </script>
     <!-- End Google Tag Manager -->
     <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1091145171732768');
-    fbq('track', 'PageView');
+    <script>
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1091145171732768');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1091145171732768&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=1091145171732768&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <noscript>
         <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-                Please enable it to continue.</strong>
+            Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
 

@@ -1,4 +1,19 @@
 <template>
+  <teleport to="head">
+    <component :is="script" type="application/ld+json">
+      {"@context":"https://schema.org/", "@type":"WebSite", "name":"Komship",
+      "description":"Komship merupakan platform layanan pengiriman yang
+      bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode
+      COD atau Non-COD tanpa batas minimum
+      pengiriman.","url":"https://komship.id/", "image":{"@type":"ImageObject",
+      "url":"https://komship.id/img/komship.png", "height":"720",
+      "width":"1280"},"sameAs":["https://www.facebook.com/komship/",
+      "https://www.instagram.com/komship/"],
+      "potentialAction":{"@type":"SearchAction",
+      "target":"https://komship.id/pencarian?q={search_term_string}",
+      "query-input":"required name=search_term_string"}}
+    </component>
+  </teleport>
   <div style="background-color: #f6f6f9; padding-bottom: 50px">
     <section id="home" style="background-color: #ffffff">
       <div class="register-now container">
@@ -438,10 +453,7 @@
           <div class="row">
             <div class="col-xl-5 col-lg-5 col-md-5">
               <div @click="replace2('dataoto', 'kendala', 'order')">
-                <button
-                  id="arrow-btn"
-                  class="acc-feature d-flex mb-3"
-                >
+                <button id="arrow-btn" class="acc-feature d-flex mb-3">
                   <div class="subhead-feature">Input Order Masal</div>
                   <div class="arrow-feature mx-4"></div>
                 </button>
@@ -451,10 +463,7 @@
                 </p>
               </div>
               <div @click="replace2('order', 'kendala', 'dataoto')">
-                <button
-                  id="arrow-btn"
-                  class="acc-feature d-flex mb-3"
-                >
+                <button id="arrow-btn" class="acc-feature d-flex mb-3">
                   <div class="subhead-feature">
                     Tarik Data Otomatis dan Mudah
                   </div>
@@ -467,10 +476,7 @@
                 </p>
               </div>
               <div @click="replace2('order', 'dataoto', 'kendala')">
-                <button
-                  id="arrow-btn"
-                  class="acc-feature d-flex mb-3"
-                >
+                <button id="arrow-btn" class="acc-feature d-flex mb-3">
                   <div class="subhead-feature">Pantau Kendala Pengiriman</div>
                   <div class="arrow-feature mx-4"></div>
                 </button>
@@ -561,7 +567,7 @@
             Fitur Tambahan
           </button>
         </div>
-        <div id="mbl-unggulan" style="display: block;">
+        <div id="mbl-unggulan" style="display: block">
           <div class="row justify-content-between mb-3">
             <div class="col-6 text-left icon-newfeature">
               <img
@@ -625,7 +631,7 @@
             </div>
           </div>
         </div>
-        <div id="mbl-tambahan" style="display: none;">
+        <div id="mbl-tambahan" style="display: none">
           <div class="row justify-content-between mb-3">
             <div class="col-6 text-left icon-newfeature">
               <img

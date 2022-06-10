@@ -1,10 +1,16 @@
 import axios from "axios";
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
+import { useMeta } from "vue-meta";
 
 const apiUrl = "https://komship.komerce.id/api/v2/landingpage/";
 
 export default {
+  setup() {
+    useMeta({
+      title: "Cek Ongkir JNE, SiCepat, ID Express 2022",
+    });
+  },
   components: { vSelect },
   data() {
     return {
@@ -50,10 +56,10 @@ export default {
             this.itemsCekOngkir = data;
             this.isCekOngkir = true;
           })
-          .catch(err => {
-            console.log(err)
+          .catch((err) => {
+            console.log(err);
             this.loadingCekOngkir = false;
-          })
+          });
       } else {
         this.loadingCekOngkir = false;
         this.itemsCekOngkir = null;
@@ -68,7 +74,7 @@ export default {
       } else if (value === "OKE19") {
         return "OKE";
       } else if (value === "CTC19") {
-        return "REGULER"
+        return "REGULER";
       } else if (value === "YES19") {
         return "YES";
       } else if (value === "SIUNT") {
