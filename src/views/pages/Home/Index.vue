@@ -35,7 +35,7 @@
             data-aos="fade-left"
             data-aos-duration="1500"
           >
-            <img :src="require('@/assets/img/hero/komship-hero.png')" />
+            <img :src="require('@/assets/img/hero/new_hero.png')" />
           </div>
         </div>
       </div>
@@ -405,17 +405,108 @@
       </div>
     </section>
     <section id="feature" class="feature">
-      <div class="container mt-4">
+      <div class="container accordion mt-4" id="accordion-feature">
         <h3
           data-aos="fade-up"
           data-aos-duration="1500"
           style="font-size: 32px; text-align: -webkit-left; !important"
           class="fitur"
         >
-          Fitur Tambahan
+          Fitur
         </h3>
-        <div class="row">
-          <div class="col-lg-7 col-12">
+        <div class="d-flex mb-5">
+          <button
+            id="div1"
+            class="btn-feature m-2 active"
+            type="button"
+            style="display: block"
+            @click="replace('div4', 'div3')"
+          >
+            Fitur Unggulan
+          </button>
+          <button
+            id="div2"
+            class="btn-feature px- m-2"
+            type="button"
+            style="display: block"
+            @click="replace('div3', 'div4')"
+          >
+            Fitur Tambahan
+          </button>
+        </div>
+        <div id="div3" style="display: block">
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-5">
+              <div @click="replace2('dataoto', 'kendala', 'order')">
+                <button
+                  id="arrow-btn"
+                  class="acc-feature d-flex mb-3"
+                >
+                  <div class="subhead-feature">Input Order Masal</div>
+                  <div class="arrow-feature mx-4"></div>
+                </button>
+                <p>
+                  Anti ribet untuk kamu yang harus input orderan cukup banyak
+                  setiap hari, Gak perlu lagi input data manual satu persatu.
+                </p>
+              </div>
+              <div @click="replace2('order', 'kendala', 'dataoto')">
+                <button
+                  id="arrow-btn"
+                  class="acc-feature d-flex mb-3"
+                >
+                  <div class="subhead-feature">
+                    Tarik Data Otomatis dan Mudah
+                  </div>
+                  <div class="arrow-feature mx-4"></div>
+                </button>
+                <p>
+                  Data di dashboard akan semakin mudah kamu olah dengan
+                  memanfaatkan menu download. Kamu tinggal pilih klasifikasi
+                  data yang dibutuhkan.
+                </p>
+              </div>
+              <div @click="replace2('order', 'dataoto', 'kendala')">
+                <button
+                  id="arrow-btn"
+                  class="acc-feature d-flex mb-3"
+                >
+                  <div class="subhead-feature">Pantau Kendala Pengiriman</div>
+                  <div class="arrow-feature mx-4"></div>
+                </button>
+                <p>
+                  Kendala pengiriman akan makin mudah dan cepat teratasi karena
+                  terhubung langsung dengan ekspedisi terkait.
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 image-unggulan">
+              <div
+                id="order"
+                class="image-feature-unggulan"
+                style="display: block"
+              >
+                <img src="../../../assets/img/background/bg-ordermasal.png" />
+              </div>
+              <div
+                id="dataoto"
+                class="image-feature-unggulan"
+                style="display: none"
+              >
+                <img src="../../../assets/img/background/bg-dataorder.png" />
+              </div>
+              <div
+                id="kendala"
+                class="image-feature-unggulan"
+                style="display: none"
+              >
+                <img src="../../../assets/img/background/bg-kendala.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="div4" style="display: none">
+          <div class="col-lg-6 col-12">
             <div
               v-for="item in feature_items"
               :key="item.id"
@@ -431,100 +522,180 @@
               </div>
             </div>
           </div>
+          <img
+            class="image-feature"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            :src="require('@/assets/img/background/bg-newfeature.png')"
+          />
         </div>
       </div>
-      <img
-        class="image-feature"
-        data-aos="zoom-in"
-        data-aos-duration="1500"
-        :src="require('@/assets/img/partials/bg-opsional-feature.svg')"
-      />
     </section>
     <section id="feature-mobile">
-      <div class="feature-mobile container">
+      <div class="feature-mobile container mb-5">
         <div class="head-feature-mobile text-center">
           <h2
             class="head-feature"
             style="font-family: Poppins; font-size: 24px; font-weight: 700"
           >
-            Fitur Tambahan
+            Fitur
           </h2>
         </div>
-        <div class="row justify-content-between mb-3">
-          <div class="col-6 text-left icon-newfeature">
-            <img
-              src="@/assets/img/partials/produk-terlaris.svg"
-              alt="produk terlaris"
-            />
+        <div class="d-flex mb-5">
+          <button
+            id="div1"
+            class="btn-feature m-2 active"
+            type="button"
+            style="display: block"
+            @click="replace('mbl-tambahan', 'mbl-unggulan')"
+          >
+            Fitur Unggulan
+          </button>
+          <button
+            id="div2"
+            class="btn-feature px- m-2"
+            type="button"
+            style="display: block"
+            @click="replace('mbl-unggulan', 'mbl-tambahan')"
+          >
+            Fitur Tambahan
+          </button>
+        </div>
+        <div id="mbl-unggulan" style="display: block;">
+          <div class="row justify-content-between mb-3">
+            <div class="col-6 text-left icon-newfeature">
+              <img
+                src="@/assets/img/background/mbl-order.svg"
+                alt="produk terlaris"
+              />
+            </div>
+            <div class="col-6 text-right subhead-feature-mobile">
+              <div class="subhead-feature">Input Order Masal</div>
+            </div>
+            <div class="row justify-content-center mt-4">
+              <div class="col-11">
+                <div class="content-feature">
+                  Jika kamu memiliki produk dengan variasi yang berbeda, maka
+                  fitur produk terlaris ini dapat membantu kamu mengetahui
+                  produk mana yang menjadi best seller dalam kurun waktu 1 bulan
+                  atau 7 hari terakhir.
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-6 text-right subhead-feature-mobile">
-            <div class="subhead-feature">Produk Terlaris</div>
+          <div class="row justify-content-between mb-3">
+            <div class="col-6 text-left subhead-feature-mobile">
+              <div class="subhead-feature" style="padding-left: 20px">
+                Tarik Data Otomatis dan Mudah
+              </div>
+            </div>
+            <div class="col-6 text-right icon-newfeature">
+              <img
+                src="@/assets/img/background/mbl-dataoto.svg"
+                alt="customer loyal"
+              />
+            </div>
+            <div class="row justify-content-center mt-4">
+              <div class="col-11">
+                <div class="content-feature">
+                  Data di dashboard akan semakin mudah kamu olah dengan
+                  memanfaatkan menu download. Kamu tinggal pilih klasifikasi
+                  data yang dibutuhkan.
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-11">
-              <div class="content-feature">
-                Jika kamu memiliki produk dengan variasi yang berbeda, maka
-                fitur produk terlaris ini dapat membantu kamu mengetahui produk
-                mana yang menjadi best seller dalam kurun waktu 1 bulan atau 7
-                hari terakhir.
+          <div class="row justify-content-between mb-3">
+            <div class="col-6 text-left icon-newfeature">
+              <img
+                src="@/assets/img/background/mbl-kendala.svg"
+                alt="top admin order"
+              />
+            </div>
+            <div class="col-6 text-right subhead-feature-mobile">
+              <div class="subhead-feature">Pantau Kendala Pengiriman</div>
+            </div>
+            <div class="row justify-content-center mt-4">
+              <div class="col-11">
+                <div class="content-feature">
+                  Kendala pengiriman akan makin mudah dan cepat teratasi karena
+                  terhubung langsung dengan ekspedisi terkait.
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row justify-content-between mb-3">
-          <div class="col-6 text-left subhead-feature-mobile">
-            <div class="subhead-feature" style="padding-left: 20px">
-              Customer Loyal
+        <div id="mbl-tambahan" style="display: none;">
+          <div class="row justify-content-between mb-3">
+            <div class="col-6 text-left icon-newfeature">
+              <img
+                src="@/assets/img/partials/produk-terlaris.svg"
+                alt="produk terlaris"
+              />
             </div>
-          </div>
-          <div class="col-6 text-right icon-newfeature">
-            <img
-              src="@/assets/img/partials/customer-loyal.svg"
-              alt="customer loyal"
-            />
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-11">
-              <div class="content-feature">
-                Merupakan data Customer yang sering melakukan order kembali
-                (repeat order). Dengan mengetahui Customer Loyal kita, maka
-                proses orderan akan semakin cepat.
+            <div class="col-6 text-right subhead-feature-mobile">
+              <div class="subhead-feature">Produk Terlaris</div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-11">
+                <div class="content-feature">
+                  Jika kamu memiliki produk dengan variasi yang berbeda, maka
+                  fitur produk terlaris ini dapat membantu kamu mengetahui
+                  produk mana yang menjadi best seller dalam kurun waktu 1 bulan
+                  atau 7 hari terakhir.
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row justify-content-between mb-3">
-          <div class="col-6 text-left icon-newfeature">
-            <img
-              src="@/assets/img/partials/top-admin.svg"
-              alt="top admin order"
-            />
+          <div class="row justify-content-between mb-3">
+            <div class="col-6 text-left subhead-feature-mobile">
+              <div class="subhead-feature" style="padding-left: 20px">
+                Customer Loyal
+              </div>
+            </div>
+            <div class="col-6 text-right icon-newfeature">
+              <img
+                src="@/assets/img/partials/customer-loyal.svg"
+                alt="customer loyal"
+              />
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-11">
+                <div class="content-feature">
+                  Merupakan data Customer yang sering melakukan order kembali
+                  (repeat order). Dengan mengetahui Customer Loyal kita, maka
+                  proses orderan akan semakin cepat.
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-6 text-right subhead-feature-mobile">
-            <div class="subhead-feature">Top Admin Order</div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-11">
-              <div class="content-feature">
-                Fitur yang akan mempermudah para pebisnis memantau produktifitas
-                para admin dengan melihat data akumulasi performa masing-masing
-                admin yang ada. Makin mudah juga untuk mengambil keputusan
-                seperti pemberian bonus dan meningkatkan semangat kerja para
-                admin.
+          <div class="row justify-content-between mb-3">
+            <div class="col-6 text-left icon-newfeature">
+              <img
+                src="@/assets/img/partials/top-admin.svg"
+                alt="top admin order"
+              />
+            </div>
+            <div class="col-6 text-right subhead-feature-mobile">
+              <div class="subhead-feature">Top Admin Order</div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-11">
+                <div class="content-feature">
+                  Fitur yang akan mempermudah para pebisnis memantau
+                  produktifitas para admin dengan melihat data akumulasi
+                  performa masing-masing admin yang ada. Makin mudah juga untuk
+                  mengambil keputusan seperti pemberian bonus dan meningkatkan
+                  semangat kerja para admin.
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="conclusion">
-      <img
-        class="bg-model-left"
-        data-aos="fade-right"
-        data-aos-duration="1500"
-        src="@/assets/img/hero/model-conclusion-left.png"
-      />
-      <div class="content">
+    <section class="conclusion justify-content-center">
+      <div class="content py-5">
         <h3 data-aos="zoom-in-down" data-aos-duration="1500">
           Percayakan Pengiriman Orderanmu Pada Komship!
         </h3>
@@ -538,38 +709,29 @@
           Daftar sekarang
         </button>
       </div>
-      <img
-        class="bg-model-right"
-        data-aos="fade-left"
-        data-aos-duration="1500"
-        src="@/assets/img/hero/model-conclusion-right.png"
-      />
     </section>
-    <section
-      id="conclusion-mobile"
-      class="conclusion-mobile-right"
-    >
-    <div class="conclusion-mobile-left">
-      <div class="content-mobile">
-        <h3
-          data-aos="zoom-in-down"
-          data-aos-duration="1500"
-          style="font-weight: 600; font-size:16px; important!"
-        >
-          Percayakan Pengiriman Orderanmu Pada Komship!
-        </h3>
-        <br />
-        <button
-          class="btn btn-primary btn-register-now"
-          data-aos="zoom-in-up"
-          data-aos-duration="1500"
-          style="font-weight: 500; font-size:16px; important!"
-          @click="openWindow('https://partner.komerce.id/komship-register')"
-        >
-          Daftar sekarang
-        </button>
+    <section id="conclusion-mobile" class="conclusion-mobile-right">
+      <div class="conclusion-mobile-left">
+        <div class="content-mobile">
+          <h3
+            data-aos="zoom-in-down"
+            data-aos-duration="1500"
+            style="font-weight: 600; font-size:16px; important!"
+          >
+            Percayakan Pengiriman Orderanmu Pada Komship!
+          </h3>
+          <br />
+          <button
+            class="btn btn-register-now"
+            data-aos="zoom-in-up"
+            data-aos-duration="1500"
+            style="font-weight: 500; font-size:16px; important!"
+            @click="openWindow('https://partner.komerce.id/komship-register')"
+          >
+            Daftar sekarang
+          </button>
+        </div>
       </div>
-    </div>
     </section>
     <section class="testimoni" data-aos="fade-up" data-aos-duration="1500">
       <h3 class="title">

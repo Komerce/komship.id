@@ -7,7 +7,7 @@
           <div class="col-lg-6 col-md-8 profile">
             <router-link to="/">
               <img
-                :src="require('@/assets/img/logo/logo-by-komship.svg')"
+                :src="require('@/assets/img/logo/new-logo.svg')"
                 alt="logo komship"
                 class="profile-image"
               />

@@ -2,6 +2,7 @@
 import "vue3-carousel/dist/carousel.css";
 import { useMeta } from "vue-meta";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
+
 export default {
   setup() {
     useMeta({
@@ -21,61 +22,40 @@ export default {
       service_items: [
         {
           id: 1,
-          title: "Input Order Masal",
-          image: require("@/assets/img/icons/input.png"),
-          description:
-            "Anti ribet untuk kamu yang harus input orderan cukup banyak setiap hari, Gak perlu lagi input data manual satu persatu.",
-        },
-        {
-          id: 2,
-          title: "Tarik Data Otomatis dan Mudah",
-          image: require("@/assets/img/icons/otomation.png"),
-          description:
-            "Data di dashboard akan semakin mudah kamu olah dengan memanfaatkan menu download. Kamu tinggal pilih klasifikasi data yang dibutuhkan.",
-        },
-        {
-          id: 3,
-          title: "Pantau Kendala Pengiriman",
-          image: require("@/assets/img/icons/problem.png"),
-          description:
-            "Kendala pengiriman akan makin mudah dan cepat teratasi karena terhubung langsung dengan ekspedisi terkait.",
-        },
-        {
-          id: 4,
           title: "Terima Pembayaran COD Instan",
           image: require("@/assets/img/icons/bgwallet.png"),
           description:
             "Semua bisa COD di Komship. Otomatis dan tanpa ribet urus persyaratan kerjasama satu persatu ke ekspedisi.",
         },
         {
-          id: 5,
+          id: 2,
           title: "Pencairan Setiap Hari",
           image: require("@/assets/img/icons/calender.png"),
           description:
             "Kamu bisa tarik dana COD kapanpun karena pencairan dapat dilakukan setiap hari.",
         },
         {
-          id: 6,
+          id: 3,
           title: "Lebih Hemat",
           image: require("@/assets/img/icons/analyst-icon.png"),
           description:
             "Dapatkan diskon ongkos kirim MULAI dari 25% (Berlaku COD dan Non COD) lebih hemat dibandingkan yang lain.",
         },
         {
-          id: 7,
+          id: 4,
           title: "Biaya COD Termurah",
           image: require("@/assets/img/icons/empty-wallet1.png"),
           description: "Biaya COD cuma 2,8%, Nggak pake mahal!",
         },
         {
-          id: 8,
+          id: 5,
           title: "Gratis Biaya Retur",
           image: require("@/assets/img/icons/rts-icon1.png"),
           description:
             "Khawatir kamu rugi karena retur pelanggan? Tenang, Komship bebas biaya retur atau pengembalian COD seluruh Indonesia.",
         },
         {
-          id: 9,
+          id: 6,
           title: "Gratis Jemput Paket",
           image: require("@/assets/img/icons/kendaraan.png"),
           description:
@@ -313,6 +293,15 @@ export default {
         const { data } = res.data;
         this.totalPartners = data;
       });
+    },
+    replace( hide, show ) {
+      document.getElementById(hide).style.display="none";
+      document.getElementById(show).style.display="block";
+    },
+    replace2( hide, hide2, show ) {
+      document.getElementById(hide).style.display="none";
+      document.getElementById(hide2).style.display="none";
+      document.getElementById(show).style.display="block";
     },
   },
 };
