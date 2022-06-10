@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/" @click="goto('home')">
         <img
-          :src="require('@/assets/img/logo/logo-by-komship.svg')"
+          :src="require('@/assets/img/logo/new-logo.svg')"
           alt="logo komship"
           class="image-navbar"
         />
