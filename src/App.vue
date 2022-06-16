@@ -1,5 +1,5 @@
 <template>
-  <teleport to="head">
+<teleport to="head">
     <component :is="script" type="application/ld+json">
       {"@context":"https://schema.org", "@type":"Organization",
       "name":"Komship", "legalName":"Komship",

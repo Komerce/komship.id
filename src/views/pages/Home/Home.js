@@ -7,6 +7,29 @@ export default {
   setup() {
     useMeta({
       title: "Komship - Platform Kirim Barang",
+      meta: [
+        {
+          name: 'description',
+          content:
+            "Cek ongkos kirim secara cepat & akurat dari berbagai ekspedisi (JNE, SiCepat, ID Express). Dapat diskon loh jika kirim pakai Komship.",
+        },
+        {
+          name: "keywords",
+          content: "Cek Ongkir JNE, Cek Ongkir SiCepat, Cek Ongkir ID Express",
+        },
+        { property: "og:locale", content: "id" },
+        { property: "og:type", content: "website" },
+        { property: "og:tittle", content: "Cek Ongkir JNE, SiCepat, ID Express 2022" },
+        { property: "og:description", content: "Cek ongkos kirim secara cepat & akurat dari berbagai ekspedisi (JNE, SiCepat, ID Express). Dapat diskon loh jika kirim pakai Komship." },
+        { property: "og:url", content: "https://komship.id/cek-ongkir/" },
+        { property: "og:site_name", content: "Komship" },
+        { property: "og:image", content: "https://komship.id/img/komship.png" },
+        { property: "og:image:width", content: "1280" },
+        { property: "og:image:height", content: "720" },
+        { property: "og:see_also", content: "https://www.instagram.com/komship/" },
+        { property: "og:see_also", content: "https://www.facebook.com/komship/" },
+      ],
+      link: [{ rel: "canonical", href: "https://komship.id/" }],
     });
   },
   components: {
