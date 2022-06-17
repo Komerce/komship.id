@@ -1,16 +1,88 @@
 import axios from "axios";
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
-import { useMeta } from "vue-meta";
+import { useHead } from '@vueuse/head'
 
 const apiUrl = "https://komship.komerce.id/api/v2/landingpage/";
 
 export default {
   setup() {
-    useMeta({
-      title: "Cek Ongkir JNE, SiCepat, ID Express 2022",
+    useHead({
+      title: {
+        inner: "Cek Ongkir JNE, SiCepat, ID Express 2022",
+      },
+      meta: [
+        {
+          name: "description",
+          content:
+            "Cek ongkos kirim secara cepat & akurat dari berbagai ekspedisi (JNE, SiCepat, ID Express). Dapat diskon loh jika kirim pakai Komship.",
+        },
+        {
+          name: "keywords",
+          content: "Cek Ongkir JNE, Cek Ongkir SiCepat, Cek Ongkir ID Express",
+        },
+        {
+          property: "og:locale",
+          content: "id",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:title",
+          content: "Cek Ongkir JNE, SiCepat, ID Express 2022",
+        },
+        {
+          property: "og:description",
+          content:
+            "Cek ongkos kirim secara cepat & akurat dari berbagai ekspedisi (JNE, SiCepat, ID Express). Dapat diskon loh jika kirim pakai Komship.",
+        },
+        {
+          property: "og:url",
+          content: "https://komship.id/cek-ongkir/",
+        },
+        {
+          property: "og:site_name",
+          content: "Komship",
+        },
+        {
+          property: "og:image",
+          content: "https://komship.id/img/komship.png",
+        },
+        {
+          property: "og:image:width",
+          content: "1280",
+        },
+        {
+          property: "og:image:height",
+          content: "720",
+        },
+        {
+          property: "og:see_also",
+          content: "https://www.instagram.com/komship/",
+        },
+        {
+          property: "og:see_also",
+          content: "https://www.facebook.com/komship/",
+        },
+      ],
+      link: [
+        {
+          rel: "canonical",
+          href: "https://komship.id/cek-ongkir/",
+        },
+      ],
+      script: [
+        {
+          t: "application/ld+json",
+          i: '{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://komship.id/cek-ongkir/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://komship.id","name":"Beranda"}},{"@type":"ListItem","position":2,"item":{"@id":"https://komship.id/cek-ongkir/","name":"Cek Ongkir JNE, SiCepat, dan ID Express 2022"}}]}',
+        },
+      ],
+      style: [],
     });
   },
+  
   components: { vSelect },
   data() {
     return {

@@ -1,9 +1,4 @@
 <template>
-  <teleport to="head">
-    <component :is="script" type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://komship.id/cek-ongkir/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://komship.id","name":"Beranda"}},{"@type":"ListItem","position":2,"item":{"@id":"https://komship.id/cek-ongkir/","name":"Cek Ongkir JNE, SiCepat, dan ID Express 2022"}}]} 
-    </component>
-  </teleport>
   <section class="container mt-4 mb-4">
     <div class="banner">
       <span class="title">Cek Ongkos Kirim</span>

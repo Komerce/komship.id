@@ -1,20 +1,87 @@
 /* eslint-disable prettier/prettier */
 import "vue3-carousel/dist/carousel.css";
-import { useMeta } from "vue-meta";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
+import { useHead } from '@vueuse/head'
 
 export default {
   setup() {
-    useMeta({
-      title: "Komship - Platform Kirim Barang",
-    });
+    useHead({
+      title: {
+        inner: "Komship - Platform Kirim Barang",
+      },
+      meta: [
+        {
+          name: "description",
+          content: "Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman."
+        },
+        {
+          name: "keywords",
+          content: "komship"
+        },
+        {
+          property: "og:locale",
+          content: "id"
+        },
+        {
+          property: "og:type",
+          content: "website"
+        },
+        {
+          property: "og:title",
+          content: "Komship - Platform Kirim Barang"
+        },
+        {
+          property: "og:description",
+          content: "Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman."
+        },
+        {
+          property: "og:url",
+          content: "https://komship.id/"
+        },
+        {
+          property: "og:site_name",
+          content: "Komship"
+        },
+        {
+          property: "og:image",
+          content: "https://komship.id/img/komship.png"
+        },
+        {
+          property: "og:image:width",
+          content: "1280"
+        },
+        {
+          property: "og:image:height",
+          content: "720"
+        },
+        {
+          property: "og:see_also",
+          content: "https://www.instagram.com/komship/"
+        },
+        {
+          property: "og:see_also",
+          content: "https://www.facebook.com/komship/"
+        }
+        
+      ],
+      link: [
+        {
+          rel: "canonical",
+          href:"https://komship.id/"
+        }
+      ],
+      script:[
+        { t: 'application/ld+json', i: '{"@context":"https://schema.org/", "@type":"WebSite", "name":"Komship", "description":"Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman.","url":"https://komship.id/", "image":{"@type":"ImageObject", "url":"https://komship.id/img/komship.png", "height":"720", "width":"1280"},"sameAs":["https://www.facebook.com/komship/", "https://www.instagram.com/komship/"], "potentialAction":{"@type":"SearchAction", "target":"https://komship.id/pencarian?q={search_term_string}", "query-input":"required name=search_term_string"}}'},
+      ],
+      style:[]
+    })
   },
   components: {
     Carousel,
     Navigation,
     Slide,
   },
-
+  
   data() {
     return {
       totalPartners: null,
@@ -282,6 +349,13 @@ export default {
     this.countPartners();
   },
   methods: {
+    getAsyncData: function () {
+      var self = this
+      window.setTimeout(function () {
+        self.title = 'My async title'
+        self.$emit('updateHead')
+      }, 3000)
+    },
     openWindow(url) {
       window.open(url);
     },
