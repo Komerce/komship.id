@@ -1,16 +1,14 @@
 import axios from "axios";
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
-import { useHead } from '@vueuse/head'
 
 const apiUrl = "https://komship.komerce.id/api/v2/landingpage/";
+import { useMeta } from "vue-meta";
 
 export default {
   setup() {
-    useHead({
-      title: {
-        inner: "Cek Ongkir JNE, SiCepat, ID Express 2022",
-      },
+    useMeta({
+      title: "Cek Ongkir JNE, SiCepat, ID Express 2022",
       meta: [
         {
           name: "description",
@@ -75,14 +73,33 @@ export default {
       ],
       script: [
         {
-          t: "application/ld+json",
-          i: '{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://komship.id/cek-ongkir/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://komship.id","name":"Beranda"}},{"@type":"ListItem","position":2,"item":{"@id":"https://komship.id/cek-ongkir/","name":"Cek Ongkir JNE, SiCepat, dan ID Express 2022"}}]}',
+          type: "application/ld+json",
+          json: {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://komship.id/cek-ongkir/#breadcrumb",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                item: { "@id": "https://komship.id", name: "Beranda" },
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                item: {
+                  "@id": "https://komship.id/cek-ongkir/",
+                  name: "Cek Ongkir JNE, SiCepat, dan ID Express 2022",
+                },
+              },
+            ],
+          },
         },
       ],
       style: [],
     });
   },
-  
+
   components: { vSelect },
   data() {
     return {
