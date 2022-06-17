@@ -76,22 +76,28 @@ export default {
           type: "application/ld+json",
           json: {
             "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "@id": "https://komship.id/cek-ongkir/#breadcrumb",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                item: { "@id": "https://komship.id", name: "Beranda" },
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                item: {
-                  "@id": "https://komship.id/cek-ongkir/",
-                  name: "Cek Ongkir JNE, SiCepat, dan ID Express 2022",
-                },
-              },
+            "@type": "Organization",
+            name: "Komship",
+            legalName: "Komship",
+            logo: "https://komship.id/img/komship.png",
+            url: "https://komship.id/",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress:
+                "Jl. Raya Tamansari, Kompleks Karangwuni, Desa Tamansari, Karangmoncol",
+              addressLocality: "Purbalingga",
+              postalCode: "53355",
+              addressCountry: "ID",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "Customer service",
+              email: "mailto:support@komship.id",
+              telephone: "081227931840",
+            },
+            sameAs: [
+              "https://www.facebook.com/komship/",
+              "https://www.instagram.com/komship/",
             ],
           },
         },
