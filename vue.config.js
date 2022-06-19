@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
-var PrerenderSpaPlugin = require("prerender-spa-plugin");
+const { PuppeteerPrerenderPlugin } = require("puppeteer-prerender-plugin");
 var path = require("path");
-const Renderer = PrerenderSpaPlugin.PuppeteerRenderer;
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   transpileDependencies: ["vue-meta"],
@@ -10,16 +12,26 @@ module.exports = {
 
     return {
       plugins: [
-        new PrerenderSpaPlugin(
-          path.resolve(__dirname, "./dist"),
-          // List of routes to prerender
-          // ["/", "/about", "/privacy", "/faq", "/terms", "/cek-ongkir"],
-          {
-            // options
-            ignoreJSErrors: true,
-          }
-        ),
+        // new HtmlWebpackPlugin({
+        //   template: "index.html", // Generates dist/index.html first
+        // }),
+        new PuppeteerPrerenderPlugin({
+          enabled: process.env.NODE_ENV !== "development",
+          entryDir: "dist",
+          outputDir: "dist",
+          postProcess: (result) => {
+            const dom = new JSDOM(result.html);
+            const app = dom.window.document.querySelector("div#app");
+            if (app) {
+              // Remove app HTML since Vue 3 cannot hydrate non-SSR markup
+              app.innerHTML = "";
+            }
 
+            result.html = dom.serialize();
+          },
+          renderAfterEvent: "__RENDERED__",
+          routes: ["/"],
+        }),
       ],
     };
   },

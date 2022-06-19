@@ -22,3 +22,5 @@ app.use(createMetaManager(), {
   refreshOnceOnNavigation: true,
 });
 app.mount("#app");
+
+document.dispatchEvent(new Event("__RENDERED__"));
