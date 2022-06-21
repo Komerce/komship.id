@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 const { PuppeteerPrerenderPlugin } = require("puppeteer-prerender-plugin");
-const path = require("path");
+var path = require("path");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   transpileDependencies: ["vue-meta"],
@@ -16,19 +17,9 @@ module.exports = {
         // }),
         new PuppeteerPrerenderPlugin({
           enabled: process.env.NODE_ENV !== "development",
-          entryDir: config.output.path,
-          outputDir: config.output.path,
+          entryDir: "dist",
+          outputDir: "dist",
           postProcess: (result) => {
-            console.log("ROUTE", result.route);
-            if (result.route === "/404") {
-              result.outputPath = path.join(config.output.path, "/404.html");
-            }
-            if (result.route === "/cek-ongkir") {
-              result.outputPath = path.join(
-                config.output.path,
-                "/cek-ongkir.html"
-              );
-            }
             const dom = new JSDOM(result.html);
             const app = dom.window.document.querySelector("div#app");
             if (app) {
@@ -39,7 +30,24 @@ module.exports = {
             result.html = dom.serialize();
           },
           renderAfterEvent: "__RENDERED__",
-          routes: ["/", "/cek-ongkir"],
+          routes: ["/"],
+        }),
+        new PuppeteerPrerenderPlugin({
+          enabled: process.env.NODE_ENV !== "development",
+          entryDir: path.join(__dirname, 'dist', 'cek-ongkir', 'index.html'),
+          outputDir: path.join(__dirname, 'dist'),
+          postProcess: (result) => {
+            const dom = new JSDOM(result.html);
+            const app = dom.window.document.querySelector("div#app");
+            if (app) {
+              // Remove app HTML since Vue 3 cannot hydrate non-SSR markup
+              app.innerHTML = "";
+            }
+
+            result.html = dom.serialize();
+          },
+          renderAfterEvent: "__RENDERED__",
+          routes: ["/'cek-ongkir"],
         }),
       ],
     };
