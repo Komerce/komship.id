@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #f6f6f9; padding-bottom: 50px">
+  <div id="app" style="background-color: #f6f6f9; padding-bottom: 50px">
     <section id="home" style="background-color: #ffffff">
       <div class="register-now container">
         <div class="row">
