@@ -19,7 +19,15 @@ module.exports = {
             ignoreJSErrors: true,
           }
         ),
-
+        // new PrerenderSpaPlugin(
+        //   path.resolve(__dirname, "./cek-ongkir"),
+        //   // List of routes to prerender
+        //   // ["/", "/about", "/privacy", "/faq", "/terms", "/cek-ongkir"],
+        //   {
+        //     // options
+        //     ignoreJSErrors: true,
+        //   }
+        // ),
       ],
     };
   },

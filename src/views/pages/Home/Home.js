@@ -2,9 +2,16 @@
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
 import { useHead } from '@vueuse/head'
+import { useMeta } from "vue-meta";
+
 
 export default {
   setup() {
+    useMeta({
+      title: "Komship - Platform Kirim Barang",
+      htmlAttrs: { lang: "id", amp: true },
+      link: [{ rel: "icon", href: require("@/assets/img/logo/komship-lp.png") }],
+    });
     useHead({
       title: {
         inner: "Komship - Platform Kirim Barang",

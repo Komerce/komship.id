@@ -2,11 +2,18 @@ import axios from "axios";
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
 import { useHead } from '@vueuse/head'
+import { useMeta } from "vue-meta";
+
 
 const apiUrl = "https://komship.komerce.id/api/v2/landingpage/";
 
 export default {
   setup() {
+    useMeta({
+      title: "Cek Ongkir JNE, SiCepat, ID Express 2022",
+      htmlAttrs: { lang: "id", amp: true },
+      link: [{ rel: "icon", href: require("@/assets/img/logo/cek-ongkir.png") }],
+    });
     useHead({
       title: {
         inner: "Cek Ongkir JNE, SiCepat, ID Express 2022",
