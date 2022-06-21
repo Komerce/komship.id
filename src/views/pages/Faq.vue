@@ -38,12 +38,10 @@
   </div>
 </template>
 <script>
-import { useMeta } from "vue-meta";
+
+
 export default {
   setup() {
-    useMeta({
-      title: "FAQ",
-    });
   },
   data() {
     return {

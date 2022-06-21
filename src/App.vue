@@ -5,6 +5,7 @@
 <script>
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import HomeLayout from "@/layouts/HomeLayout.vue";
+
 export default {
   components: {
     DefaultLayout,

@@ -91,14 +91,7 @@
   </div>
 </template>
 <script>
-import { useMeta } from "vue-meta";
-export default {
-  setup() {
-    useMeta({
-      title: "Syarat & Ketentuan",
-    });
-  },
-};
+export default {};
 </script>
 <style>
 .terms {
