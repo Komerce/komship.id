@@ -1,5 +1,4 @@
 <template>
-  <metainfo />
   <div data-spy="scroll" data-target=".navbar" data-offset="50">
     <Navbar />
     <div style="padding-top: 80px">
