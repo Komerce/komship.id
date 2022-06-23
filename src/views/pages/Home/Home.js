@@ -85,7 +85,7 @@ export default {
       ],
       script:[
         { 
-          vmid: "jsonId",
+          vmid: 'ldjson-schema',
           type: 'application/ld+json', 
           json: {
             "@context":"https://schema.org/", 
