@@ -1,7 +1,7 @@
 name: cd
 on:
   push:
-    branches: [ production ]
+    branches: [ production2 ]
   workflow_dispatch:
 
 jobs:

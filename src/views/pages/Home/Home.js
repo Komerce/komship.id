@@ -11,54 +11,67 @@ export default {
       meta: [
         {
           name: "description",
+          vmid: "description",
           content: "Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman."
         },
         {
           name: "keywords",
+          vmid: "keywords",
           content: "komship"
         },
         {
           property: "og:locale",
+          vmid: "og:locale",
           content: "id"
         },
         {
           property: "og:type",
+          vmid: "og:type",
           content: "website"
         },
         {
           property: "og:title",
+          vmid: "og:title",
           content: "Komship - Platform Kirim Barang"
         },
         {
           property: "og:description",
+          vmid: "og:description",
           content: "Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman."
         },
         {
           property: "og:url",
+          vmid: "og:url",
           content: "https://komship.id/"
         },
         {
+          vmid: "og:site_name",
           property: "og:site_name",
           content: "Komship"
         },
         {
           property: "og:image",
+          vmid: "og:image",
           content: "https://komship.id/img/komship.png"
         },
         {
           property: "og:image:width",
+          vmid: "og:image:width",
           content: "1280"
         },
         {
           property: "og:image:height",
+          vmid: "og:image:height",
           content: "720"
         },
         {
           property: "og:see_also",
+          vmid: "og:see_also",
           content: "https://www.instagram.com/komship/"
         },
         {
           property: "og:see_also",
+          vmid: "og:see_also2",
           content: "https://www.facebook.com/komship/"
         }
         
@@ -66,29 +79,15 @@ export default {
       link: [
         {
           rel: "canonical",
+          vmid: "canonical",
           href:"https://komship.id/"
         }
       ],
       script:[
         { 
+          vmid: "application-ldjson",
           type: 'application/ld+json', 
-          json: {
-            "@context":"https://schema.org/", 
-            "@type":"WebSite", 
-            "name":"Komship", 
-            "description":"Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman.",
-            "url":"https://komship.id/", 
-            "image":{
-              "@type":"ImageObject", 
-              "url":"https://komship.id/img/komship.png", 
-              "height":"720", "width":"1280"},
-              "sameAs":[
-                "https://www.facebook.com/komship/", 
-                "https://www.instagram.com/komship/"
-              ], "potentialAction":{
-                "@type":"SearchAction", 
-                "target":"https://komship.id/pencarian?q={search_term_string}", "query-input":"required name=search_term_string"}
-              }
+          innerHtml: `{"@context":"https://schema.org/", "@type":"WebSite", "name":"Komship", "description":"Komship merupakan platform layanan pengiriman yang bertujuan memudahkan kamu untuk mengirim paket yang didukung dengan metode COD atau Non-COD tanpa batas minimum pengiriman.","url":"https://komship.id/", "image":{"@type":"ImageObject", "url":"https://komship.id/img/komship.png", "height":"720", "width":"1280"},"sameAs":["https://www.facebook.com/komship/", "https://www.instagram.com/komship/"], "potentialAction":{"@type":"SearchAction", "target":"https://komship.id/pencarian?q={search_term_string}", "query-input":"required name=search_term_string"}}`
             },
       ],
       style:[]
