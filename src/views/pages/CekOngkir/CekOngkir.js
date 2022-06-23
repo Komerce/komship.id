@@ -93,6 +93,9 @@ export default {
           }`,
         },
       ],
+      __dangerouslyDisableSanitizersByTagID: {
+        "application-ldjson": ["innerHTML"],
+      },
       style: [],
     });
   },
