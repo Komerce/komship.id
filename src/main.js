@@ -17,10 +17,10 @@ app.AOS = new AOS.init({
   once: true,
 });
 
-app.use(createMetaManager(), {
-  // optional pluginOptions
-  refreshOnceOnNavigation: true,
-});
+app.use(createMetaManager, {
+  refreshOnceOnNavigation: true
+})
+
 app.mount("#app");
 
 document.dispatchEvent(new Event("__RENDERED__"));
