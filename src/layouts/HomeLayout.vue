@@ -11,7 +11,7 @@
 import "@/assets/css/app.css";
 import Navbar from "@/components/Navbar/HomeNavbar.vue";
 import Footer from "@/components/Footer/HomeFooter.vue";
-import { useMeta } from "vue-meta";
+// import { useMeta } from "vue-meta";
 export default {
   name: "HomeLayout",
   components: {
@@ -19,11 +19,11 @@ export default {
     Footer,
   },
   setup() {
-    useMeta({
-      title: "Komship.id",
-      htmlAttrs: { lang: "id", amp: true },
-      link: [{ rel: "icon", href: require("@/assets/img/logo/komship.png") }],
-    });
+    // useMeta({
+    //   title: "Komship.id",
+    //   htmlAttrs: { lang: "id", amp: true },
+    //   link: [{ rel: "icon", href: require("@/assets/img/logo/komship.png") }],
+    // });
   },
 };
 </script>

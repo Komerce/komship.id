@@ -56,12 +56,12 @@
   </div>
 </template>
 <script>
-import { useMeta } from "vue-meta";
+// import { useMeta } from "vue-meta";
 export default {
   setup() {
-    useMeta({
-      title: "Tentang Kami",
-    });
+    // useMeta({
+    //   title: "Tentang Kami",
+    // });
   },
 };
 </script>
